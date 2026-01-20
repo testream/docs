@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-jira-integration/installation" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.6.3">
+<title data-rh="true">Jira Integration - Installation | Testream Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://testream.github.io/docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://testream.github.io/docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://testream.github.io/docs/jira-integration/installation"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Jira Integration - Installation | Testream Documentation"><meta data-rh="true" name="description" content="Integrate Testream with Jira to view test results, trends, and artifacts directly in your Jira issues and projects."><meta data-rh="true" property="og:description" content="Integrate Testream with Jira to view test results, trends, and artifacts directly in your Jira issues and projects."><link data-rh="true" rel="icon" href="/docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://testream.github.io/docs/jira-integration/installation"><link data-rh="true" rel="alternate" href="https://testream.github.io/docs/jira-integration/installation" hreflang="en"><link data-rh="true" rel="alternate" href="https://testream.github.io/docs/jira-integration/installation" hreflang="x-default"><link rel="stylesheet" href="/docs/assets/css/styles.aa8b9421.css">
+<script src="/docs/assets/js/runtime~main.5c20164a.js" defer="defer"></script>
+<script src="/docs/assets/js/main.253b87b4.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" target="_self" href="/docs/intro"><div class="navbar__logo"><img src="/docs/img/logo.svg" alt="Testream Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/docs/img/logo.svg" alt="Testream Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Testream</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/intro">Documentation</a></div><div class="navbar__items navbar__items--right"><a href="https://testream.app" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Website<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/testream" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Introduction</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/getting-started/installation">Getting Started</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/reporters/playwright">Reporters</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/github-action/setup">GitHub Action</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/jira-integration/installation">Jira Integration</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/jira-integration/installation">Jira Integration - Installation</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/jira-integration/usage">Jira Integration - Usage</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><span class="breadcrumbs__link">Jira Integration</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Jira Integration - Installation</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Jira Integration - Installation</h1></header>
+<p>Integrate Testream with Jira to view test results, trends, and artifacts directly in your Jira issues and projects.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="prerequisites">Prerequisites<a href="#prerequisites" class="hash-link" aria-label="Direct link to Prerequisites" title="Direct link to Prerequisites">​</a></h2>
+<ul>
+<li>Jira Cloud instance (Atlassian Cloud)</li>
+<li>Jira administrator or permission to install apps</li>
+<li>Active Testream account</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="step-1-install-the-forge-app">Step 1: Install the Forge App<a href="#step-1-install-the-forge-app" class="hash-link" aria-label="Direct link to Step 1: Install the Forge App" title="Direct link to Step 1: Install the Forge App">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="from-atlassian-marketplace">From Atlassian Marketplace<a href="#from-atlassian-marketplace" class="hash-link" aria-label="Direct link to From Atlassian Marketplace" title="Direct link to From Atlassian Marketplace">​</a></h3>
+<ol>
+<li>Log in to your Jira instance as an administrator</li>
+<li>Go to <strong>Settings</strong> (⚙️) → <strong>Apps</strong> → <strong>Find new apps</strong></li>
+<li>Search for <strong>&quot;Testream&quot;</strong> in the marketplace</li>
+<li>Click on the Testream app</li>
+<li>Click <strong>&quot;Get it now&quot;</strong> or <strong>&quot;Try it free&quot;</strong></li>
+<li>Follow the installation prompts</li>
+<li>Accept the permissions requested by the app</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="required-permissions">Required Permissions<a href="#required-permissions" class="hash-link" aria-label="Direct link to Required Permissions" title="Direct link to Required Permissions">​</a></h3>
+<p>The Testream Forge app requires the following permissions:</p>
+<ul>
+<li><strong>Read project data</strong> - To display test results in project contexts</li>
+<li><strong>Read issue data</strong> - To show test results linked to issues</li>
+<li><strong>Write issue data</strong> - To add test result panels to issues</li>
+<li><strong>Storage</strong> - To cache test data for performance</li>
+</ul>
+<p>These permissions are necessary for the app to function correctly and display test information.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="step-2-connect-your-testream-account">Step 2: Connect Your Testream Account<a href="#step-2-connect-your-testream-account" class="hash-link" aria-label="Direct link to Step 2: Connect Your Testream Account" title="Direct link to Step 2: Connect Your Testream Account">​</a></h2>
+<p>After installing the app, you need to connect it to your Testream account:</p>
+<ol>
+<li>In Jira, go to any project</li>
+<li>Look for the <strong>Testream</strong> menu item in the project sidebar</li>
+<li>Click <strong>&quot;Connect to Testream&quot;</strong></li>
+<li>You&#x27;ll be redirected to testream.app to authenticate</li>
+<li>Log in to your Testream account</li>
+<li>Authorize the Jira integration</li>
+<li>You&#x27;ll be redirected back to Jira</li>
+</ol>
+<p>Alternatively:</p>
+<ol>
+<li>Go to <strong>Settings</strong> → <strong>Apps</strong> → <strong>Manage apps</strong></li>
+<li>Find &quot;Testream&quot; in the list</li>
+<li>Click <strong>&quot;Configure&quot;</strong></li>
+<li>Follow the connection wizard</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="step-3-configure-api-key-optional">Step 3: Configure API Key (Optional)<a href="#step-3-configure-api-key-optional" class="hash-link" aria-label="Direct link to Step 3: Configure API Key (Optional)" title="Direct link to Step 3: Configure API Key (Optional)">​</a></h2>
+<p>If you want to use organization-wide settings:</p>
+<ol>
+<li>In Jira, go to <strong>Settings</strong> → <strong>Apps</strong> → <strong>Manage apps</strong></li>
+<li>Find &quot;Testream&quot; and click <strong>Configure</strong></li>
+<li>Enter your Testream API key (from testream.app → Settings → API Keys)</li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<p>This allows all users in your Jira instance to view test results without individual authentication.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="step-4-verify-installation">Step 4: Verify Installation<a href="#step-4-verify-installation" class="hash-link" aria-label="Direct link to Step 4: Verify Installation" title="Direct link to Step 4: Verify Installation">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="check-app-status">Check App Status<a href="#check-app-status" class="hash-link" aria-label="Direct link to Check App Status" title="Direct link to Check App Status">​</a></h3>
+<ol>
+<li>Go to <strong>Settings</strong> → <strong>Apps</strong> → <strong>Manage apps</strong></li>
+<li>Find &quot;Testream&quot; in the list</li>
+<li>Status should show <strong>&quot;Enabled&quot;</strong></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="test-the-integration">Test the Integration<a href="#test-the-integration" class="hash-link" aria-label="Direct link to Test the Integration" title="Direct link to Test the Integration">​</a></h3>
+<ol>
+<li>Create or open a Jira issue</li>
+<li>Look for the <strong>&quot;Testream&quot;</strong> panel in the issue view</li>
+<li>You should see:<!-- -->
+<ul>
+<li>&quot;Connect to Testream&quot; button (if not connected)</li>
+<li>Or test results panel (if tests have been linked)</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="troubleshooting-installation">Troubleshooting Installation<a href="#troubleshooting-installation" class="hash-link" aria-label="Direct link to Troubleshooting Installation" title="Direct link to Troubleshooting Installation">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="app-not-appearing-in-marketplace">App not appearing in marketplace<a href="#app-not-appearing-in-marketplace" class="hash-link" aria-label="Direct link to App not appearing in marketplace" title="Direct link to App not appearing in marketplace">​</a></h3>
+<p><strong>Possible causes:</strong></p>
+<ul>
+<li>App not yet published to marketplace (check with Testream support)</li>
+<li>Your Jira instance doesn&#x27;t allow Forge apps</li>
+<li>Network or firewall restrictions</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Contact Testream support at <a href="mailto:support@testream.app" target="_blank" rel="noopener noreferrer">support@testream.app</a></li>
+<li>Check with your Jira administrator about app installation policies</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="installation-fails">Installation fails<a href="#installation-fails" class="hash-link" aria-label="Direct link to Installation fails" title="Direct link to Installation fails">​</a></h3>
+<p><strong>Check:</strong></p>
+<ul>
+<li>You have administrator permissions in Jira</li>
+<li>Your Jira instance is on Atlassian Cloud (not Server/Data Center)</li>
+<li>No conflicting apps are installed</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="connection-to-testream-fails">Connection to Testream fails<a href="#connection-to-testream-fails" class="hash-link" aria-label="Direct link to Connection to Testream fails" title="Direct link to Connection to Testream fails">​</a></h3>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Verify your Testream account is active</li>
+<li>Check that you&#x27;re logged into the correct Testream account</li>
+<li>Try clearing browser cache and cookies</li>
+<li>Disable browser extensions that might interfere</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="api-key-not-working">API Key not working<a href="#api-key-not-working" class="hash-link" aria-label="Direct link to API Key not working" title="Direct link to API Key not working">​</a></h3>
+<p><strong>Check:</strong></p>
+<ul>
+<li>API key is copied correctly (no extra spaces)</li>
+<li>API key is not expired</li>
+<li>API key has correct permissions</li>
+<li>Generate a new key if needed</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="uninstalling">Uninstalling<a href="#uninstalling" class="hash-link" aria-label="Direct link to Uninstalling" title="Direct link to Uninstalling">​</a></h2>
+<p>To remove the Testream app:</p>
+<ol>
+<li>Go to <strong>Settings</strong> → <strong>Apps</strong> → <strong>Manage apps</strong></li>
+<li>Find &quot;Testream&quot; in the list</li>
+<li>Click <strong>&quot;Uninstall&quot;</strong></li>
+<li>Confirm the uninstallation</li>
+</ol>
+<p><strong>Note:</strong> This will remove all Testream panels from issues, but your test data remains in Testream.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="whats-next">What&#x27;s Next?<a href="#whats-next" class="hash-link" aria-label="Direct link to What&#x27;s Next?" title="Direct link to What&#x27;s Next?">​</a></h2>
+<ul>
+<li>Learn how to <a href="/docs/jira-integration/usage">use the integration</a> to view test results</li>
+<li>Configure <a href="/docs/reporters/playwright">test reporters</a> to send data to Testream</li>
+<li>Set up <a href="/docs/github-action/setup">GitHub Actions</a> for automated uploads</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/testream/docs/tree/main/docs/jira-integration/installation.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/github-action/setup"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">GitHub Action Setup</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/jira-integration/usage"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Jira Integration - Usage</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#prerequisites" class="table-of-contents__link toc-highlight">Prerequisites</a></li><li><a href="#step-1-install-the-forge-app" class="table-of-contents__link toc-highlight">Step 1: Install the Forge App</a><ul><li><a href="#from-atlassian-marketplace" class="table-of-contents__link toc-highlight">From Atlassian Marketplace</a></li><li><a href="#required-permissions" class="table-of-contents__link toc-highlight">Required Permissions</a></li></ul></li><li><a href="#step-2-connect-your-testream-account" class="table-of-contents__link toc-highlight">Step 2: Connect Your Testream Account</a></li><li><a href="#step-3-configure-api-key-optional" class="table-of-contents__link toc-highlight">Step 3: Configure API Key (Optional)</a></li><li><a href="#step-4-verify-installation" class="table-of-contents__link toc-highlight">Step 4: Verify Installation</a><ul><li><a href="#check-app-status" class="table-of-contents__link toc-highlight">Check App Status</a></li><li><a href="#test-the-integration" class="table-of-contents__link toc-highlight">Test the Integration</a></li></ul></li><li><a href="#troubleshooting-installation" class="table-of-contents__link toc-highlight">Troubleshooting Installation</a><ul><li><a href="#app-not-appearing-in-marketplace" class="table-of-contents__link toc-highlight">App not appearing in marketplace</a></li><li><a href="#installation-fails" class="table-of-contents__link toc-highlight">Installation fails</a></li><li><a href="#connection-to-testream-fails" class="table-of-contents__link toc-highlight">Connection to Testream fails</a></li><li><a href="#api-key-not-working" class="table-of-contents__link toc-highlight">API Key not working</a></li></ul></li><li><a href="#uninstalling" class="table-of-contents__link toc-highlight">Uninstalling</a></li><li><a href="#whats-next" class="table-of-contents__link toc-highlight">What&#39;s Next?</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Getting Started</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/reporters/playwright">Reporters</a></li></ul></div><div class="col footer__col"><div class="footer__title">Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/github-action/setup">GitHub Action</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/jira-integration/installation">Jira Integration</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://testream.app" target="_blank" rel="noopener noreferrer" class="footer__link-item">Website<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/testream" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.npmjs.com/search?q=%40testream" target="_blank" rel="noopener noreferrer" class="footer__link-item">NPM<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Testream. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

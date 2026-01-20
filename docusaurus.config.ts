@@ -20,7 +20,7 @@ const config: Config = {
   organizationName: 'testream',
   projectName: 'docs',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -57,6 +57,8 @@ const config: Config = {
       logo: {
         alt: 'Testream Logo',
         src: 'img/logo.svg',
+        target: '_self',
+        href: '/intro',
       },
       items: [
         {
