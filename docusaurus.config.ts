@@ -11,7 +11,7 @@ const config: Config = {
   url: 'https://testream.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs/',
+  baseUrl: '/',
 
   // Trailing slash behavior
   trailingSlash: false,
@@ -20,8 +20,8 @@ const config: Config = {
   organizationName: 'testream',
   projectName: 'docs',
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -36,7 +36,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          routeBasePath: '/', // Serve docs at baseUrl root (/docs/) instead of /docs/docs/
+          routeBasePath: '/', // Serve docs at baseUrl root (/)
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           editUrl: 'https://github.com/testream/docs/tree/main/',
@@ -99,7 +99,7 @@ const config: Config = {
           title: 'Resources',
           items: [
             {
-              label: 'GitHub Action',
+              label: 'CI/CD Integrations',
               to: '/ci-integrations/setup',
             },
             {
