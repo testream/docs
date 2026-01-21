@@ -132,4 +132,4 @@ To remove the Testream app:
 
 - Learn how to [use the integration](./usage) to view test results
 - Configure [test reporters](../reporters/playwright) to send data to Testream
-- Set up [GitHub Actions](../github-action/setup) for automated uploads
+- Set up [CI/CD integrations](../ci-integrations/setup) for automated uploads

@@ -52,34 +52,6 @@ npx @testream/dotnet-reporter --file TestResults.trx
 
 ---
 
-## GitHub Action
-
-The GitHub Action is automatically available in the GitHub Actions marketplace. No installation required!
-
-Simply add it to your workflow file:
-
-```yaml
-- uses: testream/upload-action@v0.4.1
-  with:
-    apiKey: ${{ secrets.TESTREAM_API_KEY }}
-```
-
-**Includes CLI Tool:** The action package also includes a standalone CLI tool:
-
-```bash
-npm install -g @testream/upload-action
-```
-
-Then use it directly:
-
-```bash
-testream-upload --apiKey $YOUR_API_KEY
-```
-
-**Next Step:** Configure the action in your workflow - see [GitHub Action Documentation](../github-action/setup).
-
----
-
 ## Requirements
 
 ### Node.js Version
@@ -111,5 +83,5 @@ You'll need a Testream API key to upload test results.
 ## What's Next?
 
 - Follow the [Quick Start Guide](./quick-start) for a complete setup walkthrough
-- Learn about [Configuration](./configuration) options
+- Set up [CI/CD integrations](../ci-integrations/setup) for automated uploads
 - Set up [Jira Integration](../jira-integration/installation)

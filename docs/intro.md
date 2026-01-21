@@ -13,7 +13,7 @@ Testream is a comprehensive test management platform that integrates seamlessly 
 - 📊 **Centralized Test Reporting** - Aggregate test results from multiple frameworks and projects
 - 🔍 **Advanced Analytics** - Track trends, identify flaky tests, and monitor test health
 - 🎯 **Jira Integration** - View test results directly in Jira issues and projects
-- 🚀 **CI/CD Ready** - First-class GitHub Actions support with artifact management
+- 🚀 **CI/CD Ready** - GitHub Actions + CLI for any CI provider
 - 📈 **Historical Tracking** - Track test performance over time with detailed dashboards
 
 ## Key Features
@@ -24,26 +24,30 @@ Testream supports popular testing frameworks out of the box:
 
 - **Playwright** - E2E testing for modern web apps
 - **.NET** - xUnit, NUnit, MSTest, and TRX formats
-- **Jest** - JavaScript unit testing (coming soon)
 
 ### CTRF Standard
 
 All reporters use the [Common Test Report Format (CTRF)](https://github.com/ctrf-io/ctrf) - an open standard for test result reporting. This ensures consistency and interoperability across different testing tools.
 
-### GitHub Action & CLI
+### CI Uploads (Action & CLI)
 
 Upload test results and artifacts with minimal configuration:
 
 ```yaml
 - uses: testream/upload-action@v0.4.1
   with:
-    apiKey: ${{ secrets.TESTREAM_API_KEY }}
+    report-path: ctrf/ctrf-report.json
+    project-key: ${{ secrets.TESTREAM_PROJECT_KEY }}
+    api-key: ${{ secrets.TESTREAM_API_KEY }}
 ```
 
 Or use the CLI directly:
 
 ```bash
-npx testream-upload --apiKey $TESTREAM_API_KEY
+npx @testream/upload-action \\
+  --report-path ctrf/ctrf-report.json \\
+  --project-key PROJ \\
+  --api-key $TESTREAM_API_KEY
 ```
 
 ### Jira Dashboard
@@ -61,7 +65,7 @@ Ready to integrate Testream? Choose your path:
 
 - [**Installation Guide**](./getting-started/installation) - Install reporters for your framework
 - [**Quick Start**](./getting-started/quick-start) - Get up and running in 5 minutes
-- [**Configuration**](./getting-started/configuration) - Configure API keys and environment variables
+- [**CI/CD Integrations**](./ci-integrations/setup) - Upload results from your pipeline
 
 ## Need Help?
 

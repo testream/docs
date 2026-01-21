@@ -60,7 +60,7 @@ docs/
 │   ├── intro.md                # Introduction page
 │   ├── getting-started/        # Getting started guides
 │   ├── reporters/              # Reporter documentation
-│   ├── github-action/          # GitHub Action docs
+│   ├── ci-integrations/        # CI/CD integrations
 │   └── jira-integration/       # Jira integration docs
 ├── src/                         # React components
 │   ├── css/                    # Custom CSS

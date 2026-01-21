@@ -9,7 +9,6 @@ const sidebars: SidebarsConfig = {
       items: [
         'getting-started/installation',
         'getting-started/quick-start',
-        'getting-started/configuration',
       ],
     },
     {
@@ -18,14 +17,13 @@ const sidebars: SidebarsConfig = {
       items: [
         'reporters/playwright',
         'reporters/dotnet',
-        'reporters/jest',
       ],
     },
     {
       type: 'category',
-      label: 'GitHub Action',
+      label: 'CI/CD Integrations',
       items: [
-        'github-action/setup',
+        'ci-integrations/setup',
       ],
     },
     {

@@ -35,15 +35,9 @@ import { defineConfig } from '@playwright/test';
 export default defineConfig({
   reporter: [
     ['@testream/playwright-reporter', {
-      // Upload configuration
-      upload: true,
       apiKey: process.env.TESTREAM_API_KEY,
-
-      // Optional: customize the report
-      outputFile: 'ctrf-report.json',
-
-      // Optional: upload artifacts (screenshots, videos, traces)
-      uploadArtifacts: true,
+      projectKey: 'PROJ',
+      uploadEnabled: true,
     }],
 
     // Keep your existing reporters
@@ -145,10 +139,11 @@ You can also run tests first and upload results separately using the GitHub Acti
 
 - name: Upload to Testream
   if: always()
-  uses: testream/upload-action@v0.4.1
-  with:
-    apiKey: ${{ secrets.TESTREAM_API_KEY }}
-    ctrfPath: 'ctrf-report.json'
+  run: |
+    npx @testream/upload-action \
+      --report-path ctrf/ctrf-report.json \
+      --project-key PROJ \
+      --api-key ${{ secrets.TESTREAM_API_KEY }}
 ```
 
 ## Troubleshooting
@@ -156,7 +151,7 @@ You can also run tests first and upload results separately using the GitHub Acti
 ### Tests run but nothing appears in Testream
 
 - Verify your API key is correct
-- Check that `upload: true` is set in the reporter config
+- Check that `uploadEnabled: true` is set in the reporter config
 - Look for error messages in the test output
 - Ensure you have an active internet connection
 
@@ -174,7 +169,7 @@ You can also run tests first and upload results separately using the GitHub Acti
 
 ## What's Next?
 
-- Explore [configuration options](./configuration) for reporters
-- Learn about [artifact uploads](../reporters/playwright#artifact-uploads)
+- Learn about [Playwright reporter options](../reporters/playwright)
+- Set up [CI/CD integrations](../ci-integrations/setup) for automated uploads
 - Set up [Jira integration](../jira-integration/installation) to view results in Jira
 - Check out [.NET reporter](../reporters/dotnet) if you're testing .NET applications

@@ -293,5 +293,5 @@ If you encounter issues:
 ## What's Next?
 
 - Configure [reporters](../reporters/playwright) to send test data
-- Set up [GitHub Actions](../github-action/setup) for CI/CD
+- Set up [CI/CD integrations](../ci-integrations/setup) for CI/CD
 - Explore [Testream dashboard](https://testream.app) for advanced features

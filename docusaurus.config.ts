@@ -100,7 +100,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Action',
-              to: '/github-action/setup',
+              to: '/ci-integrations/setup',
             },
             {
               label: 'Jira Integration',
