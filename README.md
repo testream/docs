@@ -91,7 +91,6 @@ docs/
 ## Links
 
 - **Website:** [testream.app](https://testream.app)
-- **Main Repository:** [jira-test-manager](https://github.com/hasanalituran/jira-test-manager)
 - **NPM Packages:** [@testream](https://www.npmjs.com/search?q=%40testream)
 
 ## License
