@@ -82,9 +82,9 @@ Test artifacts (screenshots, videos, traces) are available directly in Jira:
 2. Scroll to the Testream panel
 3. Click on a failed test
 4. View attached artifacts:
-   - 📸 Screenshots
-   - 🎥 Videos
-   - 📊 Traces
+   - Screenshots
+   - Videos
+   - Traces
 
 ### Download Artifacts
 
@@ -190,37 +190,37 @@ Configure in Testream dashboard:
 
 ### Issue Linking
 
-✅ **DO:**
+**DO:**
 - Include issue keys in commit messages
 - Use conventional branch naming (e.g., `feature/PROJECT-123`)
 - Link critical tests manually if needed
 
-❌ **DON'T:**
+**DON'T:**
 - Create too many manual links (automate instead)
 - Link unrelated tests to issues
 - Forget to update links when refactoring
 
 ### Dashboard Usage
 
-✅ **DO:**
+**DO:**
 - Review test trends regularly
 - Investigate flaky tests promptly
 - Share dashboard with team in standups
 - Use filters to focus on relevant data
 
-❌ **DON'T:**
+**DON'T:**
 - Ignore consistent failures
 - Let flaky tests accumulate
 - Use dashboard as the only source of truth (check detailed logs)
 
 ### Artifact Management
 
-✅ **DO:**
+**DO:**
 - Upload artifacts for failed tests
 - Download artifacts before they expire
 - Share artifact links in issue comments
 
-❌ **DON'T:**
+**DON'T:**
 - Upload unnecessary artifacts (increases storage costs)
 - Rely solely on artifacts without reading error messages
 
@@ -286,9 +286,9 @@ By default, anyone with access to the Jira issue can view test results.
 
 If you encounter issues:
 
-- 📧 Email: [support@testream.app](mailto:support@testream.app)
-- 📖 Documentation: [docs](/)
-- 🐛 Report bugs: [GitHub Issues](https://github.com/testream/docs/issues)
+- Email: [support@testream.app](mailto:support@testream.app)
+- Documentation: [docs](/)
+- Report bugs: [GitHub Issues](https://github.com/testream/docs/issues)
 
 ## What's Next?
 

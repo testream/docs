@@ -10,11 +10,11 @@ Welcome to **Testream** - a modern test management platform designed for develop
 
 Testream is a comprehensive test management platform that integrates seamlessly with your existing testing frameworks and CI/CD pipelines. It provides:
 
-- 📊 **Centralized Test Reporting** - Aggregate test results from multiple frameworks and projects
-- 🔍 **Advanced Analytics** - Track trends, identify flaky tests, and monitor test health
-- 🎯 **Jira Integration** - View test results directly in Jira issues and projects
-- 🚀 **CI/CD Ready** - GitHub Actions + CLI for any CI provider
-- 📈 **Historical Tracking** - Track test performance over time with detailed dashboards
+- **Centralized Test Reporting** - Aggregate test results from multiple frameworks and projects
+- **Advanced Analytics** - Track trends, identify flaky tests, and monitor test health
+- **Jira Integration** - View test results directly in Jira issues and projects
+- **CI/CD Ready** - GitHub Actions + CLI for any CI provider
+- **Historical Tracking** - Track test performance over time with detailed dashboards
 
 ## Key Features
 
@@ -69,6 +69,6 @@ Ready to integrate Testream? Choose your path:
 
 ## Need Help?
 
-- 📧 Email: [support@testream.app](mailto:support@testream.app)
-- 🐛 Issues: [GitHub Issues](https://github.com/testream/docs/issues)
-- 🌐 Website: [testream.app](https://testream.app)
+ - Email: [support@testream.app](mailto:support@testream.app)
+ - Issues: [GitHub Issues](https://github.com/testream/docs/issues)
+ - Website: [testream.app](https://testream.app)

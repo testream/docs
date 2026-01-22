@@ -17,7 +17,7 @@ Integrate Testream with Jira to view test results, trends, and artifacts directl
 ### From Atlassian Marketplace
 
 1. Log in to your Jira instance as an administrator
-2. Go to **Settings** (⚙️) → **Apps** → **Find new apps**
+2. Go to **Settings** → **Apps** → **Find new apps**
 3. Search for **"Testream"** in the marketplace
 4. Click on the Testream app
 5. Click **"Get it now"** or **"Try it free"**
