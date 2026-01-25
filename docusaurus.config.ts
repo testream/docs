@@ -56,7 +56,7 @@ const config: Config = {
       title: 'Testream',
       logo: {
         alt: 'Testream Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo-48.png',
         target: '_self',
         href: '/intro',
       },

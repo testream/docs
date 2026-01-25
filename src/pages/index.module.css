@@ -1,27 +1,405 @@
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+/* ==========================================================================
+   Testream Landing Page Styles
+   Light & Clean SaaS Aesthetic
+   ========================================================================== */
+
+/* Hero Section
+   ========================================================================== */
+.hero {
   position: relative;
+  padding: 6rem 0 4rem;
+  text-align: center;
   overflow: hidden;
+  background: linear-gradient(180deg, rgba(13, 148, 136, 0.03) 0%, transparent 100%);
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroInner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-.buttons {
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--testream-text-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.heroTitleAccent {
+  color: var(--ifm-color-primary);
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--testream-text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.heroButtons {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
-.features {
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.primaryButton:hover {
+  background: var(--ifm-color-primary-dark);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--testream-shadow-lg);
+  text-decoration: none;
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: transparent;
+  color: var(--testream-text-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid var(--testream-border);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+/* Logo Strip
+   ========================================================================== */
+.logoStrip {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--testream-border);
+}
+
+.logoStripLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--testream-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.logoGrid {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--testream-text-secondary);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.logoItem:hover {
+  opacity: 1;
+}
+
+.logoIcon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Features Section
+   ========================================================================== */
+.features {
+  padding: 5rem 0;
+  background: var(--ifm-background-surface-color);
+}
+
+.featuresInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--testream-text-primary);
+  margin-bottom: 3rem;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.featureCard {
+  background: var(--ifm-background-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--testream-shadow-md);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--testream-shadow-lg);
+  border-color: var(--ifm-color-primary-lightest);
+}
+
+.featureIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--ifm-color-primary-lightest) 0%, var(--ifm-color-primary-lighter) 100%);
+  border-radius: 0.75rem;
+  margin-bottom: 1.25rem;
+  color: var(--ifm-color-primary-dark);
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--testream-text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.featureDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--testream-text-secondary);
+  margin: 0;
+}
+
+/* How It Works Section
+   ========================================================================== */
+.howItWorks {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(13, 148, 136, 0.03) 100%);
+}
+
+.howItWorksInner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+}
+
+.stepNumber {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.25rem;
+  border-radius: 50%;
+  margin: 0 auto 1.25rem;
+}
+
+.stepTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--testream-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.stepDescription {
+  font-size: 0.9375rem;
+  color: var(--testream-text-secondary);
+  line-height: 1.5;
+}
+
+.codeSnippet {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8125rem;
+  display: inline-block;
+  margin-top: 0.75rem;
+}
+
+/* Final CTA Section
+   ========================================================================== */
+.finalCta {
+  padding: 5rem 0;
+  background: var(--ifm-color-primary);
+  text-align: center;
+}
+
+.finalCtaInner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.finalCtaTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.finalCtaSubtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+}
+
+.ctaButtonLight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: #fff;
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ctaButtonLight:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+}
+
+/* Responsive Styles
+   ========================================================================== */
+@media screen and (max-width: 996px) {
+  .heroTitle {
+    font-size: 2.75rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.125rem;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 3rem auto 0;
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logoGrid {
+    gap: 1.5rem;
+  }
+
+  .logoItem {
+    font-size: 0.875rem;
+  }
+
+  .features,
+  .howItWorks,
+  .finalCta {
+    padding: 3rem 0;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .finalCtaTitle {
+    font-size: 1.75rem;
+  }
+}
+
+/* Dark mode adjustments
+   ========================================================================== */
+[data-theme='dark'] .hero {
+  background: linear-gradient(180deg, rgba(45, 212, 191, 0.05) 0%, transparent 100%);
+}
+
+[data-theme='dark'] .featureCard {
+  background: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .howItWorks {
+  background: linear-gradient(180deg, transparent 0%, rgba(45, 212, 191, 0.05) 100%);
+}
+
+[data-theme='dark'] .codeSnippet {
+  background: #0f172a;
 }

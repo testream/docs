@@ -17,6 +17,8 @@ const sidebars: SidebarsConfig = {
       items: [
         'reporters/playwright',
         'reporters/dotnet',
+        'reporters/cypress',
+        'reporters/jest',
       ],
     },
     {
