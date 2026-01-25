@@ -23,6 +23,8 @@ Testream is a comprehensive test management platform that integrates seamlessly 
 Testream supports popular testing frameworks out of the box:
 
 - **Playwright** - E2E testing for modern web apps
+- **Cypress** - E2E testing for web applications
+- **Jest** - Unit and integration testing for JavaScript/TypeScript
 - **.NET** - xUnit, NUnit, MSTest, and TRX formats
 
 ### CTRF Standard

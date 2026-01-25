@@ -28,6 +28,50 @@ pnpm add --save-dev @testream/playwright-reporter
 
 ---
 
+## Cypress Reporter
+
+Install the Cypress reporter for automatic CTRF report generation and upload.
+
+```bash
+npm install --save-dev @testream/cypress-reporter cypress-ctrf-json-reporter
+```
+
+Or with other package managers:
+
+```bash
+# Yarn
+yarn add --dev @testream/cypress-reporter cypress-ctrf-json-reporter
+
+# pnpm
+pnpm add --save-dev @testream/cypress-reporter cypress-ctrf-json-reporter
+```
+
+**Next Step:** Configure the reporter in your `cypress.config.ts` or use the CLI - see [Cypress Documentation](../reporters/cypress).
+
+---
+
+## Jest Reporter
+
+Install the Jest reporter for automatic CTRF report generation and upload.
+
+```bash
+npm install --save-dev @testream/jest-reporter
+```
+
+Or with other package managers:
+
+```bash
+# Yarn
+yarn add --dev @testream/jest-reporter
+
+# pnpm
+pnpm add --save-dev @testream/jest-reporter
+```
+
+**Next Step:** Configure the reporter in your `jest.config.js` - see [Jest Documentation](../reporters/jest).
+
+---
+
 ## .NET Reporter
 
 Install the .NET reporter CLI globally for converting .NET test results to CTRF format.

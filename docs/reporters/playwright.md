@@ -33,17 +33,10 @@ export default defineConfig({
 
 ## Configuration Options
 
-### Required
-
-| Option | Type | Description |
-| --- | --- | --- |
-| `apiKey` | `string` | Testream API key |
-| `projectKey` | `string` | Jira project key |
-
-### Optional
-
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
+| `apiKey` | `string` | - | **Required** Testream API key |
+| `projectKey` | `string` | - | **Required** Jira project key |
 | `uploadEnabled` | `boolean` | `true` | Enable/disable automatic upload |
 | `failOnUploadError` | `boolean` | `false` | Fail the test run if upload fails |
 | `branch` | `string` | auto | Git branch name |
