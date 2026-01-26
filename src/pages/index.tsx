@@ -2,7 +2,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 
 // Simple SVG icons for features
 const icons = {
@@ -52,6 +52,7 @@ const frameworks = [
   { name: 'Jest', icon: 'https://ctrf.io/img/jest.svg' },
   { name: 'Cypress', icon: 'https://ctrf.io/img/cypress.svg' },
   { name: '.NET', icon: 'https://ctrf.io/img/dotnet.svg' },
+  { name: 'CI/CD CLI', icon: 'img/command-line-icon.png' },
 ];
 
 function HeroSection() {
@@ -79,14 +80,11 @@ function HeroSection() {
             View on GitHub
           </Link>
         </div>
-        <div className={styles.logoStrip}>
-          <p className={styles.logoStripLabel}>Works with your stack</p>
-          <div className={styles.logoGrid}>
-            {frameworks.map((fw) => (
-              <span key={fw.name} className={styles.logoItem}>
-                <img src={fw.icon} alt={fw.name} className={styles.logoIcon} />
-                {fw.name}
-              </span>
+        <div className={styles.heroReportersSection}>
+          <p className={styles.heroReportersLabel}>Works with Your Stack</p>
+          <div className={styles.heroReportersGrid}>
+            {reporters.map((reporter) => (
+              <HeroReporterCard key={reporter.name} reporter={reporter} />
             ))}
           </div>
         </div>
@@ -135,12 +133,94 @@ function FeaturesSection() {
   );
 }
 
+const reporters = [
+  {
+    name: 'Playwright',
+    icon: 'https://ctrf.io/img/playwright.svg',
+    command: 'npm i @testream/playwright-reporter',
+    docsLink: '/reporters/playwright',
+  },
+  {
+    name: 'Jest',
+    icon: 'https://ctrf.io/img/jest.svg',
+    command: 'npm i @testream/jest-reporter',
+    docsLink: '/reporters/jest',
+  },
+  {
+    name: 'Cypress',
+    icon: 'https://ctrf.io/img/cypress.svg',
+    command: 'npm i @testream/cypress-reporter',
+    docsLink: '/reporters/cypress',
+  },
+  {
+    name: '.NET',
+    icon: 'https://ctrf.io/img/dotnet.svg',
+    command: 'npm i @testream/dotnet-reporter',
+    docsLink: '/reporters/dotnet',
+  },
+  {
+    name: 'CI/CD CLI',
+    icon: 'img/command-line-icon.png',
+    command: 'npm i @testream/cli',
+    docsLink: '/ci-integrations/setup',
+  },
+];
+
+function HeroReporterCard({ reporter }: { reporter: (typeof reporters)[0] }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    try {
+      await navigator.clipboard.writeText(reporter.command);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
+
+  return (
+    <Link
+      to={reporter.docsLink}
+      className={styles.heroReporterCard}
+    >
+      <img
+        src={reporter.icon}
+        alt={reporter.name}
+        className={styles.heroReporterIcon}
+      />
+      <h3 className={styles.heroReporterName}>{reporter.name}</h3>
+      <div className={styles.installCommandBox} onClick={handleCopy}>
+        <code className={styles.installCommandText}>{reporter.command}</code>
+        <button
+          className={`${styles.copyIconButton} ${copied ? styles.copied : ''}`}
+          aria-label="Copy install command"
+          type="button"
+        >
+          {copied ? (
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          ) : (
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+            </svg>
+          )}
+        </button>
+      </div>
+    </Link>
+  );
+}
+
 const steps = [
   {
     number: 1,
     title: 'Install the Reporter',
-    description: 'Add Testream to your test framework',
-    code: 'npm install testream-reporter',
+    description: 'Choose your framework and install Testream',
+    code: null,
   },
   {
     number: 2,
