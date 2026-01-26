@@ -73,11 +73,11 @@ function HeroSection() {
             {icons.arrow}
           </Link>
           <Link
-            to="https://github.com/testream"
+            to="https://testream.app"
             className={styles.secondaryButton}
           >
-            {icons.github}
-            View on GitHub
+            Claim Free API Key
+            {icons.arrow}
           </Link>
         </div>
         <div className={styles.heroReportersSection}>
@@ -102,9 +102,9 @@ const features = [
   },
   {
     icon: icons.radar,
-    title: 'Flaky Test Radar',
+    title: 'Comprehensive Test Management',
     description:
-      'Spot unreliable tests before they cause chaos. Track patterns and fix flakiness with data-driven insights.',
+      'Track test cases, analyze trends, spot flaky tests early. Create Jira tickets from failures and improve releases with actionable test insights.',
   },
   {
     icon: icons.sync,
@@ -231,7 +231,7 @@ const steps = [
   {
     number: 3,
     title: 'View in Jira',
-    description: 'Test results appear in your issues',
+    description: 'Track your tests in Jira and create issues and manage releases!',
     code: null,
   },
 ];
