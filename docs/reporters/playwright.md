@@ -23,7 +23,6 @@ export default defineConfig({
   reporter: [
     ['@testream/playwright-reporter', {
       apiKey: process.env.TESTREAM_API_KEY,
-      projectKey: 'PROJ',
       uploadEnabled: true,
     }],
     ['html'],
@@ -36,7 +35,6 @@ export default defineConfig({
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
 | `apiKey` | `string` | - | **Required** Testream API key |
-| `projectKey` | `string` | - | **Required** Jira project key |
 | `uploadEnabled` | `boolean` | `true` | Enable/disable automatic upload |
 | `failOnUploadError` | `boolean` | `false` | Fail the test run if upload fails |
 | `branch` | `string` | auto | Git branch name |
@@ -68,7 +66,6 @@ export default defineConfig({
   reporter: [
     ['@testream/playwright-reporter', {
       apiKey: process.env.TESTREAM_API_KEY,
-      projectKey: 'PROJ',
       uploadEnabled: true,
       failOnUploadError: true,
       branch: process.env.GITHUB_REF_NAME,

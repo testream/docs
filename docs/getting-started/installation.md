@@ -8,7 +8,7 @@ Choose the reporter that matches your testing framework and follow the installat
 
 ## Playwright Reporter
 
-Install the Playwright reporter for automatic CTRF report generation and upload.
+Install the Playwright reporter for automatically uploading your Playwright test results.
 
 ```bash
 npm install --save-dev @testream/playwright-reporter
@@ -30,7 +30,7 @@ pnpm add --save-dev @testream/playwright-reporter
 
 ## Cypress Reporter
 
-Install the Cypress reporter for automatic CTRF report generation and upload.
+Install the Cypress reporter for automatically uploading your Cypress test results.
 
 ```bash
 npm install --save-dev @testream/cypress-reporter cypress-ctrf-json-reporter
@@ -52,7 +52,7 @@ pnpm add --save-dev @testream/cypress-reporter cypress-ctrf-json-reporter
 
 ## Jest Reporter
 
-Install the Jest reporter for automatic CTRF report generation and upload.
+Install the Jest reporter for automatically uploading your Jest test results.
 
 ```bash
 npm install --save-dev @testream/jest-reporter
@@ -74,7 +74,7 @@ pnpm add --save-dev @testream/jest-reporter
 
 ## .NET Reporter
 
-Install the .NET reporter CLI globally for converting .NET test results to CTRF format.
+Install the .NET reporter CLI globally for seamlessly uploading your .NET test results.
 
 ```bash
 npm install -g @testream/dotnet-reporter
@@ -118,9 +118,9 @@ You'll need a Testream API key to upload test results.
 
 1. Visit [testream.app](https://testream.app)
 2. Sign up or log in to your account
-3. Navigate to Settings → API Keys
+3. Navigate to Dashboard → Projects
 4. Create a new API key
-5. Copy and store it securely (e.g., GitHub Secrets, environment variables)
+5. Copy and store it securely (e.g., GitHub Secrets, Key Vaults,environment variables)
 
 ---
 

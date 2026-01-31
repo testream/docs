@@ -24,7 +24,6 @@ module.exports = {
       '@testream/jest-reporter',
       {
         apiKey: process.env.TESTREAM_API_KEY,
-        projectKey: 'PROJ',
         uploadEnabled: true,
       },
     ],
@@ -45,7 +44,6 @@ The reporter will automatically upload results after each test run.
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
 | `apiKey` | `string` | - | **Required** Testream API key |
-| `projectKey` | `string` | - | **Required** Jira project key |
 | `uploadEnabled` | `boolean` | `true` | Enable/disable automatic upload |
 | `failOnUploadError` | `boolean` | `false` | Fail test run if upload fails |
 | `branch` | `string` | auto | Git branch name |
@@ -72,7 +70,6 @@ module.exports = {
       {
         // API Configuration
         apiKey: process.env.TESTREAM_API_KEY,
-        projectKey: process.env.TESTREAM_PROJECT_KEY || 'PROJ',
         
         // Upload Configuration
         uploadEnabled: process.env.CI === 'true',
@@ -117,7 +114,6 @@ module.exports = {
       '@testream/jest-reporter',
       {
         apiKey: process.env.TESTREAM_API_KEY,
-        projectKey: 'PROJ',
       },
     ],
   ],
@@ -136,7 +132,6 @@ module.exports = {
       '@testream/jest-reporter',
       {
         apiKey: process.env.TESTREAM_API_KEY,
-        projectKey: 'PROJ',
         uploadEnabled: process.env.CI === 'true',
         testEnvironment: process.env.CI ? 'ci' : 'local',
       },
@@ -171,7 +166,6 @@ const config: Config = {
       '@testream/jest-reporter',
       {
         apiKey: process.env.TESTREAM_API_KEY!,
-        projectKey: 'PROJ',
         uploadEnabled: true,
         testType: 'unit',
       },
@@ -194,7 +188,6 @@ module.exports = {
       '@testream/jest-reporter',
       {
         apiKey: process.env.TESTREAM_API_KEY,
-        projectKey: process.env.TESTREAM_PROJECT_KEY,
         uploadEnabled: process.env.TESTREAM_UPLOAD_ENABLED === 'true',
         failOnUploadError: process.env.TESTREAM_FAIL_ON_ERROR === 'true',
         branch: process.env.TESTREAM_BRANCH,
@@ -238,7 +231,6 @@ jobs:
       - name: Run tests with Testream reporter
         env:
           TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
-          TESTREAM_PROJECT_KEY: PROJ
         run: npm test
 ```
 
@@ -268,7 +260,6 @@ jobs:
       - name: Run tests
         env:
           TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
-          TESTREAM_PROJECT_KEY: PROJ
           TESTREAM_UPLOAD_ENABLED: 'true'
           TESTREAM_BRANCH: ${{ github.ref_name }}
           TESTREAM_COMMIT_SHA: ${{ github.sha }}

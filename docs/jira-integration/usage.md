@@ -167,25 +167,6 @@ Monitor key metrics:
 - **Failure Trends** - Number of failing tests over time
 - **New Failures** - Recently broken tests
 
-## Notifications
-
-Stay informed about test results:
-
-### Jira Notifications
-
-- Test failures on linked issues
-- New test runs completed
-- Flaky test alerts
-
-### Email Notifications
-
-Configure in Testream dashboard:
-1. Go to Settings → Notifications
-2. Enable email alerts for:
-   - Test failures
-   - Flaky tests detected
-   - Daily/weekly summaries
-
 ## Best Practices
 
 ### Issue Linking
@@ -229,58 +210,6 @@ Configure in Testream dashboard:
 ### Who Can View Test Results?
 
 By default, anyone with access to the Jira issue can view test results.
-
-### Who Can Link Tests?
-
-- Project administrators
-- Users with "Edit Issues" permission
-- Testream account owners
-
-### Configuring Permissions
-
-1. Go to Jira **Settings** → **Apps** → **Testream**
-2. Click **"Permissions"**
-3. Configure:
-   - Who can view test results
-   - Who can link/unlink tests
-   - Who can configure settings
-
-## Troubleshooting
-
-### No test results appearing
-
-**Check:**
-- Tests are actually being uploaded to Testream
-- Issue key is correctly referenced in commits/branches
-- Testream app is connected to your account
-- Jira issue is in the correct project
-
-### Artifacts not loading
-
-**Possible causes:**
-- Artifacts not uploaded with test results
-- Network issues
-- Artifacts expired (check retention policy)
-
-**Solution:**
-- Verify `uploadArtifacts: true` in reporter config
-- Check artifact file sizes (large files may take time)
-- Contact support if artifacts are missing
-
-### Test runs not updating
-
-**Try:**
-- Refresh the page
-- Check if test runs are completing in Testream dashboard
-- Verify webhook connections in settings
-
-### Slow performance
-
-**Solutions:**
-- Reduce date range in filters
-- Limit number of displayed test runs
-- Clear browser cache
-- Check Jira instance performance
 
 ## Getting Help
 

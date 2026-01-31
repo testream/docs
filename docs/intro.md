@@ -39,16 +39,16 @@ Upload test results and artifacts with minimal configuration:
 - uses: testream/upload-action@v0.4.1
   with:
     report-path: ctrf/ctrf-report.json
-    project-key: ${{ secrets.TESTREAM_PROJECT_KEY }}
+    test-tool: playwright
     api-key: ${{ secrets.TESTREAM_API_KEY }}
 ```
 
 Or use the CLI directly:
 
 ```bash
-npx @testream/upload-action \\
-  --report-path ctrf/ctrf-report.json \\
-  --project-key PROJ \\
+npx @testream/upload-action \
+  --report-path ctrf/ctrf-report.json \
+  --test-tool playwright \
   --api-key $TESTREAM_API_KEY
 ```
 

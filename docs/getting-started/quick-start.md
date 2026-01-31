@@ -36,7 +36,6 @@ export default defineConfig({
   reporter: [
     ['@testream/playwright-reporter', {
       apiKey: process.env.TESTREAM_API_KEY,
-      projectKey: 'PROJ',
       uploadEnabled: true,
     }],
 
@@ -142,7 +141,7 @@ You can also run tests first and upload results separately using the GitHub Acti
   run: |
     npx @testream/upload-action \
       --report-path ctrf/ctrf-report.json \
-      --project-key PROJ \
+      --test-tool playwright \
       --api-key ${{ secrets.TESTREAM_API_KEY }}
 ```
 

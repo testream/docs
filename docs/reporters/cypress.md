@@ -19,13 +19,13 @@ npm install --save-dev @testream/cypress-reporter cypress-ctrf-json-reporter
 The easiest way to get started is using the CLI:
 
 ```bash
-npx @testream/cypress-reporter -p PROJ -k $TESTREAM_API_KEY
+npx @testream/cypress-reporter -k $TESTREAM_API_KEY
 ```
 
 This single command will:
 1. Run your Cypress tests
 2. Generate a CTRF report automatically
-3. Upload results to Testream
+3. Upload results to Testream (project key inferred from API key)
 
 ### Option 2: Programmatic Configuration
 
@@ -41,7 +41,6 @@ export default defineConfig({
       new TestreamReporter({
         on,
         apiKey: process.env.TESTREAM_API_KEY,
-        projectKey: 'PROJ',
         uploadEnabled: true,
       });
     },
@@ -59,7 +58,6 @@ cypress run
 
 | Option | Description |
 | --- | --- |
-| `-p, --project-key` | **Required** Jira project key |
 | `-k, --api-key` | **Required** API key (unless `--no-upload` is used) |
 | `--project <path>` | Path to Cypress project (defaults to current directory) |
 | `--results-path <path>` | Use existing CTRF file(s) instead of running tests |
@@ -85,7 +83,6 @@ When using programmatic configuration, these options are available:
 | --- | --- | --- | --- |
 | `on` | `PluginEvents` | - | **Required** Cypress plugin events object |
 | `apiKey` | `string` | - | **Required** Testream API key |
-| `projectKey` | `string` | - | **Required** Jira project key |
 | `uploadEnabled` | `boolean` | `true` | Enable/disable automatic upload |
 | `failOnUploadError` | `boolean` | `false` | Fail test run if upload fails |
 | `outputDir` | `string` | `ctrf` | CTRF output directory |
@@ -110,19 +107,19 @@ When using programmatic configuration, these options are available:
 ### Run tests and upload
 
 ```bash
-npx @testream/cypress-reporter -p PROJ -k $TESTREAM_API_KEY
+npx @testream/cypress-reporter -k $TESTREAM_API_KEY
 ```
 
 ### Run tests from a specific project directory
 
 ```bash
-npx @testream/cypress-reporter -p PROJ -k $TESTREAM_API_KEY --project ./e2e
+npx @testream/cypress-reporter -k $TESTREAM_API_KEY --project ./e2e
 ```
 
 ### Pass additional arguments to Cypress
 
 ```bash
-npx @testream/cypress-reporter -p PROJ -k $TESTREAM_API_KEY -- --spec "cypress/e2e/**/*.cy.js"
+npx @testream/cypress-reporter -k $TESTREAM_API_KEY -- --spec "cypress/e2e/**/*.cy.js"
 ```
 
 ### Use existing CTRF results
@@ -130,14 +127,13 @@ npx @testream/cypress-reporter -p PROJ -k $TESTREAM_API_KEY -- --spec "cypress/e
 If you've already run your tests and have CTRF reports:
 
 ```bash
-npx @testream/cypress-reporter -p PROJ -k $TESTREAM_API_KEY --results-path ctrf/ctrf-report.json
+npx @testream/cypress-reporter -k $TESTREAM_API_KEY --results-path ctrf/ctrf-report.json
 ```
 
 ### Add full metadata
 
 ```bash
 npx @testream/cypress-reporter \
-  -p PROJ \
   -k $TESTREAM_API_KEY \
   --branch $GITHUB_REF_NAME \
   --commit-sha $GITHUB_SHA \
@@ -167,7 +163,6 @@ export default defineConfig({
         on,
         // API Configuration
         apiKey: process.env.TESTREAM_API_KEY,
-        projectKey: 'PROJ',
 
         // Upload Configuration
         uploadEnabled: true,
@@ -232,10 +227,8 @@ jobs:
       - name: Run Cypress tests and upload
         env:
           TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
-          TESTREAM_PROJECT_KEY: PROJ
         run: |
           npx @testream/cypress-reporter \
-            -p $TESTREAM_PROJECT_KEY \
             -k $TESTREAM_API_KEY \
             --test-environment ci \
             --app-name MyApp \

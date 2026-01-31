@@ -19,23 +19,21 @@ npm install -g @testream/dotnet-reporter
 ## Quick Start
 
 ```bash
-npx @testream/dotnet-reporter -p PROJ -k $TESTREAM_API_KEY
+npx @testream/dotnet-reporter -k $TESTREAM_API_KEY
 ```
 
 This single command will:
 1. Run `dotnet test`
 2. Generate a CTRF report
-3. Upload to Testream
+3. Upload to Testream (project key inferred from API key)
 
 ## CLI Options
 
 | Option | Description |
 | --- | --- |
-| `-p, --project-key` | **Required** Jira project key |
 | `-k, --api-key` | **Required** API key (unless `--no-upload` is used) |
 | `--project <path>` | Path to .NET project or solution (defaults to current directory) |
 | `--trx-path <path>` | Use existing TRX file(s) instead of running tests |
-| `--test-tool <name>` | Override detected test framework (`xunit`, `nunit`, `mstest`) |
 | `--branch <name>` | Git branch name (auto-detected in CI) |
 | `--commit-sha <sha>` | Git commit SHA (auto-detected in CI) |
 | `--repository-url <url>` | Git repository URL (auto-detected in CI) |
@@ -55,32 +53,31 @@ This single command will:
 ### Run tests and upload
 
 ```bash
-npx @testream/dotnet-reporter -p PROJ -k $TESTREAM_API_KEY
+npx @testream/dotnet-reporter -k $TESTREAM_API_KEY
 ```
 
 ### Use a specific project or solution
 
 ```bash
-npx @testream/dotnet-reporter -p PROJ -k $TESTREAM_API_KEY --project ./MySolution.sln
+npx @testream/dotnet-reporter -k $TESTREAM_API_KEY --project ./MySolution.sln
 ```
 
 ### Pass extra `dotnet test` arguments
 
 ```bash
-npx @testream/dotnet-reporter -p PROJ -k $TESTREAM_API_KEY -- --filter "Category=Unit"
+npx @testream/dotnet-reporter -k $TESTREAM_API_KEY -- --filter "Category=Unit"
 ```
 
 ### Use existing TRX files
 
 ```bash
-npx @testream/dotnet-reporter -p PROJ -k $TESTREAM_API_KEY --trx-path TestResults/*.trx
+npx @testream/dotnet-reporter -k $TESTREAM_API_KEY --trx-path TestResults/*.trx
 ```
 
 ### Add full metadata
 
 ```bash
 npx @testream/dotnet-reporter \
-  -p PROJ \
   -k $TESTREAM_API_KEY \
   --branch $GITHUB_REF_NAME \
   --commit-sha $GITHUB_SHA \
@@ -120,10 +117,8 @@ jobs:
       - name: Run tests and upload
         run: |
           npx @testream/dotnet-reporter \
-            -p ${{ secrets.TESTREAM_PROJECT_KEY }} \
             -k ${{ secrets.TESTREAM_API_KEY }} \
             --project ./MySolution.sln \
-            --test-tool xunit \
             --test-environment ci \
             --app-name MyApp \
             --app-version 1.0.0 \
