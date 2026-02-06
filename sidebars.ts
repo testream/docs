@@ -33,6 +33,7 @@ const sidebars: SidebarsConfig = {
       label: 'Jira Integration',
       items: [
         'jira-integration/installation',
+        'jira-integration/overview',
         'jira-integration/usage',
       ],
     },

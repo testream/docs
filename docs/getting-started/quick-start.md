@@ -170,5 +170,5 @@ You can also run tests first and upload results separately using the GitHub Acti
 
 - Learn about [Playwright reporter options](../reporters/playwright)
 - Set up [CI/CD integrations](../ci-integrations/setup) for automated uploads
-- Set up [Jira integration](../jira-integration/installation) to view results in Jira
+- Set up [Jira integration](../jira-integration/overview) to view results in Jira
 - Check out [.NET reporter](../reporters/dotnet) if you're testing .NET applications

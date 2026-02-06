@@ -20,4 +20,4 @@ Official documentation for the Testream test management platform.
 
 ## Support
 
-- Email: support@testream.app
+- Email: contact@testream.app

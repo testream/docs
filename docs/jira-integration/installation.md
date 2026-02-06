@@ -2,131 +2,134 @@
 sidebar_position: 1
 ---
 
-# Jira Integration - Installation
+# Installation
 
-Integrate Testream with Jira to view test results, trends, and artifacts directly in your Jira issues and projects.
+Integrate Testream with Jira to view test results, trends, and artifacts directly in your Jira workspace.
 
 ## Prerequisites
 
 - Jira Cloud instance (Atlassian Cloud)
-- Jira administrator or permission to install apps
-- Active Testream account
+- Jira administrator permission to install apps (or ability to request app installation)
+- Active Testream account with a test project
 
-## Step 1: Install the Forge App
+## Step 1: Install from Atlassian Marketplace
 
-### From Atlassian Marketplace
+### For Jira Administrators
 
 1. Log in to your Jira instance as an administrator
-2. Go to **Settings** → **Apps** → **Find new apps**
-3. Search for **"Testream"** in the marketplace
-4. Click on the Testream app
-5. Click **"Get it now"** or **"Try it free"**
-6. Follow the installation prompts
-7. Accept the permissions requested by the app
+2. Click the **Apps** dropdown in the top navigation bar
+3. Select **"Explore new apps"** (or **"Find new apps"**)
+4. In the search box, type **"Testream for Jira"**
+5. Click on the **Testream for Jira** app tile in the search results
+6. Click the **"Get app"** button
+7. Wait for the installation success message to appear
 
-### Required Permissions
+The app will be installed and enabled automatically for your entire Jira workspace.
 
-The Testream Forge app requires the following permissions:
+### For Non-Administrators
 
-- **Read project data** - To display test results in project contexts
-- **Read issue data** - To show test results linked to issues
-- **Write issue data** - To add test result panels to issues
-- **Storage** - To cache test data for performance
+If you don't have admin permissions:
 
-These permissions are necessary for the app to function correctly and display test information.
+1. Navigate to **Apps** → **Explore new apps**
+2. Search for **"Testream for Jira"**
+3. Click **"Request installation"**
+4. Your Jira administrator will receive a notification to approve the installation
 
-## Step 2: Connect Your Testream Account
+## Step 2: Get Your Testream API Key
 
-After installing the app, you need to connect it to your Testream account:
+Before you can view test data in Jira, you need an API key from Testream:
 
-1. In Jira, go to any project
-2. Look for the **Testream** menu item in the project sidebar
-3. Click **"Connect to Testream"**
-4. You'll be redirected to testream.app to authenticate
-5. Log in to your Testream account
-6. Authorize the Jira integration
-7. You'll be redirected back to Jira
+1. Visit [testream.app/projects](https://testream.app/projects)
+2. Log in to your Testream account (or create one if needed)
+3. Create a test project or select an existing one
+4. Navigate to **Settings** → **API Keys**
+5. Click **"Generate New API Key"**
+6. Copy the API key immediately (it won't be shown again)
+7. Store it securely - you'll need it in the next step
 
-Alternatively:
+## Step 3: Configure API Key in Jira
 
-1. Go to **Settings** → **Apps** → **Manage apps**
-2. Find "Testream" in the list
-3. Click **"Configure"**
-4. Follow the connection wizard
+Now connect your Jira workspace to Testream using the API key:
 
-## Step 3: Configure API Key (Optional)
+1. In Jira, click **Apps** in the top navigation
+2. Select **Testream for Jira** from the dropdown (or find it in the sidebar)
+3. You'll see the API Key Management screen:
 
-If you want to use organization-wide settings:
+![API Key Management](/img/jira/Welcome-Screenshot.png)
 
-1. In Jira, go to **Settings** → **Apps** → **Manage apps**
-2. Find "Testream" and click **Configure**
-3. Enter your Testream API key (from testream.app → Settings → API Keys)
-4. Click **Save**
+4. Click the **"Add API Key"** button
+5. Paste your Testream API key into the input field
+6. Click **"Save"** or **"Connect"**
 
-This allows all users in your Jira instance to view test results without individual authentication.
+Once connected, test data from your Testream projects will start appearing in Jira.
 
 ## Step 4: Verify Installation
 
-### Check App Status
+After completing the setup, verify everything is working:
 
-1. Go to **Settings** → **Apps** → **Manage apps**
-2. Find "Testream" in the list
-3. Status should show **"Enabled"**
+1. Navigate to **Apps** → **Testream for Jira** in your Jira workspace
+2. You should see the dashboard with test metrics (if you have test data)
+3. If you see test runs and statistics, the integration is working correctly
 
-### Test the Integration
+If you don't see any data yet, run your tests with a Testream reporter configured, and results will appear within minutes.
 
-1. Create or open a Jira issue
-2. Look for the **"Testream"** panel in the issue view
-3. You should see:
-   - "Connect to Testream" button (if not connected)
-   - Or test results panel (if tests have been linked)
-
-## Troubleshooting Installation
+## Troubleshooting
 
 ### App not appearing in marketplace
 
 **Possible causes:**
-- App not yet published to marketplace (check with Testream support)
-- Your Jira instance doesn't allow Forge apps
-- Network or firewall restrictions
+- Your Jira instance is not on Atlassian Cloud (Server/Data Center not supported)
+- Network or firewall restrictions blocking marketplace access
+- Regional availability limitations
 
 **Solution:**
-- Contact Testream support at [support@testream.app](mailto:support@testream.app)
-- Check with your Jira administrator about app installation policies
+- Verify you're using Jira Cloud at `*.atlassian.net`
+- Contact your IT team about marketplace access
+- Reach out to Testream support at [contact@testream.app](mailto:contact@testream.app)
 
 ### Installation fails
 
-**Check:**
-- You have administrator permissions in Jira
-- Your Jira instance is on Atlassian Cloud (not Server/Data Center)
-- No conflicting apps are installed
+**Common issues:**
+- Missing administrator permissions in Jira
+- Organization policies blocking new app installations
+- Browser extensions interfering with installation
 
-### Connection to Testream fails
-
-**Solutions:**
-- Verify your Testream account is active
-- Check that you're logged into the correct Testream account
-- Try clearing browser cache and cookies
-- Disable browser extensions that might interfere
+**Solution:**
+- Confirm you have Jira administrator role
+- Request installation approval from your Jira admin
+- Try installation in an incognito/private browser window
 
 ### API Key not working
 
 **Check:**
-- API key is copied correctly (no extra spaces)
-- API key is not expired
-- API key has correct permissions
-- Generate a new key if needed
+- API key copied correctly without extra spaces or line breaks
+- API key generated from the correct Testream project
+- API key not revoked or expired in Testream settings
+
+**Solution:**
+- Copy the API key again directly from Testream
+- Generate a fresh API key and try again
+- Verify the key in Testream Settings → API Keys shows as active
+
+### No test data appearing
+
+**If the app is installed but shows no data:**
+- Test results must be uploaded to Testream first using a reporter
+- Configure an reporter that is compatible with your test suite (e.g., Playwright, Jest, etc.)
+- Run your tests with the reporter configured
+- Wait a few minutes for data to sync to Jira
 
 ## Uninstalling
 
-To remove the Testream app:
+To remove the Testream for Jira app:
 
-1. Go to **Settings** → **Apps** → **Manage apps**
-2. Find "Testream" in the list
-3. Click **"Uninstall"**
-4. Confirm the uninstallation
+1. Go to **Apps** → **Manage apps** (requires Jira admin permissions)
+2. Find **"Testream for Jira"** in the installed apps list
+3. Click the settings icon next to the app
+4. Select **"Uninstall"**
+5. Confirm the uninstallation when prompted
 
-**Note:** This will remove all Testream panels from issues, but your test data remains in Testream.
+**Note:** Uninstalling removes the Jira integration, but your test data remains safely stored in Testream and can be viewed at [testream.app](https://testream.app).
 
 ## What's Next?
 

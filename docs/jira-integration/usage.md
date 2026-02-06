@@ -1,222 +1,225 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Jira Integration - Usage
+# Usage
 
-Learn how to view and manage test results in Jira using the Testream integration.
+Learn how to view test results, debug failures, track trends, and create issues directly in Jira using the Testream integration.
+
+## Accessing the Dashboard
+
+After installation and configuration, access Testream in Jira:
+
+1. Click **Apps** in the top navigation bar
+2. Select **Testream for Jira** from the dropdown menu
+
+Alternatively, you may find Testream in your project sidebar depending on your Jira configuration.
 
 ## Dashboard Overview
 
-After installing and connecting the Testream app, you can access test data in multiple ways within Jira.
+The main dashboard provides a comprehensive view of your test health:
 
-## Viewing Test Results in Issues
+![Dashboard Overview](/img/jira/Dashboard-Screenshot.png)
 
-### Issue Panel
+### Test Metrics Cards
 
-When you open a Jira issue, the Testream panel appears showing:
+At the top of the dashboard, you'll see key metrics:
 
-- **Linked Test Runs** - All test executions associated with this issue
-- **Test Summary** - Pass/fail counts and success rate
-- **Recent Results** - Latest test run results
-- **Trends** - Historical test performance
+- **Total Tests** - Complete count of all tests in your suite
+- **Pass Rate** - Overall success percentage
+- **Failed Tests** - Number of currently failing tests
+- **Skipped Tests** - Count of intentionally skipped tests
+- **Flaky Tests** - Tests with inconsistent pass/fail behavior
 
-### How Tests Get Linked to Issues
+### Test Results Distribution
 
-Tests are automatically linked to Jira issues when:
+The donut chart visualizes your test results breakdown showing passed, failed, and skipped tests. This provides an at-a-glance view of test suite health.
 
-1. Your commit message includes the issue key (e.g., `PROJECT-123`)
-2. Your branch name includes the issue key (e.g., `feature/PROJECT-123-new-feature`)
-3. You manually link tests in the Testream dashboard
+### Recent Test Runs
 
-Example commit message:
-```bash
-git commit -m "PROJECT-123: Add user authentication tests"
-```
+Below the metrics, you'll find a chronological list of recent test executions showing:
+- Test run timestamp
+- Duration
+- Pass/fail counts
+- Quick action buttons
 
-## Project Dashboard
+### Action Buttons
 
-Access the project-wide test dashboard:
+- **Releases** - Navigate to release-specific test results
+- **View Trends** - Access analytics and historical data
+- **View All Runs** - See complete test run history
 
-1. Navigate to your Jira project
-2. Click **"Testream"** in the project sidebar
-3. View:
-   - All test runs for the project
-   - Test trends over time
-   - Flaky test detection
-   - Test coverage metrics
+## Viewing Test Run Details
 
-### Dashboard Features
+Click on any test run to see comprehensive details:
 
-#### Test Runs List
+![Test Run Details](/img/jira/Test-Run-Details-Screenshot.png)
 
-- View all test executions chronologically
-- Filter by status (passed, failed, pending)
-- Filter by date range
-- Search by test name or suite
+### Metadata Section
 
-#### Test Trends
+Each test run includes detailed context:
 
-- Success rate over time
-- Test duration trends
-- Failure patterns
-- Identify flaky tests
+- **Branch** - Git branch where tests ran
+- **Duration** - Total execution time
+- **Started** - Timestamp of test execution
+- **Tool** - Test framework used (Playwright, Jest, .NET, etc.)
+- **Commit** - Git commit hash with link to repository
+- **Environment** - Test environment (staging, production, etc.)
 
-#### Test Details
+### Results Summary
 
-Click on any test run to see:
+View aggregate statistics:
+- Number of passed tests
+- Number of failed tests
+- Number of skipped tests
+- Overall success rate
 
-- Individual test results
-- Error messages and stack traces
-- Execution time
-- Environment information
-- Linked artifacts
+### Release Linking
 
-## Viewing Artifacts
+Associate test runs with Jira release versions using the **"Link to Release"** button. This helps track quality per release cycle.
 
-Test artifacts (screenshots, videos, traces) are available directly in Jira:
+### Failed Tests List
 
-### In Issue Panel
+All failed tests are listed with:
+- Test name
+- Error message preview
+- **"Create Issue"** button for each failure
 
-1. Open an issue with test results
-2. Scroll to the Testream panel
-3. Click on a failed test
-4. View attached artifacts:
-   - Screenshots
-   - Videos
-   - Traces
+## Inspecting Failed Tests
 
-### Download Artifacts
+Click on a failed test to see detailed diagnostic information:
 
-1. Click on any artifact thumbnail
-2. Preview or download the file
-3. Share with team members
+![Failed Test Details](/img/jira/Failed-Test-Screenshot.png)
 
-## Linking Tests Manually
+### Error Messages
 
-To manually link test results to issues:
+Clear, formatted error output explaining why the test failed.
 
-### Option 1: From Testream Dashboard
+### Stack Traces
 
-1. Log in to [testream.app](https://testream.app)
-2. Go to **Test Runs**
-3. Select a test run
-4. Click **"Link to Jira"**
-5. Enter the issue key (e.g., `PROJECT-123`)
-6. Click **"Link"**
+Expandable stack trace sections showing:
+- File paths with line numbers
+- Function call hierarchy
+- Error propagation
 
-### Option 2: From Jira Issue
+### Artifacts
 
-1. Open the Jira issue
-2. Go to the Testream panel
-3. Click **"Link Test Run"**
-4. Select from recent test runs
-5. Click **"Link"**
+Visual debugging aids captured during test execution:
 
-## Real-Time Updates
+- **Screenshots** - Visual state at failure point
+- **Videos** - Recording of test execution
+- **Trace Files** - Detailed execution traces (Playwright trace viewer compatible)
 
-The Testream panel updates automatically when:
+Artifacts appear as thumbnail previews that you can click to view full-size or download.
 
-- New test runs complete
-- Test status changes
-- Artifacts are uploaded
+## Creating Jira Issues from Failed Tests
 
-No need to refresh the page!
+Streamline bug reporting by creating issues directly from test failures:
 
-## Filtering and Searching
+![Create Issue Modal](/img/jira/Create-Issue-From-Failed-Test-Screenshot.png)
 
-### In Issue Panel
+### Steps to Create an Issue
 
-Filter test results by:
+1. Click the **"Create Issue"** button next to any failed test
+2. Review the pre-filled issue form:
+   - **Summary** - Auto-populated with test name
+   - **Description** - Includes error message and test context
+   - **Project** - Select destination Jira project
+   - **Issue Type** - Choose Bug, Task, etc.
+3. The following custom fields are automatically populated:
+   - **Test Run ID** - Links back to the specific test execution
+   - **Test Name** - Full test identifier
+   - **Environment** - Where the test failed (staging, production, etc.)
+4. Click **"Create"** to generate the issue
 
-- Status (passed, failed, skipped)
-- Date range
-- Test suite
-- Environment
+The created issue will contain all context needed for developers to investigate and fix the failure.
 
-### In Project Dashboard
+## Tracking Trends & Analytics
 
-Advanced filtering:
-- Test framework (Playwright, .NET, Jest)
-- Branch name
-- Commit SHA
-- Author
-- Tags
+Navigate to the Trends section to analyze test performance over time:
 
-## Working with Test Trends
+![Trends and Analytics](/img/jira/Trends-Screenshot-1.png)
 
-### Identify Flaky Tests
+### Date Range Selection
 
-1. Navigate to Project Dashboard → **Trends**
-2. Look for tests with:
-   - Inconsistent pass/fail patterns
-   - Multiple retries
-   - Recent failures after long success streaks
+Use the date picker to analyze trends for specific time periods:
+- Last 7 days
+- Last 30 days
+- Custom date ranges
 
-3. Click on a flaky test to see:
-   - Failure rate
-   - Recent executions
-   - Common error messages
+### Test Results Trends Chart
 
-### Track Test Health
+The line chart displays pass percentage, fail percentage, skip percentage, and flaky percentage trends over time. Hover over data points to see exact values for any date.
 
-Monitor key metrics:
+### Additional Metrics
 
-- **Overall Success Rate** - Percentage of passing tests
-- **Average Duration** - Test execution time trends
-- **Failure Trends** - Number of failing tests over time
-- **New Failures** - Recently broken tests
+Depending on your configuration, you may also see:
+- Test suite growth over time
+- Average test duration trends
+- Failure pattern analysis
+
+## Managing Releases
+
+Track test quality across your release cycle:
+
+![Releases View](/img/jira/Releases-Screenshot.png)
+
+### Releases Page Features
+
+- **Release List** - All Jira releases with associated test runs
+- **Test Run Count** - Number of test executions per release
+- **Quality Metrics** - Pass rate for each release version
+- **Filter by Release** - Click any release to see only its test runs
+
+### Linking Test Runs to Releases
+
+From any test run detail page:
+
+1. Click the **"Link to Release"** button
+2. Select a Jira release version from the dropdown
+3. The test run will now appear filtered under that release
+
+This helps teams assess release readiness and track quality gates.
 
 ## Best Practices
 
-### Issue Linking
+### Daily Usage
 
-**DO:**
-- Include issue keys in commit messages
-- Use conventional branch naming (e.g., `feature/PROJECT-123`)
-- Link critical tests manually if needed
+- Check the dashboard each morning to spot new failures
+- Review flaky tests weekly and prioritize fixes
+- Use the pass rate trend to gauge test suite stability
 
-**DON'T:**
-- Create too many manual links (automate instead)
-- Link unrelated tests to issues
-- Forget to update links when refactoring
+### Debugging Failures
 
-### Dashboard Usage
+- Always check error messages first before diving into artifacts
+- Download screenshots and videos for failures that are hard to reproduce
+- Use stack traces to identify the exact line of code causing failures
+- Share artifact links with team members in issue comments
 
-**DO:**
-- Review test trends regularly
-- Investigate flaky tests promptly
-- Share dashboard with team in standups
-- Use filters to focus on relevant data
+### Release Management
 
-**DON'T:**
-- Ignore consistent failures
-- Let flaky tests accumulate
-- Use dashboard as the only source of truth (check detailed logs)
+- Link test runs to releases as part of your release checklist
+- Review release-specific test results before deployment
+- Track pass rate trends leading up to release dates
+- Use release filters to compare quality across versions
 
-### Artifact Management
+### Team Collaboration
 
-**DO:**
-- Upload artifacts for failed tests
-- Download artifacts before they expire
-- Share artifact links in issue comments
-
-**DON'T:**
-- Upload unnecessary artifacts (increases storage costs)
-- Rely solely on artifacts without reading error messages
+- Create Jira issues for persistent failures to track fixes
+- Share the dashboard URL in standup meetings
+- Add test run links to pull request descriptions
+- Use custom fields in issues to maintain traceability
 
 ## Permissions
 
-### Who Can View Test Results?
-
-By default, anyone with access to the Jira issue can view test results.
+By default, any Jira user who can access the workspace can view Testream data. Contact your Jira administrator if you need to restrict access.
 
 ## Getting Help
 
-If you encounter issues:
+If you encounter issues or have questions:
 
-- Email: [support@testream.app](mailto:support@testream.app)
-- Documentation: [docs](/)
+- Email: [contact@testream.app](mailto:contact@testream.app)
+- Documentation: [Read the docs](/)
 - Report bugs: [GitHub Issues](https://github.com/testream/docs/issues)
 
 ## What's Next?

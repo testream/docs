@@ -54,12 +54,16 @@ npx @testream/upload-action \
 
 ### Jira Dashboard
 
-Install the Testream Forge app in Jira to view:
+Install the Testream for Jira app to access:
 
-- Test execution results linked to issues
-- Test trends and historical data
-- Artifact downloads (screenshots, videos, traces)
-- Real-time test status updates
+- **Test health metrics** - Pass rate, failed tests, and flaky test detection
+- **Detailed test runs** - View results with branch, commit, and environment metadata
+- **Create issues from failures** - One-click bug creation with pre-filled context
+- **Rich debugging artifacts** - Screenshots, videos, and trace files inline
+- **Trends & analytics** - Track test performance over time
+- **Release management** - Filter and assess quality by release version
+
+[Learn more about the Jira integration](./jira-integration/overview)
 
 ## Getting Started
 
@@ -71,6 +75,6 @@ Ready to integrate Testream? Choose your path:
 
 ## Need Help?
 
- - Email: [support@testream.app](mailto:support@testream.app)
+ - Email: [contact@testream.app](mailto:contact@testream.app)
  - Issues: [GitHub Issues](https://github.com/testream/docs/issues)
  - Website: [testream.app](https://testream.app)
