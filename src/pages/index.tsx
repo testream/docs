@@ -52,6 +52,7 @@ const frameworks = [
   { name: 'Jest', icon: 'https://ctrf.io/img/jest.svg' },
   { name: 'Cypress', icon: 'https://ctrf.io/img/cypress.svg' },
   { name: '.NET', icon: 'https://ctrf.io/img/dotnet.svg' },
+  { name: 'WebdriverIO', icon: 'https://ctrf.io/img/wdio.svg' },
   { name: 'CI/CD CLI', icon: 'img/command-line-icon.png' },
 ];
 
@@ -64,7 +65,7 @@ function HeroSection() {
           <span className={styles.heroTitleAccent}>Every Test.</span>
         </h1>
         <p className={styles.heroSubtitle}>
-          Centralize results from Playwright, Jest, Cypress, and .NET.
+          Centralize results from Playwright, Jest, Cypress, WebdriverIO, and .NET.
           Track trends and kill flaky tests—synced to Jira.
         </p>
         <div className={styles.heroButtons}>
@@ -137,31 +138,37 @@ const reporters = [
   {
     name: 'Playwright',
     icon: 'https://ctrf.io/img/playwright.svg',
-    command: 'npm i @testream/playwright-reporter',
+    command: 'npm i -D @testream/playwright-reporter',
     docsLink: '/reporters/playwright',
   },
   {
     name: 'Jest',
     icon: 'https://ctrf.io/img/jest.svg',
-    command: 'npm i @testream/jest-reporter',
+    command: 'npm i -D @testream/jest-reporter',
     docsLink: '/reporters/jest',
   },
   {
     name: 'Cypress',
     icon: 'https://ctrf.io/img/cypress.svg',
-    command: 'npm i @testream/cypress-reporter',
+    command: 'npm i -D @testream/cypress-reporter',
     docsLink: '/reporters/cypress',
   },
   {
     name: '.NET',
     icon: 'https://ctrf.io/img/dotnet.svg',
-    command: 'npm i @testream/dotnet-reporter',
+    command: 'npm i -D @testream/dotnet-reporter',
     docsLink: '/reporters/dotnet',
+  },
+  {
+    name: 'WebdriverIO',
+    icon: 'https://ctrf.io/img/wdio.svg',
+    command: 'npm i -D @testream/webdriverio-reporter',
+    docsLink: '/reporters/webdriverio',
   },
   {
     name: 'CI/CD CLI',
     icon: 'img/command-line-icon.png',
-    command: 'npm i @testream/cli',
+    command: 'npm i -D @testream/cli',
     docsLink: '/ci-integrations/setup',
   },
 ];

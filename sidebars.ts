@@ -19,6 +19,7 @@ const sidebars: SidebarsConfig = {
         'reporters/dotnet',
         'reporters/cypress',
         'reporters/jest',
+        'reporters/webdriverio',
       ],
     },
     {

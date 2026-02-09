@@ -96,6 +96,28 @@ npx @testream/dotnet-reporter --file TestResults.trx
 
 ---
 
+## WebdriverIO Reporter
+
+Install the WebdriverIO reporter for automatically uploading your WebdriverIO test results.
+
+```bash
+npm install --save-dev @testream/webdriverio-reporter wdio-ctrf-json-reporter
+```
+
+Or with other package managers:
+
+```bash
+# Yarn
+yarn add --dev @testream/webdriverio-reporter wdio-ctrf-json-reporter
+
+# pnpm
+pnpm add --save-dev @testream/webdriverio-reporter wdio-ctrf-json-reporter
+```
+
+**Next Step:** Configure the reporter in your `wdio.conf.ts` - see [WebdriverIO Documentation](../reporters/webdriverio).
+
+---
+
 ## Requirements
 
 ### Node.js Version

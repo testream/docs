@@ -115,5 +115,6 @@ Playwright artifacts (screenshots, videos, traces) are uploaded automatically wh
 - Learn about the [.NET Reporter](./dotnet)
 - Learn about the [Cypress Reporter](./cypress)
 - Learn about the [Jest Reporter](./jest)
+- Learn about the [WebdriverIO Reporter](./webdriverio)
 - Set up [CI/CD integrations](../ci-integrations/setup)
 - View results in [Jira](../jira-integration/usage)
