@@ -135,4 +135,4 @@ To remove the Testream for Jira app:
 
 - Learn how to [use the integration](./usage) to view test results
 - Configure [test reporters](../reporters/playwright) to send data to Testream
-- Set up [CI/CD integrations](../ci-integrations/setup) for automated uploads
+- Set up [CLI Reporter](../reporters/cli) for automated uploads

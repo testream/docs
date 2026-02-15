@@ -153,5 +153,5 @@ In CI environments like GitHub Actions, GitLab CI, and CircleCI, git context (br
 - Learn about the [Cypress Reporter](./cypress)
 - Learn about the [Jest Reporter](./jest)
 - Learn about the [.NET Reporter](./dotnet)
-- Set up [CI/CD integrations](../ci-integrations/setup)
+- Set up [CLI Reporter](./cli)
 - View results in [Jira](../jira-integration/usage)

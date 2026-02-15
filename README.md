@@ -11,7 +11,7 @@ Official documentation for the Testream test management platform.
 
 - Playwright Reporter: https://testream.github.io/reporters/playwright
 - .NET Reporter: https://testream.github.io/reporters/dotnet
-- CI/CD Integrations: https://testream.github.io/ci-integrations/setup
+- CLI Reporter: https://testream.github.io/reporters/cli
 - Jira Integration: https://testream.github.io/jira-integration/installation
 
 ## Packages

@@ -20,13 +20,20 @@ const sidebars: SidebarsConfig = {
         'reporters/cypress',
         'reporters/jest',
         'reporters/webdriverio',
+        'reporters/cli',
       ],
     },
     {
       type: 'category',
-      label: 'CI/CD Integrations',
+      label: 'Features',
       items: [
-        'ci-integrations/setup',
+        'features/dashboard',
+        'features/test-run-details',
+        'features/issue-creation',
+        'features/failure-inspection',
+        'features/trends-analytics',
+        'features/release-management',
+        'features/pdf-reports',
       ],
     },
     {

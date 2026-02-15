@@ -62,8 +62,9 @@ Install the Testream for Jira app to access:
 - **Rich debugging artifacts** - Screenshots, videos, and trace files inline
 - **Trends & analytics** - Track test performance over time
 - **Release management** - Filter and assess quality by release version
+- **PDF reports** - Generate downloadable PDF summaries of test runs
 
-[Learn more about the Jira integration](./jira-integration/overview)
+[Learn more about the Jira integration](./jira-integration/overview) | [Explore all features](./features/dashboard)
 
 ## Getting Started
 
@@ -71,7 +72,7 @@ Ready to integrate Testream? Choose your path:
 
 - [**Installation Guide**](./getting-started/installation) - Install reporters for your framework
 - [**Quick Start**](./getting-started/quick-start) - Get up and running in 5 minutes
-- [**CI/CD Integrations**](./ci-integrations/setup) - Upload results from your pipeline
+- [**CLI Reporter**](./reporters/cli) - Upload results from your pipeline
 
 ## Need Help?
 

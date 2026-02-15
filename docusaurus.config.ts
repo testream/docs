@@ -99,8 +99,8 @@ const config: Config = {
           title: 'Resources',
           items: [
             {
-              label: 'CI/CD Integrations',
-              to: '/ci-integrations/setup',
+              label: 'CLI Reporter',
+              to: '/reporters/cli',
             },
             {
               label: 'Jira Integration',

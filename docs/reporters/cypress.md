@@ -260,5 +260,5 @@ Cypress screenshots captured during test runs are automatically included in the 
 - Learn about the [Jest Reporter](./jest)
 - Learn about the [Playwright Reporter](./playwright)
 - Learn about the [WebdriverIO Reporter](./webdriverio)
-- Set up [CI/CD integrations](../ci-integrations/setup)
+- Set up [CLI Reporter](./cli)
 - View results in [Jira](../jira-integration/usage)

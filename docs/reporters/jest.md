@@ -307,5 +307,5 @@ In CI environments like GitHub Actions, GitLab CI, and CircleCI, git context (br
 - Learn about the [Cypress Reporter](./cypress)
 - Learn about the [Playwright Reporter](./playwright)
 - Learn about the [WebdriverIO Reporter](./webdriverio)
-- Set up [CI/CD integrations](../ci-integrations/setup)
+- Set up [CLI Reporter](./cli)
 - View results in [Jira](../jira-integration/usage)

@@ -149,5 +149,5 @@ You'll need a Testream API key to upload test results.
 ## What's Next?
 
 - Follow the [Quick Start Guide](./quick-start) for a complete setup walkthrough
-- Set up [CI/CD integrations](../ci-integrations/setup) for automated uploads
+- Set up [CLI Reporter](../reporters/cli) for automated uploads
 - Set up [Jira Integration](../jira-integration/installation)

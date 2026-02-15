@@ -169,7 +169,7 @@ const reporters = [
     name: 'CI/CD CLI',
     icon: 'img/command-line-icon.png',
     command: 'npm i -D @testream/cli',
-    docsLink: '/ci-integrations/setup',
+    docsLink: '/reporters/cli',
   },
 ];
 
