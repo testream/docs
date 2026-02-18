@@ -50,10 +50,12 @@ const icons = {
 const frameworks = [
   { name: 'Playwright', icon: 'https://ctrf.io/img/playwright.svg' },
   { name: 'Jest', icon: 'https://ctrf.io/img/jest.svg' },
+  { name: 'Vitest', icon: 'https://ctrf.io/img/vitest.svg' },
   { name: 'Cypress', icon: 'https://ctrf.io/img/cypress.svg' },
+  { name: 'JUnit', icon: 'https://ctrf.io/img/junit.svg' },
   { name: '.NET', icon: 'https://ctrf.io/img/dotnet.svg' },
   { name: 'WebdriverIO', icon: 'https://ctrf.io/img/wdio.svg' },
-  { name: 'CI/CD CLI', icon: 'img/command-line-icon.png' },
+  { name: 'CLI', icon: 'img/command-line-icon.png' },
 ];
 
 function HeroSection() {
@@ -65,7 +67,7 @@ function HeroSection() {
           <span className={styles.heroTitleAccent}>Every Test.</span>
         </h1>
         <p className={styles.heroSubtitle}>
-          Centralize results from Playwright, Jest, Cypress, WebdriverIO, and .NET.
+          Centralize results from Playwright, Jest, Vitest, Cypress, WebdriverIO, JUnit, and .NET.
           Track trends and kill flaky tests—synced to Jira.
         </p>
         <div className={styles.heroButtons}>
@@ -148,10 +150,22 @@ const reporters = [
     docsLink: '/reporters/jest',
   },
   {
+    name: 'Vitest',
+    icon: 'https://ctrf.io/img/vitest.svg',
+    command: 'npm i -D @testream/vitest-reporter',
+    docsLink: '/reporters/vitest',
+  },
+  {
     name: 'Cypress',
     icon: 'https://ctrf.io/img/cypress.svg',
     command: 'npm i -D @testream/cypress-reporter',
     docsLink: '/reporters/cypress',
+  },
+  {
+    name: 'JUnit',
+    icon: 'https://ctrf.io/img/junit.svg',
+    command: 'npx @testream/junit-reporter --help',
+    docsLink: '/reporters/junit',
   },
   {
     name: '.NET',
@@ -166,7 +180,7 @@ const reporters = [
     docsLink: '/reporters/webdriverio',
   },
   {
-    name: 'CI/CD CLI',
+    name: 'CLI',
     icon: 'img/command-line-icon.png',
     command: 'npm i -D @testream/cli',
     docsLink: '/reporters/cli',

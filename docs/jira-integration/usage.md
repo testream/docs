@@ -71,5 +71,5 @@ If you encounter issues or have questions:
 ## What's Next?
 
 - Configure [reporters](../reporters/playwright) to send test data
-- Set up [CLI Reporter](../reporters/cli) for CI/CD
+- Set up [CLI Reporter](../reporters/cli) for ingesting framework agnostic CTRF reports
 - Explore [Testream dashboard](https://testream.app) for advanced features

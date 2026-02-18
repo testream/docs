@@ -21,6 +21,8 @@ const sidebars: SidebarsConfig = {
         'reporters/jest',
         'reporters/webdriverio',
         'reporters/cli',
+        'reporters/junit',
+        'reporters/vitest',
       ],
     },
     {
