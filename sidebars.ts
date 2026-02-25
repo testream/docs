@@ -20,6 +20,7 @@ const sidebars: SidebarsConfig = {
         'reporters/cypress',
         'reporters/jest',
         'reporters/webdriverio',
+        'reporters/mocha',
         'reporters/cli',
         'reporters/junit',
         'reporters/vitest',
@@ -31,6 +32,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'features/dashboard',
         'features/test-run-details',
+        'features/test-suite-changes',
         'features/issue-creation',
         'features/failure-inspection',
         'features/trends-analytics',

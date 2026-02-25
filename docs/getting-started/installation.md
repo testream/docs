@@ -118,6 +118,28 @@ pnpm add --save-dev @testream/webdriverio-reporter wdio-ctrf-json-reporter
 
 ---
 
+## Mocha Reporter
+
+Install the Mocha reporter for automatically uploading your Mocha test results.
+
+```bash
+npm install --save-dev @testream/mocha-reporter
+```
+
+Or with other package managers:
+
+```bash
+# Yarn
+yarn add --dev @testream/mocha-reporter
+
+# pnpm
+pnpm add --save-dev @testream/mocha-reporter
+```
+
+**Next Step:** Configure the reporter in your `.mocharc.js` - see [Mocha Documentation](../reporters/mocha).
+
+---
+
 ## Requirements
 
 ### Node.js Version

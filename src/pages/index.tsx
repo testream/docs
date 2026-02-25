@@ -55,6 +55,7 @@ const frameworks = [
   { name: 'JUnit', icon: 'https://ctrf.io/img/junit.svg' },
   { name: '.NET', icon: 'https://ctrf.io/img/dotnet.svg' },
   { name: 'WebdriverIO', icon: 'https://ctrf.io/img/wdio.svg' },
+  { name: 'Mocha', icon: 'https://ctrf.io/img/mochajs.svg' },
   { name: 'CLI', icon: 'img/command-line-icon.png' },
 ];
 
@@ -67,7 +68,7 @@ function HeroSection() {
           <span className={styles.heroTitleAccent}>Every Test.</span>
         </h1>
         <p className={styles.heroSubtitle}>
-          Centralize results from Playwright, Jest, Vitest, Cypress, WebdriverIO, JUnit, and .NET.
+          Centralize results from Playwright, Jest, Vitest, Cypress, Mocha, WebdriverIO, JUnit, and .NET.
           Track trends and kill flaky tests—synced to Jira.
         </p>
         <div className={styles.heroButtons}>
@@ -178,6 +179,12 @@ const reporters = [
     icon: 'https://ctrf.io/img/wdio.svg',
     command: 'npm i -D @testream/webdriverio-reporter',
     docsLink: '/reporters/webdriverio',
+  },
+  {
+    name: 'Mocha',
+    icon: 'https://ctrf.io/img/mochajs.svg',
+    command: 'npm i -D @testream/mocha-reporter',
+    docsLink: '/reporters/mocha',
   },
   {
     name: 'CLI',
