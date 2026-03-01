@@ -10,6 +10,7 @@ The Testream for Jira integration brings comprehensive test reporting directly i
 
 - **[Dashboard](../features/dashboard)** - Monitor your test suite's overall health with key metrics, test result distributions, and recent test runs at a glance.
 - **[Test Run Details](../features/test-run-details)** - View comprehensive metadata, results summary, and failed tests for any test execution.
+- **[Test Suite Changes](../features/test-suite-changes)** - Track tests added, removed, and unchanged between runs on the same branch.
 - **[Issue Creation](../features/issue-creation)** - Create Jira issues directly from failed tests with pre-filled context and custom fields.
 - **[Failure Inspection](../features/failure-inspection)** - Debug failures with error messages, stack traces, and visual artifacts like screenshots and videos.
 - **[Trends & Analytics](../features/trends-analytics)** - Track pass/fail trends, test suite growth, and duration patterns over time.
