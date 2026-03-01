@@ -30,7 +30,7 @@ The Testream for Jira integration is designed for:
 
 Ready to get started? Follow these steps:
 
-1. **[Install the app](./installation)** - Set up Testream for Jira in your workspace
+1. **[Install the app](./installation)** - Set up Testream for Jira in your workspace via the [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704/testream-for-jira)
 2. **[Learn to use it](./usage)** - Access instructions, permissions, and best practices
 3. **Configure reporters** - Set up test framework reporters to send data to Testream
 4. **Start testing** - Run your tests and see results appear in Jira

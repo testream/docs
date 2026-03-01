@@ -14,6 +14,8 @@ Integrate Testream with Jira to view test results, trends, and artifacts directl
 
 ## Step 1: Install from Atlassian Marketplace
 
+Use the official listing: [Testream for Jira on Atlassian Marketplace](https://marketplace.atlassian.com/apps/3048460704/testream-for-jira).
+
 ### For Jira Administrators
 
 1. Log in to your Jira instance as an administrator
@@ -30,10 +32,9 @@ The app will be installed and enabled automatically for your entire Jira workspa
 
 If you don't have admin permissions:
 
-1. Navigate to **Apps** → **Explore new apps**
-2. Search for **"Testream for Jira"**
-3. Click **"Request installation"**
-4. Your Jira administrator will receive a notification to approve the installation
+1. Open the [Testream for Jira Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704/testream-for-jira)
+2. Click **"Request installation"**
+3. Your Jira administrator will receive a notification to approve the installation
 
 ## Step 2: Get Your Testream API Key
 

@@ -15,6 +15,8 @@ After installation and configuration, access Testream in Jira:
 
 Alternatively, you may find Testream in your project sidebar depending on your Jira configuration.
 
+Need to install it first? Use the [Testream for Jira Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704/testream-for-jira) and follow the [installation guide](./installation).
+
 ## Feature Guides
 
 For detailed guides on each feature, visit the dedicated pages:
