@@ -6,6 +6,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Getting Started',
+      collapsed: false,
       items: [
         'getting-started/installation',
         'getting-started/quick-start',
@@ -14,6 +15,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Reporters',
+      collapsed: false,
       items: [
         'reporters/playwright',
         'reporters/dotnet',
@@ -29,6 +31,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Features',
+      collapsed: false,
       items: [
         'features/dashboard',
         'features/test-run-details',
@@ -43,6 +46,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Jira Integration',
+      collapsed: false,
       items: [
         'jira-integration/installation',
         'jira-integration/overview',

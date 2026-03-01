@@ -36,7 +36,7 @@ All reporters use the [Common Test Report Format (CTRF)](https://github.com/ctrf
 Upload test results and artifacts with minimal configuration:
 
 ```yaml
-- uses: testream/upload-action@v0.4.1
+- uses: testream/upload-action@latest
   with:
     report-path: ctrf/ctrf-report.json
     test-tool: playwright

@@ -35,7 +35,7 @@ jobs:
 
       - name: Upload to Testream
         if: always()
-        uses: testream/upload-action@v0.4.1
+        uses: testream/upload-action@latest
         with:
           report-path: ctrf/ctrf-report.json
           api-key: ${{ secrets.TESTREAM_API_KEY }}
