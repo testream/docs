@@ -51,7 +51,7 @@ jobs:
 | `branch` | No | auto | Git branch name |
 | `commit-sha` | No | auto | Git commit SHA |
 | `repository-url` | No | auto | Git repository URL |
-| `build-name` | No | auto | Build name/identifier |
+| `build-name` | No | - | Build name/identifier |
 | `build-number` | No | auto | Build number |
 | `build-url` | No | auto | Build URL |
 | `test-environment` | No | - | Environment name (e.g., `ci`, `staging`) |
@@ -79,12 +79,12 @@ npx @testream/upload-action \
 | `-r, --report-path <path>` | **Required** Path to CTRF report JSON file |
 | `-k, --api-key <key>` | **Required** API key for authentication |
 | `--test-tool <name>` | **Required** Test tool name (e.g., `playwright`, `jest`, `cypress`, `dotnet`) |
-| `-b, --branch <name>` | Git branch name |
-| `-c, --commit-sha <sha>` | Git commit SHA |
-| `-u, --repository-url <url>` | Git repository URL |
+| `-b, --branch <name>` | Git branch name (auto-detected in CI) |
+| `-c, --commit-sha <sha>` | Git commit SHA (auto-detected in CI) |
+| `-u, --repository-url <url>` | Git repository URL (auto-detected in CI) |
 | `--build-name <name>` | Build name/identifier |
-| `--build-number <num>` | Build number |
-| `--build-url <url>` | Build URL |
+| `--build-number <num>` | Build number (auto-detected in CI) |
+| `--build-url <url>` | Build URL (auto-detected in CI) |
 | `--test-environment <env>` | Test environment (e.g., `ci`, `staging`) |
 | `--app-name <name>` | Application name |
 | `--app-version <ver>` | Application version |

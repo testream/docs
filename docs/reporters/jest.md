@@ -53,8 +53,8 @@ The reporter will automatically upload results after each test run.
 | `appName` | `string` | - | Application name |
 | `appVersion` | `string` | - | Application version |
 | `buildName` | `string` | - | Build name |
-| `buildNumber` | `string` | - | Build number |
-| `buildUrl` | `string` | - | Build URL |
+| `buildNumber` | `string` | auto | Build number |
+| `buildUrl` | `string` | auto | Build URL |
 | `testEnvironment` | `string` | - | Test environment (e.g., `ci`, `staging`) |
 
 ## Full Configuration Example

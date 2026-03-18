@@ -48,8 +48,8 @@ export default defineConfig({
 | `commitSha` | `string` | auto (CI) | Git commit SHA |
 | `repositoryUrl` | `string` | auto (CI) | Git repository URL |
 | `buildName` | `string` | - | Build name/identifier |
-| `buildNumber` | `string` | - | Build number |
-| `buildUrl` | `string` | - | Build URL |
+| `buildNumber` | `string` | auto (CI) | Build number |
+| `buildUrl` | `string` | auto (CI) | Build URL |
 | `testEnvironment` | `string` | - | Test environment (e.g., `ci`, `staging`) |
 | `appName` | `string` | - | Application name |
 | `appVersion` | `string` | - | Application version |

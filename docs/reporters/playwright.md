@@ -48,8 +48,8 @@ export default defineConfig({
 | `appName` | `string` | - | Application name |
 | `appVersion` | `string` | - | Application version |
 | `buildName` | `string` | - | Build name |
-| `buildNumber` | `string` | - | Build number |
-| `buildUrl` | `string` | - | Build URL |
+| `buildNumber` | `string` | auto | Build number |
+| `buildUrl` | `string` | auto | Build URL |
 | `testEnvironment` | `string` | - | Environment name |
 
 ## Full Configuration Example

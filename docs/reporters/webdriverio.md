@@ -48,8 +48,8 @@ The `services` entry registers a launcher service that automatically aggregates 
 | `outputDir` | `string` | `ctrf` | CTRF output directory |
 | `outputFile` | `string` | `ctrf-report.json` | CTRF report filename |
 | `buildName` | `string` | - | Build name |
-| `buildNumber` | `string` | - | Build number |
-| `buildUrl` | `string` | - | Build URL |
+| `buildNumber` | `string` | auto | Build number |
+| `buildUrl` | `string` | auto | Build URL |
 | `testEnvironment` | `string` | - | Environment name |
 | `appName` | `string` | - | Application name |
 | `appVersion` | `string` | - | Application version |

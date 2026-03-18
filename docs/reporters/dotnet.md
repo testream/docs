@@ -38,8 +38,8 @@ This single command will:
 | `--commit-sha <sha>` | Git commit SHA (auto-detected in CI) |
 | `--repository-url <url>` | Git repository URL (auto-detected in CI) |
 | `--build-name <name>` | Build name |
-| `--build-number <num>` | Build number |
-| `--build-url <url>` | Build URL |
+| `--build-number <num>` | Build number (auto-detected in CI) |
+| `--build-url <url>` | Build URL (auto-detected in CI) |
 | `--test-environment <env>` | Test environment (e.g., `ci`, `staging`) |
 | `--app-name <name>` | Application name |
 | `--app-version <ver>` | Application version |

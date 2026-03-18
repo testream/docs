@@ -49,7 +49,7 @@ npx @testream/junit-reporter \
 | `--branch <name>` | Git branch name | auto (CI) |
 | `--commit-sha <sha>` | Git commit SHA | auto (CI) |
 | `--repository-url <url>` | Git repository URL | auto (CI) |
-| `--build-name <name>` | Build name/identifier | auto (CI) |
+| `--build-name <name>` | Build name/identifier | - |
 | `--build-number <num>` | Build number | auto (CI) |
 | `--build-url <url>` | Build URL | auto (CI) |
 | `--test-environment <env>` | Test environment (e.g., `ci`, `staging`) | - |

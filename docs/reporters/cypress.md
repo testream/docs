@@ -65,8 +65,8 @@ cypress run
 | `--commit-sha <sha>` | Git commit SHA (auto-detected in CI) |
 | `--repository-url <url>` | Git repository URL (auto-detected in CI) |
 | `--build-name <name>` | Build name |
-| `--build-number <num>` | Build number |
-| `--build-url <url>` | Build URL |
+| `--build-number <num>` | Build number (auto-detected in CI) |
+| `--build-url <url>` | Build URL (auto-detected in CI) |
 | `--test-environment <env>` | Test environment (e.g., `ci`, `staging`) |
 | `--app-name <name>` | Application name |
 | `--app-version <ver>` | Application version |
@@ -98,8 +98,8 @@ When using programmatic configuration, these options are available:
 | `repositoryUrl` | `string` | auto | Git repository URL |
 | `repositoryName` | `string` | auto | Git repository name |
 | `buildName` | `string` | - | Build name |
-| `buildNumber` | `string` | - | Build number |
-| `buildUrl` | `string` | - | Build URL |
+| `buildNumber` | `string` | auto | Build number |
+| `buildUrl` | `string` | auto | Build URL |
 | `testEnvironment` | `string` | - | Test environment name |
 
 ## Examples
