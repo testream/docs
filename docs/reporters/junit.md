@@ -40,24 +40,24 @@ npx @testream/junit-reporter \
 
 ## CLI Options
 
-| Option | Description | Default |
-| --- | --- | --- |
-| `-k, --api-key <key>` | Testream API key (*required unless `--no-upload` is used) | - |
-| `-j, --junit-path <path/glob>` | Path or glob to JUnit XML file(s) | `target/surefire-reports/TEST-*.xml` |
-| `--output-dir <dir>` | Output directory for CTRF report | `ctrf` |
-| `--output-file <file>` | CTRF file name | `ctrf-report.json` |
-| `--branch <name>` | Git branch name | auto (CI) |
-| `--commit-sha <sha>` | Git commit SHA | auto (CI) |
-| `--repository-url <url>` | Git repository URL | auto (CI) |
-| `--build-name <name>` | Build name/identifier | - |
-| `--build-number <num>` | Build number | auto (CI) |
-| `--build-url <url>` | Build URL | auto (CI) |
-| `--test-environment <env>` | Test environment (e.g., `ci`, `staging`) | - |
-| `--app-name <name>` | Application name under test | - |
-| `--app-version <ver>` | Application version under test | - |
-| `--test-type <type>` | Test type (e.g., `unit`, `integration`, `e2e`) | - |
-| `--no-upload` | Skip uploading (convert + write report only) | `false` |
-| `--fail-on-error` | Exit with non-zero code if upload fails | `false` |
+| Option | Type | Default | Description |
+| --- | --- | --- | --- |
+| `-k, --api-key <key>` | `string` | - | **Required** Testream API key |
+| `-j, --junit-path <path/glob>` | `string` | `target/surefire-reports/TEST-*.xml` | Path or glob to JUnit XML file(s) |
+| `--output-dir <dir>` | `string` | `ctrf` | Output directory for CTRF report |
+| `--output-file <file>` | `string` | `ctrf-report.json` | CTRF file name |
+| `--branch <name>` | `string` | auto (CI) | Git branch name |
+| `--commit-sha <sha>` | `string` | auto (CI) | Git commit SHA |
+| `--repository-url <url>` | `string` | auto (CI) | Git repository URL |
+| `--build-name <name>` | `string` | - | Build name/identifier |
+| `--build-number <num>` | `string` | auto (CI) | Build number |
+| `--build-url <url>` | `string` | auto (CI) | Build URL |
+| `--test-environment <env>` | `string` | - | Test environment (e.g., `ci`, `staging`) |
+| `--app-name <name>` | `string` | - | Application name under test |
+| `--app-version <ver>` | `string` | - | Application version under test |
+| `--test-type <type>` | `string` | - | Test type (e.g., `unit`, `integration`, `e2e`) |
+| `--no-upload` | `boolean` | `false` | Skip uploading (convert + write report only) |
+| `--fail-on-error` | `boolean` | `false` | Exit with non-zero code if upload fails |
 
 ## CI Example (GitHub Actions)
 

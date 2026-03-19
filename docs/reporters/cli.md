@@ -43,23 +43,23 @@ jobs:
 
 ### Action inputs
 
-| Input | Required | Default | Description |
+| Option | Type | Default | Description |
 | --- | --- | --- | --- |
-| `report-path` | Yes | - | Path to CTRF report JSON file |
-| `api-key` | Yes* | - | Testream API key (*required unless `no-upload` is true) |
-| `test-tool` | Yes | - | Test tool name (e.g., `playwright`, `jest`, `cypress`, `dotnet`) |
-| `branch` | No | auto | Git branch name |
-| `commit-sha` | No | auto | Git commit SHA |
-| `repository-url` | No | auto | Git repository URL |
-| `build-name` | No | - | Build name/identifier |
-| `build-number` | No | auto | Build number |
-| `build-url` | No | auto | Build URL |
-| `test-environment` | No | - | Environment name (e.g., `ci`, `staging`) |
-| `app-name` | No | - | Application name |
-| `app-version` | No | - | Application version |
-| `test-type` | No | - | Test type (e.g., `unit`, `e2e`) |
-| `no-upload` | No | `false` | Skip upload (validate + summarize only) |
-| `fail-on-error` | No | `true` | Fail the action if upload fails |
+| `report-path` | `string` | - | **Required** Path to CTRF report JSON file |
+| `api-key` | `string` | - | **Required** Testream API key (*required unless `no-upload` is true) |
+| `test-tool` | `string` | - | **Required** Test tool name (e.g., `playwright`, `jest`, `cypress`, `dotnet`) |
+| `branch` | `string` | auto | Git branch name |
+| `commit-sha` | `string` | auto | Git commit SHA |
+| `repository-url` | `string` | auto | Git repository URL |
+| `build-name` | `string` | - | Build name/identifier |
+| `build-number` | `string` | auto | Build number |
+| `build-url` | `string` | auto | Build URL |
+| `test-environment` | `string` | - | Environment name (e.g., `ci`, `staging`) |
+| `app-name` | `string` | - | Application name |
+| `app-version` | `string` | - | Application version |
+| `test-type` | `string` | - | Test type (e.g., `unit`, `e2e`) |
+| `no-upload` | `boolean` | `false` | Skip upload (validate + summarize only) |
+| `fail-on-error` | `boolean` | `true` | Fail the action if upload fails |
 
 ## CLI (Any CI provider)
 
@@ -74,23 +74,23 @@ npx @testream/upload-action \
 
 ### CLI options
 
-| Option | Description |
-| --- | --- |
-| `-r, --report-path <path>` | **Required** Path to CTRF report JSON file |
-| `-k, --api-key <key>` | **Required** API key for authentication |
-| `--test-tool <name>` | **Required** Test tool name (e.g., `playwright`, `jest`, `cypress`, `dotnet`) |
-| `-b, --branch <name>` | Git branch name (auto-detected in CI) |
-| `-c, --commit-sha <sha>` | Git commit SHA (auto-detected in CI) |
-| `-u, --repository-url <url>` | Git repository URL (auto-detected in CI) |
-| `--build-name <name>` | Build name/identifier |
-| `--build-number <num>` | Build number (auto-detected in CI) |
-| `--build-url <url>` | Build URL (auto-detected in CI) |
-| `--test-environment <env>` | Test environment (e.g., `ci`, `staging`) |
-| `--app-name <name>` | Application name |
-| `--app-version <ver>` | Application version |
-| `--test-type <type>` | Test type (e.g., `unit`, `e2e`) |
-| `--no-upload` | Skip uploading (validate + summarize only) |
-| `--fail-on-error` | Exit with non-zero code if upload fails |
+| Option | Type | Default | Description |
+| --- | --- | --- | --- |
+| `-r, --report-path <path>` | `string` | - | **Required** Path to CTRF report JSON file |
+| `-k, --api-key <key>` | `string` | - | **Required** API key for authentication |
+| `--test-tool <name>` | `string` | - | **Required** Test tool name (e.g., `playwright`, `jest`, `cypress`, `dotnet`) |
+| `-b, --branch <name>` | `string` | auto (CI) | Git branch name |
+| `-c, --commit-sha <sha>` | `string` | auto (CI) | Git commit SHA |
+| `-u, --repository-url <url>` | `string` | auto (CI) | Git repository URL |
+| `--build-name <name>` | `string` | - | Build name/identifier |
+| `--build-number <num>` | `string` | auto (CI) | Build number |
+| `--build-url <url>` | `string` | auto (CI) | Build URL |
+| `--test-environment <env>` | `string` | - | Test environment (e.g., `ci`, `staging`) |
+| `--app-name <name>` | `string` | - | Application name |
+| `--app-version <ver>` | `string` | - | Application version |
+| `--test-type <type>` | `string` | - | Test type (e.g., `unit`, `e2e`) |
+| `--no-upload` | `boolean` | `false` | Skip uploading (validate + summarize only) |
+| `--fail-on-error` | `boolean` | `false` | Exit with non-zero code if upload fails |
 
 ## CircleCI example
 

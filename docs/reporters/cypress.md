@@ -56,24 +56,24 @@ cypress run
 
 ## CLI Options
 
-| Option | Description |
-| --- | --- |
-| `-k, --api-key` | **Required** API key (unless `--no-upload` is used) |
-| `--project <path>` | Path to Cypress project (defaults to current directory) |
-| `--results-path <path>` | Use existing CTRF file(s) instead of running tests |
-| `--branch <name>` | Git branch name (auto-detected in CI) |
-| `--commit-sha <sha>` | Git commit SHA (auto-detected in CI) |
-| `--repository-url <url>` | Git repository URL (auto-detected in CI) |
-| `--build-name <name>` | Build name |
-| `--build-number <num>` | Build number (auto-detected in CI) |
-| `--build-url <url>` | Build URL (auto-detected in CI) |
-| `--test-environment <env>` | Test environment (e.g., `ci`, `staging`) |
-| `--app-name <name>` | Application name |
-| `--app-version <ver>` | Application version |
-| `--test-type <type>` | Test type (e.g., `e2e`, `integration`) |
-| `--no-upload` | Skip uploading (validate + summarize only) |
-| `--fail-on-error` | Exit with non-zero code if upload fails |
-| `-- <args>` | Additional arguments passed to `cypress run` |
+| Option | Type | Default | Description |
+| --- | --- | --- | --- |
+| `-k, --api-key` | `string` | - | **Required** API key (unless `--no-upload` is used) |
+| `--project <path>` | `string` | current dir | Path to Cypress project |
+| `--results-path <path>` | `string` | - | Use existing CTRF file(s) instead of running tests |
+| `--branch <name>` | `string` | auto (CI) | Git branch name |
+| `--commit-sha <sha>` | `string` | auto (CI) | Git commit SHA |
+| `--repository-url <url>` | `string` | auto (CI) | Git repository URL |
+| `--build-name <name>` | `string` | - | Build name |
+| `--build-number <num>` | `string` | auto (CI) | Build number |
+| `--build-url <url>` | `string` | auto (CI) | Build URL |
+| `--test-environment <env>` | `string` | - | Test environment (e.g., `ci`, `staging`) |
+| `--app-name <name>` | `string` | - | Application name |
+| `--app-version <ver>` | `string` | - | Application version |
+| `--test-type <type>` | `string` | - | Test type (e.g., `e2e`, `integration`) |
+| `--no-upload` | `boolean` | `false` | Skip uploading (validate + summarize only) |
+| `--fail-on-error` | `boolean` | `false` | Exit with non-zero code if upload fails |
+| `-- <args>` | - | - | Additional arguments passed to `cypress run` |
 
 ## Configuration Options
 
