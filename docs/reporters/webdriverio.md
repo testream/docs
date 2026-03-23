@@ -142,6 +142,10 @@ npm install --save-dev wdio-ctrf-json-reporter
 
 In CI environments like GitHub Actions, GitLab CI, and CircleCI, git context (branch, commit SHA, repository URL) is automatically detected from environment variables. You only need to provide these values explicitly if running outside of standard CI environments.
 
+## Sample Project
+
+The **[testream/webdriverio-jira-reporter](https://github.com/testream/webdriverio-jira-reporter)** repository is a complete working example of a WebdriverIO project integrated with Testream. It includes example tests, full reporter configuration, and a ready-to-use GitHub Actions workflow.
+
 ## NPM Package
 
 - **Package:** [@testream/webdriverio-reporter](https://www.npmjs.com/package/@testream/webdriverio-reporter)

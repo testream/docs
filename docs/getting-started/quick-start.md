@@ -4,171 +4,46 @@ sidebar_position: 2
 
 # Quick Start
 
-Get up and running with Testream in under 5 minutes! This guide uses Playwright as an example, but the process is similar for other frameworks.
+Get Testream up and running in minutes. These steps work for every supported framework.
 
-## Prerequisites
+## 1. Create an account and get your API key
 
-- Node.js 18 or later
-- An existing Playwright project (or create one with `npm init playwright@latest`)
-- A Testream account ([sign up at testream.app](https://testream.app))
+1. Sign up at [testream.app](https://testream.app)
+2. Go to **Settings → API Keys**
+3. Click **Create API Key** and copy it
 
-## Step 1: Get Your API Key
+## 2. Install a reporter
 
-1. Log in to [testream.app](https://testream.app)
-2. Go to **Settings** → **API Keys**
-3. Click **Create API Key**
-4. Copy the generated API key (you'll need this in the next steps)
+Pick the reporter for your testing framework and follow its setup guide.
 
-## Step 2: Install the Reporter
+→ [View all reporters](./installation)
 
-```bash
-npm install --save-dev @testream/playwright-reporter
+## 3. Set your API key
+
+The reporter reads your API key from the `TESTREAM_API_KEY` environment variable.
+
+**Locally** — add to a `.env` file in your project root (don't commit this):
+
 ```
-
-## Step 3: Configure Playwright
-
-Update your `playwright.config.ts`:
-
-```typescript title="playwright.config.ts"
-import { defineConfig } from '@playwright/test';
-
-export default defineConfig({
-  reporter: [
-    ['@testream/playwright-reporter', {
-      apiKey: process.env.TESTREAM_API_KEY,
-      uploadEnabled: true,
-    }],
-
-    // Keep your existing reporters
-    ['html'],
-  ],
-
-  // Rest of your config...
-});
-```
-
-## Step 4: Set Environment Variable
-
-### Local Development
-
-Create a `.env` file in your project root:
-
-```bash title=".env"
 TESTREAM_API_KEY=your_api_key_here
 ```
 
-**Important:** Add `.env` to your `.gitignore` to avoid committing secrets!
-
-```bash title=".gitignore"
-.env
-```
-
-### CI/CD (GitHub Actions)
-
-Add your API key as a GitHub secret:
-
-1. Go to your repository → **Settings** → **Secrets and variables** → **Actions**
-2. Click **New repository secret**
-3. Name: `TESTREAM_API_KEY`
-4. Value: (paste your API key)
-5. Click **Add secret**
-
-## Step 5: Run Your Tests
-
-```bash
-# Make sure the environment variable is loaded
-export TESTREAM_API_KEY=your_api_key_here
-
-# Run your tests
-npx playwright test
-```
-
-That's it! Your test results will automatically be uploaded to Testream.
-
-## Step 6: View Results
-
-1. Visit [testream.app](https://testream.app)
-2. Navigate to **Dashboard** or **Test Runs**
-3. You should see your latest test run with all results and artifacts
-
-## Using with GitHub Actions
-
-Create or update `.github/workflows/playwright.yml`:
-
-```yaml title=".github/workflows/playwright.yml"
-name: Playwright Tests
-on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
-
-jobs:
-  test:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 20
-
-    - name: Install dependencies
-      run: npm ci
-
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-
-    - name: Run Playwright tests
-      run: npx playwright test
-      env:
-        TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
-```
-
-The reporter will automatically upload results during the test run!
-
-## Alternative: Upload After Tests
-
-You can also run tests first and upload results separately using the GitHub Action:
+**In CI (GitHub Actions)** — add `TESTREAM_API_KEY` as a repository secret (**Settings → Secrets → Actions → New repository secret**), then reference it in your workflow:
 
 ```yaml
-- name: Run Playwright tests
-  run: npx playwright test
-
-- name: Upload to Testream
-  if: always()
-  run: |
-    npx @testream/upload-action \
-      --report-path ctrf/ctrf-report.json \
-      --test-tool playwright \
-      --api-key ${{ secrets.TESTREAM_API_KEY }}
+env:
+  TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
 ```
 
-## Troubleshooting
+## 4. Run your tests
 
-### Tests run but nothing appears in Testream
+Run your tests as normal. The reporter automatically uploads results to Testream when `TESTREAM_API_KEY` is present.
 
-- Verify your API key is correct
-- Check that `uploadEnabled: true` is set in the reporter config
-- Look for error messages in the test output
-- Ensure you have an active internet connection
+## 5. View your results
 
-### API Key not found
-
-- Make sure the environment variable is exported: `export TESTREAM_API_KEY=your_key`
-- In GitHub Actions, verify the secret is added and referenced correctly
-- Check for typos in the environment variable name
-
-### Upload fails with authentication error
-
-- Your API key might be expired or invalid
-- Generate a new API key from the Testream dashboard
-- Update the environment variable/secret with the new key
+Open [testream.app](https://testream.app), navigate to your project, and check **Test Runs** to see the uploaded results.
 
 ## What's Next?
 
-- Learn about [Playwright reporter options](../reporters/playwright)
-- Set up [CLI Reporter](../reporters/cli) for automated uploads
-- Set up [Jira integration](../jira-integration/overview) to view results in Jira
-- Check out [.NET reporter](../reporters/dotnet) if you're testing .NET applications
+- [Reporters](./installation) — full configuration options for your framework
+- [Jira Integration](../jira-integration/overview) — surface test results directly in Jira

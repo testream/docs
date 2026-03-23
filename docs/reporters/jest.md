@@ -297,6 +297,10 @@ reporters: [
 
 In CI environments like GitHub Actions, GitLab CI, and CircleCI, git context (branch, commit SHA, repository URL) is automatically detected from environment variables. You only need to provide these values explicitly if running outside of standard CI environments.
 
+## Sample Project
+
+The **[testream/jest-jira-reporter](https://github.com/testream/jest-jira-reporter)** repository is a complete working example of a Jest project integrated with Testream. It includes example tests, full reporter configuration, and a ready-to-use GitHub Actions workflow.
+
 ## NPM Package
 
 - **Package:** [@testream/jest-reporter](https://www.npmjs.com/package/@testream/jest-reporter)

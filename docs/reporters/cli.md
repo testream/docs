@@ -149,6 +149,10 @@ pipelines:
 
 Use the same CLI options in GitLab, Jenkins, Azure Pipelines, or any custom runner. If you already have a CTRF report, the CLI is all you need.
 
+## Sample Project
+
+The **[testream/ctrf-jira-reporter](https://github.com/testream/ctrf-jira-reporter)** repository is a complete working example of using the CTRF CLI to upload test results to Testream. It includes example tests, CLI configuration, and a ready-to-use GitHub Actions workflow.
+
 ## NPM package
 
 - **Package:** [@testream/upload-action](https://www.npmjs.com/package/@testream/upload-action)

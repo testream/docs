@@ -105,6 +105,10 @@ export default defineConfig({
 
 Playwright artifacts (screenshots, videos, traces) are uploaded automatically when they are attached to tests. Keep Playwright artifact capture enabled in `use` and the reporter will pick them up.
 
+## Sample Project
+
+The **[testream/playwright-jira-reporter](https://github.com/testream/playwright-jira-reporter)** repository is a complete working example of a Playwright project integrated with Testream. It includes example tests, full reporter configuration, and a ready-to-use GitHub Actions workflow.
+
 ## NPM Package
 
 - **Package:** [@testream/playwright-reporter](https://www.npmjs.com/package/@testream/playwright-reporter)

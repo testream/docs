@@ -81,6 +81,10 @@ npx @testream/junit-reporter \
       --fail-on-error
 ```
 
+## Sample Project
+
+The **[testream/junit-jira-reporter](https://github.com/testream/junit-jira-reporter)** repository is a complete working example of a JUnit project integrated with Testream. It includes example tests, full reporter configuration, and a ready-to-use GitHub Actions workflow.
+
 ## NPM Package
 
 - **Package:** [@testream/junit-reporter](https://www.npmjs.com/package/@testream/junit-reporter)

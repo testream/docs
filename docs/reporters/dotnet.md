@@ -133,6 +133,10 @@ jobs:
 - MSTest
 - TRX (generic)
 
+## Sample Project
+
+The **[testream/dotnet-jira-reporter](https://github.com/testream/dotnet-jira-reporter)** repository is a complete working example of a .NET project integrated with Testream. It includes example tests, full reporter configuration, and a ready-to-use GitHub Actions workflow.
+
 ## NPM Package
 
 - **Package:** [@testream/dotnet-reporter](https://www.npmjs.com/package/@testream/dotnet-reporter)

@@ -79,6 +79,10 @@ module.exports = {
 - Git and CI metadata can be auto-detected when running in supported CI providers.
 - Mocha passes reporter options as strings (`key=value`), including booleans.
 
+## Sample Project
+
+The **[testream/mocha-jira-reporter](https://github.com/testream/mocha-jira-reporter)** repository is a complete working example of a Mocha project integrated with Testream. It includes example tests, full reporter configuration, and a ready-to-use GitHub Actions workflow.
+
 ## NPM Package
 
 - **Package:** [@testream/mocha-reporter](https://www.npmjs.com/package/@testream/mocha-reporter)

@@ -4,172 +4,40 @@ sidebar_position: 1
 
 # Installation
 
-Choose the reporter that matches your testing framework and follow the installation instructions below.
-
-## Playwright Reporter
-
-Install the Playwright reporter for automatically uploading your Playwright test results.
-
-```bash
-npm install --save-dev @testream/playwright-reporter
-```
-
-Or with other package managers:
-
-```bash
-# Yarn
-yarn add --dev @testream/playwright-reporter
-
-# pnpm
-pnpm add --save-dev @testream/playwright-reporter
-```
-
-**Next Step:** Configure the reporter in your `playwright.config.ts` - see [Playwright Documentation](../reporters/playwright).
-
----
-
-## Cypress Reporter
-
-Install the Cypress reporter for automatically uploading your Cypress test results.
-
-```bash
-npm install --save-dev @testream/cypress-reporter cypress-ctrf-json-reporter
-```
-
-Or with other package managers:
-
-```bash
-# Yarn
-yarn add --dev @testream/cypress-reporter cypress-ctrf-json-reporter
-
-# pnpm
-pnpm add --save-dev @testream/cypress-reporter cypress-ctrf-json-reporter
-```
-
-**Next Step:** Configure the reporter in your `cypress.config.ts` or use the CLI - see [Cypress Documentation](../reporters/cypress).
-
----
-
-## Jest Reporter
-
-Install the Jest reporter for automatically uploading your Jest test results.
-
-```bash
-npm install --save-dev @testream/jest-reporter
-```
-
-Or with other package managers:
-
-```bash
-# Yarn
-yarn add --dev @testream/jest-reporter
-
-# pnpm
-pnpm add --save-dev @testream/jest-reporter
-```
-
-**Next Step:** Configure the reporter in your `jest.config.js` - see [Jest Documentation](../reporters/jest).
-
----
-
-## .NET Reporter
-
-Install the .NET reporter CLI globally for seamlessly uploading your .NET test results.
-
-```bash
-npm install -g @testream/dotnet-reporter
-```
-
-Or use npx without installation:
-
-```bash
-npx @testream/dotnet-reporter --file TestResults.trx
-```
-
-**Supported Formats:**
-- xUnit XML
-- NUnit XML
-- MSTest TRX
-- Generic TRX format
-
-**Next Step:** Learn how to use the CLI - see [.NET Documentation](../reporters/dotnet).
-
----
-
-## WebdriverIO Reporter
-
-Install the WebdriverIO reporter for automatically uploading your WebdriverIO test results.
-
-```bash
-npm install --save-dev @testream/webdriverio-reporter wdio-ctrf-json-reporter
-```
-
-Or with other package managers:
-
-```bash
-# Yarn
-yarn add --dev @testream/webdriverio-reporter wdio-ctrf-json-reporter
-
-# pnpm
-pnpm add --save-dev @testream/webdriverio-reporter wdio-ctrf-json-reporter
-```
-
-**Next Step:** Configure the reporter in your `wdio.conf.ts` - see [WebdriverIO Documentation](../reporters/webdriverio).
-
----
-
-## Mocha Reporter
-
-Install the Mocha reporter for automatically uploading your Mocha test results.
-
-```bash
-npm install --save-dev @testream/mocha-reporter
-```
-
-Or with other package managers:
-
-```bash
-# Yarn
-yarn add --dev @testream/mocha-reporter
-
-# pnpm
-pnpm add --save-dev @testream/mocha-reporter
-```
-
-**Next Step:** Configure the reporter in your `.mocharc.js` - see [Mocha Documentation](../reporters/mocha).
-
----
+Testream works by adding a reporter to your existing test suite. Pick the reporter for your framework, follow its setup guide, and your results will upload automatically on every run.
 
 ## Requirements
 
-### Node.js Version
+- **Node.js 18 or later** — required by all JS/TS reporters and CLI tools
+- **A Testream account** — [sign up free at testream.app](https://testream.app)
+- **An API key** — generate one in **Settings → API Keys** after signing up
 
-All reporters and tools require **Node.js 18 or later**.
+## Reporters
 
-Check your Node.js version:
+| Framework | Reporter Docs |
+|---|---|
+| Playwright | [Playwright Reporter](../reporters/playwright) |
+| Cypress | [Cypress Reporter](../reporters/cypress) |
+| Jest | [Jest Reporter](../reporters/jest) |
+| Vitest | [Vitest Reporter](../reporters/vitest) |
+| Mocha | [Mocha Reporter](../reporters/mocha) |
+| WebdriverIO | [WebdriverIO Reporter](../reporters/webdriverio) |
+| JUnit | [JUnit Reporter](../reporters/junit) |
+| .NET | [.NET Reporter](../reporters/dotnet) |
+| Any (CTRF) | [CLI Reporter](../reporters/cli) |
 
-```bash
-node --version
-```
+## Sample Projects
 
-If you need to upgrade, visit [nodejs.org](https://nodejs.org/).
+Each reporter has a complete working example repository with tests, configuration, and a GitHub Actions workflow ready to use.
 
-### API Key
-
-You'll need a Testream API key to upload test results.
-
-**To get your API key:**
-
-1. Visit [testream.app](https://testream.app)
-2. Sign up or log in to your account
-3. Navigate to Dashboard → Projects
-4. Create a new API key
-5. Copy and store it securely (e.g., GitHub Secrets, Key Vaults,environment variables)
-
----
-
-## What's Next?
-
-- Follow the [Quick Start Guide](./quick-start) for a complete setup walkthrough
-- Set up [CLI Reporter](../reporters/cli) for automated uploads
-- Set up [Jira Integration](../jira-integration/installation)
+| Framework | Sample Project |
+|---|---|
+| Playwright | [testream/playwright-jira-reporter](https://github.com/testream/playwright-jira-reporter) |
+| Cypress | [testream/cypress-jira-reporter](https://github.com/testream/cypress-jira-reporter) |
+| Jest | [testream/jest-jira-reporter](https://github.com/testream/jest-jira-reporter) |
+| Mocha | [testream/mocha-jira-reporter](https://github.com/testream/mocha-jira-reporter) |
+| Vitest | [testream/vitest-jira-reporter](https://github.com/testream/vitest-jira-reporter) |
+| WebdriverIO | [testream/webdriverio-jira-reporter](https://github.com/testream/webdriverio-jira-reporter) |
+| JUnit | [testream/junit-jira-reporter](https://github.com/testream/junit-jira-reporter) |
+| .NET | [testream/dotnet-jira-reporter](https://github.com/testream/dotnet-jira-reporter) |
+| CTRF CLI | [testream/ctrf-jira-reporter](https://github.com/testream/ctrf-jira-reporter) |

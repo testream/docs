@@ -250,6 +250,10 @@ npm install --save-dev cypress-ctrf-json-reporter
 
 Cypress screenshots captured during test runs are automatically included in the CTRF report when `screenshot: true` is set (default behavior).
 
+## Sample Project
+
+The **[testream/cypress-jira-reporter](https://github.com/testream/cypress-jira-reporter)** repository is a complete working example of a Cypress project integrated with Testream. It includes example tests, full reporter configuration, and a ready-to-use GitHub Actions workflow.
+
 ## NPM Package
 
 - **Package:** [@testream/cypress-reporter](https://www.npmjs.com/package/@testream/cypress-reporter)

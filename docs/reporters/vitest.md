@@ -92,6 +92,10 @@ export default defineConfig(({ mode }) => {
 - The reporter writes the CTRF report to `ctrf/ctrf-report.json` by default.
 - Git context (branch/commit/repository) is auto-detected in many CI environments if not provided.
 
+## Sample Project
+
+The **[testream/vitest-jira-reporter](https://github.com/testream/vitest-jira-reporter)** repository is a complete working example of a Vitest project integrated with Testream. It includes example tests, full reporter configuration, and a ready-to-use GitHub Actions workflow.
+
 ## NPM Package
 
 - **Package:** [@testream/vitest-reporter](https://www.npmjs.com/package/@testream/vitest-reporter)
