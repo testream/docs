@@ -68,8 +68,7 @@ function HeroSection() {
           <span className={styles.heroTitleAccent}>Every Test.</span>
         </h1>
         <p className={styles.heroSubtitle}>
-          Centralize results from Playwright, Jest, Vitest, Cypress, Mocha, WebdriverIO, JUnit, and .NET.
-          Track trends and kill flaky tests—synced to Jira.
+          Close the gap between your automated tests and your Jira projects by bringing test results from your favorite frameworks!
         </p>
         <div className={styles.heroButtons}>
           <Link to="/intro" className={styles.primaryButton}>
@@ -194,7 +193,7 @@ const reporters = [
   },
 ];
 
-function HeroReporterCard({ reporter }: { reporter: (typeof reporters)[0] }) {
+function HeroReporterCard({ reporter }: Readonly<{ reporter: (typeof reporters)[0] }>) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async (e: React.MouseEvent) => {
@@ -247,21 +246,18 @@ const steps = [
   {
     number: 1,
     title: 'Install the Reporter',
-    description: 'Choose your framework and install Testream',
-    code: null,
+    description: 'Choose your framework and integrate your projects'
   },
   {
     number: 2,
-    title: 'Run Your Tests',
-    description: 'Results are captured automatically',
-    code: null,
+    title: 'Run Your Automated Tests',
+    description: 'Your test runs and all the metadata are captured automatically from your CI/CD pipelines'
   },
   {
     number: 3,
-    title: 'View in Jira',
-    description: 'Track your tests in Jira and create issues and manage releases!',
-    code: null,
-  },
+    title: 'Track Your Tests in Jira Natively',
+    description: 'Make your tests visible to the whole team and improve software delivery with actionable insights'
+  }
 ];
 
 function HowItWorksSection() {
@@ -275,7 +271,6 @@ function HowItWorksSection() {
               <div className={styles.stepNumber}>{step.number}</div>
               <h3 className={styles.stepTitle}>{step.title}</h3>
               <p className={styles.stepDescription}>{step.description}</p>
-              {step.code && <code className={styles.codeSnippet}>{step.code}</code>}
             </div>
           ))}
         </div>

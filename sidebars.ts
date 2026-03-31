@@ -35,6 +35,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'features/dashboard',
         'features/test-run-details',
+        'features/test-run-summaries-in-jira-issues',
         'features/test-suite-changes',
         'features/issue-creation',
         'features/failure-inspection',

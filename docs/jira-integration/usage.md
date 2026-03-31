@@ -23,6 +23,7 @@ For detailed guides on each feature, visit the dedicated pages:
 
 - **[Dashboard](../features/dashboard)** - Test metrics, result distributions, and recent runs
 - **[Test Run Details](../features/test-run-details)** - Metadata, results summary, and release linking
+- **[Test Run Summaries in Jira Issues](../features/test-run-summaries-in-jira-issues)** - Inline issue panel with run status, commit, and suite-change highlights
 - **[Issue Creation](../features/issue-creation)** - Creating Jira issues from failed tests
 - **[Failure Inspection](../features/failure-inspection)** - Error messages, stack traces, and artifacts
 - **[Trends & Analytics](../features/trends-analytics)** - Historical performance charts and analysis
