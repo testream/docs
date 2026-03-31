@@ -41,8 +41,9 @@ All reporters use the [Common Test Report Format (CTRF)](https://github.com/ctrf
 ### CI/CD Integration
 
 Upload test results and artifacts with minimal configuration in any stage of your pipeline. Whether you're using GitHub Actions, Jenkins, CircleCI, or any other CI/CD platform, Testream makes it easy to integrate:
+
 ```yaml
-- uses: testream/upload-action@latest
+- uses: testream/cli@latest
   with:
     report-path: ctrf/ctrf-report.json
     test-tool: playwright
@@ -52,7 +53,7 @@ Upload test results and artifacts with minimal configuration in any stage of you
 Or use the CLI directly:
 
 ```bash
-npx @testream/cli \
+git npx @testream/cli \
   --report-path ctrf/ctrf-report.json \
   --test-tool playwright \
   --api-key $TESTREAM_API_KEY
@@ -82,6 +83,6 @@ Ready to integrate Testream? Choose your path:
 
 ## Need Help?
 
- - Email: [contact@testream.app](mailto:contact@testream.app)
- - Issues: [GitHub Issues](https://github.com/testream/docs/issues)
- - Website: [testream.app](https://testream.app)
+- Email: [contact@testream.app](mailto:contact@testream.app)
+- Issues: [GitHub Issues](https://github.com/testream/docs/issues)
+- Website: [testream.app](https://testream.app)
