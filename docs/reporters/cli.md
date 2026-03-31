@@ -66,7 +66,7 @@ jobs:
 Use the CLI in CircleCI, Bitbucket Pipelines, GitLab, Jenkins, Azure Pipelines, or local scripts.
 
 ```bash
-npx @testream/upload-action \
+npx @testream/cli \
   --report-path ctrf/ctrf-report.json \
   --test-tool playwright \
   --api-key $TESTREAM_API_KEY
@@ -108,7 +108,7 @@ jobs:
       - run:
           name: Upload to Testream
           command: |
-            npx @testream/upload-action \
+            npx @testream/cli \
               --report-path ctrf/ctrf-report.json \
               --test-tool playwright \
               --api-key $TESTREAM_API_KEY \
@@ -133,7 +133,7 @@ pipelines:
           - npm ci
           - npx playwright test
           - |
-            npx @testream/upload-action \
+            npx @testream/cli \
               --report-path ctrf/ctrf-report.json \
               --test-tool playwright \
               --api-key $TESTREAM_API_KEY \
@@ -155,7 +155,7 @@ The **[testream/ctrf-jira-reporter](https://github.com/testream/ctrf-jira-report
 
 ## NPM package
 
-- **Package:** [@testream/upload-action](https://www.npmjs.com/package/@testream/upload-action)
+- **Package:** [@testream/cli](https://www.npmjs.com/package/@testream/cli)
 - **Org:** [testream packages](https://www.npmjs.com/org/testream)
 
 ## What's Next?

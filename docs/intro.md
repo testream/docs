@@ -52,7 +52,7 @@ Upload test results and artifacts with minimal configuration in any stage of you
 Or use the CLI directly:
 
 ```bash
-npx @testream/upload-action \
+npx @testream/cli \
   --report-path ctrf/ctrf-report.json \
   --test-tool playwright \
   --api-key $TESTREAM_API_KEY
