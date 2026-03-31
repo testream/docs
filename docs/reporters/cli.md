@@ -35,7 +35,7 @@ jobs:
 
       - name: Upload to Testream
         if: always()
-        uses: testream/upload-action@latest
+        uses: testream/cli@latest
         with:
           report-path: ctrf/ctrf-report.json
           api-key: ${{ secrets.TESTREAM_API_KEY }}
@@ -43,30 +43,30 @@ jobs:
 
 ### Action inputs
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `report-path` | `string` | - | **Required** Path to CTRF report JSON file |
-| `api-key` | `string` | - | **Required** Testream API key (*required unless `no-upload` is true) |
-| `test-tool` | `string` | - | **Required** Test tool name (e.g., `playwright`, `jest`, `cypress`, `dotnet`) |
-| `branch` | `string` | auto | Git branch name |
-| `commit-sha` | `string` | auto | Git commit SHA |
-| `repository-url` | `string` | auto | Git repository URL |
-| `build-name` | `string` | - | Build name/identifier |
-| `build-number` | `string` | auto | Build number |
-| `build-url` | `string` | auto | Build URL |
-| `test-environment` | `string` | - | Environment name (e.g., `ci`, `staging`) |
-| `app-name` | `string` | - | Application name |
-| `app-version` | `string` | - | Application version |
-| `test-type` | `string` | - | Test type (e.g., `unit`, `e2e`) |
-| `no-upload` | `boolean` | `false` | Skip upload (validate + summarize only) |
-| `fail-on-error` | `boolean` | `true` | Fail the action if upload fails |
+| Option             | Type      | Default | Description                                                                   |
+| ------------------ | --------- | ------- | ----------------------------------------------------------------------------- |
+| `report-path`      | `string`  | -       | **Required** Path to CTRF report JSON file                                    |
+| `api-key`          | `string`  | -       | **Required** Testream API key (\*required unless `no-upload` is true)         |
+| `test-tool`        | `string`  | -       | **Required** Test tool name (e.g., `playwright`, `jest`, `cypress`, `dotnet`) |
+| `branch`           | `string`  | auto    | Git branch name                                                               |
+| `commit-sha`       | `string`  | auto    | Git commit SHA                                                                |
+| `repository-url`   | `string`  | auto    | Git repository URL                                                            |
+| `build-name`       | `string`  | -       | Build name/identifier                                                         |
+| `build-number`     | `string`  | auto    | Build number                                                                  |
+| `build-url`        | `string`  | auto    | Build URL                                                                     |
+| `test-environment` | `string`  | -       | Environment name (e.g., `ci`, `staging`)                                      |
+| `app-name`         | `string`  | -       | Application name                                                              |
+| `app-version`      | `string`  | -       | Application version                                                           |
+| `test-type`        | `string`  | -       | Test type (e.g., `unit`, `e2e`)                                               |
+| `no-upload`        | `boolean` | `false` | Skip upload (validate + summarize only)                                       |
+| `fail-on-error`    | `boolean` | `true`  | Fail the action if upload fails                                               |
 
 ## CLI (Any CI provider)
 
 Use the CLI in CircleCI, Bitbucket Pipelines, GitLab, Jenkins, Azure Pipelines, or local scripts.
 
 ```bash
-npx @testream/upload-action \
+npx @testream/cli \
   --report-path ctrf/ctrf-report.json \
   --test-tool playwright \
   --api-key $TESTREAM_API_KEY
@@ -74,23 +74,23 @@ npx @testream/upload-action \
 
 ### CLI options
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `-r, --report-path <path>` | `string` | - | **Required** Path to CTRF report JSON file |
-| `-k, --api-key <key>` | `string` | - | **Required** API key for authentication |
-| `--test-tool <name>` | `string` | - | **Required** Test tool name (e.g., `playwright`, `jest`, `cypress`, `dotnet`) |
-| `-b, --branch <name>` | `string` | auto (CI) | Git branch name |
-| `-c, --commit-sha <sha>` | `string` | auto (CI) | Git commit SHA |
-| `-u, --repository-url <url>` | `string` | auto (CI) | Git repository URL |
-| `--build-name <name>` | `string` | - | Build name/identifier |
-| `--build-number <num>` | `string` | auto (CI) | Build number |
-| `--build-url <url>` | `string` | auto (CI) | Build URL |
-| `--test-environment <env>` | `string` | - | Test environment (e.g., `ci`, `staging`) |
-| `--app-name <name>` | `string` | - | Application name |
-| `--app-version <ver>` | `string` | - | Application version |
-| `--test-type <type>` | `string` | - | Test type (e.g., `unit`, `e2e`) |
-| `--no-upload` | `boolean` | `false` | Skip uploading (validate + summarize only) |
-| `--fail-on-error` | `boolean` | `false` | Exit with non-zero code if upload fails |
+| Option                       | Type      | Default   | Description                                                                   |
+| ---------------------------- | --------- | --------- | ----------------------------------------------------------------------------- |
+| `-r, --report-path <path>`   | `string`  | -         | **Required** Path to CTRF report JSON file                                    |
+| `-k, --api-key <key>`        | `string`  | -         | **Required** API key for authentication                                       |
+| `--test-tool <name>`         | `string`  | -         | **Required** Test tool name (e.g., `playwright`, `jest`, `cypress`, `dotnet`) |
+| `-b, --branch <name>`        | `string`  | auto (CI) | Git branch name                                                               |
+| `-c, --commit-sha <sha>`     | `string`  | auto (CI) | Git commit SHA                                                                |
+| `-u, --repository-url <url>` | `string`  | auto (CI) | Git repository URL                                                            |
+| `--build-name <name>`        | `string`  | -         | Build name/identifier                                                         |
+| `--build-number <num>`       | `string`  | auto (CI) | Build number                                                                  |
+| `--build-url <url>`          | `string`  | auto (CI) | Build URL                                                                     |
+| `--test-environment <env>`   | `string`  | -         | Test environment (e.g., `ci`, `staging`)                                      |
+| `--app-name <name>`          | `string`  | -         | Application name                                                              |
+| `--app-version <ver>`        | `string`  | -         | Application version                                                           |
+| `--test-type <type>`         | `string`  | -         | Test type (e.g., `unit`, `e2e`)                                               |
+| `--no-upload`                | `boolean` | `false`   | Skip uploading (validate + summarize only)                                    |
+| `--fail-on-error`            | `boolean` | `false`   | Exit with non-zero code if upload fails                                       |
 
 ## CircleCI example
 
@@ -108,7 +108,7 @@ jobs:
       - run:
           name: Upload to Testream
           command: |
-            npx @testream/upload-action \
+            npx @testream/cli \
               --report-path ctrf/ctrf-report.json \
               --test-tool playwright \
               --api-key $TESTREAM_API_KEY \
@@ -133,7 +133,7 @@ pipelines:
           - npm ci
           - npx playwright test
           - |
-            npx @testream/upload-action \
+            npx @testream/cli \
               --report-path ctrf/ctrf-report.json \
               --test-tool playwright \
               --api-key $TESTREAM_API_KEY \
@@ -155,7 +155,7 @@ The **[testream/ctrf-jira-reporter](https://github.com/testream/ctrf-jira-report
 
 ## NPM package
 
-- **Package:** [@testream/upload-action](https://www.npmjs.com/package/@testream/upload-action)
+- **Package:** [@testream/cli](https://www.npmjs.com/package/@testream/cli)
 - **Org:** [testream packages](https://www.npmjs.com/org/testream)
 
 ## What's Next?
