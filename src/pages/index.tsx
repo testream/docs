@@ -56,6 +56,7 @@ const frameworks = [
   { name: '.NET', icon: 'https://ctrf.io/img/dotnet.svg' },
   { name: 'WebdriverIO', icon: 'https://ctrf.io/img/wdio.svg' },
   { name: 'Mocha', icon: 'https://ctrf.io/img/mochajs.svg' },
+  { name: 'Pytest', icon: 'https://ctrf.io/img/pytest.svg' },
   { name: 'CLI', icon: 'img/command-line-icon.png' },
 ];
 
@@ -68,7 +69,7 @@ function HeroSection() {
           <span className={styles.heroTitleAccent}>Every Test.</span>
         </h1>
         <p className={styles.heroSubtitle}>
-          Close the gap between your automated tests and your Jira projects by bringing test results from your favorite frameworks!
+          Close the gap between your automated tests and your Jira projects by bringing test results from your favorite framework repositories!
         </p>
         <div className={styles.heroButtons}>
           <Link to="/intro" className={styles.primaryButton}>
@@ -164,7 +165,7 @@ const reporters = [
   {
     name: 'JUnit',
     icon: 'https://ctrf.io/img/junit.svg',
-    command: 'npx @testream/junit-reporter --help',
+    command: 'npm i -D @testream/junit-reporter',
     docsLink: '/reporters/junit',
   },
   {
@@ -184,6 +185,12 @@ const reporters = [
     icon: 'https://ctrf.io/img/mochajs.svg',
     command: 'npm i -D @testream/mocha-reporter',
     docsLink: '/reporters/mocha',
+  },
+  {
+    name: 'Pytest',
+    icon: 'https://ctrf.io/img/pytest.svg',
+    command: 'npm i -D @testream/pytest-reporter',
+    docsLink: '/reporters/pytest',
   },
   {
     name: 'CLI',

@@ -17,87 +17,82 @@ npm install --save-dev @testream/playwright-reporter
 Add the reporter to your `playwright.config.ts`:
 
 ```typescript title="playwright.config.ts"
-import { defineConfig } from '@playwright/test';
+import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
   reporter: [
-    ['@testream/playwright-reporter', {
-      apiKey: process.env.TESTREAM_API_KEY,
-      uploadEnabled: true,
-    }],
-    ['html'],
+    [
+      "@testream/playwright-reporter",
+      {
+        apiKey: process.env.TESTREAM_API_KEY,
+        uploadEnabled: true,
+      },
+    ],
+    ["html"],
   ],
 });
 ```
 
 ## Configuration Options
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `apiKey` | `string` | - | **Required** Testream API key |
-| `uploadEnabled` | `boolean` | `true` | Enable/disable automatic upload |
-| `failOnUploadError` | `boolean` | `false` | Fail the test run if upload fails |
-| `branch` | `string` | auto | Git branch name |
-| `commitSha` | `string` | auto | Git commit SHA |
-| `repositoryUrl` | `string` | auto | Git repository URL |
-| `outputFile` | `string` | `ctrf-report.json` | CTRF report filename |
-| `outputDir` | `string` | `ctrf` | CTRF output directory |
-| `screenshot` | `boolean` | `true` | Include screenshots in CTRF |
-| `annotations` | `boolean` | `false` | Include Playwright annotations |
-| `testType` | `string` | `e2e` | Test type (e.g., `api`, `unit`) |
-| `appName` | `string` | - | Application name |
-| `appVersion` | `string` | - | Application version |
-| `buildName` | `string` | - | Build name |
-| `buildNumber` | `string` | auto | Build number |
-| `buildUrl` | `string` | auto | Build URL |
-| `testEnvironment` | `string` | - | Environment name |
+| Option              | Type      | Default            | Description                       |
+| ------------------- | --------- | ------------------ | --------------------------------- |
+| `apiKey`            | `string`  | -                  | **Required** Testream API key     |
+| `uploadEnabled`     | `boolean` | `true`             | Enable/disable automatic upload   |
+| `failOnUploadError` | `boolean` | `false`            | Fail the test run if upload fails |
+| `branch`            | `string`  | auto               | Git branch name                   |
+| `commitSha`         | `string`  | auto               | Git commit SHA                    |
+| `repositoryUrl`     | `string`  | auto               | Git repository URL                |
+| `outputFile`        | `string`  | `ctrf-report.json` | CTRF report filename              |
+| `outputDir`         | `string`  | `ctrf`             | CTRF output directory             |
+| `screenshot`        | `boolean` | `true`             | Include screenshots in CTRF       |
+| `annotations`       | `boolean` | `false`            | Include Playwright annotations    |
+| `testType`          | `string`  | `e2e`              | Test type (e.g., `api`, `unit`)   |
+| `appName`           | `string`  | -                  | Application name                  |
+| `appVersion`        | `string`  | -                  | Application version               |
+| `buildName`         | `string`  | -                  | Build name                        |
+| `buildNumber`       | `string`  | auto               | Build number                      |
+| `buildUrl`          | `string`  | auto               | Build URL                         |
+| `testEnvironment`   | `string`  | -                  | Environment name                  |
 
 ## Full Configuration Example
 
 ```typescript title="playwright.config.ts"
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
-  testDir: './tests',
+  testDir: "./tests",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: [
-    ['@testream/playwright-reporter', {
-      apiKey: process.env.TESTREAM_API_KEY,
-      uploadEnabled: true,
-      failOnUploadError: true,
-      branch: process.env.GITHUB_REF_NAME,
-      commitSha: process.env.GITHUB_SHA,
-      repositoryUrl: process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITORY
-        ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}`
-        : undefined,
-      outputFile: 'ctrf-report.json',
-      outputDir: 'ctrf',
-      screenshot: true,
-      annotations: true,
-      testType: 'e2e',
-      appName: 'My App',
-      appVersion: '1.0.0',
-      buildName: process.env.GITHUB_WORKFLOW,
-      buildNumber: process.env.GITHUB_RUN_NUMBER,
-      buildUrl: process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITORY && process.env.GITHUB_RUN_ID
-        ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`
-        : undefined,
-      testEnvironment: process.env.TEST_ENV || 'ci',
-    }],
-    ['html', { open: 'never' }],
-    ['list'],
+    [
+      "@testream/playwright-reporter",
+      {
+        apiKey: process.env.TESTREAM_API_KEY,
+        uploadEnabled: true,
+        failOnUploadError: true,
+        outputFile: "ctrf-report.json",
+        outputDir: "ctrf",
+        screenshot: true,
+        annotations: true,
+        testType: "e2e",
+        appName: "My App",
+        appVersion: "1.0.0",
+        buildName: process.env.GITHUB_WORKFLOW,
+        testEnvironment: process.env.TEST_ENV || "ci",
+      },
+    ],
+    ["html", { open: "never" }],
+    ["list"],
   ],
   use: {
-    trace: 'retain-on-failure',
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    trace: "retain-on-failure",
+    screenshot: "only-on-failure",
+    video: "retain-on-failure",
   },
-  projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
-  ],
+  projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
 });
 ```
 
@@ -119,6 +114,7 @@ The **[testream/playwright-jira-reporter](https://github.com/testream/playwright
 - Learn about the [.NET Reporter](./dotnet)
 - Learn about the [Cypress Reporter](./cypress)
 - Learn about the [Jest Reporter](./jest)
+- Learn about the [Pytest Reporter](./pytest)
 - Learn about the [WebdriverIO Reporter](./webdriverio)
 - Set up [CLI Reporter](./cli)
 - View results in [Jira](../jira-integration/usage)

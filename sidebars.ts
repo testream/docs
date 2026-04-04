@@ -25,6 +25,7 @@ const sidebars: SidebarsConfig = {
         'reporters/mocha',
         'reporters/cli',
         'reporters/junit',
+        'reporters/pytest',
         'reporters/vitest',
       ],
     },

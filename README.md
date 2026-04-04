@@ -17,6 +17,7 @@ Official documentation for the Testream test management platform.
 - Mocha Reporter: https://testream.github.io/reporters/mocha
 - CLI Reporter: https://testream.github.io/reporters/cli
 - JUnit Reporter: https://testream.github.io/reporters/junit
+- Pytest Reporter: https://testream.github.io/reporters/pytest
 - Vitest Reporter: https://testream.github.io/reporters/vitest
 - Jira Integration: https://testream.github.io/jira-integration/installation (Marketplace: https://marketplace.atlassian.com/apps/3048460704/testream-for-jira)
 

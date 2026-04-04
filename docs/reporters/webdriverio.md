@@ -18,18 +18,13 @@ Add the reporter and launcher service to your `wdio.conf.ts`:
 
 ```typescript title="wdio.conf.ts"
 const testreamConfig = {
-  apiKey: process.env.TESTREAM_API_KEY || '',
+  apiKey: process.env.TESTREAM_API_KEY || "",
   uploadEnabled: true,
 };
 
 export const config: Options.Testrunner = {
-  reporters: [
-    'spec',
-    ['@testream/webdriverio-reporter', testreamConfig],
-  ],
-  services: [
-    ['@testream/webdriverio-reporter', testreamConfig],
-  ],
+  reporters: ["spec", ["@testream/webdriverio-reporter", testreamConfig]],
+  services: [["@testream/webdriverio-reporter", testreamConfig]],
 };
 ```
 
@@ -37,67 +32,55 @@ The `services` entry registers a launcher service that automatically aggregates 
 
 ## Configuration Options
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `apiKey` | `string` | - | **Required** Testream API key |
-| `uploadEnabled` | `boolean` | `true` | Enable/disable automatic upload |
-| `failOnUploadError` | `boolean` | `false` | Fail the test run if upload fails |
-| `branch` | `string` | auto | Git branch name |
-| `commitSha` | `string` | auto | Git commit SHA |
-| `repositoryUrl` | `string` | auto | Git repository URL |
-| `outputDir` | `string` | `ctrf` | CTRF output directory |
-| `outputFile` | `string` | `ctrf-report.json` | CTRF report filename |
-| `buildName` | `string` | - | Build name |
-| `buildNumber` | `string` | auto | Build number |
-| `buildUrl` | `string` | auto | Build URL |
-| `testEnvironment` | `string` | - | Environment name |
-| `appName` | `string` | - | Application name |
-| `appVersion` | `string` | - | Application version |
-| `testType` | `string` | `e2e` | Test type (e.g., `api`, `unit`) |
+| Option              | Type      | Default            | Description                       |
+| ------------------- | --------- | ------------------ | --------------------------------- |
+| `apiKey`            | `string`  | -                  | **Required** Testream API key     |
+| `uploadEnabled`     | `boolean` | `true`             | Enable/disable automatic upload   |
+| `failOnUploadError` | `boolean` | `false`            | Fail the test run if upload fails |
+| `branch`            | `string`  | auto               | Git branch name                   |
+| `commitSha`         | `string`  | auto               | Git commit SHA                    |
+| `repositoryUrl`     | `string`  | auto               | Git repository URL                |
+| `outputDir`         | `string`  | `ctrf`             | CTRF output directory             |
+| `outputFile`        | `string`  | `ctrf-report.json` | CTRF report filename              |
+| `buildName`         | `string`  | -                  | Build name                        |
+| `buildNumber`       | `string`  | auto               | Build number                      |
+| `buildUrl`          | `string`  | auto               | Build URL                         |
+| `testEnvironment`   | `string`  | -                  | Environment name                  |
+| `appName`           | `string`  | -                  | Application name                  |
+| `appVersion`        | `string`  | -                  | Application version               |
+| `testType`          | `string`  | `e2e`              | Test type (e.g., `api`, `unit`)   |
 
 ## Full Configuration Example
 
 ```typescript title="wdio.conf.ts"
 const testreamConfig = {
-  apiKey: process.env.TESTREAM_API_KEY || '',
+  apiKey: process.env.TESTREAM_API_KEY || "",
   uploadEnabled: true,
   failOnUploadError: true,
-  branch: process.env.GITHUB_REF_NAME,
-  commitSha: process.env.GITHUB_SHA,
-  repositoryUrl: process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITORY
-    ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}`
-    : undefined,
-  outputDir: 'ctrf',
-  outputFile: 'ctrf-report.json',
-  testType: 'e2e',
-  appName: 'My App',
-  appVersion: '1.0.0',
+  outputDir: "ctrf",
+  outputFile: "ctrf-report.json",
+  testType: "e2e",
+  appName: "My App",
+  appVersion: "1.0.0",
   buildName: process.env.GITHUB_WORKFLOW,
-  buildNumber: process.env.GITHUB_RUN_NUMBER,
-  buildUrl: process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITORY && process.env.GITHUB_RUN_ID
-    ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`
-    : undefined,
-  testEnvironment: process.env.TEST_ENV || 'ci',
+  testEnvironment: process.env.TEST_ENV || "ci",
 };
 
 export const config: Options.Testrunner = {
-  runner: 'local',
-  specs: ['./test/specs/**/*.ts'],
+  runner: "local",
+  specs: ["./test/specs/**/*.ts"],
   maxInstances: 5,
-  capabilities: [{
-    browserName: 'chrome',
-    'goog:chromeOptions': { args: ['--headless', '--disable-gpu'] },
-  }],
-  logLevel: 'info',
-  framework: 'mocha',
-  reporters: [
-    'spec',
-    ['@testream/webdriverio-reporter', testreamConfig],
+  capabilities: [
+    {
+      browserName: "chrome",
+      "goog:chromeOptions": { args: ["--headless", "--disable-gpu"] },
+    },
   ],
-  services: [
-    ['@testream/webdriverio-reporter', testreamConfig],
-  ],
-  mochaOpts: { ui: 'bdd', timeout: 60000 },
+  logLevel: "info",
+  framework: "mocha",
+  reporters: ["spec", ["@testream/webdriverio-reporter", testreamConfig]],
+  services: [["@testream/webdriverio-reporter", testreamConfig]],
+  mochaOpts: { ui: "bdd", timeout: 60000 },
 };
 ```
 
@@ -156,6 +139,7 @@ The **[testream/webdriverio-jira-reporter](https://github.com/testream/webdriver
 - Learn about the [Playwright Reporter](./playwright)
 - Learn about the [Cypress Reporter](./cypress)
 - Learn about the [Jest Reporter](./jest)
+- Learn about the [Pytest Reporter](./pytest)
 - Learn about the [.NET Reporter](./dotnet)
 - Set up [CLI Reporter](./cli)
 - View results in [Jira](../jira-integration/usage)

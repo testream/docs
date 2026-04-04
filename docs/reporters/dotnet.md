@@ -23,30 +23,31 @@ npx @testream/dotnet-reporter -k $TESTREAM_API_KEY
 ```
 
 This single command will:
+
 1. Run `dotnet test`
 2. Generate a CTRF report
 3. Upload to Testream (project key inferred from API key)
 
 ## CLI Options
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `-k, --api-key` | `string` | - | **Required** API key (unless `--no-upload` is used) |
-| `--project <path>` | `string` | current dir | Path to .NET project or solution |
-| `--trx-path <path>` | `string` | - | Use existing TRX file(s) instead of running tests |
-| `--branch <name>` | `string` | auto (CI) | Git branch name |
-| `--commit-sha <sha>` | `string` | auto (CI) | Git commit SHA |
-| `--repository-url <url>` | `string` | auto (CI) | Git repository URL |
-| `--build-name <name>` | `string` | - | Build name |
-| `--build-number <num>` | `string` | auto (CI) | Build number |
-| `--build-url <url>` | `string` | auto (CI) | Build URL |
-| `--test-environment <env>` | `string` | - | Test environment (e.g., `ci`, `staging`) |
-| `--app-name <name>` | `string` | - | Application name |
-| `--app-version <ver>` | `string` | - | Application version |
-| `--test-type <type>` | `string` | - | Test type (e.g., `unit`, `integration`) |
-| `--no-upload` | `boolean` | `false` | Skip uploading (validate + summarize only) |
-| `--fail-on-error` | `boolean` | `false` | Exit with non-zero code if upload fails |
-| `-- <args>` | - | - | Additional arguments passed to `dotnet test` |
+| Option                     | Type      | Default     | Description                                         |
+| -------------------------- | --------- | ----------- | --------------------------------------------------- |
+| `-k, --api-key`            | `string`  | -           | **Required** API key (unless `--no-upload` is used) |
+| `--project <path>`         | `string`  | current dir | Path to .NET project or solution                    |
+| `--trx-path <path>`        | `string`  | -           | Use existing TRX file(s) instead of running tests   |
+| `--branch <name>`          | `string`  | auto (CI)   | Git branch name                                     |
+| `--commit-sha <sha>`       | `string`  | auto (CI)   | Git commit SHA                                      |
+| `--repository-url <url>`   | `string`  | auto (CI)   | Git repository URL                                  |
+| `--build-name <name>`      | `string`  | -           | Build name                                          |
+| `--build-number <num>`     | `string`  | auto (CI)   | Build number                                        |
+| `--build-url <url>`        | `string`  | auto (CI)   | Build URL                                           |
+| `--test-environment <env>` | `string`  | -           | Test environment (e.g., `ci`, `staging`)            |
+| `--app-name <name>`        | `string`  | -           | Application name                                    |
+| `--app-version <ver>`      | `string`  | -           | Application version                                 |
+| `--test-type <type>`       | `string`  | -           | Test type (e.g., `unit`, `integration`)             |
+| `--no-upload`              | `boolean` | `false`     | Skip uploading (validate + summarize only)          |
+| `--fail-on-error`          | `boolean` | `false`     | Exit with non-zero code if upload fails             |
+| `-- <args>`                | -         | -           | Additional arguments passed to `dotnet test`        |
 
 ## Examples
 
@@ -74,21 +75,18 @@ npx @testream/dotnet-reporter -k $TESTREAM_API_KEY -- --filter "Category=Unit"
 npx @testream/dotnet-reporter -k $TESTREAM_API_KEY --trx-path TestResults/*.trx
 ```
 
-### Add full metadata
+## Full Configuration Example
 
 ```bash
 npx @testream/dotnet-reporter \
   -k $TESTREAM_API_KEY \
-  --branch $GITHUB_REF_NAME \
-  --commit-sha $GITHUB_SHA \
-  --repository-url $GITHUB_SERVER_URL/$GITHUB_REPOSITORY \
+  --project ./MySolution.sln \
   --build-name $GITHUB_WORKFLOW \
-  --build-number $GITHUB_RUN_NUMBER \
-  --build-url $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID \
   --test-environment ci \
   --app-name "My App" \
   --app-version 1.0.0 \
-  --test-type unit
+  --test-type unit \
+  --fail-on-error
 ```
 
 ## GitHub Actions Example
@@ -107,7 +105,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: "8.0.x"
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -146,6 +144,7 @@ The **[testream/dotnet-jira-reporter](https://github.com/testream/dotnet-jira-re
 
 - Learn about the [Cypress Reporter](./cypress)
 - Learn about the [Jest Reporter](./jest)
+- Learn about the [Pytest Reporter](./pytest)
 - Learn about the [Playwright Reporter](./playwright)
 - Learn about the [WebdriverIO Reporter](./webdriverio)
 - Set up [CLI Reporter](./cli)

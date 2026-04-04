@@ -23,6 +23,7 @@ npx @testream/cypress-reporter -k $TESTREAM_API_KEY
 ```
 
 This single command will:
+
 1. Run your Cypress tests
 2. Generate a CTRF report automatically
 3. Upload results to Testream (project key inferred from API key)
@@ -32,8 +33,8 @@ This single command will:
 Add the reporter to your `cypress.config.ts`:
 
 ```typescript title="cypress.config.ts"
-import { defineConfig } from 'cypress';
-import { TestreamReporter } from '@testream/cypress-reporter';
+import { defineConfig } from "cypress";
+import { TestreamReporter } from "@testream/cypress-reporter";
 
 export default defineConfig({
   e2e: {
@@ -56,51 +57,51 @@ cypress run
 
 ## CLI Options
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `-k, --api-key` | `string` | - | **Required** API key (unless `--no-upload` is used) |
-| `--project <path>` | `string` | current dir | Path to Cypress project |
-| `--results-path <path>` | `string` | - | Use existing CTRF file(s) instead of running tests |
-| `--branch <name>` | `string` | auto (CI) | Git branch name |
-| `--commit-sha <sha>` | `string` | auto (CI) | Git commit SHA |
-| `--repository-url <url>` | `string` | auto (CI) | Git repository URL |
-| `--build-name <name>` | `string` | - | Build name |
-| `--build-number <num>` | `string` | auto (CI) | Build number |
-| `--build-url <url>` | `string` | auto (CI) | Build URL |
-| `--test-environment <env>` | `string` | - | Test environment (e.g., `ci`, `staging`) |
-| `--app-name <name>` | `string` | - | Application name |
-| `--app-version <ver>` | `string` | - | Application version |
-| `--test-type <type>` | `string` | - | Test type (e.g., `e2e`, `integration`) |
-| `--no-upload` | `boolean` | `false` | Skip uploading (validate + summarize only) |
-| `--fail-on-error` | `boolean` | `false` | Exit with non-zero code if upload fails |
-| `-- <args>` | - | - | Additional arguments passed to `cypress run` |
+| Option                     | Type      | Default     | Description                                         |
+| -------------------------- | --------- | ----------- | --------------------------------------------------- |
+| `-k, --api-key`            | `string`  | -           | **Required** API key (unless `--no-upload` is used) |
+| `--project <path>`         | `string`  | current dir | Path to Cypress project                             |
+| `--results-path <path>`    | `string`  | -           | Use existing CTRF file(s) instead of running tests  |
+| `--branch <name>`          | `string`  | auto (CI)   | Git branch name                                     |
+| `--commit-sha <sha>`       | `string`  | auto (CI)   | Git commit SHA                                      |
+| `--repository-url <url>`   | `string`  | auto (CI)   | Git repository URL                                  |
+| `--build-name <name>`      | `string`  | -           | Build name                                          |
+| `--build-number <num>`     | `string`  | auto (CI)   | Build number                                        |
+| `--build-url <url>`        | `string`  | auto (CI)   | Build URL                                           |
+| `--test-environment <env>` | `string`  | -           | Test environment (e.g., `ci`, `staging`)            |
+| `--app-name <name>`        | `string`  | -           | Application name                                    |
+| `--app-version <ver>`      | `string`  | -           | Application version                                 |
+| `--test-type <type>`       | `string`  | -           | Test type (e.g., `e2e`, `integration`)              |
+| `--no-upload`              | `boolean` | `false`     | Skip uploading (validate + summarize only)          |
+| `--fail-on-error`          | `boolean` | `false`     | Exit with non-zero code if upload fails             |
+| `-- <args>`                | -         | -           | Additional arguments passed to `cypress run`        |
 
 ## Configuration Options
 
 When using programmatic configuration, these options are available:
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `on` | `PluginEvents` | - | **Required** Cypress plugin events object |
-| `apiKey` | `string` | - | **Required** Testream API key |
-| `uploadEnabled` | `boolean` | `true` | Enable/disable automatic upload |
-| `failOnUploadError` | `boolean` | `false` | Fail test run if upload fails |
-| `outputDir` | `string` | `ctrf` | CTRF output directory |
-| `outputFile` | `string` | `ctrf-report.json` | CTRF report filename |
-| `screenshot` | `boolean` | `true` | Include screenshots in report |
-| `minimal` | `boolean` | `false` | Generate minimal report |
-| `annotations` | `boolean` | `false` | Include Cypress annotations |
-| `testType` | `string` | `e2e` | Test type (e.g., `e2e`, `integration`) |
-| `appName` | `string` | - | Application name |
-| `appVersion` | `string` | - | Application version |
-| `branchName` | `string` | auto | Git branch name |
-| `commitSha` | `string` | auto | Git commit SHA |
-| `repositoryUrl` | `string` | auto | Git repository URL |
-| `repositoryName` | `string` | auto | Git repository name |
-| `buildName` | `string` | - | Build name |
-| `buildNumber` | `string` | auto | Build number |
-| `buildUrl` | `string` | auto | Build URL |
-| `testEnvironment` | `string` | - | Test environment name |
+| Option              | Type           | Default            | Description                               |
+| ------------------- | -------------- | ------------------ | ----------------------------------------- |
+| `on`                | `PluginEvents` | -                  | **Required** Cypress plugin events object |
+| `apiKey`            | `string`       | -                  | **Required** Testream API key             |
+| `uploadEnabled`     | `boolean`      | `true`             | Enable/disable automatic upload           |
+| `failOnUploadError` | `boolean`      | `false`            | Fail test run if upload fails             |
+| `outputDir`         | `string`       | `ctrf`             | CTRF output directory                     |
+| `outputFile`        | `string`       | `ctrf-report.json` | CTRF report filename                      |
+| `screenshot`        | `boolean`      | `true`             | Include screenshots in report             |
+| `minimal`           | `boolean`      | `false`            | Generate minimal report                   |
+| `annotations`       | `boolean`      | `false`            | Include Cypress annotations               |
+| `testType`          | `string`       | `e2e`              | Test type (e.g., `e2e`, `integration`)    |
+| `appName`           | `string`       | -                  | Application name                          |
+| `appVersion`        | `string`       | -                  | Application version                       |
+| `branchName`        | `string`       | auto               | Git branch name                           |
+| `commitSha`         | `string`       | auto               | Git commit SHA                            |
+| `repositoryUrl`     | `string`       | auto               | Git repository URL                        |
+| `repositoryName`    | `string`       | auto               | Git repository name                       |
+| `buildName`         | `string`       | -                  | Build name                                |
+| `buildNumber`       | `string`       | auto               | Build number                              |
+| `buildUrl`          | `string`       | auto               | Build URL                                 |
+| `testEnvironment`   | `string`       | -                  | Test environment name                     |
 
 ## Examples
 
@@ -130,32 +131,27 @@ If you've already run your tests and have CTRF reports:
 npx @testream/cypress-reporter -k $TESTREAM_API_KEY --results-path ctrf/ctrf-report.json
 ```
 
-### Add full metadata
+### Add application and environment metadata
 
 ```bash
 npx @testream/cypress-reporter \
   -k $TESTREAM_API_KEY \
-  --branch $GITHUB_REF_NAME \
-  --commit-sha $GITHUB_SHA \
-  --repository-url $GITHUB_SERVER_URL/$GITHUB_REPOSITORY \
   --build-name "E2E Tests" \
-  --build-number $GITHUB_RUN_NUMBER \
-  --build-url $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID \
   --test-environment ci \
   --app-name "My App" \
   --app-version 1.0.0 \
   --test-type e2e
 ```
 
-### Full Programmatic Configuration Example
+## Full Configuration Example
 
 ```typescript title="cypress.config.ts"
-import { defineConfig } from 'cypress';
-import { TestreamReporter } from '@testream/cypress-reporter';
+import { defineConfig } from "cypress";
+import { TestreamReporter } from "@testream/cypress-reporter";
 
 export default defineConfig({
   e2e: {
-    baseUrl: 'https://example.cypress.io',
+    baseUrl: "https://example.cypress.io",
     video: false,
     screenshotOnRunFailure: true,
     setupNodeEvents(on, config) {
@@ -169,34 +165,23 @@ export default defineConfig({
         failOnUploadError: false,
 
         // Output Configuration
-        outputDir: 'ctrf',
-        outputFile: 'ctrf-report.json',
+        outputDir: "ctrf",
+        outputFile: "ctrf-report.json",
 
         // Report Options
         screenshot: true,
-        testType: 'e2e',
+        testType: "e2e",
         minimal: false,
 
         // Application Info
-        appName: 'My App',
-        appVersion: '1.0.0',
+        appName: "My App",
+        appVersion: "1.0.0",
 
         // Environment
-        testEnvironment: process.env.TEST_ENV || 'local',
+        testEnvironment: process.env.TEST_ENV || "local",
 
-        // Git Info (auto-detected in CI)
-        commitSha: process.env.GITHUB_SHA,
-        repositoryUrl: process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITORY
-          ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}`
-          : undefined,
-        branchName: process.env.GITHUB_REF_NAME,
-
-        // Build Info
-        buildNumber: process.env.GITHUB_RUN_NUMBER,
-        buildName: 'Cypress E2E Tests',
-        buildUrl: process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITORY && process.env.GITHUB_RUN_ID
-          ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`
-          : undefined,
+        // Build Metadata
+        buildName: "Cypress E2E Tests",
       });
     },
   },
@@ -262,6 +247,7 @@ The **[testream/cypress-jira-reporter](https://github.com/testream/cypress-jira-
 ## What's Next?
 
 - Learn about the [Jest Reporter](./jest)
+- Learn about the [Pytest Reporter](./pytest)
 - Learn about the [Playwright Reporter](./playwright)
 - Learn about the [WebdriverIO Reporter](./webdriverio)
 - Set up [CLI Reporter](./cli)

@@ -19,9 +19,9 @@ Add the reporter to your `jest.config.js`:
 ```javascript title="jest.config.js"
 module.exports = {
   reporters: [
-    'default',
+    "default",
     [
-      '@testream/jest-reporter',
+      "@testream/jest-reporter",
       {
         apiKey: process.env.TESTREAM_API_KEY,
         uploadEnabled: true,
@@ -41,59 +41,48 @@ The reporter will automatically upload results after each test run.
 
 ## Configuration Options
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `apiKey` | `string` | - | **Required** Testream API key |
-| `uploadEnabled` | `boolean` | `true` | Enable/disable automatic upload |
-| `failOnUploadError` | `boolean` | `false` | Fail test run if upload fails |
-| `branch` | `string` | auto | Git branch name |
-| `commitSha` | `string` | auto | Git commit SHA |
-| `repositoryUrl` | `string` | auto | Git repository URL |
-| `testType` | `string` | - | Test type (e.g., `unit`, `integration`) |
-| `appName` | `string` | - | Application name |
-| `appVersion` | `string` | - | Application version |
-| `buildName` | `string` | - | Build name |
-| `buildNumber` | `string` | auto | Build number |
-| `buildUrl` | `string` | auto | Build URL |
-| `testEnvironment` | `string` | - | Test environment (e.g., `ci`, `staging`) |
+| Option              | Type      | Default | Description                              |
+| ------------------- | --------- | ------- | ---------------------------------------- |
+| `apiKey`            | `string`  | -       | **Required** Testream API key            |
+| `uploadEnabled`     | `boolean` | `true`  | Enable/disable automatic upload          |
+| `failOnUploadError` | `boolean` | `false` | Fail test run if upload fails            |
+| `branch`            | `string`  | auto    | Git branch name                          |
+| `commitSha`         | `string`  | auto    | Git commit SHA                           |
+| `repositoryUrl`     | `string`  | auto    | Git repository URL                       |
+| `testType`          | `string`  | -       | Test type (e.g., `unit`, `integration`)  |
+| `appName`           | `string`  | -       | Application name                         |
+| `appVersion`        | `string`  | -       | Application version                      |
+| `buildName`         | `string`  | -       | Build name                               |
+| `buildNumber`       | `string`  | auto    | Build number                             |
+| `buildUrl`          | `string`  | auto    | Build URL                                |
+| `testEnvironment`   | `string`  | -       | Test environment (e.g., `ci`, `staging`) |
 
 ## Full Configuration Example
 
 ```javascript title="jest.config.js"
 module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
+  preset: "ts-jest",
+  testEnvironment: "node",
   reporters: [
-    'default',
+    "default",
     [
-      '@testream/jest-reporter',
+      "@testream/jest-reporter",
       {
         // API Configuration
         apiKey: process.env.TESTREAM_API_KEY,
-        
+
         // Upload Configuration
-        uploadEnabled: process.env.CI === 'true',
+        uploadEnabled: process.env.CI === "true",
         failOnUploadError: true,
-        
-        // Git Context (auto-detected in most CI environments)
-        branch: process.env.GITHUB_REF_NAME,
-        commitSha: process.env.GITHUB_SHA,
-        repositoryUrl: process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITORY
-          ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}`
-          : undefined,
-        
+
         // Build Metadata
-        buildName: process.env.GITHUB_WORKFLOW || 'Jest Tests',
-        buildNumber: process.env.GITHUB_RUN_NUMBER,
-        buildUrl: process.env.GITHUB_SERVER_URL && process.env.GITHUB_REPOSITORY && process.env.GITHUB_RUN_ID
-          ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`
-          : undefined,
-        
+        buildName: process.env.GITHUB_WORKFLOW || "Jest Tests",
+
         // Application Metadata
-        testEnvironment: process.env.TEST_ENV || 'ci',
-        appName: 'My App',
-        appVersion: '1.0.0',
-        testType: 'unit',
+        testEnvironment: process.env.TEST_ENV || "ci",
+        appName: "My App",
+        appVersion: "1.0.0",
+        testType: "unit",
       },
     ],
   ],
@@ -109,9 +98,9 @@ Minimal configuration for local development:
 ```javascript title="jest.config.js"
 module.exports = {
   reporters: [
-    'default',
+    "default",
     [
-      '@testream/jest-reporter',
+      "@testream/jest-reporter",
       {
         apiKey: process.env.TESTREAM_API_KEY,
       },
@@ -127,13 +116,13 @@ Enable upload only in CI environments:
 ```javascript title="jest.config.js"
 module.exports = {
   reporters: [
-    'default',
+    "default",
     [
-      '@testream/jest-reporter',
+      "@testream/jest-reporter",
       {
         apiKey: process.env.TESTREAM_API_KEY,
-        uploadEnabled: process.env.CI === 'true',
-        testEnvironment: process.env.CI ? 'ci' : 'local',
+        uploadEnabled: process.env.CI === "true",
+        testEnvironment: process.env.CI ? "ci" : "local",
       },
     ],
   ],
@@ -155,19 +144,19 @@ The reporter will still upload test results even when coverage is enabled.
 If using TypeScript for your Jest config:
 
 ```typescript title="jest.config.ts"
-import type { Config } from 'jest';
+import type { Config } from "jest";
 
 const config: Config = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
+  preset: "ts-jest",
+  testEnvironment: "node",
   reporters: [
-    'default',
+    "default",
     [
-      '@testream/jest-reporter',
+      "@testream/jest-reporter",
       {
         apiKey: process.env.TESTREAM_API_KEY!,
         uploadEnabled: true,
-        testType: 'unit',
+        testType: "unit",
       },
     ],
   ],
@@ -183,13 +172,13 @@ For maximum flexibility, read all settings from environment variables:
 ```javascript title="jest.config.js"
 module.exports = {
   reporters: [
-    'default',
+    "default",
     [
-      '@testream/jest-reporter',
+      "@testream/jest-reporter",
       {
         apiKey: process.env.TESTREAM_API_KEY,
-        uploadEnabled: process.env.TESTREAM_UPLOAD_ENABLED === 'true',
-        failOnUploadError: process.env.TESTREAM_FAIL_ON_ERROR === 'true',
+        uploadEnabled: process.env.TESTREAM_UPLOAD_ENABLED === "true",
+        failOnUploadError: process.env.TESTREAM_FAIL_ON_ERROR === "true",
         branch: process.env.TESTREAM_BRANCH,
         commitSha: process.env.TESTREAM_COMMIT_SHA,
         repositoryUrl: process.env.TESTREAM_REPOSITORY_URL,
@@ -260,18 +249,18 @@ jobs:
       - name: Run tests
         env:
           TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
-          TESTREAM_UPLOAD_ENABLED: 'true'
+          TESTREAM_UPLOAD_ENABLED: "true"
           TESTREAM_BRANCH: ${{ github.ref_name }}
           TESTREAM_COMMIT_SHA: ${{ github.sha }}
           TESTREAM_REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}
-          TESTREAM_BUILD_NAME: 'Jest Tests'
+          TESTREAM_BUILD_NAME: "Jest Tests"
           TESTREAM_BUILD_NUMBER: ${{ github.run_number }}
           TESTREAM_BUILD_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          TESTREAM_TEST_ENVIRONMENT: 'ci'
-          TESTREAM_APP_NAME: 'my-app'
-          TESTREAM_APP_VERSION: '1.0.0'
-          TESTREAM_TEST_TYPE: 'unit'
-          TESTREAM_FAIL_ON_UPLOAD_ERROR: 'true'
+          TESTREAM_TEST_ENVIRONMENT: "ci"
+          TESTREAM_APP_NAME: "my-app"
+          TESTREAM_APP_VERSION: "1.0.0"
+          TESTREAM_TEST_TYPE: "unit"
+          TESTREAM_FAIL_ON_UPLOAD_ERROR: "true"
         run: npm test
 ```
 
@@ -309,6 +298,7 @@ The **[testream/jest-jira-reporter](https://github.com/testream/jest-jira-report
 ## What's Next?
 
 - Learn about the [Cypress Reporter](./cypress)
+- Learn about the [Pytest Reporter](./pytest)
 - Learn about the [Playwright Reporter](./playwright)
 - Learn about the [WebdriverIO Reporter](./webdriverio)
 - Set up [CLI Reporter](./cli)

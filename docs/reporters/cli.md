@@ -162,4 +162,5 @@ The **[testream/ctrf-jira-reporter](https://github.com/testream/ctrf-jira-report
 
 - Learn about the [Playwright Reporter](./playwright)
 - Learn about the [.NET Reporter](./dotnet)
+- Learn about the [Pytest Reporter](./pytest)
 - Set up [Jira Integration](../jira-integration/installation)
