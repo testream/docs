@@ -22,6 +22,7 @@ Testream works by adding a reporter to your existing test suite. Pick the report
 | Vitest | [Vitest Reporter](../reporters/vitest) |
 | Mocha | [Mocha Reporter](../reporters/mocha) |
 | WebdriverIO | [WebdriverIO Reporter](../reporters/webdriverio) |
+| Pytest | [Pytest Reporter](../reporters/pytest) |
 | JUnit | [JUnit Reporter](../reporters/junit) |
 | .NET | [.NET Reporter](../reporters/dotnet) |
 | Any (CTRF) | [CLI Reporter](../reporters/cli) |
@@ -38,6 +39,7 @@ Each reporter has a complete working example repository with tests, configuratio
 | Mocha | [testream/mocha-jira-reporter](https://github.com/testream/mocha-jira-reporter) |
 | Vitest | [testream/vitest-jira-reporter](https://github.com/testream/vitest-jira-reporter) |
 | WebdriverIO | [testream/webdriverio-jira-reporter](https://github.com/testream/webdriverio-jira-reporter) |
+| Pytest | [testream/pytest-jira-reporter](https://github.com/testream/pytest-jira-reporter) |
 | JUnit | [testream/junit-jira-reporter](https://github.com/testream/junit-jira-reporter) |
 | .NET | [testream/dotnet-jira-reporter](https://github.com/testream/dotnet-jira-reporter) |
 | CTRF CLI | [testream/ctrf-jira-reporter](https://github.com/testream/ctrf-jira-reporter) |

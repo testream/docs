@@ -19,7 +19,7 @@ npm install -g @testream/pytest-reporter
 ## Quick Start
 
 ```bash
-npx @testream/pytest-reporter -k $TESTREAM_API_KEY
+npx @testream/pytest-reporter -k "$TESTREAM_API_KEY"
 ```
 
 This single command will:
@@ -27,6 +27,8 @@ This single command will:
 1. Run `pytest`
 2. Write JUnit XML to `junit/pytest-junit.xml`
 3. Convert to CTRF and upload to Testream
+
+For a full end-to-end repository example (project layout, intentional failures, and CI setup), see the **Sample Project** section below.
 
 ## CLI Options
 
@@ -107,9 +109,14 @@ npx @testream/pytest-reporter \
 ## GitHub Actions Example
 
 ```yaml title=".github/workflows/pytest.yml"
-name: Pytest
+name: Example Pytest CI Workflow with Testream Reporter for Jira
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
 
 jobs:
   test:
@@ -120,20 +127,24 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-
-      - run: pip install pytest
+          node-version: lts/*
 
       - run: |
           npx @testream/pytest-reporter \
-            -k ${{ secrets.TESTREAM_API_KEY }} \
+            -k "$TESTREAM_API_KEY" \
             --test-environment ci \
-            --app-name my-python-service \
+            --app-name pytest-jira-reporter-example \
+            --app-version "${{ github.sha }}" \
             --test-type unit \
             --fail-on-error
+        env:
+          TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
 ```
 
 ## Notes
@@ -144,7 +155,11 @@ jobs:
 
 ## Sample Project
 
-The **[testream/pytest-jira-reporter](https://github.com/testream/pytest-jira-reporter)** repository is a complete working example of a Pytest project integrated with Testream. It includes example tests, full reporter configuration, and a ready-to-use CI workflow.
+The **[testream/pytest-jira-reporter](https://github.com/testream/pytest-jira-reporter)** repository is a complete working example of a Pytest project integrated with Testream. It includes:
+
+- A Python-first project layout (`src/`, `tests/`, `requirements.txt`, `pytest.ini`)
+- Intentionally failing tests to demonstrate Jira/Testream failure triage
+- A ready-to-use GitHub Actions workflow that authenticates with `secrets.TESTREAM_API_KEY`
 
 ## NPM Package
 
