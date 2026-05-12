@@ -14,7 +14,7 @@ Integrate Testream with Jira to view test results, trends, and artifacts directl
 
 ## Step 1: Install from Atlassian Marketplace
 
-Use the official listing: [Testream for Jira on Atlassian Marketplace](https://marketplace.atlassian.com/apps/3048460704/testream-for-jira).
+Use the official listing: [Testream for Jira on Atlassian Marketplace](https://marketplace.atlassian.com/apps/3048460704).
 
 ### For Jira Administrators
 
@@ -76,49 +76,56 @@ If you don't see any data yet, run your tests with a Testream reporter configure
 
 ## Troubleshooting
 
-### App not appearing in marketplace
-
+:::danger App not appearing in marketplace
 **Possible causes:**
+
 - Your Jira instance is not on Atlassian Cloud (Server/Data Center not supported)
 - Network or firewall restrictions blocking marketplace access
 - Regional availability limitations
 
 **Solution:**
+
 - Verify you're using Jira Cloud at `*.atlassian.net`
 - Contact your IT team about marketplace access
 - Reach out to Testream support at [contact@testream.app](mailto:contact@testream.app)
+  :::
 
-### Installation fails
-
+:::danger Installation fails
 **Common issues:**
+
 - Missing administrator permissions in Jira
 - Organization policies blocking new app installations
 - Browser extensions interfering with installation
 
 **Solution:**
+
 - Confirm you have Jira administrator role
 - Request installation approval from your Jira admin
 - Try installation in an incognito/private browser window
+  :::
 
-### API Key not working
-
+:::warning API Key not working
 **Check:**
+
 - API key copied correctly without extra spaces or line breaks
 - API key generated from the correct Testream project
 - API key not revoked or expired in Testream settings
 
 **Solution:**
+
 - Copy the API key again directly from Testream
 - Generate a fresh API key and try again
 - Verify the key in Testream Settings → API Keys shows as active
+  :::
 
-### No test data appearing
-
+:::info No test data appearing
 **If the app is installed but shows no data:**
+
 - Test results must be uploaded to Testream first using a reporter
 - Configure an reporter that is compatible with your test suite (e.g., Playwright, Jest, etc.)
 - Run your tests with the reporter configured
 - Wait a few minutes for data to sync to Jira
+  :::
 
 ## Uninstalling
 
@@ -130,7 +137,9 @@ To remove the Testream for Jira app:
 4. Select **"Uninstall"**
 5. Confirm the uninstallation when prompted
 
+:::caution
 **Note:** Uninstalling removes the Jira integration, but your test data remains safely stored in Testream and can be viewed at [testream.app](https://testream.app).
+:::
 
 ## What's Next?
 

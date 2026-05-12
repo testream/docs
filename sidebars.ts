@@ -43,6 +43,7 @@ const sidebars: SidebarsConfig = {
         'features/trends-analytics',
         'features/release-management',
         'features/pdf-reports',
+        'features/bdd-gherkin-specs',
       ],
     },
     {

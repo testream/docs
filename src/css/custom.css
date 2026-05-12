@@ -72,6 +72,16 @@
   font-weight: 700;
 }
 
+/* Feature section cards */
+.featureCard {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--testream-shadow-md);
+}
+
 /* Button enhancements */
 .button--primary {
   transition: all 0.2s ease;

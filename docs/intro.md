@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # Introduction
 
-Welcome to **Testream** - a modern code-first test management platform designed for development teams who want to streamline their testing workflows and gain powerful insights into test results.
+Welcome to **Testream** - a modern code-first test management platform and reporting solution designed for modern development teams who want to streamline their testing workflows and gain powerful insights into test results.
 
 ## What is Testream?
 
-Testream is a comprehensive test management platform that integrates seamlessly with your existing testing frameworks and CI/CD pipelines. It provides:
+Testream is a comprehensive test management and reporting platform that integrates seamlessly with your existing testing frameworks and CI/CD pipelines. It provides:
 
 - **Centralized Test Reporting** - Aggregate test results from multiple frameworks and projects
 - **Advanced Analytics** - Track trends, identify flaky tests, and monitor test health
@@ -17,6 +17,7 @@ Testream is a comprehensive test management platform that integrates seamlessly 
 - **Historical Tracking** - Track test performance over time with detailed dashboards
 - **Artifact Management** - Store and view test artifacts like screenshots (videos and trace files coming soon!)
 - **Source of Truth** - A single source of truth for all your test results, accessible to developers, QA, and stakeholders
+- **Source Control Integration** - Track your tests right from the commits and branches
 
 ## Key Features
 
@@ -40,7 +41,7 @@ All reporters use the [Common Test Report Format (CTRF)](https://github.com/ctrf
 
 ### CI/CD Integration
 
-Upload test results and artifacts with minimal configuration in any stage of your pipeline. Whether you're using GitHub Actions, Jenkins, CircleCI, or any other CI/CD platform, Testream makes it easy to integrate:
+Upload test results and artifacts with minimal configuration in any stage of your pipeline. Whether you're using GitHub Actions, Jenkins, CircleCI, Azure DevOps or any other CI/CD platform, Testream makes it easy to integrate with native NPM packages and CLI tools:
 
 ```yaml
 - uses: testream/cli@latest
@@ -61,7 +62,7 @@ git npx @testream/cli \
 
 ### Testream for Jira
 
-Install the [Testream for Jira app](https://marketplace.atlassian.com/apps/3048460704/testream-for-jira) to access:
+Testream is a Jira first test management and reporting solution. Install the [Testream for Jira app](https://marketplace.atlassian.com/apps/3048460704/testream-for-jira) to access comprehensive test reporting directly in your Jira workspace:
 
 - **Test health metrics** - Pass rate, failed tests, and flaky test detection
 - **Detailed test runs** - View results with branch, commit, and environment metadata
@@ -70,6 +71,9 @@ Install the [Testream for Jira app](https://marketplace.atlassian.com/apps/30484
 - **Trends & analytics** - Track test performance over time
 - **Release management** - Filter and assess quality by release version
 - **PDF reports** - Generate downloadable PDF summaries of test runs
+- **Test Run Summaries in Jira Issues** - View summaries of test runs directly within Jira issues.
+- **Test Suite Changes** - Track tests added, removed, and unchanged between runs on the same branch.
+- **BDD Gherkin Specs with Rovo** - Create BDD Gherkin specifications with AI using natural language and assess them against the Testream context automatically captured.
 
 [Learn more about the Jira integration](./jira-integration/overview) | [Explore all features](./features/dashboard)
 
@@ -84,5 +88,4 @@ Ready to integrate Testream? Choose your path:
 ## Need Help?
 
 - Email: [contact@testream.app](mailto:contact@testream.app)
-- Issues: [GitHub Issues](https://github.com/testream/docs/issues)
 - Website: [testream.app](https://testream.app)

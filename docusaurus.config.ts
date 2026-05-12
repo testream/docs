@@ -42,6 +42,8 @@ const config: Config = {
         docs: {
           routeBasePath: '/', // Serve docs at baseUrl root (/)
           sidebarPath: './sidebars.ts',
+          showLastUpdateTime: true,
+          breadcrumbs: true,
           // Please change this to your repo.
           editUrl: 'https://github.com/testream/docs/tree/main/',
         },
@@ -53,7 +55,28 @@ const config: Config = {
     ],
   ],
 
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: true,
+        docsRouteBasePath: "/",
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 8,
+      },
+    ],
+  ],
+
   themeConfig: {
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
+    },
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
@@ -136,6 +159,17 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ['bash', 'typescript', 'javascript', 'json', 'yaml', 'csharp'],
+      magicComments: [
+        {
+          className: 'theme-code-block-highlighted-line',
+          line: 'highlight-next-line',
+          block: {start: 'highlight-start', end: 'highlight-end'},
+        },
+        {
+          className: 'code-block-error-line',
+          line: 'This will error',
+        },
+      ],
     },
   } satisfies Preset.ThemeConfig,
 };
