@@ -29,6 +29,7 @@ For detailed guides on each feature, visit the dedicated pages:
 - **[Trends & Analytics](../features/trends-analytics)** - Historical performance charts and analysis
 - **[Release Management](../features/release-management)** - Linking test runs to Jira releases
 - **[PDF Reports](../features/pdf-reports)** - Generating downloadable PDF summaries
+- **[BDD Specs](../features/bdd-gherkin-specs)** - Creating Gherkin scenarios in Jira issues and assessing coverage with Rovo
 
 ## Best Practices
 

@@ -17,6 +17,7 @@ The Testream for Jira integration brings comprehensive test reporting directly i
 - **[Trends & Analytics](../features/trends-analytics)** - Track pass/fail trends, test suite growth, and duration patterns over time.
 - **[Release Management](../features/release-management)** - Link test runs to Jira releases and monitor quality metrics per version.
 - **[PDF Reports](../features/pdf-reports)** - Generate downloadable PDF summaries of test runs with pass rates, errors, and screenshots.
+- **[BDD Specs](../features/bdd-gherkin-specs)** - Write Gherkin scenarios in Jira issues and assess them against linked Testream evidence with Rovo.
 
 ## Who Should Use This Integration?
 
