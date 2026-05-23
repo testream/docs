@@ -4,8 +4,7 @@ Official documentation for the Testream test management platform.
 
 ## Documentation
 
-- **Live docs:** https://testream.github.io/
-- **Docs repository:** https://github.com/testream/docs
+- **Live docs:** https://docs.testream.app
 
 ## Get Started
 
