@@ -9,7 +9,7 @@ The Testream Cypress Reporter runs your Cypress tests and automatically uploads 
 ## Installation
 
 ```bash
-npm install --save-dev @testream/cypress-reporter cypress-ctrf-json-reporter
+npm install --save-dev @testream/cypress-reporter
 ```
 
 ## Quick Start
@@ -222,14 +222,6 @@ jobs:
 ```
 
 ## Notes
-
-### Peer Dependency
-
-The reporter requires `cypress-ctrf-json-reporter` as a peer dependency. Make sure it's installed:
-
-```bash
-npm install --save-dev cypress-ctrf-json-reporter
-```
 
 ### Screenshots and Artifacts
 

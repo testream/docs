@@ -4,12 +4,12 @@ sidebar_position: 5
 
 # WebdriverIO Reporter
 
-The Testream WebdriverIO Reporter generates CTRF reports and uploads test results to Testream. It extends `wdio-ctrf-json-reporter` to integrate seamlessly with WebdriverIO's reporter system.
+The Testream WebdriverIO Reporter generates CTRF reports and uploads test results to Testream. It integrates with WebdriverIO's reporter system and handles CTRF report generation for you.
 
 ## Installation
 
 ```bash
-npm install --save-dev @testream/webdriverio-reporter wdio-ctrf-json-reporter
+npm install --save-dev @testream/webdriverio-reporter
 ```
 
 ## Basic Configuration
@@ -112,14 +112,6 @@ jobs:
 ```
 
 ## Notes
-
-### Peer Dependency
-
-The reporter requires `wdio-ctrf-json-reporter` as a peer dependency. Make sure it's installed:
-
-```bash
-npm install --save-dev wdio-ctrf-json-reporter
-```
 
 ### Git Context Detection
 
