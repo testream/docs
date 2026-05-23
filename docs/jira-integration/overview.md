@@ -18,6 +18,7 @@ The Testream for Jira integration brings comprehensive test reporting directly i
 - **[Release Management](../features/release-management)** - Link test runs to Jira releases and monitor quality metrics per version.
 - **[PDF Reports](../features/pdf-reports)** - Generate downloadable PDF summaries of test runs with pass rates, errors, and screenshots.
 - **[BDD Specs](../features/bdd-gherkin-specs)** - Write Gherkin scenarios in Jira issues and assess them against linked Testream evidence with Rovo.
+- **[Rovo Setup Agent](../getting-started/ai-assisted-setup)** - Get reporter recommendations, CI guidance, and first-run checks from Testream Settings in Jira.
 
 ## Who Should Use This Integration?
 
@@ -35,5 +36,5 @@ Ready to get started? Follow these steps:
 
 1. **[Install the app](./installation)** - Set up Testream for Jira in your workspace via the [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704/testream-for-jira)
 2. **[Learn to use it](./usage)** - Access instructions, permissions, and best practices
-3. **Configure reporters** - Set up test framework reporters to send data to Testream
+3. **[Configure reporters](../getting-started/ai-assisted-setup)** - Set up test framework reporters yourself or with the Rovo setup agent
 4. **Start testing** - Run your tests and see results appear in Jira

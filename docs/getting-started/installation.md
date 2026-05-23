@@ -25,8 +25,8 @@ When the installation is complete, you can access the Testream in the top naviga
 
 ## Reporters
 
-:::tip AI-Ready Setup
-AI agents are great at setting up Testream workflows! If you point them to any documentation of the project you want to integrate, they can handle the installation and configuration for you quite easily.
+:::tip Set up Testream with Rovo
+Testream for Jira includes a Rovo setup agent that can recommend the right reporter, sample project, CI guidance, and first-run checklist from your selected project stack. Start from **Testream → Settings → Get Started with Rovo**, or follow the [AI-assisted setup guide](./ai-assisted-setup).
 :::
 
 | Framework   | Reporter Docs                                    |

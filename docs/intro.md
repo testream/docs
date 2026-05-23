@@ -62,18 +62,19 @@ git npx @testream/cli \
 
 ### Testream for Jira
 
-Testream is a Jira first test management and reporting solution. Install the [Testream for Jira app](https://marketplace.atlassian.com/apps/3048460704/testream-for-jira) to access comprehensive test reporting directly in your Jira workspace:
+Testream is a Jira first test management and reporting solution. Install the [Testream for Jira app](https://marketplace.atlassian.com/apps/3048460704) to access comprehensive test reporting directly in your Jira workspace:
 
-- **Test health metrics** - Pass rate, failed tests, and flaky test detection
+- **Test Run Summaries in Jira Issues** - View summaries of test runs directly within Jira issues.
+- **Test Suite Changes** - Track tests added, removed, and unchanged between runs on the same branch.
+- **Rovo-assisted setup** - Let the Testream Setup Agent recommend reporters, CI guidance, and first-run checks from Jira.
+- **BDD Specs with Rovo** - Draft Jira issue-level Gherkin scenarios and assess them against Testream's captured test evidence.
 - **Detailed test runs** - View results with branch, commit, and environment metadata
 - **Create issues from failures** - One-click bug creation with pre-filled context
 - **Rich debugging artifacts** - Screenshots, videos, and trace files inline
 - **Trends & analytics** - Track test performance over time
 - **Release management** - Filter and assess quality by release version
 - **PDF reports** - Generate downloadable PDF summaries of test runs
-- **Test Run Summaries in Jira Issues** - View summaries of test runs directly within Jira issues.
-- **Test Suite Changes** - Track tests added, removed, and unchanged between runs on the same branch.
-- **BDD Gherkin Specs with Rovo** - Create BDD Gherkin specifications with AI using natural language and assess them against the Testream context automatically captured.
+- **Test health metrics** - Pass rate, failed tests, and flaky test detection
 
 [Learn more about the Jira integration](./jira-integration/overview) | [Explore all features](./features/dashboard)
 
@@ -83,6 +84,7 @@ Ready to integrate Testream? Choose your path:
 
 - [**Installation Guide**](./getting-started/installation) - Install reporters for your framework
 - [**Quick Start**](./getting-started/quick-start) - Get up and running in 5 minutes
+- [**AI-Assisted Setup with Rovo**](./getting-started/ai-assisted-setup) - Let Rovo guide reporter and CI setup
 - [**CLI Reporter**](./reporters/cli) - Upload results from your pipeline
 
 ## Need Help?
