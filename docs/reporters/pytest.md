@@ -171,4 +171,4 @@ The **[testream/pytest-jira-reporter](https://github.com/testream/pytest-jira-re
 - Learn about the [JUnit Reporter](./junit)
 - Learn about the [Vitest Reporter](./vitest)
 - Upload existing CTRF reports with the [CLI Reporter](./cli)
-- Set up [Jira Integration](../jira-integration/installation)
+- Set up [Testream for Jira](../getting-started/installation)

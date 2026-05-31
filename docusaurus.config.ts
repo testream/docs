@@ -4,11 +4,11 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Testream Documentation',
-  tagline: 'Test Management Platform for Modern Development Teams',
+  tagline: 'Automated Test Reporting for Jira Teams',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://testream.github.io',
+  url: 'https://docs.testream.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '',
@@ -78,14 +78,14 @@ const config: Config = {
       },
     },
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/logo-48.png',
     navbar: {
       title: 'Testream',
       logo: {
         alt: 'Testream Logo',
         src: 'img/logo-48.png',
         target: '_self',
-        href: '/intro',
+        href: '/',
       },
       items: [
         {
@@ -131,7 +131,7 @@ const config: Config = {
             },
             {
               label: 'Jira Integration',
-              to: '/jira-integration/installation',
+              to: '/jira-integration/overview',
             },
           ],
         },

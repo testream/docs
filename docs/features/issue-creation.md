@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Issue Creation
 
-Streamline your bug reporting workflow by creating Jira issues directly from failed tests — with pre-filled context and custom fields.
+Create Jira issues directly from failed tests with pre-filled failure context and custom fields.
 
 ![Create Issue from Failed Test](/img/jira/Create-Issue-From-Failed-Test-Screenshot.png)
 

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Dashboard
 
-Monitor your test suite's overall health with an intuitive dashboard that displays key metrics, test result distributions, and recent test runs — all at a glance.
+Monitor your test suite's overall health with an intuitive dashboard that displays key metrics, test result distributions, and recent test runs at a glance.
 
 ![Dashboard Overview](/img/jira/Dashboard-Screenshot.png)
 

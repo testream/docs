@@ -52,7 +52,6 @@ const sidebars: SidebarsConfig = {
       label: 'Jira Integration',
       collapsed: false,
       items: [
-        'jira-integration/installation',
         'jira-integration/overview',
         'jira-integration/usage',
       ],

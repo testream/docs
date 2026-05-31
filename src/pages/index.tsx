@@ -3,7 +3,9 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import styles from './index.module.css';
-import { JSX, useState } from 'react';
+import { JSX, useState, type MouseEvent } from 'react';
+
+const MARKETPLACE_URL = 'https://marketplace.atlassian.com/apps/3048460704';
 
 // Simple SVG icons for features
 const icons = {
@@ -40,11 +42,6 @@ const icons = {
       <path d="m12 5 7 7-7 7" />
     </svg>
   ),
-  github: (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-    </svg>
-  ),
   sparkles: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
@@ -56,51 +53,42 @@ const icons = {
   ),
 };
 
-// Framework/tool logos
-const frameworks = [
-  { name: 'Playwright', icon: 'https://ctrf.io/img/playwright.svg' },
-  { name: 'Jest', icon: 'https://ctrf.io/img/jest.svg' },
-  { name: 'Vitest', icon: 'https://ctrf.io/img/vitest.svg' },
-  { name: 'Cypress', icon: 'https://ctrf.io/img/cypress.svg' },
-  { name: 'JUnit', icon: 'https://ctrf.io/img/junit.svg' },
-  { name: '.NET', icon: 'https://ctrf.io/img/dotnet.svg' },
-  { name: 'WebdriverIO', icon: 'https://ctrf.io/img/wdio.svg' },
-  { name: 'Mocha', icon: 'https://ctrf.io/img/mochajs.svg' },
-  { name: 'Pytest', icon: 'https://ctrf.io/img/pytest.svg' },
-  { name: 'CLI', icon: 'img/command-line-icon.png' },
-];
-
 function HeroSection() {
   return (
     <section className={styles.hero}>
       <div className={styles.heroInner}>
         <h1 className={styles.heroTitle}>
-          One Dashboard.{' '}
-          <span className={styles.heroTitleAccent}>Every Test.</span>
+          Publish your first automated test run into Jira.
         </h1>
         <p className={styles.heroSubtitle}>
-          Close the gap between your automated tests and your Jira projects by bringing test results from your favorite framework repositories!
+          Testream publishes Playwright, Jest, Cypress, JUnit, .NET, Pytest,
+          and other automated test runs into Jira with failure evidence,
+          artifacts, branch and commit context, trends, and release signal.
         </p>
         <div className={styles.heroButtons}>
-          <Link to="/intro" className={styles.primaryButton}>
-            Get Started
+          <Link to="/getting-started/quick-start" className={styles.primaryButton}>
+            Start the 5-minute Quick Start
             {icons.arrow}
           </Link>
           <Link
-            to="https://testream.app"
+            to={MARKETPLACE_URL}
             className={styles.secondaryButton}
           >
-            Claim Free API Key
+            Install on Jira
             {icons.arrow}
           </Link>
         </div>
         <div className={styles.heroReportersSection}>
-          <p className={styles.heroReportersLabel}>Works with Your Stack</p>
+          <p className={styles.heroReportersLabel}>Choose your reporter path</p>
           <div className={styles.heroReportersGrid}>
             {reporters.map((reporter) => (
               <HeroReporterCard key={reporter.name} reporter={reporter} />
             ))}
           </div>
+          <p className={styles.heroReporterFallback}>
+            Using another tool?{' '}
+            <Link to="/reporters/cli">Upload reports with the CLI.</Link>
+          </p>
         </div>
       </div>
     </section>
@@ -110,27 +98,27 @@ function HeroSection() {
 const features = [
   {
     icon: icons.dashboard,
-    title: 'Instant Setup',
+    title: 'Jira-native run summaries',
     description:
-      'npm install, run your tests, done. Testream captures results automatically with zero configuration.',
+      'See pass rate, failed tests, branch, commit, and suite changes where your team already tracks work.',
   },
   {
     icon: icons.radar,
-    title: 'Comprehensive Test Management',
+    title: 'Failure evidence attached',
     description:
-      'Track test cases, analyze trends, spot flaky tests early. Create Jira tickets from failures and improve releases with actionable test insights.',
+      'Keep errors, stack traces, screenshots, traces, videos, logs, and metadata connected to the test result.',
   },
   {
     icon: icons.sync,
-    title: 'CI/CD Native',
+    title: 'History that improves every run',
     description:
-      'Works with GitHub Actions, GitLab, CircleCI, Jenkins, and more. One CLI for any pipeline.',
+      'Track trends, flaky behavior, suite growth, and release readiness as automated runs keep landing.',
   },
   {
     icon: icons.sparkles,
-    title: 'BDD Gherkin Specs',
+    title: 'Rovo when it removes friction',
     description:
-      'Write acceptance criteria in Gherkin syntax and Atlassian Rovo AI in your Jira issues for automated assessment.',
+      'Use the Testream Setup Agent for first-run guidance, then Testream BDD Specs for evidence-based coverage review.',
   },
 ];
 
@@ -138,7 +126,7 @@ function FeaturesSection() {
   return (
     <section className={styles.features}>
       <div className={styles.featuresInner}>
-        <h2 className={styles.sectionTitle}>Why teams choose Testream</h2>
+        <h2 className={styles.sectionTitle}>What every test run gives your Jira team</h2>
         <div className={styles.featureGrid}>
           {features.map((feature, idx) => (
             <div key={idx} className={styles.featureCard}>
@@ -158,69 +146,71 @@ const reporters = [
     name: 'Playwright',
     icon: 'https://ctrf.io/img/playwright.svg',
     command: 'npm i -D @testream/playwright-reporter',
+    description: 'Publish browser test results and artifacts into Jira.',
     docsLink: '/reporters/playwright',
   },
   {
     name: 'Jest',
     icon: 'https://ctrf.io/img/jest.svg',
     command: 'npm i -D @testream/jest-reporter',
+    description: 'Send unit and integration test evidence to Jira.',
     docsLink: '/reporters/jest',
   },
   {
     name: 'Vitest',
     icon: 'https://ctrf.io/img/vitest.svg',
     command: 'npm i -D @testream/vitest-reporter',
+    description: 'Publish fast frontend and service test runs.',
     docsLink: '/reporters/vitest',
   },
   {
     name: 'Cypress',
     icon: 'https://ctrf.io/img/cypress.svg',
     command: 'npm i -D @testream/cypress-reporter',
+    description: 'Bring end-to-end results and artifacts into Jira.',
     docsLink: '/reporters/cypress',
   },
   {
     name: 'JUnit',
     icon: 'https://ctrf.io/img/junit.svg',
     command: 'npm i -D @testream/junit-reporter',
+    description: 'Upload JUnit XML reports from existing CI jobs.',
     docsLink: '/reporters/junit',
   },
   {
     name: '.NET',
     icon: 'https://ctrf.io/img/dotnet.svg',
     command: 'npm i -D @testream/dotnet-reporter',
+    description: 'Publish .NET test evidence from TRX-based runs.',
     docsLink: '/reporters/dotnet',
   },
   {
     name: 'WebdriverIO',
     icon: 'https://ctrf.io/img/wdio.svg',
     command: 'npm i -D @testream/webdriverio-reporter',
+    description: 'Connect WebdriverIO suites to Jira run evidence.',
     docsLink: '/reporters/webdriverio',
   },
   {
     name: 'Mocha',
     icon: 'https://ctrf.io/img/mochajs.svg',
     command: 'npm i -D @testream/mocha-reporter',
+    description: 'Publish JavaScript test runs from Mocha projects.',
     docsLink: '/reporters/mocha',
   },
   {
     name: 'Pytest',
     icon: 'https://ctrf.io/img/pytest.svg',
     command: 'npm i -D @testream/pytest-reporter',
+    description: 'Send Python test results and metadata to Jira.',
     docsLink: '/reporters/pytest',
-  },
-  {
-    name: 'CLI',
-    icon: 'img/command-line-icon.png',
-    command: 'npm i -D @testream/cli',
-    docsLink: '/reporters/cli',
   },
 ];
 
 function HeroReporterCard({ reporter }: Readonly<{ reporter: (typeof reporters)[0] }>) {
   const [copied, setCopied] = useState(false);
 
-  const handleCopy = async (e: React.MouseEvent) => {
-    e.preventDefault();
+  const handleCopy = async (e: MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     try {
       await navigator.clipboard.writeText(reporter.command);
@@ -232,22 +222,30 @@ function HeroReporterCard({ reporter }: Readonly<{ reporter: (typeof reporters)[
   };
 
   return (
-    <Link
-      to={reporter.docsLink}
-      className={styles.heroReporterCard}
-    >
-      <img
-        src={reporter.icon}
-        alt={reporter.name}
-        className={styles.heroReporterIcon}
-      />
-      <h3 className={styles.heroReporterName}>{reporter.name}</h3>
-      <div className={styles.installCommandBox} onClick={handleCopy}>
+    <div className={styles.heroReporterCard}>
+      <Link
+        to={reporter.docsLink}
+        className={styles.heroReporterLink}
+        aria-label={`Open ${reporter.name} reporter guide`}
+      >
+        <img
+          src={reporter.icon}
+          alt={reporter.name}
+          className={styles.heroReporterIcon}
+        />
+        <h3 className={styles.heroReporterName}>{reporter.name}</h3>
+        <p className={styles.heroReporterDescription}>{reporter.description}</p>
+      </Link>
+      <button
+        className={styles.installCommandBox}
+        onClick={handleCopy}
+        type="button"
+        aria-label={copied ? `Copied ${reporter.name} install command` : `Copy ${reporter.name} install command`}
+      >
         <code className={styles.installCommandText}>{reporter.command}</code>
-        <button
+        <span
           className={`${styles.copyIconButton} ${copied ? styles.copied : ''}`}
-          aria-label="Copy install command"
-          type="button"
+          aria-hidden="true"
         >
           {copied ? (
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -259,27 +257,27 @@ function HeroReporterCard({ reporter }: Readonly<{ reporter: (typeof reporters)[
               <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
             </svg>
           )}
-        </button>
-      </div>
-    </Link>
+        </span>
+      </button>
+    </div>
   );
 }
 
 const steps = [
   {
     number: 1,
-    title: 'Install the Reporter',
-    description: 'Choose your framework and integrate your projects'
+    title: 'Choose your reporter',
+    description: 'Start with Playwright, Jest, Cypress, JUnit, .NET, Pytest, Vitest, WebdriverIO, Mocha, or CLI.'
   },
   {
     number: 2,
-    title: 'Run Your Automated Tests',
-    description: 'Your test runs and all the metadata are captured automatically from your CI/CD pipelines'
+    title: 'Add your Testream API key',
+    description: 'Run locally or configure your Testream API key in CI so Testream can publish results from your existing test command.'
   },
   {
     number: 3,
-    title: 'Track Your Tests in Jira Natively',
-    description: 'Make your tests visible to the whole team and improve software delivery with actionable insights'
+    title: 'Verify the run in Jira',
+    description: 'Open your Jira project and confirm the run arrived with status, failures, branch, commit, and evidence attached.'
   }
 ];
 
@@ -287,7 +285,7 @@ function HowItWorksSection() {
   return (
     <section className={styles.howItWorks}>
       <div className={styles.howItWorksInner}>
-        <h2 className={styles.sectionTitle}>Get started in minutes</h2>
+        <h2 className={styles.sectionTitle}>From codebase to Jira in one test run</h2>
         <div className={styles.stepsGrid}>
           {steps.map((step) => (
             <div key={step.number} className={styles.step}>
@@ -296,6 +294,16 @@ function HowItWorksSection() {
               <p className={styles.stepDescription}>{step.description}</p>
             </div>
           ))}
+        </div>
+        <div className={styles.stepsActions}>
+          <Link to="/getting-started/quick-start" className={styles.primaryButton}>
+            Open Quick Start
+            {icons.arrow}
+          </Link>
+          <Link to="/getting-started/installation" className={styles.secondaryButton}>
+            Browse reporters
+            {icons.arrow}
+          </Link>
         </div>
       </div>
     </section>
@@ -307,13 +315,14 @@ function FinalCTASection() {
     <section className={styles.finalCta}>
       <div className={styles.finalCtaInner}>
         <h2 className={styles.finalCtaTitle}>
-          Stop chasing test results across tools
+          Prove your first Jira-ready test run.
         </h2>
         <p className={styles.finalCtaSubtitle}>
-          Join teams who have unified their test reporting with Testream.
+          Start with one automated run, then use every run after it to build
+          release confidence with current Jira-native evidence.
         </p>
-        <Link to="/intro" className={styles.ctaButtonLight}>
-          Get Started Free
+        <Link to="/getting-started/quick-start" className={styles.ctaButtonLight}>
+          Start the Quick Start
           {icons.arrow}
         </Link>
       </div>
@@ -326,10 +335,10 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={siteConfig.title}
-      description="Official documentation for Testream test management platform"
+      description="Publish automated test evidence from CI/CD into Jira with Testream."
     >
       <Head>
-        <meta property="og:description" content="Close the gap between your automated tests and your Jira projects by bringing test results from your favorite framework repositories!" />
+        <meta property="og:description" content="Publish automated test evidence from CI/CD into Jira with Testream." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@testream" />
       </Head>

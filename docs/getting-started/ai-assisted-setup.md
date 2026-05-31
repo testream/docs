@@ -6,6 +6,21 @@ sidebar_position: 3
 
 Use the **Testream Setup Agent** in Jira to choose the right reporter, generate CI guidance, and verify that Testream receives your first test run.
 
+This page is for teams that want guided setup. If you already know your framework and just want to prove the first run, use the [Quick Start](./quick-start).
+
+:::warning Verify Rovo outputs
+Rovo can make mistakes or suggest configuration that does not match your repository, CI provider, permissions, or Testream project. Review every install command, workflow snippet, reporter option, and API-key instruction before applying it. Treat Rovo guidance as a setup accelerator, not as a replacement for your own validation.
+:::
+
+## When to Use This
+
+Use the Testream Setup Agent when:
+
+- You are not sure which reporter matches your test project.
+- You want CI guidance for GitHub Actions, GitLab CI, Bitbucket Pipelines, Azure Pipelines, CircleCI, or Jenkins.
+- You want a first-run checklist before changing your pipeline.
+- You want Rovo to help confirm whether Testream received a run.
+
 ## Before You Start
 
 You need:
@@ -13,7 +28,7 @@ You need:
 - Testream for Jira installed in your Jira workspace.
 - Access to the Jira project where Testream is configured.
 - A test project that uses one of the supported Testream reporters or can produce CTRF/JUnit output.
-- Permission to add a CI secret named `TESTREAM_API_KEY`.
+- Permission to add a CI secret named `TESTREAM_API_KEY`, if you plan to automate the run in CI.
 
 You do not need to paste a real API key into source code or chat. The setup agent uses `TESTREAM_API_KEY` as a placeholder while you shape the workflow.
 
@@ -37,7 +52,7 @@ Testream maps those choices to the closest reporter, sample project, and setup t
 
 ![Setup Testream Rovo Dialog](/img/jira/Setup-Testream-Rovo.png)
 
-## 3. Review the Rovo Recommendation
+## 3. Use the Rovo Recommendation
 
 Rovo opens with the selected project context and setup recommendation. It can provide:
 
@@ -48,28 +63,31 @@ Rovo opens with the selected project context and setup recommendation. It can pr
 - CI workflow guidance for your selected provider.
 - A first-run checklist.
 
-Rovo should use `TESTREAM_API_KEY` as the secret name in generated examples. Store the real key only in your CI secret manager and in Testream for Jira Settings.
+Verify and follow the recommendation to update your reporter config or CI workflow. Keep `TESTREAM_API_KEY` as the secret name in generated examples, and store the real key only in your CI secret manager and Testream settings.
 
-## 4. Create or Select a Testream Project
+## 4. Add the API Key
 
-After the workflow shape is ready:
+If you have not created a Testream project yet:
 
 1. Open [testream.app/projects](https://testream.app/projects).
 2. Create a new project or select an existing one.
 3. Copy the one-time API key.
-4. Add it to your CI secret manager as `TESTREAM_API_KEY`.
-5. Return to Testream for Jira Settings and add or validate the API key.
+4. Add it locally for a proof run, or store it in CI as `TESTREAM_API_KEY`.
+
+Then return to **Testream → Settings** in Jira and add or validate the API key.
 
 ![Add Project API Key](/img/jira/Add-Api-Key.png)
 
-## 5. Run Your Pipeline Once
+## 5. Run Tests Once
 
-Run your test workflow from CI. The reporter should upload the test results when `TESTREAM_API_KEY` is available.
+Run your tests locally or from CI. The reporter should upload results when `TESTREAM_API_KEY` is available.
 
-After the run finishes, tell Rovo that the pipeline has run. The setup agent can check whether Testream received a run for the Jira project and return the next step:
+After the run finishes, tell Rovo that the tests have run. The setup agent can check whether Testream received a run for the Jira project and return the next step:
 
 - If a run was received, open the Testream dashboard and review the results.
 - If no run was received, check the reporter command, CI secret name, project key, and workflow logs.
+
+![Test Runs in Jira](/img/jira/Test-Runs-Screenshot.png)
 
 ## What Rovo Does Not Do
 

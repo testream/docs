@@ -4,59 +4,99 @@ sidebar_position: 2
 
 # Quick Start
 
-Get Testream up and running in minutes. These steps work for every supported framework.
+Publish your first automated test run into Jira in about five minutes. By the end, you should see a real run with status, framework metadata, branch or CI context, and failure evidence inside your Jira project.
 
-## 1. Create an account and get your API key
+These steps work for every supported framework. Use the reporter guide for your stack when you need framework-specific configuration.
+
+## Before You Start
+
+You need:
+
+- [Testream for Jira installed](./installation) in your Jira workspace.
+- A codebase with automated tests.
+- Permission to create a Testream project or access an existing project API key.
+
+## 1. Create or Select a Testream Project
 
 1. Sign up at [testream.app](https://testream.app)
-2. Go to **Dashboard → [Projects](https://testream.app/projects)**
+2. Open **Dashboard → [Projects](https://testream.app/projects)**
    ![Example Jira Navigation Bar](/img/jira/Dashboard-Projects.png)
-3. Click **+ New Project** and copy the API key! Please keep this key secret as it will not be shown again. You can always generate a new key if needed.
+3. Create a project or open an existing one.
+4. Copy the API key.
 
-## 2. Install a reporter
+Keep this key secret. It is shown once, and you can generate a new key later if needed.
 
-Pick the reporter for your testing framework and follow its setup guide.
+## 2. Choose Your Reporter
 
-→ [View all reporters](./installation)
+Open the [reporter table](./installation#reporters), choose the guide for your stack, and add the minimal configuration. If your tool already produces CTRF or another report format, use the [CLI Reporter](../reporters/cli).
 
-## 3. Set your API key
+## 3. Set `TESTREAM_API_KEY`
 
-Set your Testream API key in the secret management system of your choice. In this example, we'll use GitHub Actions secrets since it's the most common CI environment, but you can set this in any CI or locally as an environment variable.
+Set your Testream API key locally for the first proof, or store it in your CI secret manager.
 
-**Locally** — add to a `.env` file in your project root (don't commit this):
+**Locally** - add to a `.env` file in your project root, but do not commit it:
 
 ```
 TESTREAM_API_KEY=your_api_key_here
 ```
 
-**In CI (GitHub Actions)** — add `TESTREAM_API_KEY` as a repository secret (**Settings → Secrets → Actions → New repository secret**), then reference it in your workflow:
+**In CI (GitHub Actions)** - add `TESTREAM_API_KEY` as a repository secret (**Settings → Secrets → Actions → New repository secret**), then reference it in your workflow:
 
 ```yaml
 env:
   TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
 ```
 
-## 4. Run your tests
+## 4. Run Your Tests
 
-Run your tests as normal. The reporter automatically uploads results to Testream when `TESTREAM_API_KEY` is present.
+Run the same test command your team already uses. The reporter uploads results to Testream when `TESTREAM_API_KEY` is present.
 
-## 5. View your results
+Examples:
 
-Open your Jira instance where Testream is installed and navigate to your project, and check **Test Runs** to see the uploaded results.
+```bash
+npx playwright test
+```
 
-## Optional: Let Rovo guide setup
+```bash
+npm test
+```
 
-If you want help choosing the right reporter or shaping your CI workflow, open **Testream → Settings → Get Started with Rovo** in Jira. The Testream Setup Agent can use your selected project stack and CI provider to recommend a reporter, sample project, CI snippet, and first-run checklist.
+```bash
+dotnet test
+```
+
+## 5. Confirm the Run in Jira
+
+Open your Jira project where Testream is installed and check **Test Runs**.
+
+![Test Runs in Jira](/img/jira/Test-Runs-Screenshot.png)
+
+A successful first proof should show:
+
+- Run status and pass rate
+- Failed tests, if any
+- Framework and run metadata
+- Branch, commit, or CI context when provided
+- Artifacts such as screenshots, traces, videos, or logs when your reporter uploads them
+
+If no run appears, check that `TESTREAM_API_KEY` is available to the test process and that the reporter is configured for your framework.
+
+## Optional Paths
+
+### Let Rovo guide setup
+
+If you want help choosing the right reporter or shaping your CI workflow, open **Testream → Settings → Get Started with Rovo** in Jira. The **Testream Setup Agent** can recommend a reporter, sample project, CI snippet, and first-run checklist.
 
 → [Use AI-assisted setup](./ai-assisted-setup)
 
-## Optional: Add BDD Specs
+### Add BDD Specs after runs are flowing
 
-After your first test runs are flowing into Testream, you can add **BDD Specs** to Jira issues. Rovo can draft or improve Gherkin scenarios and assess them against the test evidence Testream captures from CI.
+After your first test runs are flowing into Testream, you can add **Testream BDD Specs** to Jira issues. Rovo can draft or improve Gherkin scenarios and assess them against the test evidence Testream captures from CI.
 
 → [Learn about BDD Specs](../features/bdd-gherkin-specs)
 
 ## What's Next?
 
-- [Reporters](./installation) — full configuration options for your framework
-- [Jira Integration](../jira-integration/overview) — surface test results directly in Jira
+- [Reporter installation](./installation#reporters) - choose the setup guide for your stack
+- [Jira Integration](../jira-integration/overview) - surface test results directly in Jira
+- [Test Run Summaries in Jira Issues](../features/test-run-summaries-in-jira-issues) - see issue-level run context

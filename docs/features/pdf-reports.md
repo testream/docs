@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # PDF Reports
 
-Generate downloadable PDF reports that summarize your test run results — including pass rates, failed test details, error messages, stack traces, and screenshots.
+Generate downloadable PDF reports that summarize your test run results, including pass rates, failed test details, error messages, stack traces, and screenshots.
 
 ![PDF Reports](/img/jira/Test-Run-Reports-Screenshot.png)
 
@@ -34,12 +34,12 @@ Each PDF report contains:
 
 Reports go through the following statuses:
 
-| Status | Description |
-|--------|-------------|
-| **Queued** | Report generation has been requested and is waiting to be processed |
-| **Processing** | The report is currently being generated |
-| **Ready** | The report is complete and available for download |
-| **Failed** | An error occurred during generation — you can retry |
+| Status         | Description                                                         |
+| -------------- | ------------------------------------------------------------------- |
+| **Queued**     | Report generation has been requested and is waiting to be processed |
+| **Processing** | The report is currently being generated                             |
+| **Ready**      | The report is complete and available for download                   |
+| **Failed**     | An error occurred during generation; you can retry                  |
 
 ## Retry on Failure
 

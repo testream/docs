@@ -2,67 +2,50 @@
 sidebar_position: 3
 ---
 
-# Usage
+# Use Testream in Jira
 
-Learn how to access and use the Testream for Jira integration, including permissions and best practices.
+After Testream receives an automated run, Jira becomes the place your team can review status, failures, evidence, and release signal.
 
-## Accessing the Dashboard
+## Open Testream
 
-After installation and configuration, access Testream in Jira:
+After installation, open Testream from Jira:
 
-1. Click **Apps** in the top navigation bar
-2. Select **Testream for Jira** from the dropdown menu
+1. Click **Apps** in the top navigation bar.
+2. Select **Testream for Jira** from the dropdown menu.
+3. If your Jira workspace has many apps installed, check **More** or your project sidebar.
 
-Alternatively, you may find Testream in your project sidebar depending on your Jira configuration.
+Need to install it first? Follow the [installation guide](../getting-started/installation) or open the [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704).
 
-Need to install it first? Use the [Testream for Jira Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704/testream-for-jira) and follow the [installation guide](./installation).
+## Review Recent Runs
 
-## Feature Guides
+Use the [Dashboard](../features/dashboard) to see current quality signal across projects, then open [Test Run Details](../features/test-run-details) for a specific run.
 
-For detailed guides on each feature, visit the dedicated pages:
+In a run, check:
 
-- **[Dashboard](../features/dashboard)** - Test metrics, result distributions, and recent runs
-- **[Test Run Details](../features/test-run-details)** - Metadata, results summary, and release linking
-- **[Test Run Summaries in Jira Issues](../features/test-run-summaries-in-jira-issues)** - Inline issue panel with run status, commit, and suite-change highlights
-- **[Issue Creation](../features/issue-creation)** - Creating Jira issues from failed tests
-- **[Failure Inspection](../features/failure-inspection)** - Error messages, stack traces, and artifacts
-- **[Trends & Analytics](../features/trends-analytics)** - Historical performance charts and analysis
-- **[Release Management](../features/release-management)** - Linking test runs to Jira releases
-- **[PDF Reports](../features/pdf-reports)** - Generating downloadable PDF summaries
-- **[BDD Specs](../features/bdd-gherkin-specs)** - Creating Gherkin scenarios in Jira issues and assessing coverage with Rovo
+- Pass rate and failed tests.
+- Branch, commit, build, and environment metadata.
+- [Test Suite Changes](../features/test-suite-changes) to see what was added, removed, or unchanged.
+- Linked Jira release, when the run belongs to a version.
 
-## Best Practices
+## Investigate Failures
 
-### Daily Usage
+Open failed tests from the run details view. [Failure Inspection](../features/failure-inspection) keeps the error message, stack trace, screenshots, traces, videos, logs, and metadata attached to the result.
 
-- Check the dashboard each morning to spot new failures
-- Review flaky tests weekly and prioritize fixes
-- Use the pass rate trend to gauge test suite stability
+When a failure needs follow-up, use [Issue Creation](../features/issue-creation) to create a Jira issue with the failure context already attached.
 
-### Debugging Failures
+## Bring Test Evidence Into Jira Issues
 
-- Always check error messages first before diving into artifacts
-- Download screenshots and videos for failures that are hard to reproduce
-- Use stack traces to identify the exact line of code causing failures
-- Share artifact links with team members in issue comments
+[Test Run Summaries in Jira Issues](../features/test-run-summaries-in-jira-issues) show linked run status, branch, commit, and suite-change highlights on the Jira issue itself. This keeps quality signal readable for QA, engineering, product, and release stakeholders.
 
-### Release Management
+If your team writes acceptance criteria in Jira, [Testream BDD Specs](../features/bdd-gherkin-specs) can draft or improve Gherkin scenarios with Rovo and assess them against ingested automated evidence.
 
-- Link test runs to releases as part of your release checklist
-- Review release-specific test results before deployment
-- Track pass rate trends leading up to release dates
-- Use release filters to compare quality across versions
+## Review Releases and Share Reports
 
-### Team Collaboration
-
-- Create Jira issues for persistent failures to track fixes
-- Share the dashboard URL in standup meetings
-- Add test run links to pull request descriptions
-- Use custom fields in issues to maintain traceability
+Use [Trends & Analytics](../features/trends-analytics) to spot quality movement over time. Use [Release Management](../features/release-management) to connect runs to Jira releases before shipping. When stakeholders need a portable summary, generate [PDF Reports](../features/pdf-reports) from the run.
 
 ## Permissions
 
-By default, any Jira user who can access the workspace can view Testream data. Contact your Jira administrator if you need to restrict access.
+Access depends on your Jira workspace, project permissions, and Testream app configuration. Contact your Jira administrator if users cannot see the app, project, or issue panel they expect.
 
 ## Getting Help
 
@@ -70,10 +53,10 @@ If you encounter issues or have questions:
 
 - Email: [contact@testream.app](mailto:contact@testream.app)
 - Documentation: [Read the docs](/)
-- Report bugs: [GitHub Issues](https://github.com/testream/docs/issues)
+- Report bugs: [Testream Service Space](https://testream.atlassian.net/servicedesk/customer/portal/1/group/1/create)
 
 ## What's Next?
 
-- Configure [reporters](../reporters/playwright) to send test data
-- Set up [CLI Reporter](../reporters/cli) for ingesting framework agnostic CTRF reports
-- Explore [Testream dashboard](https://testream.app) for advanced features
+- Publish a first run with the [Quick Start](../getting-started/quick-start).
+- Choose a reporter from the [Installation guide](../getting-started/installation#reporters).
+- Use the [Testream Setup Agent](../getting-started/ai-assisted-setup) if your Jira workspace has Rovo enabled.

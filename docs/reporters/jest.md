@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Jest Reporter
 
-The Testream Jest Reporter integrates seamlessly with your Jest test suite to automatically generate CTRF reports and upload test results to Testream. Simply add it to your Jest configuration and continue running tests as usual.
+The Testream Jest Reporter generates and uploads Jest test results to Testream from your existing Jest configuration.
 
 ## Installation
 
@@ -131,7 +131,7 @@ module.exports = {
 
 ### With Coverage
 
-Jest reporter works seamlessly with coverage:
+Jest reporter works with coverage:
 
 ```bash
 jest --coverage
@@ -179,12 +179,7 @@ module.exports = {
         apiKey: process.env.TESTREAM_API_KEY,
         uploadEnabled: process.env.TESTREAM_UPLOAD_ENABLED === "true",
         failOnUploadError: process.env.TESTREAM_FAIL_ON_ERROR === "true",
-        branch: process.env.TESTREAM_BRANCH,
-        commitSha: process.env.TESTREAM_COMMIT_SHA,
-        repositoryUrl: process.env.TESTREAM_REPOSITORY_URL,
         buildName: process.env.TESTREAM_BUILD_NAME,
-        buildNumber: process.env.TESTREAM_BUILD_NUMBER,
-        buildUrl: process.env.TESTREAM_BUILD_URL,
         testEnvironment: process.env.TESTREAM_TEST_ENVIRONMENT,
         appName: process.env.TESTREAM_APP_NAME,
         appVersion: process.env.TESTREAM_APP_VERSION,
@@ -250,12 +245,7 @@ jobs:
         env:
           TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
           TESTREAM_UPLOAD_ENABLED: "true"
-          TESTREAM_BRANCH: ${{ github.ref_name }}
-          TESTREAM_COMMIT_SHA: ${{ github.sha }}
-          TESTREAM_REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}
           TESTREAM_BUILD_NAME: "Jest Tests"
-          TESTREAM_BUILD_NUMBER: ${{ github.run_number }}
-          TESTREAM_BUILD_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           TESTREAM_TEST_ENVIRONMENT: "ci"
           TESTREAM_APP_NAME: "my-app"
           TESTREAM_APP_VERSION: "1.0.0"
@@ -265,10 +255,6 @@ jobs:
 ```
 
 ## Notes
-
-### Automatic CTRF Generation
-
-The reporter uses `jest-ctrf-json-reporter` under the hood to generate CTRF reports automatically. You don't need to configure anything else - just add the reporter and you're ready to go!
 
 ### Multiple Reporters
 

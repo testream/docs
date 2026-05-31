@@ -4,20 +4,20 @@ sidebar_position: 1
 
 # Introduction
 
-Welcome to **Testream** - a modern code-first test management platform and reporting solution designed for modern development teams who want to streamline their testing workflows and gain powerful insights into test results.
+Welcome to **Testream**, code-first automated test reporting for Jira teams.
+
+Testream brings automated test evidence from your codebase and CI/CD pipeline into Jira, without requiring teams to recreate every automated test as a manual Jira test case.
 
 ## What is Testream?
 
-Testream is a comprehensive test management and reporting platform that integrates seamlessly with your existing testing frameworks and CI/CD pipelines. It provides:
+Testream publishes automated test results into Jira with the context teams need to understand delivery risk:
 
-- **Centralized Test Reporting** - Aggregate test results from multiple frameworks and projects
-- **Advanced Analytics** - Track trends, identify flaky tests, and monitor test health
-- **Jira Integration** - View test results directly in Jira issues and projects
-- **CI/CD Ready** - Integrate Testream reporters to upload results from your pipelines with minimal configuration
-- **Historical Tracking** - Track test performance over time with detailed dashboards
-- **Artifact Management** - Store and view test artifacts like screenshots (videos and trace files coming soon!)
-- **Source of Truth** - A single source of truth for all your test results, accessible to developers, QA, and stakeholders
-- **Source Control Integration** - Track your tests right from the commits and branches
+- **Jira-native run summaries** - See pass rate, failed tests, branch, commit, and suite changes where work is already tracked.
+- **Failure evidence** - Keep errors, stack traces, screenshots, videos, traces, logs, and metadata connected to the result.
+- **CI/CD context** - Attach branch, commit, environment, and run metadata from local runs or pipelines.
+- **Trends and release signal** - Track flaky behavior, suite growth, timing changes, and release readiness over time.
+- **Code-first reporting** - Start from the automated tests you already run, not from a separate manual test-case inventory.
+- **Shared quality visibility** - Give developers, QA, product, and release stakeholders one readable quality signal inside Jira.
 
 ## Key Features
 
@@ -34,6 +34,7 @@ Testream supports the following reporters out of the box:
 - **CLI** - Upload CTRF reports from any test tool
 - **JUnit** - Parse and upload JUnit XML test results
 - **Vitest** - Blazing-fast unit testing for Vite projects
+- **pytest** - Python testing framework with rich plugin ecosystem
 
 ### CTRF Standard
 
@@ -41,7 +42,7 @@ All reporters use the [Common Test Report Format (CTRF)](https://github.com/ctrf
 
 ### CI/CD Integration
 
-Upload test results and artifacts with minimal configuration in any stage of your pipeline. Whether you're using GitHub Actions, Jenkins, CircleCI, Azure DevOps or any other CI/CD platform, Testream makes it easy to integrate with native NPM packages and CLI tools:
+Upload test results and artifacts from local runs or any stage of your pipeline. Whether you use GitHub Actions, Jenkins, CircleCI, Azure DevOps, or another CI/CD provider, Testream reporters and the CLI can publish results with `TESTREAM_API_KEY`:
 
 ```yaml
 - uses: testream/cli@latest
@@ -54,7 +55,7 @@ Upload test results and artifacts with minimal configuration in any stage of you
 Or use the CLI directly:
 
 ```bash
-git npx @testream/cli \
+npx @testream/cli \
   --report-path ctrf/ctrf-report.json \
   --test-tool playwright \
   --api-key $TESTREAM_API_KEY
@@ -62,7 +63,7 @@ git npx @testream/cli \
 
 ### Testream for Jira
 
-Testream is a Jira first test management and reporting solution. Install the [Testream for Jira app](https://marketplace.atlassian.com/apps/3048460704) to access comprehensive test reporting directly in your Jira workspace:
+Install the [Testream for Jira app](https://marketplace.atlassian.com/apps/3048460704) to make automated test evidence visible inside Jira:
 
 - **Test Run Summaries in Jira Issues** - View summaries of test runs directly within Jira issues.
 - **Test Suite Changes** - Track tests added, removed, and unchanged between runs on the same branch.
@@ -80,12 +81,12 @@ Testream is a Jira first test management and reporting solution. Install the [Te
 
 ## Getting Started
 
-Ready to integrate Testream? Choose your path:
+The fastest proof is one real automated run in Jira:
 
-- [**Installation Guide**](./getting-started/installation) - Install reporters for your framework
-- [**Quick Start**](./getting-started/quick-start) - Get up and running in 5 minutes
-- [**AI-Assisted Setup with Rovo**](./getting-started/ai-assisted-setup) - Let Rovo guide reporter and CI setup
-- [**CLI Reporter**](./reporters/cli) - Upload results from your pipeline
+- [**Quick Start**](./getting-started/quick-start) - Publish your first automated test run into Jira
+- [**Installation Guide**](./getting-started/installation) - Choose the reporter for your framework
+- [**AI-Assisted Setup with Rovo**](./getting-started/ai-assisted-setup) - Let the Testream Setup Agent guide reporter and CI setup
+- [**CLI Reporter**](./reporters/cli) - Upload CTRF or converted reports from any test tool
 
 ## Need Help?
 

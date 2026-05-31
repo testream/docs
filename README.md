@@ -1,6 +1,6 @@
 # Testream Documentation
 
-Official documentation for the Testream test management platform.
+Official documentation for Testream automated test reporting.
 
 ## Documentation
 
@@ -8,17 +8,17 @@ Official documentation for the Testream test management platform.
 
 ## Get Started
 
-- Playwright Reporter: https://testream.github.io/reporters/playwright
-- .NET Reporter: https://testream.github.io/reporters/dotnet
-- Cypress Reporter: https://testream.github.io/reporters/cypress
-- Jest Reporter: https://testream.github.io/reporters/jest
-- WebdriverIO Reporter: https://testream.github.io/reporters/webdriverio
-- Mocha Reporter: https://testream.github.io/reporters/mocha
-- CLI Reporter: https://testream.github.io/reporters/cli
-- JUnit Reporter: https://testream.github.io/reporters/junit
-- Pytest Reporter: https://testream.github.io/reporters/pytest
-- Vitest Reporter: https://testream.github.io/reporters/vitest
-- Jira Integration: https://testream.github.io/jira-integration/installation (Marketplace: https://marketplace.atlassian.com/apps/3048460704/testream-for-jira)
+- Playwright Reporter: https://docs.testream.app/reporters/playwright
+- .NET Reporter: https://docs.testream.app/reporters/dotnet
+- Cypress Reporter: https://docs.testream.app/reporters/cypress
+- Jest Reporter: https://docs.testream.app/reporters/jest
+- WebdriverIO Reporter: https://docs.testream.app/reporters/webdriverio
+- Mocha Reporter: https://docs.testream.app/reporters/mocha
+- CLI Reporter: https://docs.testream.app/reporters/cli
+- JUnit Reporter: https://docs.testream.app/reporters/junit
+- Pytest Reporter: https://docs.testream.app/reporters/pytest
+- Vitest Reporter: https://docs.testream.app/reporters/vitest
+- Jira Integration: https://docs.testream.app/jira-integration/overview (Marketplace: https://marketplace.atlassian.com/apps/3048460704)
 
 ## Packages
 
