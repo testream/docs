@@ -45,6 +45,7 @@ const sidebars: SidebarsConfig = {
         'features/release-management',
         'features/pdf-reports',
         'features/bdd-gherkin-specs',
+        'features/artifact-storage',
       ],
     },
     {
