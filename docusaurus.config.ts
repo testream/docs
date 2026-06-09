@@ -48,6 +48,37 @@ const config: Config = {
           editUrl: 'https://github.com/testream/docs/tree/main/',
         },
         blog: false,
+        sitemap: {
+          ignorePatterns: ['/search'],
+          changefreq: 'weekly',
+          priority: 0.5,
+          createSitemapItems: async ({defaultCreateSitemapItems, ...params}) => {
+            const items = await defaultCreateSitemapItems(params);
+
+            return items
+              .filter((item) => new URL(item.url).pathname !== '/search')
+              .map((item) => {
+                const pathname = new URL(item.url).pathname.replace(/\/$/, '') || '/';
+
+                let priority = 0.5;
+
+                if (pathname === '/' || pathname === '/intro') {
+                  priority = 1;
+                } else if (pathname.startsWith('/getting-started')) {
+                  priority = 0.8;
+                } else if (pathname.startsWith('/reporters')) {
+                  priority = 0.7;
+                } else if (pathname.startsWith('/features') || pathname.startsWith('/jira-integration')) {
+                  priority = 0.6;
+                }
+
+                return {
+                  ...item,
+                  priority,
+                };
+              });
+          },
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
