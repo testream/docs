@@ -3,8 +3,8 @@
  * Light & Clean SaaS Aesthetic with Teal Accent
  */
 
-/* Import Plus Jakarta Sans from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+/* Import Geist Mono from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
 
 /* Override Infima variables with new teal palette */
 :root {
@@ -18,8 +18,8 @@
   --ifm-color-primary-lightest: #5EEAD4;
 
   /* Typography */
-  --ifm-font-family-base: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --ifm-heading-font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-base: 'Geist Mono', ui-monospace, monospace;
+  --ifm-heading-font-family: 'Geist Mono', ui-monospace, monospace;
   --ifm-font-weight-bold: 700;
   --ifm-heading-font-weight: 800;
 
