@@ -28,8 +28,6 @@ Each PDF report contains:
 - **Failed Tests** - Detailed listing with error messages, stack traces, and captured screenshots
 - **Passed & Skipped Tests** - Summary table of all remaining tests
 
-> **[View an example PDF report](https://files.testream.app/reports/019c1925-214e-798c-b7c5-ec62b875ecd4/85cf3ae8-002b-45e8-aafb-dee7d1b7cb33/report.pdf)** to see what a generated report looks like.
-
 ## Report Statuses
 
 Reports go through the following statuses:
