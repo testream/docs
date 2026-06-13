@@ -33,6 +33,15 @@ jobs:
       - name: Build website
         run: npm run build
 
+      - name: Verify IndexNow payload generation
+        run: npm run test:indexnow && npm run indexnow:dry-run -- --sitemap build/sitemap.xml
+
+      - name: Upload sitemap for IndexNow submission
+        uses: actions/upload-artifact@v4
+        with:
+          name: indexnow-sitemap
+          path: ./build/sitemap.xml
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -48,3 +57,27 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  submit-indexnow:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+      - deploy
+    if: ${{ needs.deploy.result == 'success' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Download sitemap artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: indexnow-sitemap
+          path: ./build
+
+      - name: Submit deployed URLs to IndexNow
+        run: npm run indexnow:submit -- --sitemap build/sitemap.xml
