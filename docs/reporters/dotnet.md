@@ -1,10 +1,20 @@
 ---
 sidebar_position: 2
+title: '.NET Reporter'
+description: 'Send xUnit, NUnit, MSTest, and TRX-based test results from CI/CD into Jira with the Testream .NET Reporter.'
+keywords:
+  - dotnet jira reporter
+  - xunit jira reporting
+  - nunit jira reporting
+  - mstest jira reporting
+  - trx jira reporting
 ---
 
 # .NET Reporter
 
-The Testream .NET Reporter runs your tests (or reads existing TRX files), converts results to CTRF, and uploads them to Testream.
+Use the Testream .NET Reporter to send xUnit, NUnit, MSTest, and TRX-based test results from CI/CD into Testream and Jira.
+
+Looking for the higher-level product fit first? Read the website page for [.NET Jira integration](https://testream.app/dotnet-jira-integration).
 
 ## Installation
 
@@ -25,7 +35,7 @@ npx @testream/dotnet-reporter -k $TESTREAM_API_KEY
 This single command will:
 
 1. Run `dotnet test`
-2. Generate a CTRF report
+2. Convert the results automatically
 3. Upload to Testream (project key inferred from API key)
 
 ## CLI Options

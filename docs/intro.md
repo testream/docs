@@ -1,12 +1,18 @@
 ---
 sidebar_position: 1
+title: Introduction
+description: Learn how Testream sends automated test results from CI/CD into Jira with reporters, CTRF uploads, artifacts, and release visibility.
+keywords:
+  - jira test reporting docs
+  - automated test reporting jira
+  - ci cd test results jira
 ---
 
 # Introduction
 
 Welcome to **Testream**, code-first automated test reporting for Jira teams.
 
-Testream brings automated test evidence from your codebase and CI/CD pipeline into Jira, without requiring teams to recreate every automated test as a manual Jira test case.
+Testream brings automated test results from CI/CD into Jira so teams can review pass rate, failures, artifacts, branch and commit context, suite changes, and release readiness without creating a separate manual test-case layer.
 
 ## What is Testream?
 

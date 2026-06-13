@@ -1,10 +1,19 @@
 ---
 sidebar_position: 10
+title: 'Pytest Reporter'
+description: 'Send Pytest and JUnit-based Python test results from CI/CD into Jira with the Testream Pytest Reporter.'
+keywords:
+  - pytest jira reporter
+  - python pytest jira
+  - django pytest jira
+  - fastapi pytest jira
 ---
 
 # Pytest Reporter
 
-The Testream Pytest Reporter runs your Pytest suite (or ingests existing JUnit XML), converts results to CTRF, and uploads them to Testream.
+Use the Testream Pytest Reporter to send Pytest and JUnit-based Python test results from CI/CD into Testream and Jira.
+
+Looking for the commercial overview first? Read the website page for [Pytest Jira integration](https://testream.app/pytest-jira-integration).
 
 ## Installation
 
@@ -26,7 +35,7 @@ This single command will:
 
 1. Run `pytest`
 2. Write JUnit XML to `junit/pytest-junit.xml`
-3. Convert to CTRF and upload to Testream
+3. Convert the results automatically and upload to Testream
 
 For a full end-to-end repository example (project layout, intentional failures, and CI setup), see the **Sample Project** section below.
 

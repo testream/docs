@@ -1,10 +1,18 @@
 ---
 sidebar_position: 3
+title: 'Cypress Reporter'
+description: 'Send Cypress test results, screenshots, videos, and end-to-end artifacts into Jira with the Testream Cypress Reporter.'
+keywords:
+  - cypress jira reporter
+  - cypress test reporting jira
+  - cypress component testing jira
 ---
 
 # Cypress Reporter
 
-The Testream Cypress Reporter runs your Cypress tests and automatically uploads test results to Testream. You can use it as a CLI tool or integrate it directly into your Cypress configuration.
+Use the Testream Cypress Reporter to send Cypress test results, screenshots, videos, and CI/CD run context into Testream and Jira.
+
+Looking for the commercial overview first? Read the website page for [Cypress Jira integration](https://testream.app/cypress-jira-integration).
 
 ## Installation
 
@@ -25,7 +33,7 @@ npx @testream/cypress-reporter -k $TESTREAM_API_KEY
 This single command will:
 
 1. Run your Cypress tests
-2. Generate a CTRF report automatically
+2. Prepare uploadable results automatically
 3. Upload results to Testream (project key inferred from API key)
 
 ### Option 2: Programmatic Configuration

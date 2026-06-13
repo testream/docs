@@ -1,10 +1,18 @@
 ---
 sidebar_position: 9
+title: 'Mocha Reporter'
+description: 'Send Mocha test results from CI/CD into Jira with the Testream Mocha Reporter and built-in upload support.'
+keywords:
+  - mocha jira reporter
+  - mocha test reporting jira
+  - node mocha jira
 ---
 
 # Mocha Reporter
 
-The Testream Mocha Reporter generates CTRF test reports from Mocha and uploads them to Testream.
+Use the Testream Mocha Reporter to send Mocha test results from CI/CD into Testream and Jira with built-in upload support.
+
+Looking for the commercial overview first? Read the website page for [Mocha Jira integration](https://testream.app/mocha-jira-integration).
 
 ## Installation
 

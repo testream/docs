@@ -1,10 +1,18 @@
 ---
 sidebar_position: 5
+title: 'WebdriverIO Reporter'
+description: 'Send WebdriverIO test results from CI/CD into Jira with the Testream WebdriverIO Reporter and built-in upload support.'
+keywords:
+  - webdriverio jira reporter
+  - wdio jira reporting
+  - webdriverio test reporting jira
 ---
 
 # WebdriverIO Reporter
 
-The Testream WebdriverIO Reporter generates CTRF reports and uploads test results to Testream. It integrates with WebdriverIO's reporter system and handles CTRF report generation for you.
+Use the Testream WebdriverIO Reporter to send browser-automation test results from CI/CD into Testream and Jira with built-in upload support.
+
+Looking for the commercial overview first? Read the website page for [WebdriverIO Jira integration](https://testream.app/webdriverio-jira-integration).
 
 ## Installation
 

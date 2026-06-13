@@ -1,10 +1,18 @@
 ---
 sidebar_position: 4
+title: 'Jest Reporter'
+description: 'Send Jest test results from CI/CD into Jira with the Testream Jest Reporter and review failures and trends in Testream.'
+keywords:
+  - jest jira reporter
+  - jest test reporting jira
+  - jest ci results jira
 ---
 
 # Jest Reporter
 
-The Testream Jest Reporter generates and uploads Jest test results to Testream from your existing Jest configuration.
+Use the Testream Jest Reporter to send Jest unit and integration test results from CI/CD into Testream and Jira.
+
+Looking for the higher-level product fit first? Read the website page for [Jest Jira integration](https://testream.app/jest-jira-integration).
 
 ## Installation
 

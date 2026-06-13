@@ -1,5 +1,4 @@
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import styles from './index.module.css';
@@ -331,16 +330,15 @@ function FinalCTASection() {
 }
 
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={siteConfig.title}
-      description="Publish automated test evidence from CI/CD into Jira with Testream."
+      title={'Testream Docs | Automated Test Reporting & BDD for Jira'}
+      description="Set up Playwright, Jest, Vitest, Cypress, JUnit, .NET, CTRF, and CLI uploads for Testream and Jira."
     >
       <Head>
-        <meta property="og:description" content="Publish automated test evidence from CI/CD into Jira with Testream." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@testream" />
+        <link rel="canonical" href="https://docs.testream.app/" />
       </Head>
       <main>
         <HeroSection />

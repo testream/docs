@@ -1,10 +1,18 @@
 ---
 sidebar_position: 1
+title: 'Playwright Reporter'
+description: 'Send Playwright test results, traces, screenshots, and videos into Jira with the Testream Playwright Reporter.'
+keywords:
+  - playwright jira reporter
+  - playwright test reporting jira
+  - playwright ci results jira
 ---
 
 # Playwright Reporter
 
-The Testream Playwright Reporter generates CTRF reports and uploads test results (plus artifacts) to Testream.
+Use the Testream Playwright Reporter to send Playwright test results, screenshots, videos, and traces into Testream and Jira.
+
+Looking for the commercial overview first? Read the website page for [Playwright Jira integration](https://testream.app/playwright-jira-integration).
 
 ## Installation
 

@@ -1,10 +1,19 @@
 ---
 sidebar_position: 7
+title: 'JUnit Reporter'
+description: 'Upload JUnit XML test results from Java CI/CD pipelines into Jira with the Testream JUnit Reporter.'
+keywords:
+  - junit jira reporter
+  - java junit jira
+  - maven surefire jira reporting
+  - gradle junit jira
 ---
 
 # JUnit Reporter
 
-The Testream JUnit Reporter converts JUnit XML into a CTRF report and uploads the results to Testream.
+Use the Testream JUnit Reporter to convert JUnit XML output from CI/CD and send Java test results into Testream and Jira.
+
+Looking for the commercial overview first? Read the website page for [JUnit Jira integration](https://testream.app/junit-jira-integration).
 
 ## Installation
 

@@ -62,14 +62,14 @@ const config: Config = {
 
                 let priority = 0.5;
 
-                if (pathname === '/' || pathname === '/intro') {
+                if (pathname === '/') {
                   priority = 1;
+                } else if (pathname === '/intro') {
+                  priority = 0.7;
                 } else if (pathname.startsWith('/getting-started')) {
                   priority = 0.8;
                 } else if (pathname.startsWith('/reporters')) {
                   priority = 0.7;
-                } else if (pathname.startsWith('/features') || pathname.startsWith('/jira-integration')) {
-                  priority = 0.6;
                 }
 
                 return {

@@ -1,10 +1,18 @@
 ---
 sidebar_position: 8
+title: 'Vitest Reporter'
+description: 'Send Vitest test results from CI/CD into Jira with the Testream Vitest Reporter and run metadata.'
+keywords:
+  - vitest jira reporter
+  - vitest test reporting jira
+  - vitest ci results jira
 ---
 
 # Vitest Reporter
 
-The Testream Vitest Reporter generates a CTRF report from your Vitest test run and uploads the results to Testream.
+Use the Testream Vitest Reporter to send Vitest test results from CI/CD into Testream and Jira with run metadata and CI-friendly uploads.
+
+Looking for the broader use case? Read the website page for [Vitest Jira integration](https://testream.app/vitest-jira-integration).
 
 ## Installation
 

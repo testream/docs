@@ -1,10 +1,18 @@
 ---
 sidebar_position: 6
+title: 'CLI Reporter'
+description: 'Upload CTRF test reports to Testream and Jira from GitHub Actions, CircleCI, Bitbucket Pipelines, Jenkins, GitLab, or any custom CI.'
+keywords:
+  - ctrf upload jira
+  - cli test reporting jira
+  - upload test results to jira from ci
 ---
 
 # CLI Reporter
 
-Upload CTRF test reports to Testream from any CI provider using the CLI.
+Upload CTRF test reports to Testream from any CI provider with the CLI, then review the results in Jira with branch, commit, build, environment, and artifact context.
+
+If you are evaluating the product path first, start with the website page for [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
 ## What you need
 

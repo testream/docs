@@ -1,0 +1,36 @@
+# Testream Documentation
+> Technical implementation guides for sending automated test results into Jira with Testream.
+
+## Getting started
+- [Quick Start](https://docs.testream.app/getting-started/quick-start): Publish the first Jira-visible test run.
+- [Installation](https://docs.testream.app/getting-started/installation): Choose the correct reporter path.
+
+## Reporter guides
+- [Playwright Reporter](https://docs.testream.app/reporters/playwright): Configure Playwright reporting, artifacts, and CI setup.
+- [Cypress Reporter](https://docs.testream.app/reporters/cypress): Configure Cypress reporting for end-to-end and component-test runs.
+- [.NET Reporter](https://docs.testream.app/reporters/dotnet): Configure xUnit, NUnit, MSTest, and TRX-based reporting.
+- [Jest Reporter](https://docs.testream.app/reporters/jest): Configure Jest reporting for unit and integration test runs.
+- [JUnit Reporter](https://docs.testream.app/reporters/junit): Upload JUnit XML results from Java CI/CD pipelines.
+- [WebdriverIO Reporter](https://docs.testream.app/reporters/webdriverio): Configure WebdriverIO reporting and launcher-service uploads.
+- [Mocha Reporter](https://docs.testream.app/reporters/mocha): Configure Mocha reporter options and CI/CD uploads.
+- [Pytest Reporter](https://docs.testream.app/reporters/pytest): Configure Pytest reporting and JUnit-ingestion workflows.
+- [Vitest Reporter](https://docs.testream.app/reporters/vitest): Configure Vitest reporting and CI/CD uploads.
+- [CLI Reporter](https://docs.testream.app/reporters/cli): Upload CTRF results from any CI provider.
+
+## Sample repositories
+- [Playwright sample repo](https://github.com/testream/playwright-jira-reporter): End-to-end Playwright setup example for Testream.
+- [Vitest sample repo](https://github.com/testream/vitest-jira-reporter): Vitest reporting example with CI-ready configuration.
+- [Jest sample repo](https://github.com/testream/jest-jira-reporter): Jest reporting example with Testream integration.
+- [Cypress sample repo](https://github.com/testream/cypress-jira-reporter): Cypress reporting example for browser tests and CI workflows.
+- [.NET sample repo](https://github.com/testream/dotnet-jira-reporter): .NET reporter example covering CI-friendly upload flows.
+
+## Related evaluation pages
+- [Vitest + React + Jira integration](https://testream.app/vitest-react-jira-integration): Evaluate a React-specific Vitest reporting workflow.
+- [Vitest + Angular + Jira integration](https://testream.app/vitest-angular-jira-integration): Evaluate an Angular-specific Vitest reporting workflow.
+- [Vitest + Vue + Jira integration](https://testream.app/vitest-vue-jira-integration): Evaluate a Vue-specific Vitest reporting workflow.
+- [.NET + xUnit + Jira integration](https://testream.app/dotnet-xunit-jira-integration): Evaluate xUnit reporting with the .NET reporter.
+- [.NET + NUnit + Jira integration](https://testream.app/dotnet-nunit-jira-integration): Evaluate NUnit reporting with the .NET reporter.
+- [.NET + MSTest + Jira integration](https://testream.app/dotnet-mstest-jira-integration): Evaluate MSTest reporting with the .NET reporter.
+- [Next.js + Jest + Jira integration](https://testream.app/nextjs-jest-jira-integration): Evaluate Jest reporting for Next.js teams.
+- [Cypress Component Testing + Jira integration](https://testream.app/cypress-component-jira-integration): Evaluate component-test reporting with the Cypress reporter.
+- [Django + Pytest + Jira integration](https://testream.app/django-pytest-jira-integration): Evaluate Pytest reporting for Django applications.
