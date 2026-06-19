@@ -1,5 +1,12 @@
 ---
 sidebar_position: 3
+title: Test Run Summaries in Jira Issues
+description: Show linked run status, branch, commit, and suite-change highlights directly inside Jira issues with the Test Run Summary panel.
+keywords:
+  - jira issue test run summary
+  - test results in jira issues
+  - branch linked test runs jira
+  - automated test context in jira issues
 ---
 
 # Test Run Summaries in Jira Issues
@@ -38,3 +45,9 @@ Use the panel actions to jump straight into deeper analysis:
 - [Test Run Details](./test-run-details)
 - [Test Suite Changes](./test-suite-changes)
 - [Issue Creation](./issue-creation)
+
+## Next Steps
+
+- [Test Run Details](./test-run-details) to inspect the linked run.
+- [Issue Creation](./issue-creation) to open follow-up Jira work from failures.
+- [Jira test reporting](https://testream.app/jira-test-reporting) for the higher-level product path.

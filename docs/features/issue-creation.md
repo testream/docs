@@ -1,5 +1,12 @@
 ---
 sidebar_position: 3
+title: Issue Creation
+description: Create Jira issues directly from failed tests with pre-filled failure, environment, and run context from Testream.
+keywords:
+  - create jira issue from failed test
+  - failed test issue creation jira
+  - automated bug creation jira tests
+  - testream issue creation
 ---
 
 # Issue Creation
@@ -23,3 +30,9 @@ Create Jira issues directly from failed tests with pre-filled failure context an
 4. Click **"Create"** to generate the issue
 
 The created issue will contain all context needed for developers to investigate and fix the failure.
+
+## Next Steps
+
+- [Failure Inspection](./failure-inspection) to review the failed evidence before opening work.
+- [Test Run Summaries in Jira Issues](./test-run-summaries-in-jira-issues) to keep linked run context visible on the issue.
+- [Jira test reporting](https://testream.app/jira-test-reporting) for the higher-level product overview.

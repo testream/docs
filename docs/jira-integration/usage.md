@@ -1,5 +1,12 @@
 ---
 sidebar_position: 3
+title: Use Testream in Jira
+description: Review automated test runs, failures, issue summaries, release links, and PDF reports inside Jira after Testream receives a run from CI or local execution.
+keywords:
+  - use testream in jira
+  - review test results in jira
+  - jira test run workflow
+  - failure evidence in jira
 ---
 
 # Use Testream in Jira
@@ -60,3 +67,4 @@ If you encounter issues or have questions:
 - Publish a first run with the [Quick Start](../getting-started/quick-start).
 - Choose a reporter from the [Installation guide](../getting-started/installation#reporters).
 - Use the [Testream Setup Agent](../getting-started/ai-assisted-setup) if your Jira workspace has Rovo enabled.
+- Review [Jira test reporting](https://testream.app/jira-test-reporting) for the commercial overview.

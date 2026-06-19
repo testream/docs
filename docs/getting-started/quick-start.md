@@ -1,5 +1,12 @@
 ---
 sidebar_position: 2
+title: Quick Start
+description: Publish your first automated test run into Jira in about five minutes with Testream, a reporter guide, and a Testream API key.
+keywords:
+  - quick start jira test reporting
+  - first automated test run jira
+  - testream quick start
+  - send test results to jira
 ---
 
 # Quick Start
@@ -100,3 +107,4 @@ After your first test runs are flowing into Testream, you can add **Testream BDD
 - [Reporter installation](./installation#reporters) - choose the setup guide for your stack
 - [Jira Integration](../jira-integration/overview) - surface test results directly in Jira
 - [Test Run Summaries in Jira Issues](../features/test-run-summaries-in-jira-issues) - see issue-level run context
+- [CI/CD test results in Jira](https://testream.app/ci-test-results-jira) - understand the higher-level product path

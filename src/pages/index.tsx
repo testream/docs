@@ -60,9 +60,10 @@ function HeroSection() {
           Publish your first automated test run into Jira.
         </h1>
         <p className={styles.heroSubtitle}>
-          Testream publishes Playwright, Jest, Cypress, JUnit, .NET, Pytest,
-          and other automated test runs into Jira with failure evidence,
-          artifacts, branch and commit context, trends, and release signal.
+          Set up Playwright, Jest, Cypress, JUnit, .NET, Pytest, Vitest,
+          WebdriverIO, Mocha, and CLI-based uploads so every automated run
+          reaches Jira with failure evidence, artifacts, branch and commit
+          context, trends, and release signal.
         </p>
         <div className={styles.heroButtons}>
           <Link to="/getting-started/quick-start" className={styles.primaryButton}>
@@ -332,8 +333,8 @@ function FinalCTASection() {
 export default function Home(): JSX.Element {
   return (
     <Layout
-      title={'Testream Docs | Automated Test Reporting & BDD for Jira'}
-      description="Set up Playwright, Jest, Vitest, Cypress, JUnit, .NET, CTRF, and CLI uploads for Testream and Jira."
+      title={'Automated Test Reporting Docs for Jira Teams | Testream'}
+      description="Set up Playwright, Jest, Vitest, Cypress, JUnit, .NET, Pytest, WebdriverIO, Mocha, and CLI uploads for automated test reporting in Jira."
     >
       <Head>
         <meta name="twitter:card" content="summary_large_image" />

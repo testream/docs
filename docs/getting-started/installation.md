@@ -1,5 +1,12 @@
 ---
 sidebar_position: 1
+title: Installation
+description: Install Testream for Jira, choose the right reporter for your test stack, and start sending automated test results into Jira.
+keywords:
+  - install testream jira
+  - jira test reporting setup
+  - automated test reporting jira
+  - choose test reporter jira
 ---
 
 # Installation
@@ -58,3 +65,9 @@ If your Jira workspace has Rovo enabled, use the **Testream Setup Agent** to fin
 ## 3. Publish Your First Run
 
 Once Testream for Jira is installed and you know which reporter to use, continue with the [Quick Start](./quick-start). It walks through creating a Testream project, setting `TESTREAM_API_KEY`, running tests, and confirming the run in Jira.
+
+## Next Steps
+
+- [Quick Start](./quick-start) to publish the first real run.
+- [Jira Integration overview](../jira-integration/overview) to see what Testream adds after setup.
+- [Jira test reporting](https://testream.app/jira-test-reporting) for the higher-level product path.

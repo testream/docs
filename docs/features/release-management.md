@@ -1,5 +1,12 @@
 ---
 sidebar_position: 6
+title: Release Management
+description: Link automated test runs to Jira releases so teams can review pass rate, quality gates, and release readiness per version.
+keywords:
+  - release management jira test results
+  - link test runs to jira releases
+  - release readiness test reporting jira
+  - jira version quality gates
 ---
 
 # Release Management
@@ -40,3 +47,9 @@ This creates the Jira issue and links the test run to the selected release in a 
 ## Filtering by Release
 
 Click any release to see only its associated test runs. Use this to compare quality across versions and monitor readiness before deployment.
+
+## Next Steps
+
+- [Test Run Details](./test-run-details) to inspect one release-linked run.
+- [PDF Reports](./pdf-reports) to share release evidence with stakeholders.
+- [Jira test reporting](https://testream.app/jira-test-reporting) for the broader product overview.

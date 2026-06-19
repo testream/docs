@@ -1,5 +1,12 @@
 ---
 sidebar_position: 7
+title: PDF Reports
+description: Generate downloadable PDF summaries of test runs with pass rates, failed test details, stack traces, screenshots, and run metadata.
+keywords:
+  - pdf test report jira
+  - downloadable test run report
+  - share test results as pdf
+  - jira automated test report pdf
 ---
 
 # PDF Reports
@@ -46,3 +53,9 @@ If a report fails to generate, click the **"Retry"** button to request a new gen
 ## Availability
 
 PDF Reports are available on **Starter**, **Pro**, and **Enterprise** plans.
+
+## Next Steps
+
+- [Release Management](./release-management) to link reports to shipping decisions.
+- [Test Run Details](./test-run-details) to inspect the run before exporting it.
+- [CI/CD test results in Jira](https://testream.app/ci-test-results-jira) for the product overview behind this workflow.

@@ -1,5 +1,12 @@
 ---
 sidebar_position: 2
+title: Test Run Details
+description: Inspect one Testream run in Jira with branch, commit, build, app, reporter, failure, and suite-change context.
+keywords:
+  - test run details jira
+  - inspect automated test results jira
+  - build metadata test results jira
+  - failed tests jira details
 ---
 
 # Test Run Details
@@ -67,3 +74,9 @@ All failed tests are listed with:
 - Test name
 - Error message preview
 - **"Create Issue"** button for each failure
+
+## Next Steps
+
+- [Failure Inspection](./failure-inspection) to debug a specific failed test.
+- [Test Suite Changes](./test-suite-changes) to review run-to-run drift.
+- [CI/CD test results in Jira](https://testream.app/ci-test-results-jira) for the higher-level product overview.

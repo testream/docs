@@ -1,5 +1,12 @@
 ---
 sidebar_position: 3
+title: AI-Assisted Setup with Rovo
+description: Use the Testream Setup Agent in Jira to choose the right reporter, generate CI guidance, and verify that Testream receives your first automated test run.
+keywords:
+  - rovo testream setup
+  - ai assisted jira test reporting setup
+  - reporter recommendation jira
+  - first test run jira rovo
 ---
 
 # AI-Assisted Setup with Rovo
@@ -102,3 +109,4 @@ After the run finishes, tell Rovo that the tests have run. The setup agent can c
 - [Reporter installation](./installation)
 - [BDD Specs](../features/bdd-gherkin-specs)
 - [Test Run Summaries in Jira Issues](../features/test-run-summaries-in-jira-issues)
+- [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704)

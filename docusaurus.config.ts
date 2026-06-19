@@ -68,8 +68,19 @@ const config: Config = {
                   priority = 0.7;
                 } else if (pathname.startsWith('/getting-started')) {
                   priority = 0.8;
+                } else if (pathname.startsWith('/jira-integration')) {
+                  priority = 0.7;
                 } else if (pathname.startsWith('/reporters')) {
                   priority = 0.7;
+                } else if (
+                  [
+                    '/features/failure-inspection',
+                    '/features/release-management',
+                    '/features/test-run-summaries-in-jira-issues',
+                    '/features/trends-analytics',
+                  ].includes(pathname)
+                ) {
+                  priority = 0.6;
                 }
 
                 return {

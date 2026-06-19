@@ -1,5 +1,12 @@
 ---
 sidebar_position: 3
+title: Test Suite Changes
+description: Compare one run against the previous run on the same branch to see added, removed, unchanged, and net test-suite movement in Jira.
+keywords:
+  - test suite changes jira
+  - compare test runs jira
+  - added removed tests jira
+  - suite drift automated tests
 ---
 
 # Test Suite Changes
@@ -41,3 +48,9 @@ Use this view to quickly validate suite refactors, identify accidental test remo
 ## Related Feature
 
 - [Test Run Details](./test-run-details)
+
+## Next Steps
+
+- [Test Run Details](./test-run-details) to review the run that produced this diff.
+- [Trends & Analytics](./trends-analytics) to track longer-term quality movement.
+- [CI/CD test results in Jira](https://testream.app/ci-test-results-jira) for the product overview.

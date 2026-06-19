@@ -1,5 +1,12 @@
 ---
 sidebar_position: 1
+title: Dashboard
+description: Use the Testream dashboard in Jira to review the latest run, compare suite changes, and watch quality movement over time.
+keywords:
+  - jira test dashboard
+  - automated test reporting dashboard
+  - latest test run jira
+  - quality trends jira
 ---
 
 # Dashboard
@@ -82,3 +89,9 @@ Each row surfaces:
 - **All Runs** - open the complete run history
 - **Trends** - open the dedicated historical trends page
 - **Releases** - navigate to release-linked test runs
+
+## Next Steps
+
+- [Test Run Details](./test-run-details) to inspect one run in depth.
+- [Trends & Analytics](./trends-analytics) to review historical quality movement.
+- [CI/CD test results in Jira](https://testream.app/ci-test-results-jira) for the product overview behind this workflow.

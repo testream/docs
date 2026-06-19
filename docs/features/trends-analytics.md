@@ -1,5 +1,12 @@
 ---
 sidebar_position: 5
+title: Trends & Analytics
+description: Track pass/fail movement, duration changes, suite growth, and flaky tests over time inside Testream for Jira.
+keywords:
+  - test trends jira
+  - flaky test analytics jira
+  - pass fail trends jira
+  - automated test analytics jira
 ---
 
 # Trends & Analytics
@@ -47,3 +54,9 @@ _(Visible at the bottom of the screenshot above)_
 A horizontal bar chart showing the top 10 tests ranked by flakiness percentage. If no flaky tests are detected, a success banner is displayed:
 
 > **No flaky tests detected! All tests are stable.**
+
+## Next Steps
+
+- [Dashboard](./dashboard) for the current-state view across recent runs.
+- [Release Management](./release-management) to connect those trends to shipping decisions.
+- [CI/CD test results in Jira](https://testream.app/ci-test-results-jira) for the higher-level workflow overview.

@@ -1,5 +1,12 @@
 ---
 sidebar_position: 2
+title: What Testream Adds to Jira
+description: See how Testream brings automated test evidence, failures, suite changes, trends, and release signal from CI into Jira without manual test-case maintenance.
+keywords:
+  - jira test reporting overview
+  - automated test evidence in jira
+  - ci test results jira overview
+  - testream jira integration
 ---
 
 # What Testream Adds to Jira
@@ -25,3 +32,9 @@ Testream brings automated test evidence from your codebase and CI into Jira. Onc
 1. **[Install Testream for Jira](../getting-started/installation)** from the [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704).
 2. **[Publish your first run](../getting-started/quick-start)** from an existing automated test suite.
 3. **[Use Testream in Jira](./usage)** to inspect runs, review issue summaries, create issues, link releases, and export reports.
+
+## Next Steps
+
+- [Quick Start](../getting-started/quick-start) to prove the first automated run.
+- [Use Testream in Jira](./usage) for the in-product workflow after setup.
+- [Jira test reporting](https://testream.app/jira-test-reporting) for the higher-level evaluation path.

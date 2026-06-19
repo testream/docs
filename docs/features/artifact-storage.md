@@ -1,5 +1,12 @@
 ---
 sidebar_position: 9
+title: Artifact Storage
+description: Keep automated test artifacts private in Testream with managed storage or your own bucket while still making them accessible from Jira.
+keywords:
+  - private test artifact storage jira
+  - testream artifact storage
+  - customer owned bucket test artifacts
+  - screenshots traces private storage
 ---
 
 # Artifact Storage
@@ -69,3 +76,9 @@ If you only want to stop using the connection for a project, disable it from the
 Choose **Testream-managed storage** if you want the fastest, simplest setup.
 
 Choose **Customer-owned bucket storage** if your team needs to connect its own bucket and manage that connection over time.
+
+## Next Steps
+
+- [Failure Inspection](./failure-inspection) to see how artifacts help with failed-test debugging.
+- [Quick Start](../getting-started/quick-start) to publish the first artifact-producing run.
+- [CI/CD test results in Jira](https://testream.app/ci-test-results-jira) for the higher-level product overview.
