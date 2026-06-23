@@ -14,6 +14,8 @@ Use the Testream WebdriverIO Reporter to send browser-automation test results fr
 
 Looking for the commercial overview first? Read the website page for [WebdriverIO Jira integration](https://testream.app/webdriverio-jira-integration).
 
+If your WebdriverIO suites include Cucumber and Gherkin workflows, also read [BDD Jira integration](https://testream.app/bdd-jira-integration).
+
 ## Installation
 
 ```bash

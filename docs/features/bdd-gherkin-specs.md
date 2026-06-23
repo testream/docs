@@ -1,9 +1,11 @@
 ---
 sidebar_position: 8
 title: BDD Specs
-description: Draft and assess Jira issue-level Gherkin scenarios with Atlassian Rovo and compare them with the automated test evidence Testream captures from CI.
+description: Draft and assess Jira issue-level Gherkin scenarios with Atlassian Rovo and compare them with the automated test evidence Testream captures from CI/CD runs.
 keywords:
   - bdd specs jira
+  - bdd jira
+  - gherkin jira integration
   - gherkin scenarios rovo jira
   - acceptance criteria with test evidence
   - jira issue bdd coverage
@@ -12,6 +14,8 @@ keywords:
 # BDD Specs
 
 Create and refine Jira issue-level acceptance criteria in Gherkin with **Atlassian Rovo**, then assess those scenarios against the test evidence Testream captures from your CI/CD runs.
+
+Looking for the broader product overview first? Read [BDD Jira integration](https://testream.app/bdd-jira-integration).
 
 :::info Adding BDD Specs to Jira Issues
 The Testream BDD Specs section is added from the Jira issue detail view. If you do not see it on the issue, open the issue layout controls and add the **Testream BDD Specs** app to the issue view. Jira can hide app sections behind issue layout settings, so this only needs to be done when the section is not already visible.
@@ -103,4 +107,5 @@ The assessment can use:
 
 - [Quick Start](../getting-started/quick-start) to prove the first automated run before assessing coverage.
 - [Use Testream in Jira](../jira-integration/usage) to review the issue-level workflow around runs and evidence.
+- [BDD Jira integration](https://testream.app/bdd-jira-integration) for the broader commercial overview.
 - [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704) to install Testream for Jira.

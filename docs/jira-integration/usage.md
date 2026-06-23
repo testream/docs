@@ -46,9 +46,13 @@ When a failure needs follow-up, use [Issue Creation](../features/issue-creation)
 
 If your team writes acceptance criteria in Jira, [Testream BDD Specs](../features/bdd-gherkin-specs) can draft or improve Gherkin scenarios with Rovo and assess them against ingested automated evidence.
 
+If you are still evaluating whether that workflow fits your team, read [BDD Jira integration](https://testream.app/bdd-jira-integration).
+
 ## Review Releases and Share Reports
 
 Use [Trends & Analytics](../features/trends-analytics) to spot quality movement over time. Use [Release Management](../features/release-management) to connect runs to Jira releases before shipping. When stakeholders need a portable summary, generate [PDF Reports](../features/pdf-reports) from the run.
+
+For the broader release-readiness product overview, read [Jira release test management](https://testream.app/jira-release-test-management).
 
 ## Permissions
 
@@ -68,3 +72,4 @@ If you encounter issues or have questions:
 - Choose a reporter from the [Installation guide](../getting-started/installation#reporters).
 - Use the [Testream Setup Agent](../getting-started/ai-assisted-setup) if your Jira workspace has Rovo enabled.
 - Review [Jira test reporting](https://testream.app/jira-test-reporting) for the commercial overview.
+- Review [Jira release test management](https://testream.app/jira-release-test-management) for release-focused evaluation.

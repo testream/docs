@@ -14,6 +14,8 @@ Use the Testream Vitest Reporter to send Vitest test results from CI/CD into Tes
 
 Looking for the broader use case? Read the website page for [Vitest Jira integration](https://testream.app/vitest-jira-integration).
 
+If you are deciding between Vitest-specific setup and the broader upload path, compare this guide with [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
+
 ## Installation
 
 ```bash

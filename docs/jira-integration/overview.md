@@ -38,3 +38,5 @@ Testream brings automated test evidence from your codebase and CI into Jira. Onc
 - [Quick Start](../getting-started/quick-start) to prove the first automated run.
 - [Use Testream in Jira](./usage) for the in-product workflow after setup.
 - [Jira test reporting](https://testream.app/jira-test-reporting) for the higher-level evaluation path.
+- [Jira release test management](https://testream.app/jira-release-test-management) for release-readiness evaluation.
+- [BDD Jira integration](https://testream.app/bdd-jira-integration) for Gherkin and coverage-evidence workflows.

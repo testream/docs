@@ -15,6 +15,8 @@ Use the Testream Pytest Reporter to send Pytest and JUnit-based Python test resu
 
 Looking for the commercial overview first? Read the website page for [Pytest Jira integration](https://testream.app/pytest-jira-integration).
 
+If you are comparing Pytest-specific setup with the broader upload path, see [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
+
 ## Installation
 
 ```bash

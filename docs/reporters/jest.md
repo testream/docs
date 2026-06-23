@@ -14,6 +14,8 @@ Use the Testream Jest Reporter to send Jest unit and integration test results fr
 
 Looking for the higher-level product fit first? Read the website page for [Jest Jira integration](https://testream.app/jest-jira-integration).
 
+If you are deciding between reporter-level setup and the broader upload path, compare this guide with [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
+
 ## Installation
 
 ```bash

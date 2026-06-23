@@ -5,6 +5,10 @@ import styles from './index.module.css';
 import { JSX, useState, type MouseEvent } from 'react';
 
 const MARKETPLACE_URL = 'https://marketplace.atlassian.com/apps/3048460704';
+const WEBSITE_REPORTING_URL = 'https://testream.app/jira-test-reporting';
+const WEBSITE_RESULTS_URL = 'https://testream.app/ci-test-results-jira';
+const WEBSITE_RELEASE_URL = 'https://testream.app/jira-release-test-management';
+const WEBSITE_BDD_URL = 'https://testream.app/bdd-jira-integration';
 
 // Simple SVG icons for features
 const icons = {
@@ -57,13 +61,14 @@ function HeroSection() {
     <section className={styles.hero}>
       <div className={styles.heroInner}>
         <h1 className={styles.heroTitle}>
-          Publish your first automated test run into Jira.
+          Publish automated test results into Jira from your existing CI/CD flow.
         </h1>
         <p className={styles.heroSubtitle}>
           Set up Playwright, Jest, Cypress, JUnit, .NET, Pytest, Vitest,
           WebdriverIO, Mocha, and CLI-based uploads so every automated run
           reaches Jira with failure evidence, artifacts, branch and commit
-          context, trends, and release signal.
+          context, trend history, release readiness signal, and BDD-connected
+          quality context.
         </p>
         <div className={styles.heroButtons}>
           <Link to="/getting-started/quick-start" className={styles.primaryButton}>
@@ -78,6 +83,13 @@ function HeroSection() {
             {icons.arrow}
           </Link>
         </div>
+        <p className={styles.heroReporterFallback}>
+          Evaluating fit first? Compare{' '}
+          <Link to={WEBSITE_REPORTING_URL}>Jira test reporting</Link>,{' '}
+          <Link to={WEBSITE_RESULTS_URL}>CI/CD test results in Jira</Link>,{' '}
+          <Link to={WEBSITE_RELEASE_URL}>release test management</Link>, and{' '}
+          <Link to={WEBSITE_BDD_URL}>BDD plus Jira workflows</Link>.
+        </p>
         <div className={styles.heroReportersSection}>
           <p className={styles.heroReportersLabel}>Choose your reporter path</p>
           <div className={styles.heroReportersGrid}>
@@ -334,7 +346,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={'Automated Test Reporting Docs for Jira Teams | Testream'}
-      description="Set up Playwright, Jest, Vitest, Cypress, JUnit, .NET, Pytest, WebdriverIO, Mocha, and CLI uploads for automated test reporting in Jira."
+      description="Set up Playwright, Jest, Vitest, Cypress, JUnit, .NET, Pytest, WebdriverIO, Mocha, and CLI uploads for automated test reporting, release evidence, and Jira-native test visibility."
     >
       <Head>
         <meta name="twitter:card" content="summary_large_image" />

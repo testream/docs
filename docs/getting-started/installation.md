@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: Installation
-description: Install Testream for Jira, choose the right reporter for your test stack, and start sending automated test results into Jira.
+description: Install Testream for Jira, choose the right reporter for your test stack, and start sending automated CI/CD test results into Jira.
 keywords:
   - install testream jira
   - jira test reporting setup
@@ -12,6 +12,8 @@ keywords:
 # Installation
 
 Use this page to install Testream for Jira and choose the reporter for your test stack. If you want the fastest proof, start with the [Quick Start](./quick-start) after the Jira app is installed.
+
+If you are still comparing the broader workflow first, see [Jira test reporting](https://testream.app/jira-test-reporting) and [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
 ## Pick the Right Starting Point
 
@@ -71,3 +73,4 @@ Once Testream for Jira is installed and you know which reporter to use, continue
 - [Quick Start](./quick-start) to publish the first real run.
 - [Jira Integration overview](../jira-integration/overview) to see what Testream adds after setup.
 - [Jira test reporting](https://testream.app/jira-test-reporting) for the higher-level product path.
+- [Jira release test management](https://testream.app/jira-release-test-management) to see the release-readiness path after setup.

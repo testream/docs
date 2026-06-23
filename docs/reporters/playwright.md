@@ -14,6 +14,8 @@ Use the Testream Playwright Reporter to send Playwright test results, screenshot
 
 Looking for the commercial overview first? Read the website page for [Playwright Jira integration](https://testream.app/playwright-jira-integration).
 
+If you are deciding between framework-specific setup and the broader upload workflow, compare this guide with [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
+
 ## Installation
 
 ```bash

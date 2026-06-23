@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Quick Start
-description: Publish your first automated test run into Jira in about five minutes with Testream, a reporter guide, and a Testream API key.
+description: Publish your first automated test run into Jira in about five minutes with your existing framework, a Testream reporter path, and a Testream API key.
 keywords:
   - quick start jira test reporting
   - first automated test run jira
@@ -12,6 +12,8 @@ keywords:
 # Quick Start
 
 Publish your first automated test run into Jira in about five minutes. By the end, you should see a real run with status, framework metadata, branch or CI context, and failure evidence inside your Jira project.
+
+If you are still evaluating the product path rather than the exact setup flow, start with [Jira test reporting](https://testream.app/jira-test-reporting) or [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
 These steps work for every supported framework. Use the reporter guide for your stack when you need framework-specific configuration.
 
@@ -102,9 +104,12 @@ After your first test runs are flowing into Testream, you can add **Testream BDD
 
 → [Learn about BDD Specs](../features/bdd-gherkin-specs)
 
+For the broader product overview first, see [BDD Jira integration](https://testream.app/bdd-jira-integration).
+
 ## What's Next?
 
 - [Reporter installation](./installation#reporters) - choose the setup guide for your stack
 - [Jira Integration](../jira-integration/overview) - surface test results directly in Jira
 - [Test Run Summaries in Jira Issues](../features/test-run-summaries-in-jira-issues) - see issue-level run context
 - [CI/CD test results in Jira](https://testream.app/ci-test-results-jira) - understand the higher-level product path
+- [Jira release test management](https://testream.app/jira-release-test-management) - see how release readiness stays tied to automated evidence

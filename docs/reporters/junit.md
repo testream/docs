@@ -15,6 +15,8 @@ Use the Testream JUnit Reporter to convert JUnit XML output from CI/CD and send 
 
 Looking for the commercial overview first? Read the website page for [JUnit Jira integration](https://testream.app/junit-jira-integration).
 
+If you are comparing direct JUnit ingestion with the broader CI/CD upload path, see [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
+
 ## Installation
 
 ```bash

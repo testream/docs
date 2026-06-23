@@ -14,6 +14,8 @@ Use the Testream Cypress Reporter to send Cypress test results, screenshots, vid
 
 Looking for the commercial overview first? Read the website page for [Cypress Jira integration](https://testream.app/cypress-jira-integration).
 
+If you are deciding between Cypress-specific setup and the broader upload workflow, compare this guide with [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
+
 ## Installation
 
 ```bash
