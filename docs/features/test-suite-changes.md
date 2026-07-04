@@ -13,7 +13,7 @@ keywords:
 
 Track how your suite evolves between runs directly from Test Run Details.
 
-![Test Suite Changes](/img/jira/Test-Suite-Changes.png)
+![Test suite changes summary card comparing the current run with the previous run on the same branch](/img/jira/Test-Suite-Changes.png)
 
 ## What It Compares
 
@@ -41,7 +41,7 @@ Select **View Details** to open the Test Suite Changes modal and inspect:
 - Removed test list
 - Aggregate chips for Added, Removed, Common, and Change
 
-![Test Suite Diff View](/img/jira/Test-Suite-Changes-Details.png)
+![Test suite changes details modal listing added and removed tests between two runs](/img/jira/Test-Suite-Changes-Details.png)
 
 Use this view to quickly validate suite refactors, identify accidental test removals, and track planned coverage growth.
 

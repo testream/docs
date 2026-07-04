@@ -24,7 +24,7 @@ Default ranges available on all plans:
 
 ## Test Results Trends
 
-![Test Results Trends](/img/jira/Trends-Screenshot-1.png)
+![Trends chart showing daily passed, failed, skipped, and flaky test result percentages over time](/img/jira/Trends-Screenshot-1.png)
 
 A grouped bar chart showing the percentage breakdown of test results per day:
 
@@ -37,13 +37,13 @@ Hover over any bar to see exact percentages for that day.
 
 ## Average Test Duration
 
-![Average Test Duration](/img/jira/Trends-Screenshot-2.png)
+![Average test duration chart showing daily execution time movement across the selected date range](/img/jira/Trends-Screenshot-2.png)
 
 A horizontal bar chart displaying the average execution time in milliseconds per day. Use this to spot performance regressions or improvements in your test suite over time.
 
 ## Test Suite Growth
 
-![Test Suite Growth and Top Flaky Tests](/img/jira/Trends-Screenshot-3.png)
+![Trend charts showing test suite growth over time and the most flaky tests in the selected window](/img/jira/Trends-Screenshot-3.png)
 
 A line chart tracking the total number of tests over time. This helps you understand how quickly your test coverage is expanding.
 

@@ -13,7 +13,7 @@ keywords:
 
 Testream brings test context into your Jira workflow with a compact **Test Run Summary** panel embedded directly in Jira issues. Test runs automatically linked to your Jira issues by branch names from your CI/CD pipelines.
 
-![Test Run Summary in Jira Issue Panel](/img/jira/Jira-Issue-Panel-Test-Run-Summary-Screenshot.png)
+![Jira issue panel showing linked test run summaries with status, branch, commit, and suite change context](/img/jira/Jira-Issue-Panel-Test-Run-Summary-Screenshot.png)
 
 ## What You Can See at a Glance
 

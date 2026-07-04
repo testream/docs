@@ -5,6 +5,14 @@
 - [Quick Start](https://docs.testream.app/getting-started/quick-start): Publish the first Jira-visible test run.
 - [Installation](https://docs.testream.app/getting-started/installation): Choose the correct reporter path.
 
+## Jira workflows
+- [BDD Specs](https://docs.testream.app/features/bdd-gherkin-specs): Draft or refine issue-level Gherkin and assess it against automated evidence.
+- [BDD Library](https://docs.testream.app/features/bdd-library): Manage reusable behaviors, folders, issue links, and evidence signals.
+- [Test Cycles](https://docs.testream.app/features/test-cycles): Build manual execution batches from reusable behaviors and attach notes plus evidence.
+- [Release Management](https://docs.testream.app/features/release-management): Link runs to Jira releases and review release-scoped linked runs.
+- [Release Visibility](https://docs.testream.app/features/release-visibility): Review linked cycles, issue coverage gaps, evidence mix, and release readiness.
+- [Test Run Details](https://docs.testream.app/features/test-run-details): Inspect run metadata, release links, and linked cycles.
+
 ## Reporter guides
 - [Playwright Reporter](https://docs.testream.app/reporters/playwright): Configure Playwright reporting, artifacts, and CI setup.
 - [Cypress Reporter](https://docs.testream.app/reporters/cypress): Configure Cypress reporting for end-to-end and component-test runs.

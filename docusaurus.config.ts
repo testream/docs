@@ -72,14 +72,17 @@ const config: Config = {
                   priority = 0.7;
                 } else if (pathname.startsWith('/reporters')) {
                   priority = 0.7;
-                } else if (
-                  [
-                    '/features/failure-inspection',
-                    '/features/release-management',
-                    '/features/test-run-summaries-in-jira-issues',
-                    '/features/trends-analytics',
-                  ].includes(pathname)
-                ) {
+                 } else if (
+                   [
+                     '/features/bdd-library',
+                     '/features/failure-inspection',
+                     '/features/release-visibility',
+                     '/features/release-management',
+                     '/features/test-cycles',
+                     '/features/test-run-summaries-in-jira-issues',
+                     '/features/trends-analytics',
+                   ].includes(pathname)
+                 ) {
                   priority = 0.6;
                 }
 

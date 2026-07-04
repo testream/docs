@@ -39,7 +39,7 @@ Only Jira admins can install Marketplace apps directly. If you are not an admin,
 
 After installation, open **Apps → Testream** from the Jira navigation bar. If your Jira workspace has many apps installed, Testream may appear under **More**.
 
-![Example Jira Navigation Bar](/img/jira/Example-Jira-Navigation-Bar.png)
+![Jira Apps menu in the top navigation bar showing the Testream app entry](/img/jira/Example-Jira-Navigation-Bar.png)
 
 From here, you can open the Testream dashboard, settings, and project-level test run views.
 

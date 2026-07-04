@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Use Testream in Jira
-description: Review automated test runs, failures, issue summaries, release links, and PDF reports inside Jira after Testream receives a run from CI or local execution.
+description: Review automated test runs, failures, BDD behaviors, test cycles, release links, and PDF reports inside Jira after Testream receives a run from CI or local execution.
 keywords:
   - use testream in jira
   - review test results in jira
@@ -11,7 +11,7 @@ keywords:
 
 # Use Testream in Jira
 
-After Testream receives an automated run, Jira becomes the place your team can review status, failures, evidence, and release signal.
+After Testream receives an automated run, Jira becomes the place your team can review status, failures, evidence, reusable behaviors, and release signal.
 
 ## Open Testream
 
@@ -48,9 +48,11 @@ If your team writes acceptance criteria in Jira, [Testream BDD Specs](../feature
 
 If you are still evaluating whether that workflow fits your team, read [BDD Jira integration](https://testream.app/bdd-jira-integration).
 
+If your team wants reusable behaviors instead of issue-local scenarios, use [BDD Library](../features/bdd-library). From there, you can organize behaviors into folders, link them across issues, and build [Test Cycles](../features/test-cycles) for manual execution.
+
 ## Review Releases and Share Reports
 
-Use [Trends & Analytics](../features/trends-analytics) to spot quality movement over time. Use [Release Management](../features/release-management) to connect runs to Jira releases before shipping. When stakeholders need a portable summary, generate [PDF Reports](../features/pdf-reports) from the run.
+Use [Trends & Analytics](../features/trends-analytics) to spot quality movement over time. Use [Release Management](../features/release-management) to connect runs to Jira releases before shipping. When you need BDD-aware release readiness, open [Release Visibility](../features/release-visibility) to review linked cycles, issue mapping gaps, and evidence coverage. When stakeholders need a portable summary, generate [PDF Reports](../features/pdf-reports) from the run.
 
 For the broader release-readiness product overview, read [Jira release test management](https://testream.app/jira-release-test-management).
 
@@ -71,5 +73,7 @@ If you encounter issues or have questions:
 - Publish a first run with the [Quick Start](../getting-started/quick-start).
 - Choose a reporter from the [Installation guide](../getting-started/installation#reporters).
 - Use the [Testream Setup Agent](../getting-started/ai-assisted-setup) if your Jira workspace has Rovo enabled.
+- Build reusable scenarios in [BDD Library](../features/bdd-library).
+- Execute linked manual coverage with [Test Cycles](../features/test-cycles).
 - Review [Jira test reporting](https://testream.app/jira-test-reporting) for the commercial overview.
 - Review [Jira release test management](https://testream.app/jira-release-test-management) for release-focused evaluation.

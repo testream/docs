@@ -67,8 +67,8 @@ function HeroSection() {
           Set up Playwright, Jest, Cypress, JUnit, .NET, Pytest, Vitest,
           WebdriverIO, Mocha, and CLI-based uploads so every automated run
           reaches Jira with failure evidence, artifacts, branch and commit
-          context, trend history, release readiness signal, and BDD-connected
-          quality context.
+          context, trend history, reusable BDD Library behaviors, test cycles,
+          release readiness signal, and BDD-connected quality context.
         </p>
         <div className={styles.heroButtons}>
           <Link to="/getting-started/quick-start" className={styles.primaryButton}>
@@ -131,6 +131,12 @@ const features = [
     title: 'Rovo when it removes friction',
     description:
       'Use the Testream Setup Agent for first-run guidance, then Testream BDD Specs for evidence-based coverage review.',
+  },
+  {
+    icon: icons.sparkles,
+    title: 'Reusable BDD workflows in Jira',
+    description:
+      'Build shared behaviors, execute lean manual test cycles, and assess release readiness from one connected Jira workflow.',
   },
 ];
 

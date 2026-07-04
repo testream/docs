@@ -46,7 +46,7 @@ You do not need to paste a real API key into source code or chat. The setup agen
 3. Go to **Settings**.
 4. Select **Get Started with Rovo** in the **Set up Testream with Rovo** section.
 
-![Settings Page](/img/jira/Find-Settings-Page.png)
+![Testream settings page in Jira with the Get Started with Rovo setup entry point](/img/jira/Find-Settings-Page.png)
 
 ## 2. Choose Your Stack and CI Provider
 
@@ -57,7 +57,7 @@ In the launcher, choose:
 
 Testream maps those choices to the closest reporter, sample project, and setup template before opening Rovo.
 
-![Setup Testream Rovo Dialog](/img/jira/Setup-Testream-Rovo.png)
+![Testream Rovo setup dialog for selecting a test framework and CI provider](/img/jira/Setup-Testream-Rovo.png)
 
 ## 3. Use the Rovo Recommendation
 
@@ -83,7 +83,7 @@ If you have not created a Testream project yet:
 
 Then return to **Testream → Settings** in Jira and add or validate the API key.
 
-![Add Project API Key](/img/jira/Add-Api-Key.png)
+![Testream settings screen for adding or validating a project API key in Jira](/img/jira/Add-Api-Key.png)
 
 ## 5. Run Tests Once
 
@@ -94,7 +94,7 @@ After the run finishes, tell Rovo that the tests have run. The setup agent can c
 - If a run was received, open the Testream dashboard and review the results.
 - If no run was received, check the reporter command, CI secret name, project key, and workflow logs.
 
-![Test Runs in Jira](/img/jira/Test-Runs-Screenshot.png)
+![Jira Test Runs view confirming that Testream received and displayed the first automated run](/img/jira/Test-Runs-Screenshot.png)
 
 ## What Rovo Does Not Do
 

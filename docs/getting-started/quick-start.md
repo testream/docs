@@ -29,7 +29,7 @@ You need:
 
 1. Sign up at [testream.app](https://testream.app)
 2. Open **Dashboard → [Projects](https://testream.app/projects)**
-   ![Example Jira Navigation Bar](/img/jira/Dashboard-Projects.png)
+   ![Testream projects page showing available projects and where to create or open a project for API key access](/img/jira/Dashboard-Projects.png)
 3. Create a project or open an existing one.
 4. Copy the API key.
 
@@ -78,7 +78,7 @@ dotnet test
 
 Open your Jira project where Testream is installed and check **Test Runs**.
 
-![Test Runs in Jira](/img/jira/Test-Runs-Screenshot.png)
+![Jira Test Runs view showing imported automated runs with status, pass rate, and run metadata](/img/jira/Test-Runs-Screenshot.png)
 
 A successful first proof should show:
 
@@ -104,12 +104,23 @@ After your first test runs are flowing into Testream, you can add **Testream BDD
 
 → [Learn about BDD Specs](../features/bdd-gherkin-specs)
 
+### Build reusable BDD workflows after the first run
+
+If your team wants reusable behavior coverage beyond one Jira issue, the next step is usually:
+
+1. Create behaviors in [BDD Library](../features/bdd-library)
+2. Reuse them across issues
+3. Build [Test Cycles](../features/test-cycles) for manual execution
+4. Review [Release Visibility](../features/release-visibility) for release readiness
+
 For the broader product overview first, see [BDD Jira integration](https://testream.app/bdd-jira-integration).
 
 ## What's Next?
 
 - [Reporter installation](./installation#reporters) - choose the setup guide for your stack
 - [Jira Integration](../jira-integration/overview) - surface test results directly in Jira
+- [BDD Library](../features/bdd-library) - manage reusable behaviors for Jira work and releases
+- [Test Cycles](../features/test-cycles) - execute manual coverage from reusable behaviors
 - [Test Run Summaries in Jira Issues](../features/test-run-summaries-in-jira-issues) - see issue-level run context
 - [CI/CD test results in Jira](https://testream.app/ci-test-results-jira) - understand the higher-level product path
 - [Jira release test management](https://testream.app/jira-release-test-management) - see how release readiness stays tied to automated evidence
