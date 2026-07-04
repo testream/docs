@@ -54,6 +54,11 @@ const config: Config = {
           priority: 0.5,
           createSitemapItems: async ({defaultCreateSitemapItems, ...params}) => {
             const items = await defaultCreateSitemapItems(params);
+            const { statSync } = await import('node:fs');
+            const { join, dirname } = await import('node:path');
+            const { fileURLToPath } = await import('node:url');
+
+            const docsDir = join(dirname(fileURLToPath(import.meta.url)), 'docs');
 
             return items
               .filter((item) => new URL(item.url).pathname !== '/search')
@@ -86,9 +91,21 @@ const config: Config = {
                   priority = 0.6;
                 }
 
+                // Compute lastmod from source .md file modification time
+                let lastmod: string | undefined;
+                try {
+                  const mdPath = join(docsDir, pathname === '/' ? 'intro.md' : `${pathname}.md`);
+                  const stats = statSync(mdPath);
+                  lastmod = stats.mtime.toISOString();
+                } catch {
+                  // Fallback: use current timestamp if file not found (e.g. custom pages)
+                  lastmod = new Date().toISOString();
+                }
+
                 return {
                   ...item,
                   priority,
+                  lastmod,
                 };
               });
           },

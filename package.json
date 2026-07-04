@@ -6,6 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "postbuild": "node scripts/add-noindex-404.mjs",
     "test:indexnow": "node --test scripts/indexnow.test.mjs",
     "indexnow:dry-run": "node scripts/indexnow.mjs --dry-run",
     "indexnow:submit": "node scripts/indexnow.mjs",
