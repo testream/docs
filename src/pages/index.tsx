@@ -352,7 +352,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={'Automated Test Reporting Docs for Jira Teams | Testream'}
-      description="Set up Playwright, Jest, Vitest, Cypress, JUnit, .NET, Pytest, WebdriverIO, Mocha, and CLI uploads for automated test reporting, release evidence, and Jira-native test visibility."
+      description="Publish test results from Playwright, Jest, Cypress, JUnit, .NET, Pytest, Vitest, WebdriverIO, Mocha, and CLI into Jira with evidence and quality context."
     >
       <Head>
         <meta name="twitter:card" content="summary_large_image" />
