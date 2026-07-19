@@ -1,5 +1,8 @@
 # Testream Documentation
-> Technical implementation guides for sending automated test results into Jira with Testream.
+> Technical implementation guides for Testream – Test Management & Quality Evidence for Jira, covering automated evidence, BDD workflows with Rovo, Test Cycles, and release readiness in Jira.
+
+## Product context
+- [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704): Testream – Test Management & Quality Evidence for Jira.
 
 ## Getting started
 - [Quick Start](https://docs.testream.app/getting-started/quick-start): Publish the first Jira-visible test run.

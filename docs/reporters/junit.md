@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 title: 'JUnit Reporter'
-description: 'Upload JUnit XML test results from Java CI/CD pipelines into Jira with the Testream JUnit Reporter.'
+description: 'Upload JUnit XML results from Java CI/CD pipelines into Jira with the Testream JUnit Reporter, run metadata, failure context, artifacts, and release visibility.'
 keywords:
   - junit jira reporter
   - java junit jira

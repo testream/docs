@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Test Suite Changes
-description: Compare one run against the previous run on the same branch to see added, removed, unchanged, and net test-suite movement in Jira.
+description: Compare automated test runs on the same branch to track added, removed, unchanged, and net suite movement in Jira before release and quality decisions.
 keywords:
   - test suite changes jira
   - compare test runs jira
