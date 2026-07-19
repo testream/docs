@@ -109,4 +109,4 @@ After the run finishes, tell Rovo that the tests have run. The setup agent can c
 - [Reporter installation](./installation)
 - [BDD Specs](../features/bdd-gherkin-specs)
 - [Test Run Summaries in Jira Issues](../features/test-run-summaries-in-jira-issues)
-- [Atlassian Marketplace listing](https://marketplace.atlassian.com/3048460704)
+- [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704)

@@ -21,7 +21,7 @@ After installation, open Testream from Jira:
 2. Select **Testream for Jira** from the dropdown menu.
 3. If your Jira workspace has many apps installed, check **More** or your project sidebar.
 
-Need to install it first? Follow the [installation guide](../getting-started/installation) or open the [Atlassian Marketplace listing](https://marketplace.atlassian.com/3048460704).
+Need to install it first? Follow the [installation guide](../getting-started/installation) or open the [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704).
 
 ## Review Recent Runs
 

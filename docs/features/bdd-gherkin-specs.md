@@ -132,4 +132,4 @@ The assessment can use:
 - [BDD Library](./bdd-library) to manage reusable behaviors beyond one Jira issue.
 - [Use Testream in Jira](../jira-integration/usage) to review the issue-level workflow around runs and evidence.
 - [BDD Jira integration](https://testream.app/bdd-jira-integration) for the broader commercial overview.
-- [Atlassian Marketplace listing](https://marketplace.atlassian.com/3048460704) to install Testream for Jira.
+- [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704) to install Testream for Jira.

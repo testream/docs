@@ -4,7 +4,7 @@ import Head from '@docusaurus/Head';
 import styles from './index.module.css';
 import { JSX, useState, type MouseEvent } from 'react';
 
-const MARKETPLACE_URL = 'https://marketplace.atlassian.com/3048460704';
+const MARKETPLACE_URL = 'https://marketplace.atlassian.com/apps/3048460704';
 const WEBSITE_REPORTING_URL = 'https://testream.app/jira-test-reporting';
 const WEBSITE_RESULTS_URL = 'https://testream.app/ci-test-results-jira';
 const WEBSITE_RELEASE_URL = 'https://testream.app/jira-release-test-management';
@@ -351,7 +351,7 @@ function FinalCTASection() {
 export default function Home(): JSX.Element {
   return (
     <Layout
-      title={'Testream – Test Management & Quality Evidence for Jira | Docs'}
+      title={'Testream Docs | Quality Evidence for Jira'}
       description="Publish test results from Playwright, Jest, Cypress, JUnit, .NET, Pytest, Vitest, WebdriverIO, Mocha, and CLI into Jira with evidence and quality context."
     >
       <Head>
