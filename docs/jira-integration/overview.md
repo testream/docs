@@ -30,7 +30,7 @@ Testream brings automated test evidence from your codebase and CI into Jira. Onc
 
 ## Start Here
 
-1. **[Install Testream for Jira](../getting-started/installation)** from the [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704).
+1. **[Install Testream for Jira](../getting-started/installation)** from the [Atlassian Marketplace listing](https://marketplace.atlassian.com/3048460704).
 2. **[Publish your first run](../getting-started/quick-start)** from an existing automated test suite.
 3. **[Use Testream in Jira](./usage)** to inspect runs, review issue summaries, manage BDD workflows, link releases, and export reports.
 

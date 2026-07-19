@@ -4,6 +4,5 @@ Disallow: /search
 Disallow: /404.html
 Disallow: /search-index.json
 Disallow: /*.LICENSE.txt
-Disallow: /llms.txt
 
 Sitemap: https://docs.testream.app/sitemap.xml

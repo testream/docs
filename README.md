@@ -18,7 +18,7 @@ Official documentation for Testream automated test reporting.
 - JUnit Reporter: https://docs.testream.app/reporters/junit
 - Pytest Reporter: https://docs.testream.app/reporters/pytest
 - Vitest Reporter: https://docs.testream.app/reporters/vitest
-- Jira Integration: https://docs.testream.app/jira-integration/overview (Marketplace: https://marketplace.atlassian.com/apps/3048460704)
+- Jira Integration: https://docs.testream.app/jira-integration/overview (Marketplace: https://marketplace.atlassian.com/3048460704)
 
 ## Packages
 
