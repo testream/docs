@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
 title: 'Vitest Reporter'
-description: 'Send Vitest test results from CI/CD into Jira with the Testream Vitest Reporter and run metadata.'
+description: 'Send Vitest test results from CI/CD into Jira with the Testream Vitest Reporter, run metadata, failure context, and CI-friendly uploads.'
 keywords:
   - vitest jira reporter
   - vitest test reporting jira
