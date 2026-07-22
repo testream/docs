@@ -5,7 +5,7 @@ const sidebars: SidebarsConfig = {
     'intro',
     {
       type: 'category',
-      label: 'Getting Started',
+      label: 'Start Here',
       collapsed: false,
       items: [
         'getting-started/installation',
@@ -32,23 +32,32 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Features',
+      label: 'Automated Evidence',
       collapsed: false,
       items: [
         'features/dashboard',
         'features/test-run-details',
         'features/test-run-summaries-in-jira-issues',
         'features/test-suite-changes',
-        'features/issue-creation',
         'features/failure-inspection',
+        'features/issue-creation',
         'features/trends-analytics',
-        'features/release-management',
-        'features/release-visibility',
+        'features/artifact-storage',
         'features/pdf-reports',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'BDD, Manual QA & Releases',
+      collapsed: false,
+      items: [
         'features/bdd-gherkin-specs',
+        'features/bdd-coverage-agent',
+        'features/rovo-setup-agent',
         'features/bdd-library',
         'features/test-cycles',
-        'features/artifact-storage',
+        'features/release-management',
+        'features/release-visibility',
       ],
     },
     {

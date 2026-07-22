@@ -13,7 +13,7 @@ keywords:
 
 Generate downloadable PDF reports that summarize your test run results, including pass rates, failed test details, error messages, stack traces, and screenshots.
 
-![PDF report section on the test run details page showing report status and download action](/img/jira/Test-Run-Reports-Screenshot.png)
+![PDF report section on the test run details page showing report status and download action](/img/product/testream-pdf-report.png)
 
 ## What Are PDF Reports?
 

@@ -13,7 +13,7 @@ keywords:
 
 The dashboard gives you a fast read on the latest run, how the test suite changed against its baseline, and where quality is moving over time.
 
-![Testream dashboard in Jira showing the latest run, baseline comparison, trend charts, and recent runs](/img/jira/Dashboard-Revamped-Screenshot.png)
+![Testream dashboard in Jira showing the latest run, baseline comparison, trend charts, and recent runs](/img/product/testream-dashboard-overview.png)
 
 ## Header & Project Context
 

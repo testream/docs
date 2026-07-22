@@ -18,7 +18,7 @@ Testream supports two private storage modes:
 - **Testream-managed storage** - the simplest option, with private storage handled by Testream.
 - **Customer-owned bucket storage** - connect your own bucket when your team needs to control where artifacts live.
 
-![Artifact Storage page showing Testream-managed storage and customer-owned bucket options](/img/jira/Artifact-Storage-Page.png)
+![Artifact Storage page showing Testream-managed storage and customer-owned bucket options](/img/product/testream-artifact-storage-overview.png)
 
 ## Storage Options
 
@@ -52,7 +52,7 @@ This is the quickest way to review the active storage mode, attach a bucket conn
 5. Attach the connection to a project.
 6. Optionally set a base prefix for that project.
 
-![New artifact storage connection form for configuring a customer-owned bucket](/img/jira/Artifact-Storage-New-Connection.png)
+![New artifact storage connection form for configuring a customer-owned bucket](/img/product/testream-artifact-storage-connection.png)
 
 ## Manage Project Storage
 
@@ -63,7 +63,7 @@ On a project’s storage page, you can:
 - edit the base prefix
 - disable customer-owned storage for the project
 
-![Project storage attachment screen for linking a bucket connection to a Testream project](/img/jira/Artifact-Storage-Attach.png)
+![Project storage attachment screen for linking a bucket connection to a Testream project](/img/product/testream-artifact-storage-attach.png)
 
 ## What Happens When a Connection Is Deleted
 

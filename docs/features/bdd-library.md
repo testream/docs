@@ -15,7 +15,7 @@ Use **BDD Library** to manage reusable behaviors in Jira instead of rewriting th
 
 Looking for the broader product overview first? Read [BDD Jira integration](https://testream.app/bdd-jira-integration).
 
-![BDD Library behaviors tab showing reusable behavior titles, authored status badges, folders, issue link counts, and evidence signals](/img/jira/BDD-Library-Behaviors.png)
+![BDD Library behaviors tab showing reusable behavior titles, authored status badges, folders, issue link counts, and evidence signals](/img/product/testream-bdd-library.png)
 
 ## What BDD Library Stores
 

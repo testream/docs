@@ -1,103 +1,88 @@
 /**
- * Testream Documentation - Custom Styles
- * Light & Clean SaaS Aesthetic with Teal Accent
+ * Testream Documentation - shared visual language with testream.app.
  */
-
-/* Import Geist Mono from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
-
-/* Override Infima variables with new teal palette */
 :root {
-  /* Primary Teal Colors */
-  --ifm-color-primary: #0D9488;
-  --ifm-color-primary-dark: #0F766E;
-  --ifm-color-primary-darker: #115E59;
-  --ifm-color-primary-darkest: #134E4A;
-  --ifm-color-primary-light: #14B8A6;
-  --ifm-color-primary-lighter: #2DD4BF;
-  --ifm-color-primary-lightest: #5EEAD4;
-
-  /* Typography */
-  --ifm-font-family-base: 'Geist Mono', ui-monospace, monospace;
-  --ifm-heading-font-family: 'Geist Mono', ui-monospace, monospace;
-  --ifm-font-weight-bold: 700;
-  --ifm-heading-font-weight: 800;
-
-  /* Code blocks */
+  --ifm-color-primary: #0f766e;
+  --ifm-color-primary-dark: #0b625b;
+  --ifm-color-primary-darker: #09524c;
+  --ifm-color-primary-darkest: #073f3a;
+  --ifm-color-primary-light: #13998e;
+  --ifm-color-primary-lighter: #2db9ac;
+  --ifm-color-primary-lightest: #74d9cf;
+  --ifm-font-family-base: 'Geist', 'Geist Fallback', ui-sans-serif, system-ui, sans-serif;
+  --ifm-heading-font-family: 'Geist', 'Geist Fallback', ui-sans-serif, system-ui, sans-serif;
+  --ifm-font-weight-bold: 650;
+  --ifm-heading-font-weight: 700;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(13, 148, 136, 0.1);
-
-  /* Backgrounds */
-  --ifm-background-color: #FAFAFA;
-  --ifm-background-surface-color: #FFFFFF;
-
-  /* Spacing & Borders */
+  --ifm-background-color: #fafafa;
+  --ifm-background-surface-color: #ffffff;
   --ifm-global-radius: 0.75rem;
   --ifm-button-border-radius: 0.5rem;
-
-  /* Custom landing page tokens */
-  --testream-text-primary: #111827;
-  --testream-text-secondary: #6B7280;
-  --testream-border: #E5E7EB;
-  --testream-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --testream-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --testream-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --docusaurus-highlighted-code-line-bg: rgba(15, 118, 110, 0.1);
+  --testream-text-primary: #0f1729;
+  --testream-text-secondary: #536176;
+  --testream-border: #dfe5eb;
+  --testream-surface-muted: #f1f5f5;
+  --testream-home-hero-start: #f3fbfa;
+  --testream-home-hero-end: #fafafa;
+  --testream-home-section: #f1f5f5;
+  --testream-home-secondary-bg: #ffffff;
+  --testream-home-final-bg: #0f302f;
+  --testream-home-final-text: #e7fbf8;
+  --testream-home-final-muted: #b9d6d2;
+  --testream-home-cta-bg: #a8eee7;
+  --testream-home-cta-hover: #d0faf6;
+  --testream-home-final-heading: #ffffff;
+  --testream-on-accent: #ffffff;
+  --testream-shadow-sm: 0 1px 2px rgba(15, 23, 41, 0.06);
+  --testream-shadow-md: 0 12px 30px rgba(15, 23, 41, 0.1);
 }
 
-/* Dark mode palette */
 [data-theme='dark'] {
-  --ifm-color-primary: #2DD4BF;
-  --ifm-color-primary-dark: #14B8A6;
-  --ifm-color-primary-darker: #0D9488;
-  --ifm-color-primary-darkest: #0F766E;
-  --ifm-color-primary-light: #5EEAD4;
-  --ifm-color-primary-lighter: #99F6E4;
-  --ifm-color-primary-lightest: #CCFBF1;
-  --docusaurus-highlighted-code-line-bg: rgba(45, 212, 191, 0.15);
-
-  --testream-text-primary: #F9FAFB;
-  --testream-text-secondary: #9CA3AF;
-  --testream-border: #374151;
-  --testream-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --testream-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-  --testream-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #4ed1c2;
+  --ifm-color-primary-dark: #2db9ac;
+  --ifm-color-primary-darker: #13998e;
+  --ifm-color-primary-darkest: #0f766e;
+  --ifm-color-primary-light: #7ce1d7;
+  --ifm-color-primary-lighter: #a8eee7;
+  --ifm-color-primary-lightest: #d0faf6;
+  --ifm-background-color: #101a1d;
+  --ifm-background-surface-color: #172326;
+  --testream-text-primary: #f3faf9;
+  --testream-text-secondary: #b3c4c4;
+  --testream-border: #304346;
+  --testream-surface-muted: #1d2c2f;
+  --testream-home-hero-start: #172a2d;
+  --testream-home-hero-end: #101a1d;
+  --testream-home-section: #142326;
+  --testream-home-secondary-bg: #172326;
+  --testream-home-final-bg: #0b2525;
+  --testream-home-final-text: #def7f3;
+  --testream-home-final-muted: #afd0cc;
+  --testream-home-cta-bg: #74d9cf;
+  --testream-home-cta-hover: #a8eee7;
+  --testream-home-final-heading: #f3faf9;
+  --testream-on-accent: #0f302f;
+  --testream-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.28);
+  --testream-shadow-md: 0 12px 30px rgba(0, 0, 0, 0.3);
+  --docusaurus-highlighted-code-line-bg: rgba(78, 209, 194, 0.15);
 }
 
-/* Navbar styling */
-.navbar {
-  box-shadow: var(--testream-shadow-sm);
-}
+html { scroll-behavior: smooth; }
+body { color: var(--testream-text-primary); }
+.navbar { border-bottom: 1px solid var(--testream-border); box-shadow: var(--testream-shadow-sm); }
+.navbar__title { font-weight: 700; letter-spacing: -0.02em; }
+.theme-doc-markdown h1, .theme-doc-markdown h2, .theme-doc-markdown h3 { letter-spacing: -0.025em; }
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+pre { border: 1px solid var(--testream-border); border-radius: var(--ifm-global-radius); }
+a { transition: color 150ms ease, border-color 150ms ease, background-color 150ms ease; }
+a:focus-visible, button:focus-visible { outline: 3px solid rgba(19, 153, 142, 0.4); outline-offset: 3px; }
 
-.navbar__title {
-  font-weight: 700;
-}
+.productScreenshot { margin: 1.5rem 0 2rem; }
+.productScreenshot img { display: block; width: 100%; height: auto; border: 1px solid var(--testream-border); border-radius: 0.85rem; box-shadow: var(--testream-shadow-md); background: var(--ifm-background-surface-color); }
+.productScreenshot figcaption { margin-top: 0.7rem; color: var(--testream-text-secondary); font-size: 0.9rem; line-height: 1.5; }
 
-/* Feature section cards */
-.featureCard {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.featureCard:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--testream-shadow-md);
-}
-
-/* Button enhancements */
-.button--primary {
-  transition: all 0.2s ease;
-}
-
-.button--primary:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--testream-shadow-md);
-}
-
-/* Link styling */
-a {
-  transition: color 0.15s ease;
-}
-
-/* Code block enhancements */
-pre {
-  border-radius: var(--ifm-global-radius);
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }

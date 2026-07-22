@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Testream Documentation',
-  tagline: 'Automated Test Reporting for Jira Teams',
+  tagline: 'Jira-native quality evidence for modern delivery teams',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -79,6 +79,7 @@ const config: Config = {
                   priority = 0.7;
                  } else if (
                    [
+                     '/features/bdd-coverage-agent',
                      '/features/bdd-library',
                      '/features/failure-inspection',
                      '/features/release-visibility',
@@ -86,6 +87,7 @@ const config: Config = {
                      '/features/test-cycles',
                      '/features/test-run-summaries-in-jira-issues',
                      '/features/trends-analytics',
+                     '/features/rovo-setup-agent',
                    ].includes(pathname)
                  ) {
                   priority = 0.6;
@@ -210,7 +212,7 @@ const config: Config = {
             },
             {
               label: 'NPM',
-              href: 'https://www.npmjs.com/search?q=%40testream',
+              href: 'https://www.npmjs.com/org/testream',
             },
           ],
         },

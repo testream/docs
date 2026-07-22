@@ -11,7 +11,7 @@ keywords:
 
 # Use Testream in Jira
 
-After Testream receives an automated run, Jira becomes the place your team can review status, failures, evidence, reusable behaviors, and release signal.
+After Testream receives an automated run, Jira becomes the place your team can review status, failures, evidence, reusable behaviors, and release context. Add manual Test Cycles and BDD coverage review when the workflow needs more than execution status.
 
 ## Open Testream
 
@@ -46,7 +46,7 @@ When a failure needs follow-up, use [Issue Creation](../features/issue-creation)
 
 If your team writes acceptance criteria in Jira, [Testream BDD Specs](../features/bdd-gherkin-specs) can draft or improve Gherkin scenarios with Rovo and assess them against ingested automated evidence.
 
-If you are still evaluating whether that workflow fits your team, read [BDD Jira integration](https://testream.app/bdd-jira-integration).
+If you are still evaluating whether that workflow fits your team, read [BDD Jira integration](https://testream.app/bdd-jira-integration). For evidence-based scenario assessment, see the [BDD Coverage Agent](../features/bdd-coverage-agent).
 
 If your team wants reusable behaviors instead of issue-local scenarios, use [BDD Library](../features/bdd-library). From there, you can organize behaviors into folders, link them across issues, and build [Test Cycles](../features/test-cycles) for manual execution.
 
@@ -72,7 +72,7 @@ If you encounter issues or have questions:
 
 - Publish a first run with the [Quick Start](../getting-started/quick-start).
 - Choose a reporter from the [Installation guide](../getting-started/installation#reporters).
-- Use the [Testream Setup Agent](../getting-started/ai-assisted-setup) if your Jira workspace has Rovo enabled.
+- Use the [Rovo Setup Agent](../features/rovo-setup-agent) if your Jira workspace has Rovo enabled.
 - Build reusable scenarios in [BDD Library](../features/bdd-library).
 - Execute linked manual coverage with [Test Cycles](../features/test-cycles).
 - Review [Jira test reporting](https://testream.app/jira-test-reporting) for the commercial overview.

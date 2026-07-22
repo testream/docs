@@ -13,7 +13,7 @@ keywords:
 
 Debug test failures efficiently with rich diagnostic information including error messages, stack traces, and visual artifacts.
 
-![Failed test details view showing the error message, stack trace, and debugging artifacts inside Jira](/img/jira/Failed-Test-Screenshot.png)
+![Failed test details view showing the error message, stack trace, and debugging artifacts inside Jira](/img/product/testream-failure-inspection.png)
 
 ## Error Messages
 

@@ -41,7 +41,7 @@ You can either create a new issue-level spec from scratch, draft one with Rovo, 
 
 If your team wants a reusable behavior inventory instead of issue-local scenario text, use [BDD Library](./bdd-library). BDD Specs are best for issue-level drafting and review. BDD Library is better when the same behavior should be reused across multiple Jira issues, test cycles, and release-readiness workflows.
 
-![BDD Specs panel in Jira showing Draft with Rovo, Add spec manually, Link existing behavior, and assessment details for a saved spec](/img/jira/BDD-Specs-Updated.png)
+![BDD Specs panel in Jira showing Draft with Rovo, Add spec manually, Link existing behavior, and assessment details for a saved spec](/img/product/testream-bdd-specs.png)
 
 ## Workflow
 
@@ -57,7 +57,7 @@ Choose the path that matches the work:
 - Select **Draft with Rovo** to turn rough acceptance criteria into a focused Gherkin scenario. Rovo asks you to approve the exact text before saving it.
 - Select **Link existing behavior** to search the reusable [BDD Library](./bdd-library) and attach one or more behaviors that are not yet linked to this issue.
 
-![Rovo dialog for drafting or improving a BDD Gherkin spec from Jira issue context](/img/jira/BDD-Rovo-Gherkin-Dialog.png)
+![Rovo dialog for drafting or improving a BDD Gherkin spec from Jira issue context](/img/product/testream-bdd-rovo-dialog.png)
 
 ### 3. Link existing behavior from the library
 
