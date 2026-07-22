@@ -13,7 +13,7 @@ keywords:
 
 Click into any test run to see rich execution metadata, build/app context, suite change analysis, and failed tests with issue creation actions.
 
-![Test run details page showing metadata, results summary, release evidence, and failed test inspection actions](/img/jira/Test-Run-Details-Screenshot.png)
+![Test run details page showing metadata, results summary, release evidence, and failed test inspection actions](/img/product/testream-run-details-overview.png)
 
 ## Metadata Section
 

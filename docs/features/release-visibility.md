@@ -15,7 +15,7 @@ Use **Release Visibility** to assess Jira release readiness with a combination o
 
 This view extends basic release linking by showing not only which runs belong to a release, but also whether the release has enough mapped and evidenced behaviors to support a decision.
 
-![Release visibility board showing linked cycles, readiness callout, evidence mix, and issue coverage for a selected Jira release](/img/jira/BDD-Release-Visibility.png)
+![Release visibility board showing linked cycles, readiness callout, evidence mix, and issue coverage for a selected Jira release](/img/product/testream-release-visibility.png)
 
 ## What Release Visibility Shows
 
@@ -85,11 +85,11 @@ Release Visibility also groups release issues into three buckets:
 
 This is especially useful for finding release items that look in scope from Jira planning, but still have no usable test behavior map.
 
-![Issue coverage section with buttons for issues with evidence, mapped issues without evidence, and unmapped release issues](/img/jira/BDD-Release-Issue-Coverage.png)
+![Issue coverage section with buttons for issues with evidence, mapped issues without evidence, and unmapped release issues](/img/product/testream-release-coverage.png)
 
 *Issue coverage buckets on the release board. Use these buttons to separate release issues that already have evidence, are mapped but still unevidenced, or are still unmapped.*
 
-![Issue coverage details modal listing Jira issues in the selected release coverage bucket](/img/jira/BDD-Release-Issue-Coverage-Details.png)
+![Issue coverage details modal listing Jira issues in the selected release coverage bucket](/img/product/testream-release-coverage-details.png)
 
 *Issue coverage details modal after selecting a bucket. Use this view to inspect the exact Jira issues behind each release coverage gap.*
 

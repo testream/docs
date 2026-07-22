@@ -13,7 +13,7 @@ keywords:
 
 Create Jira issues directly from failed tests with pre-filled failure context and custom fields.
 
-![Create Issue form opened from a failed test with pre-filled summary, description, and failure context](/img/jira/Create-Issue-From-Failed-Test-Screenshot.png)
+![Create Issue form opened from a failed test with pre-filled summary, description, and failure context](/img/product/testream-create-issue-from-failure.png)
 
 ## Steps to Create an Issue
 

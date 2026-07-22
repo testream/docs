@@ -1,17 +1,25 @@
 # Testream Documentation
-> Technical implementation guides for Testream – Test Management & Quality Evidence for Jira, covering automated evidence, BDD workflows with Rovo, Test Cycles, and release readiness in Jira.
+> Technical implementation guides for Testream – Jira-native quality evidence connecting automated runs, reusable BDD behaviors, focused manual Test Cycles, and release context.
 
 ## Product context
-- [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704): Testream – Test Management & Quality Evidence for Jira.
+- [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704/testream-test-management-quality-evidence-for-jira): Testream – Test Management & Quality Evidence for Jira.
+- [Testream website](https://testream.app/): Product positioning, capabilities, and installation entry point.
+- Testream keeps reviewers in control: Rovo can accelerate setup and BDD evidence review, but generated guidance and coverage assessments must be checked against the repository and captured evidence.
 
 ## Getting started
 - [Quick Start](https://docs.testream.app/getting-started/quick-start): Publish the first Jira-visible test run.
 - [Installation](https://docs.testream.app/getting-started/installation): Choose the correct reporter path.
+- [Rovo Setup Agent](https://docs.testream.app/features/rovo-setup-agent): Use guided setup to choose a reporter, shape CI guidance, and verify first ingestion.
+- [Jira Integration](https://docs.testream.app/jira-integration/overview): Understand where Testream evidence appears in Jira.
 
 ## Jira workflows
 - [BDD Specs](https://docs.testream.app/features/bdd-gherkin-specs): Draft or refine issue-level Gherkin and assess it against automated evidence.
+- [BDD Coverage Agent](https://docs.testream.app/features/bdd-coverage-agent): Review scenario coverage with confidence, rationale, and evidence provenance; coverage mapping is distinct from latest execution outcome.
 - [BDD Library](https://docs.testream.app/features/bdd-library): Manage reusable behaviors, folders, issue links, and evidence signals.
 - [Test Cycles](https://docs.testream.app/features/test-cycles): Build manual execution batches from reusable behaviors and attach notes plus evidence.
+- [Dashboard](https://docs.testream.app/features/dashboard): Review project-level runs, pass rates, failures, and trends.
+- [Failure Inspection](https://docs.testream.app/features/failure-inspection): Inspect errors, stack traces, screenshots, videos, traces, logs, and metadata.
+- [Test Suite Changes](https://docs.testream.app/features/test-suite-changes): Compare added, removed, and unchanged tests between runs.
 - [Release Management](https://docs.testream.app/features/release-management): Link runs to Jira releases and review release-scoped linked runs.
 - [Release Visibility](https://docs.testream.app/features/release-visibility): Review linked cycles, issue coverage gaps, evidence mix, and release readiness.
 - [Test Run Details](https://docs.testream.app/features/test-run-details): Inspect run metadata, release links, and linked cycles.

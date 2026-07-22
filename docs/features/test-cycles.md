@@ -15,7 +15,7 @@ Use **Test Cycles** to execute reusable BDD Library behaviors as lean manual tes
 
 Test cycles are not a separate test-case authoring system. They are execution batches built from behaviors you already maintain in [BDD Library](./bdd-library).
 
-![Test cycles list showing cycle names, linked releases, states, progress, and updated timestamps](/img/jira/BDD-Test-Cycles-List.png)
+![Test cycles list showing cycle names, linked releases, states, progress, and updated timestamps](/img/product/testream-test-cycles-list.png)
 
 ## What Test Cycles Are For
 
@@ -102,7 +102,7 @@ Each cycle row shows:
 
 Open a cycle to enter the cycle details and execute the behaviors in that batch.
 
-![Test cycle detail view showing cycle metrics, linked release context, behavior rows, and result actions](/img/jira/BDD-Test-Cycles-Details.png)
+![Test cycle detail view showing cycle metrics, linked release context, behavior rows, and result actions](/img/product/testream-test-cycle-details.png)
 
 For each behavior in the cycle, you can record one of these manual execution statuses:
 
@@ -149,7 +149,7 @@ After a behavior has a manual result, you can add supporting execution context:
 - Image thumbnails for visual proof
 - File links for non-image artifacts
 
-![Test cycle behavior details showing behavior status, notes, and uploaded manual evidence](/img/jira/BDD-Test-Cycle-Details-Behaviours.png)
+![Test cycle behavior details showing behavior status, notes, and uploaded manual evidence](/img/product/testream-test-cycle-behavior.png)
 
 Use this to keep screenshots, logs, exports, or reviewer comments attached to the specific executed behavior rather than to a general release note.
 

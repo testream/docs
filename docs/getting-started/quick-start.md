@@ -15,7 +15,15 @@ Publish your first automated test run into Jira in about five minutes. By the en
 
 If you are still evaluating the product path rather than the exact setup flow, start with [Jira test reporting](https://testream.app/jira-test-reporting) or [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
-These steps work for every supported framework. Use the reporter guide for your stack when you need framework-specific configuration.
+These steps work for every supported framework. Use the reporter guide for your stack when you need framework-specific configuration, or use the [Rovo Setup Agent](../features/rovo-setup-agent) when you want guided setup in Jira.
+
+## Choose your starting point
+
+| Your situation | Recommended path |
+| --- | --- |
+| You know your framework | Choose its [reporter guide](./installation#reporters). |
+| You have CTRF or JUnit output already | Use the [CLI Reporter](../reporters/cli). |
+| You are unsure about the reporter or CI configuration | Use the [Rovo Setup Agent](../features/rovo-setup-agent). |
 
 ## Before You Start
 
@@ -29,7 +37,7 @@ You need:
 
 1. Sign up at [testream.app](https://testream.app)
 2. Open **Dashboard → [Projects](https://testream.app/projects)**
-   ![Testream projects page showing available projects and where to create or open a project for API key access](/img/jira/Dashboard-Projects.png)
+   ![Testream projects page showing available projects and where to create or open a project for API key access](/img/product/testream-dashboard-overview.png)
 3. Create a project or open an existing one.
 4. Copy the API key.
 
@@ -78,7 +86,7 @@ dotnet test
 
 Open your Jira project where Testream is installed and check **Test Runs**.
 
-![Jira Test Runs view showing imported automated runs with status, pass rate, and run metadata](/img/jira/Test-Runs-Screenshot.png)
+![Jira Test Runs view showing imported automated runs with status, pass rate, and run metadata](/img/product/testream-test-runs.png)
 
 A successful first proof should show:
 

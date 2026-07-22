@@ -11,7 +11,7 @@ keywords:
 
 # AI-Assisted Setup with Rovo
 
-Use the **Testream Setup Agent** in Jira to choose the right reporter, generate CI guidance, and verify that Testream receives your first test run.
+Use the **Testream Setup Agent** in Jira to choose a reporter, shape CI guidance, and verify that Testream receives your first test run. For the product overview and boundaries, see the dedicated [Rovo Setup Agent](../features/rovo-setup-agent) page.
 
 This page is for teams that want guided setup. If you already know your framework and just want to prove the first run, use the [Quick Start](./quick-start).
 
@@ -46,7 +46,7 @@ You do not need to paste a real API key into source code or chat. The setup agen
 3. Go to **Settings**.
 4. Select **Get Started with Rovo** in the **Set up Testream with Rovo** section.
 
-![Testream settings page in Jira with the Get Started with Rovo setup entry point](/img/jira/Find-Settings-Page.png)
+![Testream settings page in Jira with the Get Started with Rovo setup entry point](/img/product/testream-rovo-setup-selection.png)
 
 ## 2. Choose Your Stack and CI Provider
 
@@ -57,7 +57,7 @@ In the launcher, choose:
 
 Testream maps those choices to the closest reporter, sample project, and setup template before opening Rovo.
 
-![Testream Rovo setup dialog for selecting a test framework and CI provider](/img/jira/Setup-Testream-Rovo.png)
+![Testream Rovo setup dialog for selecting a test framework and CI provider](/img/product/testream-rovo-setup-dialog.png)
 
 ## 3. Use the Rovo Recommendation
 
@@ -94,7 +94,7 @@ After the run finishes, tell Rovo that the tests have run. The setup agent can c
 - If a run was received, open the Testream dashboard and review the results.
 - If no run was received, check the reporter command, CI secret name, project key, and workflow logs.
 
-![Jira Test Runs view confirming that Testream received and displayed the first automated run](/img/jira/Test-Runs-Screenshot.png)
+![Jira Test Runs view confirming that Testream received and displayed the first automated run](/img/product/testream-test-runs.png)
 
 ## What Rovo Does Not Do
 
@@ -108,5 +108,6 @@ After the run finishes, tell Rovo that the tests have run. The setup agent can c
 - [Quick Start](./quick-start)
 - [Reporter installation](./installation)
 - [BDD Specs](../features/bdd-gherkin-specs)
+- [BDD Coverage Agent](../features/bdd-coverage-agent)
 - [Test Run Summaries in Jira Issues](../features/test-run-summaries-in-jira-issues)
 - [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704)

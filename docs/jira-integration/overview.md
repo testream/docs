@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: What Testream Adds to Jira
-description: See how Testream brings automated test evidence, reusable BDD behaviors, cycles, failures, trends, and release signal from CI into Jira.
+description: See how Testream brings automated evidence, reusable BDD behaviors, focused Test Cycles, failures, trends, and release context from CI into Jira.
 keywords:
   - jira test reporting overview
   - automated test evidence in jira
@@ -11,7 +11,7 @@ keywords:
 
 # What Testream Adds to Jira
 
-Testream brings automated test evidence from your codebase and CI into Jira. Once a reporter publishes a run, Jira teams can see status, failures, suite changes, release signal, reusable BDD behaviors, and issue-level context without recreating automated tests as a heavy manual test-case inventory.
+Testream is a Jira-native quality evidence system. Once a reporter publishes a run, Jira teams can see status, failures, suite changes, release context, reusable BDD behaviors, and issue-level evidence without recreating automated tests as a heavy manual test-case inventory.
 
 ## What Jira Gets From Each Run
 
@@ -20,7 +20,7 @@ Testream brings automated test evidence from your codebase and CI into Jira. Onc
 - **BDD workflows without duplication** - [BDD Specs](../features/bdd-gherkin-specs), [BDD Library](../features/bdd-library), and [Test Cycles](../features/test-cycles) help teams draft, reuse, execute, and evidence behaviors inside Jira.
 - **Suite and release signal** - [Test Suite Changes](../features/test-suite-changes), [Trends & Analytics](../features/trends-analytics), [Release Management](../features/release-management), and [Release Visibility](../features/release-visibility) show how quality changes across branches, runs, cycles, and releases.
 - **Actionable follow-up** - [Issue Creation](../features/issue-creation) turns failed tests into Jira issues with pre-filled context, while [PDF Reports](../features/pdf-reports) provide portable summaries for release reviews.
-- **Rovo after the first run** - The [Testream Setup Agent](../getting-started/ai-assisted-setup) helps teams complete setup, and [Testream BDD Specs](../features/bdd-gherkin-specs) assess Jira issue-level scenarios against ingested automated evidence.
+- **Rovo where it removes friction** - The [Rovo Setup Agent](../features/rovo-setup-agent) helps teams complete setup, and the [BDD Coverage Agent](../features/bdd-coverage-agent) assesses Jira scenarios against captured evidence while reviewers retain control.
 
 ## Who Uses It
 
@@ -30,7 +30,7 @@ Testream brings automated test evidence from your codebase and CI into Jira. Onc
 
 ## Start Here
 
-1. **[Install Testream for Jira](../getting-started/installation)** from the [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704).
+1. **[Install Testream for Jira](../getting-started/installation)** from the [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704/testream-test-management-quality-evidence-for-jira).
 2. **[Publish your first run](../getting-started/quick-start)** from an existing automated test suite.
 3. **[Use Testream in Jira](./usage)** to inspect runs, review issue summaries, manage BDD workflows, link releases, and export reports.
 

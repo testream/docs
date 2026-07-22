@@ -24,7 +24,7 @@ Default ranges available on all plans:
 
 ## Test Results Trends
 
-![Trends chart showing daily passed, failed, skipped, and flaky test result percentages over time](/img/jira/Trends-Screenshot-1.png)
+![Trends chart showing daily passed, failed, skipped, and flaky test result percentages over time](/img/product/testream-trends-overview.png)
 
 A grouped bar chart showing the percentage breakdown of test results per day:
 

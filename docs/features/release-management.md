@@ -15,7 +15,7 @@ Track test quality across your release cycle by linking test runs to Jira releas
 
 Looking for the broader product overview first? Read [Jira release test management](https://testream.app/jira-release-test-management).
 
-![Releases page showing the Jira release filter, linked runs, and release-level quality context](/img/jira/Releases-Screenshot.png)
+![Releases page showing the Jira release filter, linked runs, and release-level quality context](/img/product/testream-release-list.png)
 
 ## Release Filter And Linked Runs
 

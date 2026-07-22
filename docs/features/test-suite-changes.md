@@ -13,7 +13,7 @@ keywords:
 
 Track how your suite evolves between runs directly from Test Run Details.
 
-![Test suite changes summary card comparing the current run with the previous run on the same branch](/img/jira/Test-Suite-Changes.png)
+![Test suite changes summary card comparing the current run with the previous run on the same branch](/img/product/testream-test-suite-diff.png)
 
 ## What It Compares
 
