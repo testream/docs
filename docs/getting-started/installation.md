@@ -27,7 +27,7 @@ If you are still comparing the broader workflow first, see [Jira test reporting]
 
 1. Log in to Jira as an admin.
 2. Open **Apps → Explore new apps**.
-3. Search for **Testream – Test Management & Quality Evidence for Jira**.
+3. Search for **Testream – Automated Test Management for Jira**.
 4. Open the app listing and select **Get app**.
 5. Follow the Jira installation prompts until the app is installed.
 

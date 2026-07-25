@@ -5,7 +5,7 @@ import {useState, type MouseEvent} from 'react';
 import ProductScreenshot from '../components/ProductScreenshot';
 import styles from './index.module.css';
 
-const MARKETPLACE_URL = 'https://marketplace.atlassian.com/apps/3048460704/testream-test-management-quality-evidence-for-jira';
+const MARKETPLACE_URL = 'https://marketplace.atlassian.com/apps/3048460704/testream-automated-test-management-for-jira';
 
 const reporters = [
   {name: 'Playwright', packageName: '@testream/playwright-reporter', link: '/reporters/playwright', icon: 'https://ctrf.io/img/playwright.svg'},

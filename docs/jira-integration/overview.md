@@ -30,7 +30,7 @@ Testream is a Jira-native quality evidence system. Once a reporter publishes a r
 
 ## Start Here
 
-1. **[Install Testream for Jira](../getting-started/installation)** from the [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704/testream-test-management-quality-evidence-for-jira).
+1. **[Install Testream for Jira](../getting-started/installation)** from the [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704/testream-automated-test-management-for-jira).
 2. **[Publish your first run](../getting-started/quick-start)** from an existing automated test suite.
 3. **[Use Testream in Jira](./usage)** to inspect runs, review issue summaries, manage BDD workflows, link releases, and export reports.
 

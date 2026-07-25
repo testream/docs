@@ -2,7 +2,7 @@
 > Technical implementation guides for Testream – Jira-native quality evidence connecting automated runs, reusable BDD behaviors, focused manual Test Cycles, and release context.
 
 ## Product context
-- [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704/testream-test-management-quality-evidence-for-jira): Testream – Test Management & Quality Evidence for Jira.
+- [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704/testream-automated-test-management-for-jira): Testream – Automated Test Management for Jira.
 - [Testream website](https://testream.app/): Product positioning, capabilities, and installation entry point.
 - Testream keeps reviewers in control: Rovo can accelerate setup and BDD evidence review, but generated guidance and coverage assessments must be checked against the repository and captured evidence.
 

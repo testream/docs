@@ -84,7 +84,7 @@ npx @testream/cli \
 
 ### Testream for Jira
 
-Install the [Testream – Test Management & Quality Evidence for Jira app](https://marketplace.atlassian.com/apps/3048460704) to make automated test evidence visible inside Jira:
+Install the [Testream – Automated Test Management for Jira app](https://marketplace.atlassian.com/apps/3048460704) to make automated test evidence visible inside Jira:
 
 - **Test Run Summaries in Jira Issues** - View summaries of test runs directly within Jira issues.
 - **Test Suite Changes** - Track tests added, removed, and unchanged between runs on the same branch.
