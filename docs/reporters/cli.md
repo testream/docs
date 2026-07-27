@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
-title: 'CLI Reporter'
-description: 'Upload CTRF test reports from any CI provider to Testream and Jira with branch, commit, build, environment, artifact context, and searchable run history.'
+title: "CLI Reporter"
+description: "Upload CTRF test reports from any CI provider to Testream and Jira — branch, commit, build, environment, artifact context, and searchable run history included."
 keywords:
   - ctrf upload jira
   - cli test reporting jira

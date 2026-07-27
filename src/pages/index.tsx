@@ -182,12 +182,12 @@ function FinalCTA() {
 
 export default function Home() {
   return (
-    <Layout title="Testream Documentation" description="Jira-native quality evidence for automated tests, BDD workflows, manual Test Cycles, and release readiness.">
+            <Layout title="Testream Documentation" description="Jira-native quality evidence connecting automated CI/CD test results, reusable BDD workflows, manual Test Cycles, and release readiness — all inside Jira for your team.">
       <Head>
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@testream" />
         <meta name="twitter:title" content="Testream Documentation | Quality evidence in Jira" />
-        <meta name="twitter:description" content="Connect CI results, BDD specs, and manual Test Cycles to Jira releases." />
+        <meta name="twitter:description" content="Jira-native quality evidence connecting automated CI/CD test results, reusable BDD workflows, manual Test Cycles, and release readiness." />
         <link rel="canonical" href="https://docs.testream.app/" />
         <script type="application/ld+json">
           {JSON.stringify({

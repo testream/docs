@@ -4,5 +4,14 @@ Disallow: /search
 Disallow: /404.html
 Disallow: /search-index.json
 Disallow: /*.LICENSE.txt
+Crawl-Delay: 10
+
+User-agent: Bingbot
+Allow: /
+Disallow: /search
+Disallow: /404.html
+Disallow: /search-index.json
+Disallow: /*.LICENSE.txt
+Crawl-Delay: 5
 
 Sitemap: https://docs.testream.app/sitemap.xml

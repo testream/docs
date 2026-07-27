@@ -1,7 +1,7 @@
 ---
 sidebar_position: 9
-title: 'Mocha Reporter'
-description: 'Send Mocha test results from CI/CD into Jira with the Testream Mocha Reporter, built-in upload support, run metadata, failure evidence, and trend context.'
+title: "Mocha Reporter"
+description: "Send Mocha test results from Node.js CI/CD pipelines into Jira with the Testream Mocha Reporter — built-in upload, run metadata, failure evidence, and trend context included."
 keywords:
   - mocha jira reporter
   - mocha test reporting jira
