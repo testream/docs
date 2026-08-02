@@ -35,7 +35,7 @@ Scenario: 'See reporter guides' button redirects to documentation
   Then I should be redirected to the Testream documentation page
 ```
 
-Use BDD Specs to keep requirements, test evidence, and coverage decisions close to the Jira work item they belong to. Testream stores saved specs through the Testream Jira issue panel, then Rovo compares each scenario with the evidence captured by Testream reporters, including test names, tags, source snippets, artifacts, branch, build, and commit metadata.
+Use BDD Specs to keep requirements, test evidence, and coverage decisions close to the Jira work item they belong to. Testream stores saved specs through the Testream Jira issue panel, then Rovo compares each scenario with candidate evidence captured by Testream reporters, including test names, suites or frameworks, outcomes, steps, source locations, source snippets, failure summaries, attachment names, and scenario or provenance signals.
 
 You can either create a new issue-level spec from scratch, draft one with Rovo, or link an existing reusable behavior from [BDD Library](./bdd-library) directly into the issue.
 
@@ -76,7 +76,7 @@ Use **Improve with Rovo** when the current scenario is too broad, unclear, or no
 
 ### 5. Assess automated coverage
 
-Select **Assess with Rovo** or **Re-assess with Rovo**. Testream sends Rovo bounded evidence for the Jira issue so it can compare the saved Gherkin with matching automated test results.
+Select **Assess with Rovo** or **Re-assess with Rovo**. Testream sends Rovo bounded evidence for the Jira issue so it can compare the saved Gherkin with matching automated test results. Continue to the [BDD Coverage Agent review workflow](./bdd-coverage-agent) for the evidence, confidence, provenance, and reviewer controls behind the assessment.
 
 ### 6. Review the assessment
 
@@ -85,6 +85,8 @@ Rovo returns a coverage decision, confidence score, rationale, and best matching
 - **Confirmed** - candidate tests align with the scenario and the source mapping is strong enough to trust.
 - **Likely** - evidence is relevant, but the match is inferred or not strong enough to confirm.
 - **Not covered** - no meaningful automated evidence is available yet.
+- **Insufficient evidence** - one or more required clauses lack clear supporting evidence.
+- **Conflicting evidence** - the available evidence supports and contradicts required clauses.
 
 ### 7. Link evidence manually when needed
 
@@ -101,10 +103,10 @@ When you assess coverage, Testream sends Rovo the linked test context for the is
 The assessment can use:
 
 - Linked test runs from the Jira issue
-- Matching test names, suites, tags, and steps
-- Source snippets captured by Testream reporters
-- Screenshots, traces, and other test artifacts
-- Branch, build, commit, and repository context
+- Test names, suites or frameworks, outcomes, and steps
+- Source locations and source snippets captured by Testream reporters
+- Failure summaries and attachment names
+- Scenario-match and provenance signals
 - Reviewer-linked runs as additional evidence
 
 ## Best Practices
