@@ -64,7 +64,7 @@ jobs:
 
 ## CI context and pull-request comparisons
 
-The CLI automatically adds available branch, commit, repository, and build details to each run. For pull requests, Testream can use the merge base to compare the run with the right trunk baseline. See [CI context and pull-request comparisons](../getting-started/ci-context) for the one-time CI setup and fallback behavior.
+The CLI automatically adds available branch, commit, repository, and build details to each run. For pull requests, Testream can use the merge base to compare the run with the right trunk baseline. See [CI context and pull-request comparisons](../features/ci-context) for the one-time CI setup and fallback behavior.
 
 ## CLI (Any CI provider)
 

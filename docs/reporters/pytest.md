@@ -17,7 +17,7 @@ Looking for the commercial overview first? Read the website page for [Pytest Jir
 
 If you are comparing Pytest-specific setup with the broader upload path, see [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
-For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../getting-started/ci-context).
+For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../features/ci-context).
 
 ## Installation
 

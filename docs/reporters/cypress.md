@@ -16,7 +16,7 @@ Looking for the commercial overview first? Read the website page for [Cypress Ji
 
 If you are deciding between Cypress-specific setup and the broader upload workflow, compare this guide with [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
-For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../getting-started/ci-context).
+For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../features/ci-context).
 
 ## Installation
 

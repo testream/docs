@@ -41,4 +41,4 @@ TESTREAM_MERGE_BASE_SHA="$BASE_SHA" npx @testream/cli \
 
 For custom CI systems, set `TESTREAM_BASE_BRANCH` when the target branch already exists in the checkout.
 
-→ [View test-suite changes](../features/test-suite-changes)
+→ [View test-suite changes](./test-suite-changes)

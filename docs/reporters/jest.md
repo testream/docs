@@ -16,7 +16,7 @@ Looking for the higher-level product fit first? Read the website page for [Jest 
 
 If you are deciding between reporter-level setup and the broader upload path, compare this guide with [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
-For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../getting-started/ci-context).
+For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../features/ci-context).
 
 ## Installation
 

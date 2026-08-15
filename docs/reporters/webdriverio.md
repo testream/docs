@@ -16,7 +16,7 @@ Looking for the commercial overview first? Read the website page for [WebdriverI
 
 If your WebdriverIO suites include Cucumber and Gherkin workflows, also read [BDD Jira integration](https://testream.app/bdd-jira-integration).
 
-For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../getting-started/ci-context).
+For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../features/ci-context).
 
 ## Installation
 

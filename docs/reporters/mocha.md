@@ -14,7 +14,7 @@ Use the Testream Mocha Reporter to send Mocha test results from CI/CD into Testr
 
 Looking for the commercial overview first? Read the website page for [Mocha Jira integration](https://testream.app/mocha-jira-integration).
 
-For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../getting-started/ci-context).
+For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../features/ci-context).
 
 ## Installation
 

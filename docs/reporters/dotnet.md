@@ -16,7 +16,7 @@ Use the Testream .NET Reporter to send xUnit, NUnit, MSTest, and TRX-based test 
 
 Looking for the higher-level product fit first? Read the website page for [.NET Jira integration](https://testream.app/dotnet-jira-integration).
 
-For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../getting-started/ci-context).
+For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../features/ci-context).
 
 ## Installation
 
