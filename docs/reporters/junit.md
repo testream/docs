@@ -17,6 +17,8 @@ Looking for the commercial overview first? Read the website page for [JUnit Jira
 
 If you are comparing direct JUnit ingestion with the broader CI/CD upload path, see [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
+For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../getting-started/ci-context).
+
 ## Installation
 
 ```bash
@@ -89,23 +91,41 @@ npx @testream/junit-reporter \
 ## CI Example (GitHub Actions)
 
 ```yaml title=".github/workflows/tests.yml"
-- uses: actions/setup-java@v4
-  with:
-    distribution: temurin
-    java-version: "17"
+name: JUnit Tests
 
-- uses: actions/setup-node@v4
-  with:
-    node-version: "20"
+on: [push, pull_request]
 
-- run: npm install -g @testream/junit-reporter
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-- run: mvn -B test -Dmaven.test.failure.ignore=true
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
 
-- run: |
-    testream-junit \
-      --api-key "${{ secrets.TESTREAM_API_KEY }}" \
-      --fail-on-error
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - run: npm install -g @testream/junit-reporter
+
+      - run: mvn -B test -Dmaven.test.failure.ignore=true
+
+      - name: Upload JUnit results to Testream
+        run: |
+          testream-junit \
+            --api-key "${{ secrets.TESTREAM_API_KEY }}" \
+            --build-name "${{ github.workflow }}" \
+            --test-environment ci \
+            --app-name "${{ github.event.repository.name }}" \
+            --app-version "${{ github.sha }}" \
+            --test-type unit \
+            --fail-on-error
 ```
 
 ## Sample Project

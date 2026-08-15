@@ -16,6 +16,8 @@ Looking for the higher-level product fit first? Read the website page for [Jest 
 
 If you are deciding between reporter-level setup and the broader upload path, compare this guide with [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
+For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../getting-started/ci-context).
+
 ## Installation
 
 ```bash
@@ -188,7 +190,8 @@ module.exports = {
       {
         apiKey: process.env.TESTREAM_API_KEY,
         uploadEnabled: process.env.TESTREAM_UPLOAD_ENABLED === "true",
-        failOnUploadError: process.env.TESTREAM_FAIL_ON_ERROR === "true",
+        failOnUploadError:
+          process.env.TESTREAM_FAIL_ON_UPLOAD_ERROR === "true",
         buildName: process.env.TESTREAM_BUILD_NAME,
         testEnvironment: process.env.TESTREAM_TEST_ENVIRONMENT,
         appName: process.env.TESTREAM_APP_NAME,
@@ -211,55 +214,27 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run tests with Testream reporter
-        env:
-          TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
-        run: npm test
-```
-
-### GitHub Actions with Full Metadata
-
-For complete test result metadata:
-
-```yaml title=".github/workflows/jest-tests.yml"
-name: Jest Tests
-
-on: [push, pull_request]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
+      - name: Run Jest tests
         env:
           TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
           TESTREAM_UPLOAD_ENABLED: "true"
-          TESTREAM_BUILD_NAME: "Jest Tests"
-          TESTREAM_TEST_ENVIRONMENT: "ci"
-          TESTREAM_APP_NAME: "my-app"
-          TESTREAM_APP_VERSION: "1.0.0"
-          TESTREAM_TEST_TYPE: "unit"
+          TESTREAM_BUILD_NAME: ${{ github.workflow }}
+          TESTREAM_TEST_ENVIRONMENT: ci
+          TESTREAM_APP_NAME: ${{ github.event.repository.name }}
+          TESTREAM_APP_VERSION: ${{ github.sha }}
+          TESTREAM_TEST_TYPE: unit
           TESTREAM_FAIL_ON_UPLOAD_ERROR: "true"
         run: npm test
 ```

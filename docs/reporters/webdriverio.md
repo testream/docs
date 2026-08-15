@@ -16,6 +16,8 @@ Looking for the commercial overview first? Read the website page for [WebdriverI
 
 If your WebdriverIO suites include Cucumber and Gherkin workflows, also read [BDD Jira integration](https://testream.app/bdd-jira-integration).
 
+For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../getting-started/ci-context).
+
 ## Installation
 
 ```bash
@@ -66,14 +68,15 @@ The `services` entry registers a launcher service that automatically aggregates 
 const testreamConfig = {
   apiKey: process.env.TESTREAM_API_KEY || "",
   uploadEnabled: true,
-  failOnUploadError: true,
+  failOnUploadError:
+    process.env.TESTREAM_FAIL_ON_UPLOAD_ERROR === "true",
   outputDir: "ctrf",
   outputFile: "ctrf-report.json",
-  testType: "e2e",
-  appName: "My App",
-  appVersion: "1.0.0",
-  buildName: process.env.GITHUB_WORKFLOW,
-  testEnvironment: process.env.TEST_ENV || "ci",
+  testType: process.env.TESTREAM_TEST_TYPE || "e2e",
+  appName: process.env.TESTREAM_APP_NAME,
+  appVersion: process.env.TESTREAM_APP_VERSION,
+  buildName: process.env.TESTREAM_BUILD_NAME,
+  testEnvironment: process.env.TESTREAM_TEST_ENVIRONMENT || "local",
 };
 
 export const config: Options.Testrunner = {
@@ -106,11 +109,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install dependencies
         run: npm ci
@@ -118,6 +123,12 @@ jobs:
       - name: Run WebdriverIO tests
         env:
           TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
+          TESTREAM_BUILD_NAME: ${{ github.workflow }}
+          TESTREAM_TEST_ENVIRONMENT: ci
+          TESTREAM_APP_NAME: ${{ github.event.repository.name }}
+          TESTREAM_APP_VERSION: ${{ github.sha }}
+          TESTREAM_TEST_TYPE: e2e
+          TESTREAM_FAIL_ON_UPLOAD_ERROR: "true"
         run: npx wdio run wdio.conf.ts
 ```
 

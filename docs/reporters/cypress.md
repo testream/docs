@@ -16,6 +16,8 @@ Looking for the commercial overview first? Read the website page for [Cypress Ji
 
 If you are deciding between Cypress-specific setup and the broader upload workflow, compare this guide with [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
+For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../getting-started/ci-context).
+
 ## Installation
 
 ```bash
@@ -210,11 +212,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install dependencies
         run: npm ci
@@ -225,9 +229,11 @@ jobs:
         run: |
           npx @testream/cypress-reporter \
             -k $TESTREAM_API_KEY \
+            --build-name "${{ github.workflow }}" \
             --test-environment ci \
-            --app-name MyApp \
-            --app-version 1.0.0 \
+            --app-name "${{ github.event.repository.name }}" \
+            --app-version "${{ github.sha }}" \
+            --test-type e2e \
             --fail-on-error
 ```
 

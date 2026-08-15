@@ -21,7 +21,7 @@ If you are evaluating the product path first, start with the website page for [C
 
 ## GitHub Actions
 
-Use the action for the easiest setup in GitHub Actions.
+Run the CLI after your test command to upload the CTRF report from GitHub Actions.
 
 ```yaml title=".github/workflows/tests.yml"
 name: Tests
@@ -33,41 +33,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - run: npm ci
       - run: npx playwright test
 
       - name: Upload to Testream
         if: always()
-        uses: testream/cli@latest
-        with:
-          report-path: ctrf/ctrf-report.json
-          api-key: ${{ secrets.TESTREAM_API_KEY }}
+        env:
+          TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
+        run: |
+          npx @testream/cli \
+            --report-path ctrf/ctrf-report.json \
+            --api-key "$TESTREAM_API_KEY" \
+            --test-tool playwright \
+            --build-name "${{ github.workflow }}" \
+            --test-environment ci \
+            --app-name "${{ github.event.repository.name }}" \
+            --app-version "${{ github.sha }}" \
+            --test-type e2e \
+            --fail-on-error
 ```
 
-### Action inputs
+`fetch-depth: 0` lets Testream compare pull-request test changes with the correct baseline. The upload still works when that history is unavailable.
 
-| Option             | Type      | Default | Description                                                                   |
-| ------------------ | --------- | ------- | ----------------------------------------------------------------------------- |
-| `report-path`      | `string`  | -       | **Required** Path to CTRF report JSON file                                    |
-| `api-key`          | `string`  | -       | **Required** Testream API key (\*required unless `no-upload` is true)         |
-| `test-tool`        | `string`  | -       | **Required** Test tool name (e.g., `playwright`, `jest`, `cypress`, `dotnet`) |
-| `branch`           | `string`  | auto    | Git branch name                                                               |
-| `commit-sha`       | `string`  | auto    | Git commit SHA                                                                |
-| `repository-url`   | `string`  | auto    | Git repository URL                                                            |
-| `build-name`       | `string`  | -       | Build name/identifier                                                         |
-| `build-number`     | `string`  | auto    | Build number                                                                  |
-| `build-url`        | `string`  | auto    | Build URL                                                                     |
-| `test-environment` | `string`  | -       | Environment name (e.g., `ci`, `staging`)                                      |
-| `app-name`         | `string`  | -       | Application name                                                              |
-| `app-version`      | `string`  | -       | Application version                                                           |
-| `test-type`        | `string`  | -       | Test type (e.g., `unit`, `e2e`)                                               |
-| `no-upload`        | `boolean` | `false` | Skip upload (validate + summarize only)                                       |
-| `fail-on-error`    | `boolean` | `true`  | Fail the action if upload fails                                               |
+## CI context and pull-request comparisons
+
+The CLI automatically adds available branch, commit, repository, and build details to each run. For pull requests, Testream can use the merge base to compare the run with the right trunk baseline. See [CI context and pull-request comparisons](../getting-started/ci-context) for the one-time CI setup and fallback behavior.
 
 ## CLI (Any CI provider)
 
@@ -120,12 +117,12 @@ jobs:
               --report-path ctrf/ctrf-report.json \
               --test-tool playwright \
               --api-key $TESTREAM_API_KEY \
-              --branch $CIRCLE_BRANCH \
-              --commit-sha $CIRCLE_SHA1 \
-              --repository-url $CIRCLE_REPOSITORY_URL \
-              --build-number $CIRCLE_BUILD_NUM \
-              --build-url $CIRCLE_BUILD_URL \
-              --test-environment ci
+              --build-name "$CIRCLE_JOB" \
+              --test-environment ci \
+              --app-name "$CIRCLE_PROJECT_REPONAME" \
+              --app-version "$CIRCLE_SHA1" \
+              --test-type e2e \
+              --fail-on-error
 ```
 
 ## Bitbucket Pipelines example
@@ -145,17 +142,17 @@ pipelines:
               --report-path ctrf/ctrf-report.json \
               --test-tool playwright \
               --api-key $TESTREAM_API_KEY \
-              --branch $BITBUCKET_BRANCH \
-              --commit-sha $BITBUCKET_COMMIT \
-              --repository-url $BITBUCKET_GIT_HTTP_ORIGIN \
-              --build-number $BITBUCKET_BUILD_NUMBER \
-              --build-url "https://bitbucket.org/${BITBUCKET_REPO_FULL_NAME}/pipelines/results/${BITBUCKET_BUILD_NUMBER}" \
-              --test-environment ci
+              --build-name "Playwright Tests" \
+              --test-environment ci \
+              --app-name "$BITBUCKET_REPO_SLUG" \
+              --app-version "$BITBUCKET_COMMIT" \
+              --test-type e2e \
+              --fail-on-error
 ```
 
 ## Other CI providers
 
-Use the same CLI options in GitLab, Jenkins, Azure Pipelines, or any custom runner. If you already have a CTRF report, the CLI is all you need.
+Use the same CLI options in GitLab, Jenkins, Azure Pipelines, or any custom runner. The CLI detects available CI context automatically; pass explicit branch, commit, repository, or build options only when you need to override them. If you already have a CTRF report, the CLI is all you need.
 
 ## Sample Project
 

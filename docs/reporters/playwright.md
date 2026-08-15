@@ -16,6 +16,8 @@ Looking for the commercial overview first? Read the website page for [Playwright
 
 If you are deciding between framework-specific setup and the broader upload workflow, compare this guide with [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
+For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../getting-started/ci-context).
+
 ## Installation
 
 ```bash
@@ -82,16 +84,17 @@ export default defineConfig({
       {
         apiKey: process.env.TESTREAM_API_KEY,
         uploadEnabled: true,
-        failOnUploadError: true,
+        failOnUploadError:
+          process.env.TESTREAM_FAIL_ON_UPLOAD_ERROR === "true",
         outputFile: "ctrf-report.json",
         outputDir: "ctrf",
         screenshot: true,
         annotations: true,
-        testType: "e2e",
-        appName: "My App",
-        appVersion: "1.0.0",
-        buildName: process.env.GITHUB_WORKFLOW,
-        testEnvironment: process.env.TEST_ENV || "ci",
+        testType: process.env.TESTREAM_TEST_TYPE || "e2e",
+        appName: process.env.TESTREAM_APP_NAME,
+        appVersion: process.env.TESTREAM_APP_VERSION,
+        buildName: process.env.TESTREAM_BUILD_NAME,
+        testEnvironment: process.env.TESTREAM_TEST_ENVIRONMENT || "local",
       },
     ],
     ["html", { open: "never" }],
@@ -109,6 +112,40 @@ export default defineConfig({
 ## Notes on Artifacts
 
 Playwright artifacts (screenshots, videos, traces) are uploaded automatically when they are attached to tests. Keep Playwright artifact capture enabled in `use` and the reporter will pick them up.
+
+## GitHub Actions Example
+
+```yaml title=".github/workflows/playwright-tests.yml"
+name: Playwright Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - run: npm ci
+      - run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        env:
+          TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
+          TESTREAM_BUILD_NAME: ${{ github.workflow }}
+          TESTREAM_TEST_ENVIRONMENT: ci
+          TESTREAM_APP_NAME: ${{ github.event.repository.name }}
+          TESTREAM_APP_VERSION: ${{ github.sha }}
+          TESTREAM_TEST_TYPE: e2e
+          TESTREAM_FAIL_ON_UPLOAD_ERROR: "true"
+        run: npx playwright test
+```
 
 ## Sample Project
 

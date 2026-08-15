@@ -65,16 +65,6 @@ All reporters use the [Common Test Report Format (CTRF)](https://github.com/ctrf
 
 Upload test results and artifacts from local runs or any stage of your pipeline. Whether you use GitHub Actions, Jenkins, CircleCI, Azure DevOps, or another CI/CD provider, Testream reporters and the CLI can publish results with `TESTREAM_API_KEY`:
 
-```yaml
-- uses: testream/cli@latest
-  with:
-    report-path: ctrf/ctrf-report.json
-    test-tool: playwright
-    api-key: ${{ secrets.TESTREAM_API_KEY }}
-```
-
-Or use the CLI directly:
-
 ```bash
 npx @testream/cli \
   --report-path ctrf/ctrf-report.json \

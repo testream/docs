@@ -17,6 +17,8 @@ Looking for the commercial overview first? Read the website page for [Pytest Jir
 
 If you are comparing Pytest-specific setup with the broader upload path, see [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
+For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../getting-started/ci-context).
+
 ## Installation
 
 ```bash
@@ -134,6 +136,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -144,18 +148,20 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          node-version: 24
 
-      - run: |
+      - name: Run Pytest tests and upload
+        env:
+          TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
+        run: |
           npx @testream/pytest-reporter \
             -k "$TESTREAM_API_KEY" \
+            --build-name "${{ github.workflow }}" \
             --test-environment ci \
-            --app-name pytest-jira-reporter-example \
+            --app-name "${{ github.event.repository.name }}" \
             --app-version "${{ github.sha }}" \
             --test-type unit \
             --fail-on-error
-        env:
-          TESTREAM_API_KEY: ${{ secrets.TESTREAM_API_KEY }}
 ```
 
 ## Notes

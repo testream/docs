@@ -16,6 +16,8 @@ Use the Testream .NET Reporter to send xUnit, NUnit, MSTest, and TRX-based test 
 
 Looking for the higher-level product fit first? Read the website page for [.NET Jira integration](https://testream.app/dotnet-jira-integration).
 
+For CI context and pull-request comparison setup, see [CI context and pull-request comparisons](../getting-started/ci-context).
+
 ## Installation
 
 ```bash
@@ -111,6 +113,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -120,16 +124,17 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Run tests and upload
         run: |
           npx @testream/dotnet-reporter \
             -k ${{ secrets.TESTREAM_API_KEY }} \
             --project ./MySolution.sln \
+            --build-name "${{ github.workflow }}" \
             --test-environment ci \
-            --app-name MyApp \
-            --app-version 1.0.0 \
+            --app-name "${{ github.event.repository.name }}" \
+            --app-version "${{ github.sha }}" \
             --test-type unit \
             --fail-on-error
 ```

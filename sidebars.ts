@@ -44,6 +44,7 @@ const sidebars: SidebarsConfig = {
         'features/trends-analytics',
         'features/artifact-storage',
         'features/pdf-reports',
+        'getting-started/ci-context',
       ],
     },
     {
