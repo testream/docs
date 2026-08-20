@@ -12,6 +12,7 @@ Official documentation for Testream automated test reporting.
 - .NET Reporter: https://docs.testream.app/reporters/dotnet
 - Cypress Reporter: https://docs.testream.app/reporters/cypress
 - Jest Reporter: https://docs.testream.app/reporters/jest
+- Jasmine Reporter: https://docs.testream.app/reporters/jasmine
 - WebdriverIO Reporter: https://docs.testream.app/reporters/webdriverio
 - Mocha Reporter: https://docs.testream.app/reporters/mocha
 - CLI Reporter: https://docs.testream.app/reporters/cli

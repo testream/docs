@@ -56,6 +56,7 @@ If your Jira workspace has Rovo enabled, use the **Testream Setup Agent** to fin
 | Playwright      | [Playwright Reporter](../reporters/playwright)   | Browser test results and artifacts  |
 | Cypress         | [Cypress Reporter](../reporters/cypress)         | End-to-end results and artifacts    |
 | Jest            | [Jest Reporter](../reporters/jest)               | Unit and integration test evidence  |
+| Jasmine         | [Jasmine Reporter](../reporters/jasmine)         | JavaScript test results and source evidence |
 | Vitest          | [Vitest Reporter](../reporters/vitest)           | Fast frontend and service test runs |
 | Mocha           | [Mocha Reporter](../reporters/mocha)             | JavaScript test runs                |
 | WebdriverIO     | [WebdriverIO Reporter](../reporters/webdriverio) | WebdriverIO suite evidence          |
