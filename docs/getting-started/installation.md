@@ -61,6 +61,7 @@ If your Jira workspace has Rovo enabled, use the **Testream Setup Agent** to fin
 | WebdriverIO     | [WebdriverIO Reporter](../reporters/webdriverio) | WebdriverIO suite evidence          |
 | Pytest          | [Pytest Reporter](../reporters/pytest)           | Python test results and metadata    |
 | JUnit XML       | [JUnit Reporter](../reporters/junit)             | Existing JUnit XML reports          |
+| Go              | [Go Reporter](../reporters/go)                   | Go test results and source evidence |
 | .NET            | [.NET Reporter](../reporters/dotnet)             | .NET and TRX-based runs             |
 | Any CTRF output | [CLI Reporter](../reporters/cli)                 | Converted or custom test reports    |
 

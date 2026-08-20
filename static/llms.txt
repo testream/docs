@@ -30,6 +30,7 @@
 - [.NET Reporter](https://docs.testream.app/reporters/dotnet): Configure xUnit, NUnit, MSTest, and TRX-based reporting.
 - [Jest Reporter](https://docs.testream.app/reporters/jest): Configure Jest reporting for unit and integration test runs.
 - [JUnit Reporter](https://docs.testream.app/reporters/junit): Upload JUnit XML results from Java CI/CD pipelines.
+- [Go Reporter](https://docs.testream.app/reporters/go): Run Go tests, convert go test JSON to CTRF, and upload source-aware results.
 - [WebdriverIO Reporter](https://docs.testream.app/reporters/webdriverio): Configure WebdriverIO reporting and launcher-service uploads.
 - [Mocha Reporter](https://docs.testream.app/reporters/mocha): Configure Mocha reporter options and CI/CD uploads.
 - [Pytest Reporter](https://docs.testream.app/reporters/pytest): Configure Pytest reporting and JUnit-ingestion workflows.

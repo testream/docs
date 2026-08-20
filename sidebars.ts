@@ -28,6 +28,7 @@ const sidebars: SidebarsConfig = {
         'reporters/junit',
         'reporters/pytest',
         'reporters/vitest',
+        'reporters/go',
       ],
     },
     {

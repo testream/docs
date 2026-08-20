@@ -56,6 +56,7 @@ Testream supports the following reporters out of the box:
 - **JUnit** - Parse and upload JUnit XML test results
 - **Vitest** - Blazing-fast unit testing for Vite projects
 - **pytest** - Python testing framework with rich plugin ecosystem
+- **Go** - Go test results with source evidence and CI metadata
 
 ### CTRF Standard
 
