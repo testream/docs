@@ -75,6 +75,7 @@ The reporter normalizes the report tool to `jasmine` and adds `generatedBy: "@te
 | `outputFile` | `string` | `ctrf-report.json` | Report filename. A `.json` suffix is added when omitted. |
 | `sourceRoot` | `string` | `process.cwd()` | Root used for source evidence discovery. |
 | `discoverFiles` | `boolean` | `true` | Discover source files when Jasmine does not provide file locations. |
+| `sourceFiles` | `string[]` | Jasmine-loaded files | Restrict discovery to files relative to `sourceRoot` or to absolute paths. Useful for ESM or programmatic setups. |
 | `maxChars`, `maxLines` | `number` | shared defaults | Bound the source evidence stored in each test result. |
 | `branch` | `string` | auto from CI | Override the Git branch name. |
 | `commitSha` | `string` | auto from CI | Override the Git commit SHA. |
@@ -88,9 +89,9 @@ When `branch`, `commitSha`, repository, build, or merge-base values are not supp
 
 ## Source Evidence
 
-The upstream Jasmine CTRF reporter does not emit source locations. Testream therefore scans JavaScript and TypeScript files below `sourceRoot` by default, matches `describe` and `it` declarations to the Jasmine full test name, and adds a relative `filePath`, `line`, and bounded `snippet` to the test result.
+The upstream Jasmine CTRF reporter does not emit source locations. Testream therefore scans the JavaScript and TypeScript files that Jasmine loaded before the run, matches `describe` and `it` declarations to the Jasmine full test name, and adds a relative `filePath`, `line`, and bounded `snippet` to the test result. Set `sourceFiles` when tests are loaded through ESM or programmatic setup; paths may be relative to `sourceRoot` or absolute.
 
-The scan supports `.js`, `.jsx`, `.mjs`, `.cjs`, `.ts`, and `.tsx` files. It skips dependency and generated directories such as `node_modules`, `dist`, `coverage`, `.git`, `.next`, `build`, and `out`. Set `discoverFiles: false` to disable the scan.
+The scan supports `.js`, `.jsx`, `.mjs`, `.cjs`, `.ts`, `.tsx`, `.mts`, and `.cts` files. It skips dependency and generated directories such as `node_modules`, `dist`, `coverage`, `.git`, `.next`, `build`, and `out`. Set `discoverFiles: false` to disable the scan.
 
 ## Upload Failures
 
