@@ -22,15 +22,15 @@ npm install --save-dev @testream/jasmine-reporter
 
 ## Basic Configuration
 
-Register the reporter from a Jasmine helper, such as `helpers/testream-reporter.js`:
+Register the reporter from a Jasmine helper under the default `spec` directory, such as `spec/helpers/testream-reporter.js`:
 
-```javascript title="helpers/testream-reporter.js"
+```javascript title="spec/helpers/testream-reporter.js"
 const TestreamJasmineReporter = require("@testream/jasmine-reporter");
 
 jasmine.getEnv().addReporter(
   new TestreamJasmineReporter({
     apiKey: process.env.TESTREAM_API_KEY,
-    uploadEnabled: process.env.TESTREAM_UPLOAD_ENABLED === "true",
+    uploadEnabled: process.env.TESTREAM_UPLOAD_ENABLED ?? true,
     failOnUploadError:
       process.env.TESTREAM_FAIL_ON_UPLOAD_ERROR === "true",
     testEnvironment: process.env.TESTREAM_TEST_ENVIRONMENT || "ci",
