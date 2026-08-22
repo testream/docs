@@ -17,8 +17,9 @@ const reporters = [
   {name: 'WebdriverIO', packageName: '@testream/webdriverio-reporter', link: '/reporters/webdriverio', icon: 'https://ctrf.io/img/wdio.svg'},
   {name: 'Mocha', packageName: '@testream/mocha-reporter', link: '/reporters/mocha', icon: 'https://ctrf.io/img/mochajs.svg'},
   {name: 'Pytest', packageName: '@testream/pytest-reporter', link: '/reporters/pytest', icon: 'https://ctrf.io/img/pytest.svg'},
-  {name: 'Go', packageName: '@testream/go-reporter', link: '/reporters/go', icon: 'https://ctrf.io/img/golang.svg'},
+  {name: 'Go', packageName: '@testream/go-reporter', link: '/reporters/go', icon: 'https://ctrf.io/img/go.svg'},
   {name: 'Jasmine', packageName: '@testream/jasmine-reporter', link: '/reporters/jasmine', icon: 'https://ctrf.io/img/jasmine.svg'},
+  {name: 'CLI', packageName: '@testream/cli', link: '/reporters/cli', icon: '/img/command-line-icon.png'},
 ] as const;
 
 const capabilities = [
