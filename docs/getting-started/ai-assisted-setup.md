@@ -52,7 +52,7 @@ You do not need to paste a real API key into source code or chat. The setup agen
 
 In the launcher, choose:
 
-- **Project/test framework** - for example Playwright, Cypress, Jest, Vitest, WebdriverIO, Mocha, pytest, JUnit XML, or .NET.
+- **Project/test framework** - for example Playwright, Cypress, Jest, Jasmine, Vitest, WebdriverIO, Mocha, Go, pytest, JUnit XML, or .NET.
 - **CI provider** - for example GitHub Actions, GitLab CI, Bitbucket Pipelines, Azure Pipelines, CircleCI, Jenkins, or **I'm not sure**.
 
 Testream maps those choices to the closest reporter, sample project, and setup template before opening Rovo.

@@ -50,12 +50,14 @@ Testream supports the following reporters out of the box:
 - **.NET** - xUnit, NUnit, MSTest, and TRX formats
 - **Cypress** - E2E testing for web applications
 - **Jest** - Unit and integration testing for JavaScript/TypeScript
+- **Jasmine** - Jasmine 5 testing with source evidence
 - **WebdriverIO** - E2E testing for web applications
 - **Mocha** - Flexible JavaScript test framework
 - **CLI** - Upload CTRF reports from any test tool
 - **JUnit** - Parse and upload JUnit XML test results
 - **Vitest** - Blazing-fast unit testing for Vite projects
 - **pytest** - Python testing framework with rich plugin ecosystem
+- **Go** - Go test runs with CTRF and source snippets
 
 ### CTRF Standard
 

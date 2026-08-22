@@ -31,7 +31,7 @@ Open **Apps → Testream → Settings → Get Started with Rovo** in Jira. Selec
 
 ![Testream setup dialog for choosing a framework and CI provider](/img/product/testream-rovo-setup-dialog.png)
 
-The setup flow supports the Testream reporter paths for Playwright, Cypress, Jest, Vitest, WebdriverIO, Mocha, pytest, JUnit XML, .NET, and CLI-based CTRF uploads.
+The setup flow supports the Testream reporter paths for Playwright, Cypress, Jest, Jasmine, Vitest, WebdriverIO, Mocha, Go, pytest, JUnit XML, .NET, and CLI-based CTRF uploads.
 
 ![Testream setup screen for selecting the test stack](/img/product/testream-rovo-setup-selection.png)
 

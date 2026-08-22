@@ -34,6 +34,8 @@
 - [Mocha Reporter](https://docs.testream.app/reporters/mocha): Configure Mocha reporter options and CI/CD uploads.
 - [Pytest Reporter](https://docs.testream.app/reporters/pytest): Configure Pytest reporting and JUnit-ingestion workflows.
 - [Vitest Reporter](https://docs.testream.app/reporters/vitest): Configure Vitest reporting and CI/CD uploads.
+- [Go Reporter](https://docs.testream.app/reporters/go): Run Go tests, generate CTRF results, and upload source evidence and CI context.
+- [Jasmine Reporter](https://docs.testream.app/reporters/jasmine): Configure Jasmine 5 reporting, source evidence, CTRF output, and CI metadata.
 - [CLI Reporter](https://docs.testream.app/reporters/cli): Upload CTRF results from any CI provider.
 
 ## Sample repositories
@@ -42,6 +44,8 @@
 - [Jest sample repo](https://github.com/testream/jest-jira-reporter): Jest reporting example with Testream integration.
 - [Cypress sample repo](https://github.com/testream/cypress-jira-reporter): Cypress reporting example for browser tests and CI workflows.
 - [.NET sample repo](https://github.com/testream/dotnet-jira-reporter): .NET reporter example covering CI-friendly upload flows.
+- [Go reporter example](https://github.com/hasanalituran/jira-test-manager/tree/main/examples/go-example): Minimal Go project with local CTRF generation, source evidence, and failure handling.
+- [Jasmine reporter example](https://github.com/hasanalituran/jira-test-manager/tree/main/examples/jasmine-example): Jasmine TypeScript project with source evidence, local reports, and CI configuration.
 
 ## Related evaluation pages
 - [Vitest + React + Jira integration](https://testream.app/vitest-react-jira-integration): Evaluate a React-specific Vitest reporting workflow.
