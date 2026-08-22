@@ -44,8 +44,6 @@
 - [Jest sample repo](https://github.com/testream/jest-jira-reporter): Jest reporting example with Testream integration.
 - [Cypress sample repo](https://github.com/testream/cypress-jira-reporter): Cypress reporting example for browser tests and CI workflows.
 - [.NET sample repo](https://github.com/testream/dotnet-jira-reporter): .NET reporter example covering CI-friendly upload flows.
-- [Go reporter example](https://github.com/hasanalituran/jira-test-manager/tree/main/examples/go-example): Minimal Go project with local CTRF generation, source evidence, and failure handling.
-- [Jasmine reporter example](https://github.com/hasanalituran/jira-test-manager/tree/main/examples/jasmine-example): Jasmine TypeScript project with source evidence, local reports, and CI configuration.
 
 ## Related evaluation pages
 - [Vitest + React + Jira integration](https://testream.app/vitest-react-jira-integration): Evaluate a React-specific Vitest reporting workflow.

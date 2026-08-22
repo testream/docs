@@ -146,10 +146,6 @@ jobs:
         run: npm test
 ```
 
-## Sample Project
-
-The [Jasmine example project](https://github.com/hasanalituran/jira-test-manager/tree/main/examples/jasmine-example) includes a working helper, TypeScript tests, source evidence, local report generation, and a GitHub Actions workflow.
-
 ## NPM Package
 
 - **Package:** [@testream/jasmine-reporter](https://www.npmjs.com/package/@testream/jasmine-reporter)

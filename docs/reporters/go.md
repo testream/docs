@@ -165,10 +165,6 @@ jobs:
             --fail-on-error
 ```
 
-## Sample Project
-
-The [Go example project](https://github.com/hasanalituran/jira-test-manager/tree/main/examples/go-example) covers passing, skipped, nested, and opt-in failing tests, plus local CTRF generation and source evidence.
-
 ## NPM Package
 
 - **Package:** [@testream/go-reporter](https://www.npmjs.com/package/@testream/go-reporter)
