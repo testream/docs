@@ -209,9 +209,9 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
+        <ReporterSection />
         <ProofSection />
         <CapabilitySection />
-        <ReporterSection />
         <FinalCTA />
       </main>
     </Layout>
