@@ -56,12 +56,14 @@ If your Jira workspace has Rovo enabled, use the **Testream Setup Agent** to fin
 | Playwright      | [Playwright Reporter](../reporters/playwright)   | Browser test results and artifacts  |
 | Cypress         | [Cypress Reporter](../reporters/cypress)         | End-to-end results and artifacts    |
 | Jest            | [Jest Reporter](../reporters/jest)               | Unit and integration test evidence  |
+| Jasmine         | [Jasmine Reporter](../reporters/jasmine)         | JavaScript test results and source evidence |
 | Vitest          | [Vitest Reporter](../reporters/vitest)           | Fast frontend and service test runs |
 | Mocha           | [Mocha Reporter](../reporters/mocha)             | JavaScript test runs                |
 | WebdriverIO     | [WebdriverIO Reporter](../reporters/webdriverio) | WebdriverIO suite evidence          |
 | Pytest          | [Pytest Reporter](../reporters/pytest)           | Python test results and metadata    |
 | JUnit XML       | [JUnit Reporter](../reporters/junit)             | Existing JUnit XML reports          |
 | .NET            | [.NET Reporter](../reporters/dotnet)             | .NET and TRX-based runs             |
+| Go              | [Go Reporter](../reporters/go)                   | Go test results and source evidence |
 | Any CTRF output | [CLI Reporter](../reporters/cli)                 | Converted or custom test reports    |
 
 ## 3. Publish Your First Run

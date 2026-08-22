@@ -34,6 +34,8 @@
 - [Mocha Reporter](https://docs.testream.app/reporters/mocha): Configure Mocha reporter options and CI/CD uploads.
 - [Pytest Reporter](https://docs.testream.app/reporters/pytest): Configure Pytest reporting and JUnit-ingestion workflows.
 - [Vitest Reporter](https://docs.testream.app/reporters/vitest): Configure Vitest reporting and CI/CD uploads.
+- [Go Reporter](https://docs.testream.app/reporters/go): Run Go tests, generate CTRF results, and upload source evidence and CI context.
+- [Jasmine Reporter](https://docs.testream.app/reporters/jasmine): Configure Jasmine 5 reporting, source evidence, CTRF output, and CI metadata.
 - [CLI Reporter](https://docs.testream.app/reporters/cli): Upload CTRF results from any CI provider.
 
 ## Sample repositories
