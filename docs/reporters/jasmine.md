@@ -90,9 +90,7 @@ When branch, commit, repository, build, or merge-base values are not supplied, T
 
 ## Source Evidence
 
-The upstream Jasmine CTRF reporter does not emit source locations. Testream therefore scans the JavaScript and TypeScript files that Jasmine loaded before the run, matches `describe` and `it` declarations to the Jasmine full test name, and adds a relative `filePath`, `line`, and bounded `snippet` to the test result. Set `sourceFiles` when tests are loaded through ESM or programmatic setup; paths may be relative to `sourceRoot` or absolute.
-
-The scan supports `.js`, `.jsx`, `.mjs`, `.cjs`, `.ts`, `.tsx`, `.mts`, and `.cts` files. It skips dependency and generated directories such as `node_modules`, `dist`, `coverage`, `.git`, `.next`, `build`, and `out`. Set `discoverFiles: false` to disable the scan.
+Testream adds source evidence to Jasmine results by matching test names to JavaScript or TypeScript files and recording the matched file path, line, and bounded snippet. For ESM or programmatic runners, set `sourceFiles` and `sourceRoot` as needed; set `discoverFiles: false` to disable scanning.
 
 ## Upload Failures and Test Exit Status
 
