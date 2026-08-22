@@ -71,7 +71,6 @@ The reporter normalizes the report tool to `jasmine` and adds `generatedBy: "@te
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
 | `apiKey` | `string` | empty | Testream API key. Upload is skipped when no key is available. |
-| `apiUrl` | `string` | `TESTREAM_API_URL` or production API | Override the Testream API base URL. |
 | `uploadEnabled` | `boolean \| string` | `true` | Enable or disable automatic upload. |
 | `failOnUploadError` | `boolean \| string` | `false` | Fail the Jasmine run when upload fails. |
 | `outputDir` | `string` | `ctrf` | Directory for the CTRF report. |
