@@ -167,7 +167,6 @@ function ReporterSection() {
           </article>
         ))}
       </div>
-      <Link className={styles.textLink} to="/reporters/cli">Need another tool? Upload with the CLI reporter →</Link>
     </section>
   );
 }
