@@ -50,8 +50,6 @@ const config: Config = {
         blog: false,
         sitemap: {
           ignorePatterns: ['/search'],
-          changefreq: 'weekly',
-          priority: 0.5,
           createSitemapItems: async ({defaultCreateSitemapItems, ...params}) => {
             const items = await defaultCreateSitemapItems(params);
             const { statSync } = await import('node:fs');
@@ -62,36 +60,8 @@ const config: Config = {
 
             return items
               .filter((item) => new URL(item.url).pathname !== '/search')
-              .map((item) => {
+              .map(({changefreq: _changefreq, priority: _priority, ...item}) => {
                 const pathname = new URL(item.url).pathname.replace(/\/$/, '') || '/';
-
-                let priority = 0.5;
-
-                if (pathname === '/') {
-                  priority = 1;
-                } else if (pathname === '/intro') {
-                  priority = 0.7;
-                } else if (pathname.startsWith('/getting-started')) {
-                  priority = 0.8;
-                } else if (pathname.startsWith('/jira-integration')) {
-                  priority = 0.7;
-                } else if (pathname.startsWith('/reporters')) {
-                  priority = 0.7;
-                 } else if (
-                   [
-                     '/features/bdd-coverage-agent',
-                     '/features/bdd-library',
-                     '/features/failure-inspection',
-                     '/features/release-visibility',
-                     '/features/release-management',
-                     '/features/test-cycles',
-                     '/features/test-run-summaries-in-jira-issues',
-                     '/features/trends-analytics',
-                     '/features/rovo-setup-agent',
-                   ].includes(pathname)
-                 ) {
-                  priority = 0.6;
-                }
 
                 // Compute lastmod from source .md file modification time
                 let lastmod: string | undefined;
@@ -106,7 +76,6 @@ const config: Config = {
 
                 return {
                   ...item,
-                  priority,
                   lastmod,
                 };
               });
