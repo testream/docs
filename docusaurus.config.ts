@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Testream Documentation',
-  tagline: 'Jira-native quality evidence for modern delivery teams',
+  tagline: 'Release evidence and reporter guides for Jira teams',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -61,7 +61,10 @@ const config: Config = {
             const docsDir = join(dirname(fileURLToPath(import.meta.url)), 'docs');
 
             return items
-              .filter((item) => new URL(item.url).pathname !== '/search')
+              .filter((item) => {
+                const pathname = new URL(item.url).pathname.replace(/\/$/, '') || '/';
+                return pathname !== '/search' && !pathname.startsWith('/superpowers/plans/');
+              })
               .map((item) => {
                 const pathname = new URL(item.url).pathname.replace(/\/$/, '') || '/';
 
@@ -142,7 +145,7 @@ const config: Config = {
       },
     },
     // Replace with your project's social card
-    image: 'img/logo-48.png',
+    image: 'img/testream-docs-social.jpg',
     navbar: {
       title: 'Testream',
       logo: {

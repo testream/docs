@@ -39,7 +39,7 @@ Use BDD Specs to keep requirements, test evidence, and coverage decisions close 
 
 You can either create a new issue-level spec from scratch, draft one with Rovo, or link an existing reusable behavior from [BDD Library](./bdd-library) directly into the issue.
 
-If your team wants a reusable behavior inventory instead of issue-local scenario text, use [BDD Library](./bdd-library). BDD Specs are best for issue-level drafting and review. BDD Library is better when the same behavior should be reused across multiple Jira issues, test cycles, and release-readiness workflows.
+If your team wants a reusable behavior inventory instead of issue-local scenario text, use [BDD Library](./bdd-library). BDD Specs are best for issue-level drafting and review. BDD Library is better when the same behavior should be reused across multiple Jira issues, Test Cycles, and release reviews.
 
 ![BDD Specs panel in Jira showing Draft with Rovo, Add spec manually, Link existing behavior, and assessment details for a saved spec](/img/product/testream-bdd-specs.png)
 
@@ -82,7 +82,7 @@ Select **Assess with Rovo** or **Re-assess with Rovo**. Testream sends Rovo boun
 
 Rovo returns a coverage decision, confidence score, rationale, and best matching evidence. The result can be:
 
-- **Confirmed** - candidate tests align with the scenario and the source mapping is strong enough to trust.
+- **Confirmed** - candidate tests align with the scenario and the source mapping supports the expected behavior.
 - **Likely** - evidence is relevant, but the match is inferred or not strong enough to confirm.
 - **Not covered** - no meaningful automated evidence is available yet.
 - **Insufficient evidence** - one or more required clauses lack clear supporting evidence.
@@ -106,7 +106,7 @@ The assessment can use:
 - Test names, suites or frameworks, outcomes, and steps
 - Source locations and source snippets captured by Testream reporters
 - Failure summaries and attachment names
-- Scenario-match and provenance signals
+- Scenario-match and provenance details
 - Reviewer-linked runs as additional evidence
 
 ## Best Practices

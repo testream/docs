@@ -1,7 +1,7 @@
 ---
 sidebar_position: 9
 title: BDD Coverage Agent for Jira
-description: Verify Jira BDD scenarios against captured automated test evidence with Rovo confidence, rationale, provenance, and reviewer control.
+description: Assess Jira BDD scenarios against captured automated test evidence with Rovo rationale, provenance, and reviewer control.
 keywords:
   - bdd coverage agent jira
   - verify bdd scenarios
@@ -27,7 +27,7 @@ The agent compares the scenario's extracted Gherkin clauses with the test eviden
 It can surface:
 
 - A coverage status: **Confirmed**, **Likely**, **Not covered**, **Insufficient evidence**, or **Conflicting evidence**.
-- A confidence signal and plain-language rationale.
+- A confidence level and plain-language rationale.
 - The matched test evidence and provenance behind the assessment.
 - Gaps that need a new or better-mapped test.
 
@@ -41,7 +41,7 @@ The bounded assessment uses candidate details such as:
 | Steps                                  | Provides behavioral detail for comparison.                         |
 | Source location and source snippet     | Adds implementation context.                                       |
 | Failure summary and attachment names   | Adds result and artifact context.                                  |
-| Scenario-match and provenance signals  | Explains the candidate's relationship to the scenario and its run. |
+| Scenario-match and provenance details  | Explains the candidate's relationship to the scenario and its run. |
 
 ## Before you start
 

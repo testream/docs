@@ -1,4 +1,10 @@
-# Bing Webmaster SEO Fixes — Implementation Plan
+---
+title: Bing Webmaster SEO Fixes Implementation Plan
+description: Internal implementation notes for a completed docs SEO maintenance task.
+unlisted: true
+---
+
+# Bing Webmaster SEO Fixes: Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 

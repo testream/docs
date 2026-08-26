@@ -25,7 +25,7 @@ Need to install it first? Follow the [installation guide](../getting-started/ins
 
 ## Review Recent Runs
 
-Use the [Dashboard](../features/dashboard) to see current quality signal across projects, then open [Test Run Details](../features/test-run-details) for a specific run.
+Use the [Dashboard](../features/dashboard) to see recent run status across projects, then open [Test Run Details](../features/test-run-details) for a specific run.
 
 In a run, check:
 
@@ -42,7 +42,7 @@ When a failure needs follow-up, use [Issue Creation](../features/issue-creation)
 
 ## Bring Test Evidence Into Jira Issues
 
-[Test Run Summaries in Jira Issues](../features/test-run-summaries-in-jira-issues) show linked run status, branch, commit, and suite-change highlights on the Jira issue itself. This keeps quality signal readable for QA, engineering, product, and release stakeholders.
+[Test Run Summaries in Jira Issues](../features/test-run-summaries-in-jira-issues) show linked run status, branch, commit, and suite-change highlights on the Jira issue itself. This gives QA, engineering, product, and release teams the context behind the work without opening CI logs.
 
 If your team writes acceptance criteria in Jira, [Testream BDD Specs](../features/bdd-gherkin-specs) can draft or improve Gherkin scenarios with Rovo and assess them against ingested automated evidence.
 
@@ -52,7 +52,7 @@ If your team wants reusable behaviors instead of issue-local scenarios, use [BDD
 
 ## Review Releases and Share Reports
 
-Use [Trends & Analytics](../features/trends-analytics) to spot quality movement over time. Use [Release Management](../features/release-management) to connect runs to Jira releases before shipping. When you need BDD-aware release readiness, open [Release Visibility](../features/release-visibility) to review linked cycles, issue mapping gaps, and evidence coverage. When stakeholders need a portable summary, generate [PDF Reports](../features/pdf-reports) from the run.
+Use [Trends & Analytics](../features/trends-analytics) to spot run and suite movement over time. Use [Release Management](../features/release-management) to connect runs to Jira releases before shipping. When you need BDD-aware release review, open [Release Visibility](../features/release-visibility) to review linked cycles, issue mapping gaps, and evidence coverage. When stakeholders need a portable summary, generate [PDF Reports](../features/pdf-reports) from the run.
 
 For the broader release-readiness product overview, read [Jira release test management](https://testream.app/jira-release-test-management).
 

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 11
-title: 'Jasmine Reporter'
-description: 'Send Jasmine 5 test results from Node.js CI/CD into Jira with the Testream Jasmine Reporter, source evidence, CTRF output, and run metadata.'
+title: "Jasmine Reporter"
+description: "Send Jasmine 5 test results from Node.js CI/CD into Jira with the Testream Jasmine Reporter, source locations, CTRF output, and run metadata."
 keywords:
   - jasmine jira reporter
   - jasmine test reporting jira
@@ -11,7 +11,7 @@ keywords:
 
 # Jasmine Reporter
 
-Use the Testream Jasmine Reporter to send Jasmine 5 test results from Node.js CI/CD into Testream and Jira with CTRF output, source evidence, and CI run metadata.
+Use the Testream Jasmine Reporter to send Jasmine 5 test results from Node.js CI/CD into Testream and Jira with CTRF output, source locations, and CI run metadata.
 
 Looking for the higher-level product fit first? Read the website page for [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
@@ -34,8 +34,7 @@ jasmine.getEnv().addReporter(
   new TestreamJasmineReporter({
     apiKey: process.env.TESTREAM_API_KEY,
     uploadEnabled: process.env.TESTREAM_UPLOAD_ENABLED === "true",
-    failOnUploadError:
-      process.env.TESTREAM_FAIL_ON_UPLOAD_ERROR === "true",
+    failOnUploadError: process.env.TESTREAM_FAIL_ON_UPLOAD_ERROR === "true",
     testEnvironment: process.env.TESTREAM_TEST_ENVIRONMENT || "ci",
     appName: process.env.TESTREAM_APP_NAME || "my-app",
     appVersion: process.env.TESTREAM_APP_VERSION || "1.0.0",
@@ -68,29 +67,29 @@ The reporter normalizes the report tool to `jasmine` and adds `generatedBy: "@te
 
 ## Configuration Options
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `apiKey` | `string` | empty | Testream API key. Upload is skipped when no key is available. |
-| `uploadEnabled` | `boolean \| string` | `true` | Enable or disable automatic upload. |
-| `failOnUploadError` | `boolean \| string` | `false` | Fail the Jasmine run when upload fails. |
-| `outputDir` | `string` | `ctrf` | Directory for the CTRF report. |
-| `outputFile` | `string` | `ctrf-report.json` | Report filename. A `.json` suffix is added when omitted. |
-| `sourceRoot` | `string` | `process.cwd()` | Root used for source evidence discovery. |
-| `discoverFiles` | `boolean` | `true` | Discover source files when Jasmine does not provide file locations. |
-| `sourceFiles` | `string[]` | Jasmine-loaded files | Restrict discovery to files relative to `sourceRoot` or to absolute paths. Useful for ESM or programmatic setups. |
-| `maxChars`, `maxLines` | `number` | shared defaults | Bound the source evidence stored in each test result. |
-| `branch` | `string` | auto from CI | Override the Git branch name. |
-| `commitSha` | `string` | auto from CI | Override the Git commit SHA. |
-| `repositoryUrl` | `string` | auto from CI | Override the repository URL. |
-| `buildName`, `buildNumber`, `buildUrl` | `string` | optional/CI | Add build metadata or override detected CI values. |
-| `testEnvironment` | `string` | optional | Environment such as `ci`, `staging`, or `local`. |
-| `appName`, `appVersion`, `testType` | `string` | optional | Application and test metadata. |
+| Option                                 | Type                | Default              | Description                                                                                                       |
+| -------------------------------------- | ------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `apiKey`                               | `string`            | empty                | Testream API key. Upload is skipped when no key is available.                                                     |
+| `uploadEnabled`                        | `boolean \| string` | `true`               | Enable or disable automatic upload.                                                                               |
+| `failOnUploadError`                    | `boolean \| string` | `false`              | Fail the Jasmine run when upload fails.                                                                           |
+| `outputDir`                            | `string`            | `ctrf`               | Directory for the CTRF report.                                                                                    |
+| `outputFile`                           | `string`            | `ctrf-report.json`   | Report filename. A `.json` suffix is added when omitted.                                                          |
+| `sourceRoot`                           | `string`            | `process.cwd()`      | Root used for source-location discovery.                                                                          |
+| `discoverFiles`                        | `boolean`           | `true`               | Discover source files when Jasmine does not provide file locations.                                               |
+| `sourceFiles`                          | `string[]`          | Jasmine-loaded files | Restrict discovery to files relative to `sourceRoot` or to absolute paths. Useful for ESM or programmatic setups. |
+| `maxChars`, `maxLines`                 | `number`            | shared defaults      | Bound the source snippet stored in each test result.                                                              |
+| `branch`                               | `string`            | auto from CI         | Override the Git branch name.                                                                                     |
+| `commitSha`                            | `string`            | auto from CI         | Override the Git commit SHA.                                                                                      |
+| `repositoryUrl`                        | `string`            | auto from CI         | Override the repository URL.                                                                                      |
+| `buildName`, `buildNumber`, `buildUrl` | `string`            | optional/CI          | Add build metadata or override detected CI values.                                                                |
+| `testEnvironment`                      | `string`            | optional             | Environment such as `ci`, `staging`, or `local`.                                                                  |
+| `appName`, `appVersion`, `testType`    | `string`            | optional             | Application and test metadata.                                                                                    |
 
 When branch, commit, repository, build, or merge-base values are not supplied, Testream resolves supported CI context during upload. See the [CI context guide](../features/ci-context) for checkout requirements and supported providers.
 
-## Source Evidence
+## Source Locations
 
-Testream adds source evidence to Jasmine results by matching test names to JavaScript or TypeScript files and recording the matched file path, line, and bounded snippet. For ESM or programmatic runners, set `sourceFiles` and `sourceRoot` as needed; set `discoverFiles: false` to disable scanning.
+Testream adds source locations to Jasmine results by matching test names to JavaScript or TypeScript files and recording the matched file path, line, and bounded snippet. For ESM or programmatic runners, set `sourceFiles` and `sourceRoot` as needed; set `discoverFiles: false` to disable scanning.
 
 ## Upload Failures and Test Exit Status
 
@@ -107,7 +106,7 @@ Jasmine test failures remain the test command's exit signal. The upload-failure 
 
 ## Artifacts
 
-Jasmine's standard reporter lifecycle does not provide framework-owned screenshots or videos. This package reports tests, source evidence, and CTRF metadata; artifact capture requires a separate CI or test integration.
+Jasmine's standard reporter lifecycle does not provide framework-owned screenshots or videos. This package reports tests, source locations, and CTRF metadata; artifact capture requires a separate CI or test integration.
 
 ## GitHub Actions Example
 

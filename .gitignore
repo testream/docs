@@ -140,3 +140,4 @@ vite.config.ts.timestamp-*
 
 # Docusaurus build output
 build/
+*.DS_Store

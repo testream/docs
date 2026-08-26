@@ -15,7 +15,7 @@ Use **BDD Library** to manage reusable behaviors in Jira instead of rewriting th
 
 Looking for the broader product overview first? Read [BDD Jira integration](https://testream.app/bdd-jira-integration).
 
-![BDD Library behaviors tab showing reusable behavior titles, authored status badges, folders, issue link counts, and evidence signals](/img/product/testream-bdd-library.png)
+![BDD Library behaviors tab showing reusable behavior titles, authored status badges, folders, issue link counts, and evidence badges](/img/product/testream-bdd-library.png)
 
 ## What BDD Library Stores
 
@@ -101,7 +101,7 @@ This helps teams:
 - Keep acceptance criteria consistent
 - Avoid duplicating Gherkin
 - Track shared evidence across related issues
-- Measure release readiness from one reusable behavior map
+- Review release coverage from one reusable behavior map
 
 ## Link Existing Behaviors To A Jira Issue
 

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 12
-title: 'Go Reporter'
-description: 'Run Go tests from CI/CD and send CTRF results into Jira with the Testream Go Reporter, source evidence, CI metadata, and test-run history.'
+title: "Go Reporter"
+description: "Run Go tests from CI/CD and send CTRF results into Jira with the Testream Go Reporter, source locations, CI metadata, and run history."
 keywords:
   - go jira reporter
   - golang test reporting jira
@@ -11,7 +11,7 @@ keywords:
 
 # Go Reporter
 
-Use the Testream Go Reporter to run Go tests, generate CTRF results, and send source evidence and CI context into Testream and Jira.
+Use the Testream Go Reporter to run Go tests, generate CTRF results, and send source locations plus CI context into Testream and Jira.
 
 Looking for the higher-level product fit first? Read the website page for [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
@@ -42,33 +42,33 @@ npx @testream/go-reporter \
   --api-key "$TESTREAM_API_KEY"
 ```
 
-The command runs `go test -json ./...`, converts the output to CTRF, adds source evidence when matching Go files are available, writes `ctrf/ctrf-report.json`, and uploads the completed run.
+The command runs `go test -json ./...`, converts the output to CTRF, adds matching source locations when Go files are available, writes `ctrf/ctrf-report.json`, and uploads the completed run.
 
 ## CLI Options
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `-k, --api-key <key>` | `string` | - | **Required** API key unless `--no-upload` is used. |
-| `--project <path>` | `string` | current directory | Path to the Go project root. |
-| `--go <path>` | `string` | `go` | Go executable to run. |
-| `--go-reporter <path>` | `string` | auto-detected | Local `go-ctrf-json-reporter` executable. |
-| `--go-packages <selector>` | `string` | `./...` | Package selector passed to `go test`. |
-| `--ctrf-path <path/glob>` | `string` | - | Ingest existing CTRF JSON files without running Go tests. |
-| `--output-dir <dir>` | `string` | `ctrf` | Directory for the generated or merged CTRF report. |
-| `--output-file <file>` | `string` | `ctrf-report.json` | CTRF report filename. |
-| `--branch <name>` | `string` | auto from CI | Override the Git branch name. |
-| `--commit-sha <sha>` | `string` | auto from CI | Override the Git commit SHA. |
-| `--repository-url <url>` | `string` | auto from CI | Override the repository URL. |
-| `--build-name <name>` | `string` | optional | Build name or identifier. |
-| `--build-number <number>` | `string` | auto from CI | Build number. |
-| `--build-url <url>` | `string` | auto from CI | CI pipeline URL. |
-| `--test-environment <env>` | `string` | optional | Environment such as `ci`, `staging`, or `production`. |
-| `--app-name <name>` | `string` | optional | Application name under test. |
-| `--app-version <version>` | `string` | optional | Application version under test. |
-| `--test-type <type>` | `string` | optional | Test type such as `unit`, `integration`, or `e2e`. |
-| `--no-upload` | `boolean` | `false` | Generate and validate the CTRF report without uploading it. |
-| `--fail-on-error` | `boolean` | `false` | Exit with a non-zero code when the upload fails. |
-| `-- <args>` | - | - | Additional arguments passed to `go test`. |
+| Option                     | Type      | Default            | Description                                                 |
+| -------------------------- | --------- | ------------------ | ----------------------------------------------------------- |
+| `-k, --api-key <key>`      | `string`  | -                  | **Required** API key unless `--no-upload` is used.          |
+| `--project <path>`         | `string`  | current directory  | Path to the Go project root.                                |
+| `--go <path>`              | `string`  | `go`               | Go executable to run.                                       |
+| `--go-reporter <path>`     | `string`  | auto-detected      | Local `go-ctrf-json-reporter` executable.                   |
+| `--go-packages <selector>` | `string`  | `./...`            | Package selector passed to `go test`.                       |
+| `--ctrf-path <path/glob>`  | `string`  | -                  | Ingest existing CTRF JSON files without running Go tests.   |
+| `--output-dir <dir>`       | `string`  | `ctrf`             | Directory for the generated or merged CTRF report.          |
+| `--output-file <file>`     | `string`  | `ctrf-report.json` | CTRF report filename.                                       |
+| `--branch <name>`          | `string`  | auto from CI       | Override the Git branch name.                               |
+| `--commit-sha <sha>`       | `string`  | auto from CI       | Override the Git commit SHA.                                |
+| `--repository-url <url>`   | `string`  | auto from CI       | Override the repository URL.                                |
+| `--build-name <name>`      | `string`  | optional           | Build name or identifier.                                   |
+| `--build-number <number>`  | `string`  | auto from CI       | Build number.                                               |
+| `--build-url <url>`        | `string`  | auto from CI       | CI pipeline URL.                                            |
+| `--test-environment <env>` | `string`  | optional           | Environment such as `ci`, `staging`, or `production`.       |
+| `--app-name <name>`        | `string`  | optional           | Application name under test.                                |
+| `--app-version <version>`  | `string`  | optional           | Application version under test.                             |
+| `--test-type <type>`       | `string`  | optional           | Test type such as `unit`, `integration`, or `e2e`.          |
+| `--no-upload`              | `boolean` | `false`            | Generate and validate the CTRF report without uploading it. |
+| `--fail-on-error`          | `boolean` | `false`            | Exit with a non-zero code when the upload fails.            |
+| `-- <args>`                | -         | -                  | Additional arguments passed to `go test`.                   |
 
 Git and CI context are detected automatically when the command runs in a supported provider. Provide explicit values when the reporter runs outside CI or when you need to override detected metadata.
 
@@ -120,7 +120,7 @@ npx @testream/go-reporter \
   -- --run TestCriticalPath
 ```
 
-## Source Evidence and Test Failures
+## Source Locations and Test Failures
 
 The Go Reporter enriches matching test results with Go source locations and bounded snippets inside the project root. The reporter uses the Go module path from `go.mod` when it matches test suites to source files.
 

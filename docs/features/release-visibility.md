@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
 title: Release Visibility
-description: Review BDD release readiness in Jira using linked test cycles, evidence mix, behavior coverage, and issue-level mapping gaps.
+description: Review linked runs, Test Cycles, behavior coverage, and issue-level mapping gaps for a Jira release before the release review.
 keywords:
   - release visibility jira
   - release readiness jira bdd
@@ -11,9 +11,9 @@ keywords:
 
 # Release Visibility
 
-Use **Release Visibility** to assess Jira release readiness with a combination of automated evidence, manual cycle execution, and BDD behavior mapping.
+Use **Release Visibility** to review a Jira release with automated runs, manual cycle outcomes, and BDD behavior mapping in view.
 
-This view extends basic release linking by showing not only which runs belong to a release, but also whether the release has enough mapped and evidenced behaviors to support a decision.
+This view extends basic release linking by showing which runs belong to a release, which behaviors are mapped, and which work items still lack evidence.
 
 ![Release visibility board showing linked cycles, readiness callout, evidence mix, and issue coverage for a selected Jira release](/img/product/testream-release-visibility.png)
 
@@ -26,7 +26,7 @@ For a selected Jira release, Testream can show:
 - Behavior evidence coverage percentage
 - Evidence mix across automation and manual execution
 - Issue coverage buckets that show mapping gaps
-- A release-readiness callout
+- A release-review callout
 
 ## Linked Cycles
 
@@ -41,9 +41,9 @@ When a release has linked test cycles, the Releases page shows:
 
 This helps release owners move from aggregate status into the exact cycle that still needs work.
 
-## Release Readiness Callout
+## Release Review Callout
 
-Testream summarizes the selected release with a readable readiness state.
+Testream summarizes the selected release with a state that points to the next review action.
 
 | Readiness          | Meaning                                                                |
 | ------------------ | ---------------------------------------------------------------------- |
@@ -53,7 +53,7 @@ Testream summarizes the selected release with a readable readiness state.
 | **Needs evidence** | Behaviors are mapped, but some still have no evidence                  |
 | **Ready**          | Mapped behaviors have evidence and no failed or blocked results remain |
 
-Use this state as decision support, not as a replacement for release judgment.
+Use this state as review support, not as a replacement for release judgment.
 
 ## Evidence Coverage and Evidence Mix
 

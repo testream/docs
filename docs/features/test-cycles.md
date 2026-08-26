@@ -111,7 +111,7 @@ For each behavior in the cycle, you can record one of these manual execution sta
 - **Blocked**
 - **Skipped**
 
-Each cycle item also carries the same authored and evidence signals that appear in BDD Library:
+Each cycle item also carries the same authored and evidence badges that appear in BDD Library:
 
 - **Draft** or **Ready** authored status
 - **Automation** badge when automation is linked

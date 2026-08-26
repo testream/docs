@@ -1,5 +1,5 @@
 # Testream Documentation
-> Technical implementation guides for Testream – Jira-native quality evidence connecting automated runs, reusable BDD behaviors, focused manual Test Cycles, and release context.
+> Practical guides for publishing automated runs, mapping BDD behavior, running focused Test Cycles, and reviewing release evidence in Jira.
 
 ## Product context
 - [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/3048460704/testream-automated-test-management-for-jira): Testream – Automated Test Management for Jira.
@@ -15,13 +15,13 @@
 ## Jira workflows
 - [BDD Specs](https://docs.testream.app/features/bdd-gherkin-specs): Draft or refine issue-level Gherkin and assess it against automated evidence.
 - [BDD Coverage Agent](https://docs.testream.app/features/bdd-coverage-agent): Review scenario coverage with confidence, rationale, and evidence provenance; coverage mapping is distinct from latest execution outcome.
-- [BDD Library](https://docs.testream.app/features/bdd-library): Manage reusable behaviors, folders, issue links, and evidence signals.
+- [BDD Library](https://docs.testream.app/features/bdd-library): Manage reusable behaviors, folders, issue links, and evidence badges.
 - [Test Cycles](https://docs.testream.app/features/test-cycles): Build manual execution batches from reusable behaviors and attach notes plus evidence.
 - [Dashboard](https://docs.testream.app/features/dashboard): Review project-level runs, pass rates, failures, and trends.
 - [Failure Inspection](https://docs.testream.app/features/failure-inspection): Inspect errors, stack traces, screenshots, videos, traces, logs, and metadata.
 - [Test Suite Changes](https://docs.testream.app/features/test-suite-changes): Compare added, removed, and unchanged tests between runs.
 - [Release Management](https://docs.testream.app/features/release-management): Link runs to Jira releases and review release-scoped linked runs.
-- [Release Visibility](https://docs.testream.app/features/release-visibility): Review linked cycles, issue coverage gaps, evidence mix, and release readiness.
+- [Release Visibility](https://docs.testream.app/features/release-visibility): Review linked cycles, issue coverage gaps, evidence mix, and what still needs validation before the release review.
 - [Test Run Details](https://docs.testream.app/features/test-run-details): Inspect run metadata, release links, and linked cycles.
 
 ## Reporter guides
@@ -34,8 +34,8 @@
 - [Mocha Reporter](https://docs.testream.app/reporters/mocha): Configure Mocha reporter options and CI/CD uploads.
 - [Pytest Reporter](https://docs.testream.app/reporters/pytest): Configure Pytest reporting and JUnit-ingestion workflows.
 - [Vitest Reporter](https://docs.testream.app/reporters/vitest): Configure Vitest reporting and CI/CD uploads.
-- [Go Reporter](https://docs.testream.app/reporters/go): Run Go tests, generate CTRF results, and upload source evidence and CI context.
-- [Jasmine Reporter](https://docs.testream.app/reporters/jasmine): Configure Jasmine 5 reporting, source evidence, CTRF output, and CI metadata.
+- [Go Reporter](https://docs.testream.app/reporters/go): Run Go tests, generate CTRF results, and upload source locations plus CI context.
+- [Jasmine Reporter](https://docs.testream.app/reporters/jasmine): Configure Jasmine 5 reporting, source locations, CTRF output, and CI metadata.
 - [CLI Reporter](https://docs.testream.app/reporters/cli): Upload CTRF results from any CI provider.
 
 ## Sample repositories

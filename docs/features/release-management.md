@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: Release Management
-description: Link automated test runs to Jira releases so teams can filter linked runs, review linked BDD cycles, and assess release readiness per version.
+description: Link automated test runs to Jira releases so teams can filter linked runs, review BDD cycles, and inspect coverage gaps per version.
 keywords:
   - release management jira test results
   - link test runs to jira releases
@@ -11,7 +11,7 @@ keywords:
 
 # Release Management
 
-Track test quality across your release cycle by linking test runs to Jira releases and monitoring quality metrics per version.
+Link test runs to Jira releases, then review the run history, linked cycles, and coverage context for each version.
 
 Looking for the broader product overview first? Read [Jira release test management](https://testream.app/jira-release-test-management).
 
@@ -39,7 +39,7 @@ From any test run detail page:
 
 After saving, the run appears under that release filter on the Releases page.
 
-This helps teams assess release readiness and track quality gates.
+This gives the release review a traceable link back to the run and its Jira version.
 
 ## Link And Create Issue
 

@@ -11,7 +11,7 @@ keywords:
 
 # Quick Start
 
-Publish your first automated test run into Jira in about five minutes. By the end, you should see a real run with status, framework metadata, branch or CI context, and failure evidence inside your Jira project.
+Publish your first automated test run into Jira in about five minutes. By the end, you should see a real run with status, framework metadata, branch or CI context, and available failure evidence inside your Jira project.
 
 If you are still evaluating the product path rather than the exact setup flow, start with [Jira test reporting](https://testream.app/jira-test-reporting) or [CI/CD test results in Jira](https://testream.app/ci-test-results-jira).
 
@@ -119,7 +119,7 @@ If your team wants reusable behavior coverage beyond one Jira issue, the next st
 1. Create behaviors in [BDD Library](../features/bdd-library)
 2. Reuse them across issues
 3. Build [Test Cycles](../features/test-cycles) for manual execution
-4. Review [Release Visibility](../features/release-visibility) for release readiness
+4. Review [Release Visibility](../features/release-visibility) for linked evidence and gaps before the release review
 
 For the broader product overview first, see [BDD Jira integration](https://testream.app/bdd-jira-integration).
 

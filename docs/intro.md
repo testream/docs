@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: Introduction
-description: Learn how Testream connects automated evidence, reusable BDD behaviors, manual Test Cycles, and Jira release context in one quality workflow.
+description: Learn how Testream publishes automated runs, maps BDD behavior, runs focused Test Cycles, and connects the evidence to Jira releases.
 keywords:
   - jira test reporting docs
   - test management jira
@@ -11,7 +11,7 @@ keywords:
 
 # Introduction
 
-Welcome to **Testream**, Jira-native quality evidence for teams that want automated runs, BDD behaviors, focused manual coverage, and release context in one workflow.
+Welcome to **Testream**, release evidence for Jira teams that already run tests in code and CI. Testream keeps the run, behavior, issue, cycle, and release context together so reviewers can see what passed, what failed, and what still needs validation.
 
 Testream connects the tests you already run to the Jira issues and releases where decisions happen. Start with one reporter and one real run, then add reusable BDD workflows, manual Test Cycles, and release visibility as your team needs them.
 
@@ -35,10 +35,10 @@ Testream publishes automated test results into Jira with the context teams need 
 - **Jira-native run summaries** - See pass rate, failed tests, branch, commit, and suite changes where work is already tracked.
 - **Failure evidence** - Keep errors, stack traces, screenshots, videos, traces, logs, and metadata connected to the result.
 - **CI/CD context** - Attach branch, commit, environment, and run metadata from local runs or pipelines.
-- **Trends and release signal** - Track flaky behavior, suite growth, timing changes, and release readiness over time.
+- **Run history and release context** - Track flaky behavior, suite growth, timing changes, and linked release evidence over time.
 - **Reusable BDD workflows** - Manage shared behaviors, manual cycles, and release evidence without duplicating acceptance criteria.
 - **Code-first reporting** - Start from the automated tests you already run, not from a separate manual test-case inventory.
-- **Shared quality visibility** - Give developers, QA, product, and release stakeholders one readable quality signal inside Jira.
+- **Shared review context** - Give developers, QA, product, and release teams the run status, failure details, artifacts, and coverage gaps in Jira.
 
 ## Key Features
 
@@ -50,14 +50,14 @@ Testream supports the following reporters out of the box:
 - **.NET** - xUnit, NUnit, MSTest, and TRX formats
 - **Cypress** - E2E testing for web applications
 - **Jest** - Unit and integration testing for JavaScript/TypeScript
-- **Jasmine** - Jasmine 5 testing with source evidence
+- **Jasmine** - Jasmine 5 testing with source locations and run metadata
 - **WebdriverIO** - E2E testing for web applications
 - **Mocha** - Flexible JavaScript test framework
 - **CLI** - Upload CTRF reports from any test tool
 - **JUnit** - Parse and upload JUnit XML test results
 - **Vitest** - Blazing-fast unit testing for Vite projects
 - **pytest** - Python testing framework with rich plugin ecosystem
-- **Go** - Go test runs with CTRF and source snippets
+- **Go** - Go test runs with CTRF, source locations, and CI context
 
 ### CTRF Standard
 
@@ -89,7 +89,7 @@ Install the [Testream – Automated Test Management for Jira app](https://market
 - **Rich debugging artifacts** - Screenshots, videos, and trace files inline
 - **Trends & analytics** - Track test performance over time
 - **Release management** - Filter and assess quality by release version
-- **Release visibility** - Review release readiness through behavior evidence, linked cycles, and mapping gaps
+- **Release Visibility** - Review linked runs, behavior coverage, cycle outcomes, and unmapped work before the release review
 - **PDF reports** - Generate downloadable PDF summaries of test runs
 - **Test health metrics** - Pass rate, failed tests, and flaky test detection
 
