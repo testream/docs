@@ -117,7 +117,7 @@ npx @testream/go-reporter \
 ```bash
 npx @testream/go-reporter \
   --api-key "$TESTREAM_API_KEY" \
-  -- --run TestCriticalPath
+  -- -run TestCriticalPath
 ```
 
 ## Source Locations and Test Failures
@@ -164,6 +164,10 @@ jobs:
             --test-type unit \
             --fail-on-error
 ```
+
+## Sample Project
+
+The **[testream/go-jira-reporter](https://github.com/testream/go-jira-reporter)** repository is a complete working example of a Go project integrated with Testream. It includes Go tests, local CTRF generation, source-location evidence, and a ready-to-use GitHub Actions workflow.
 
 ## NPM Package
 

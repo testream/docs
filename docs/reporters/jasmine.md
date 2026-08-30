@@ -142,6 +142,10 @@ jobs:
         run: npm test
 ```
 
+## Sample Project
+
+The **[testream/jasmine-jira-reporter](https://github.com/testream/jasmine-jira-reporter)** repository is a complete working example of a Jasmine 5 project integrated with Testream. It includes TypeScript tests, helper-based reporter configuration, local CTRF output, and a ready-to-use GitHub Actions workflow.
+
 ## NPM Package
 
 - **Package:** [@testream/jasmine-reporter](https://www.npmjs.com/package/@testream/jasmine-reporter)
