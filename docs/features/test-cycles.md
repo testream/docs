@@ -162,6 +162,9 @@ Cycles can be linked to Jira releases. When they are linked:
 - They appear in release-level readiness workflows
 - They show up in the Releases page and in linked release evidence views
 - Their progress contributes context for release decision-making
+- A failed or blocked result in the cycle sets the release to **Action needed**, whether or not that behavior is mapped to an issue in the release
+
+Passed results count toward the release's evidence coverage only for behaviors mapped to an issue in that release. A skipped result is not evidence. Archiving a cycle keeps the evidence for behaviors mapped to release issues, and stops failed or blocked results on unmapped behaviors from holding the release. See [Release Visibility](./release-visibility#what-counts-toward-the-state) for the full rules.
 
 Release-linked cycles are useful when your Jira issues for that version already carry BDD specs created manually or with Rovo. Once the cycle is attached to that release, those release-scoped specs are also part of the cycle context, and the cycle provides the manual execution and evidence layer around that same release scope.
 

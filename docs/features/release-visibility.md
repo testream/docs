@@ -55,9 +55,21 @@ Testream summarizes the selected release with a state that points to the next re
 
 Use this state as review support, not as a replacement for release judgment.
 
+### What counts toward the state
+
+Testream reads a release through its Jira issues: each issue's mapped behaviors, and the evidence for those behaviors.
+
+- **Automated evidence** counts when the behavior is mapped to an issue in the release, the automation link is confirmed, and the test run is linked to the release.
+- **Manual evidence** counts when the behavior is mapped to an issue in the release and the result was recorded in a test cycle linked to the release.
+- **Failed or blocked results in a linked cycle always count.** If a cycle linked to the release has a failed or blocked result, the release shows **Action needed**, even when that behavior is not mapped to an issue in the release. A passed result on a behavior that is not mapped to a release issue does not move the release toward **Ready**, because it does not show that a release issue is covered.
+- **Skipped is not evidence.** A behavior whose latest manual result is skipped is treated as having no evidence yet.
+- **Archiving a cycle clears its unmapped failures.** A failed or blocked result on a behavior that is not mapped to a release issue stops counting once its cycle is archived. Results for behaviors mapped to a release issue still count after archiving, so archiving a finished cycle does not remove evidence.
+
+When a behavior has several manual results in the release's cycles, the latest one is used.
+
 ## Evidence Coverage and Evidence Mix
 
-The release board shows how much of the mapped behavior set already has evidence.
+The release board shows how much of the mapped behavior set already has evidence. The percentage covers behaviors mapped to the release's Jira issues. Results on behaviors that are only in a linked cycle do not change it.
 
 Evidence can come from:
 
@@ -65,7 +77,7 @@ Evidence can come from:
 - Manual pass results
 - Manual fail results
 - Blocked manual results
-- Behaviors that still have no evidence
+- Behaviors that still have no evidence, including behaviors whose latest manual result is skipped
 
 This helps teams distinguish between:
 
@@ -79,7 +91,7 @@ Release Visibility also groups release issues into three buckets:
 
 | Bucket                             | Meaning                                                                |
 | ---------------------------------- | ---------------------------------------------------------------------- |
-| **Issues with evidence**           | At least one mapped behavior already has manual or automation evidence |
+| **Issues with evidence**           | At least one mapped behavior already has manual or automation evidence. A skipped result is not evidence |
 | **Mapped issues without evidence** | Behaviors exist, but none has evidence yet                             |
 | **Unmapped release issues**        | No BDD behaviors are linked yet                                        |
 
@@ -115,6 +127,7 @@ That means teams can move in both directions:
 - Use cycles for manual evidence that automation does not cover yet.
 - Treat unmapped issues as a visibility gap, not just a documentation gap.
 - Review blocked and failed manual evidence before treating a release as ready.
+- Map the behaviors in a release's cycles to the release issues they verify, so passed results count toward coverage.
 
 ## Related Features
 
