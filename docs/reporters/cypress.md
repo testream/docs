@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: 'Cypress Reporter'
-description: 'Send Cypress test results, screenshots, videos, and end-to-end artifacts into Jira with the Testream Cypress Reporter.'
+description: 'Send Cypress test results, screenshots, videos, and end-to-end artifacts into Jira with the Testream Cypress Reporter, run metadata, and failure context.'
 keywords:
   - cypress jira reporter
   - cypress test reporting jira

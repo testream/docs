@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: 'Playwright Reporter'
-description: 'Send Playwright test results, traces, screenshots, and videos into Jira with the Testream Playwright Reporter.'
+description: 'Send Playwright test results, traces, screenshots, and videos into Jira with the Testream Playwright Reporter, run metadata, and failure context.'
 keywords:
   - playwright jira reporter
   - playwright test reporting jira
